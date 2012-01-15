@@ -1,0 +1,87 @@
+detect_relations: true
+
+Client:
+  actAs: [Timestampable]
+  columns: 
+    id:           { type: integer, primary: true, autoincrement: true }
+    user_id:      { type: integer(255) }
+    firstname:    { type: string(255) }
+    lastname:     { type: string(255) }
+    track_record: { type: clob }
+  relations: 
+    User:
+      class: sfGuardUser
+      local: user_id
+      foreign: id
+      type: one
+      foreignType: one
+      foreignAlias: Client
+
+Staff:
+  actAs: [Timestampable]
+  columns:
+    id:           { type: integer, primary: true, autoincrement: true }
+    user_id:      { type: integer(255) }
+    firstname:    { type: string(255) }
+    lastname:     { type: string(255) }
+    title:        { type: string(255) }
+    bio:          { type: clob }
+  relations:
+    User:
+      class: sfGuardUser
+      local: user_id
+      foreign: id
+      type: one
+      foreignType: one
+      foreignAlias: Staff
+
+Account:
+  actAs: [Timestampable]
+  columns:
+    id:           { type: integer, primary: true, autoincrement: true }
+    client_id:    { type: integer }    
+    domain_name:  { type: string(255) }
+    description:  { type: clob }
+    active:       { type: boolean }
+
+AccountInvoice:
+  actAs: [Timestampable]
+  columns:
+    id:          { type: integer, primary: true, autoincrement: true }
+    account_id:  { type: integer }
+    ref_no:      { type: string(255) }
+    ammount_due: { type: decimal }
+    description: { type: clob }
+    paid_off:    { type: boolean }
+
+AccountRecord:
+  actAs: [Timestampable]
+  columns: 
+    id:          { type: integer, primary: true, autoincrement: true }
+    account_id:  { type: integer }
+    name:        { type: string(255) }
+    description: { type: clob }
+
+Bug:
+  actAs: [Timestampable]
+  columns: 
+    id:            { type: integer, primary: true, autoincrement: true }
+    account_id:    { type: integer }
+    staff_id:      { type: integer } 
+    bug_status_id: { type: integer }
+    description:   { type: clob } 
+
+BugStatus:
+  columns:
+    id:           { type: integer, primary: true, autoincrement: true }
+    name:         { type: string(255) }
+
+BugComment:
+  actAs: [Timestampable] 
+  columns:
+    id:           { type: integer, primary: true, autoincrement: true }
+    bug_id:       { type: integer }
+    staff_id:     { type: integer } 
+    title:        { type: string(255) }
+    comment:      { type: clob }
+
