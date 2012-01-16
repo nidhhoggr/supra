@@ -10,6 +10,13 @@
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
-class AccountRecord extends BaseAccountRecord
-{
+class AccountRecord extends BaseAccountRecord {
+
+  public function fetchRecent() {
+    return Doctirne_Query::create()
+             ->from('AccountRecord ai')
+             ->orderBy('ai.updated_at DESC')
+             ->limit(5)
+             ->execute();
+  }
 }

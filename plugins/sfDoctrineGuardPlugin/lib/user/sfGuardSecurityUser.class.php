@@ -223,6 +223,12 @@ class sfGuardSecurityUser extends sfBasicSecurityUser
     return $this->getGuardUser()->__toString();
   }
 
+
+  public function getId() {
+    return $this->getGuardUser()->getId();
+  }
+
+
   /**
    * Returns the sfGuardUser object's username.
    *

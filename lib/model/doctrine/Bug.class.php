@@ -12,4 +12,11 @@
  */
 class Bug extends BaseBug
 {
+  public function fetchRecent() {
+    return Doctirne_Query::create()
+             ->from('Bug b')
+             ->orderBy('b.updated_at DESC')
+             ->limit(5)
+             ->execute();
+  }
 }

@@ -10,6 +10,13 @@
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
-class AccountInvoice extends BaseAccountInvoice
-{
+class AccountInvoice extends BaseAccountInvoice {
+
+  public function fetchRecent() {
+    return Doctirne_Query::create()
+             ->from('AccountInvoice ai')
+             ->orderBy('ai.updated_at DESC')
+             ->limit(5)
+             ->execute();
+  }
 }
