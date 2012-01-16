@@ -40,35 +40,37 @@ Account:
   columns:
     id:           { type: integer, primary: true, autoincrement: true }
     client_id:    { type: integer }    
-    domain_name:  { type: string(255) }
+    domain_name:  { type: string(255), notnull: true }
     description:  { type: clob }
-    active:       { type: boolean }
+    active:       { type: boolean, notnull: true, default: 0 }
 
 AccountInvoice:
   actAs: [Timestampable]
   columns:
     id:          { type: integer, primary: true, autoincrement: true }
     account_id:  { type: integer }
-    ref_no:      { type: string(255) }
+    ref_no:      { type: string(255), unique: true }
     ammount_due: { type: decimal }
     description: { type: clob }
-    paid_off:    { type: boolean }
+    paid_off:    { type: boolean, notnull: true, default: 0 }
 
 AccountRecord:
   actAs: [Timestampable]
   columns: 
     id:          { type: integer, primary: true, autoincrement: true }
     account_id:  { type: integer }
-    name:        { type: string(255) }
+    name:        { type: string(255), notnull: true }
     description: { type: clob }
 
 Bug:
   actAs: [Timestampable]
   columns: 
     id:            { type: integer, primary: true, autoincrement: true }
-    account_id:    { type: integer }
+    account_id:    { type: integer, notnull: true }
     staff_id:      { type: integer } 
-    bug_status_id: { type: integer }
+    bug_status_id: { type: integer, notnull: true }
+    ref_no:        { type: string(255), unique: true }
+    name:          { type: string(255) }
     description:   { type: clob } 
 
 BugStatus:
