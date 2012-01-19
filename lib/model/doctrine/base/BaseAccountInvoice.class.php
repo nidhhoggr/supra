@@ -12,21 +12,24 @@
  * @property clob $description
  * @property boolean $paid_off
  * @property Account $Account
+ * @property Doctrine_Collection $AccountInvoiceTask
  * 
- * @method integer        getId()          Returns the current record's "id" value
- * @method integer        getAccountId()   Returns the current record's "account_id" value
- * @method string         getRefNo()       Returns the current record's "ref_no" value
- * @method decimal        getAmmountDue()  Returns the current record's "ammount_due" value
- * @method clob           getDescription() Returns the current record's "description" value
- * @method boolean        getPaidOff()     Returns the current record's "paid_off" value
- * @method Account        getAccount()     Returns the current record's "Account" value
- * @method AccountInvoice setId()          Sets the current record's "id" value
- * @method AccountInvoice setAccountId()   Sets the current record's "account_id" value
- * @method AccountInvoice setRefNo()       Sets the current record's "ref_no" value
- * @method AccountInvoice setAmmountDue()  Sets the current record's "ammount_due" value
- * @method AccountInvoice setDescription() Sets the current record's "description" value
- * @method AccountInvoice setPaidOff()     Sets the current record's "paid_off" value
- * @method AccountInvoice setAccount()     Sets the current record's "Account" value
+ * @method integer             getId()                 Returns the current record's "id" value
+ * @method integer             getAccountId()          Returns the current record's "account_id" value
+ * @method string              getRefNo()              Returns the current record's "ref_no" value
+ * @method decimal             getAmmountDue()         Returns the current record's "ammount_due" value
+ * @method clob                getDescription()        Returns the current record's "description" value
+ * @method boolean             getPaidOff()            Returns the current record's "paid_off" value
+ * @method Account             getAccount()            Returns the current record's "Account" value
+ * @method Doctrine_Collection getAccountInvoiceTask() Returns the current record's "AccountInvoiceTask" collection
+ * @method AccountInvoice      setId()                 Sets the current record's "id" value
+ * @method AccountInvoice      setAccountId()          Sets the current record's "account_id" value
+ * @method AccountInvoice      setRefNo()              Sets the current record's "ref_no" value
+ * @method AccountInvoice      setAmmountDue()         Sets the current record's "ammount_due" value
+ * @method AccountInvoice      setDescription()        Sets the current record's "description" value
+ * @method AccountInvoice      setPaidOff()            Sets the current record's "paid_off" value
+ * @method AccountInvoice      setAccount()            Sets the current record's "Account" value
+ * @method AccountInvoice      setAccountInvoiceTask() Sets the current record's "AccountInvoiceTask" collection
  * 
  * @package    supra
  * @subpackage model
@@ -71,6 +74,10 @@ abstract class BaseAccountInvoice extends sfDoctrineRecord
         $this->hasOne('Account', array(
              'local' => 'account_id',
              'foreign' => 'id'));
+
+        $this->hasMany('AccountInvoiceTask', array(
+             'local' => 'id',
+             'foreign' => 'account_invoice_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));

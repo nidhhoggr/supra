@@ -1,9 +1,9 @@
 sfGuardUser:
 <?php for($i = 1; $i <=10; $i++):?>
   user_<?php echo $i ?>:
-    id: <?php echo $i."\n" ?>
+    id: <?php echo $i . "\n" ?>
     email_address: "user<?php echo $i ?>@supraliminal.com"
-    username: user<?php echo $i."\n" ?>
+    username: user<?php echo $i . "\n" ?>
     algorithm: "sha1"
     is_active: 1
     is_super_admin: 0
@@ -12,10 +12,10 @@ sfGuardUser:
 Client:
 <?php for($i = 1; $i <=5; $i++):?>
   client_<?php echo $i ?>:
-    id: <?php echo $i."\n" ?>
-    user_id: <?php echo $i."\n" ?>
-    firstname: client_fn<?php echo $i."\n" ?>
-    lastname: client_ln<?php echo $i."\n" ?>
+    id: <?php echo $i . "\n" ?>
+    user_id: <?php echo $i . "\n" ?>
+    firstname: client_fn<?php echo $i . "\n" ?>
+    lastname: client_ln<?php echo $i . "\n" ?>
     track_record: good customer
 <?php endfor ?>
 
@@ -23,12 +23,29 @@ Staff:
 <?php for($i = 6; $i <=10; $i++):?>
   staff_<?php echo $i ?>:
     id: <?php echo $i - 5 . "\n" ?>
-    user_id: <?php echo $i."\n" ?>
+    user_id: <?php echo $i . "\n" ?>
     firstname: staff_fn<?php echo $i - 5 . "\n" ?>
     lastname: staff_ln<?php echo $i - 5 . "\n" ?>
     title: staff
     bio: is a staff of supraliminal.info
 <?php endfor ?>
+
+StaffTaskWork:
+  staff1:
+    staff_id: 1
+    task_work_id: 1
+  staff2:
+    staff_id: 2
+    task_work_id: 2
+  staff3:
+    staff_id: 3
+    task_work_id: 3
+  staff4:
+    staff_id: 4
+    task_work_id: 2
+  staff5:
+    staff_id: 5 
+    task_work_id: 1
 
 Account:
 <?php for($i = 1; $i <=5; $i++):?>
@@ -62,6 +79,14 @@ AccountInvoice:
     paid_off: 0
 <?php endfor ?>
 
+AccountInvoiceTask:
+<?php for($i = 1; $i <=10; $i++):?>
+  task_to_invoice<?php echo $i ?>:
+    account_invoice_id: <?php echo $i . "\n" ?>
+    task_id: <?php echo 11 - $i . "\n" ?>
+<?php endfor ?>
+
+
 AccountRecord:
 <?php for($i = 1; $i <=10; $i++):?>
   record_<?php echo $i ?>:
@@ -71,15 +96,16 @@ AccountRecord:
     description: these are the account<?php echo $i ?> credentials
 <?php endfor ?>
 
-Bug:
+Task:
 <?php for($i = 1; $i <=5; $i++):?>
   bug_<?php echo $i*2-1 ?>:
     id: <?php echo $i*2-1 . "\n"?>
     account_id: <?php echo $i*2-1 . "\n"?>
     staff_id: <?php echo $i . "\n"?>
-    bug_status_id: 4
-    bug_type_id: 3
-    bug_priority_id: 2
+    task_status_id: 4
+    task_type_id: 3
+    task_priority_id: 2
+    task_work_id: 1
     name: bug_<?php echo $i*2-1 . "\n"?>
     ref_no: <?php echo 320388 + ($i * 2 - 1) . "\n" ?>
     description: need to be able to edit the site
@@ -87,15 +113,16 @@ Bug:
     id: <?php echo $i*2 . "\n"?>
     account_id: <?php echo $i*2 . "\n"?>
     staff_id: <?php echo $i . "\n"?>
-    bug_status_id: 2
-    bug_type_id: 1
-    bug_priority_id: 1
+    task_status_id: 2
+    task_type_id: 1
+    task_priority_id: 1
+    task_work_id: 2
     name: bug_<?php echo $i*2 . "\n" ?>
     ref_no: <?php echo 320388 + ($i * 2) . "\n" ?>
     description: tax doesnt show up
 <?php endfor ?>
 
-BugStatus:
+TaskStatus:
   incomplete:
     id: 1
     name: incomplete
@@ -112,7 +139,7 @@ BugStatus:
     id: 5
     name: on hold
 
-BugType:
+TaskType:
   addition:
     id: 1
     name: addition
@@ -123,7 +150,7 @@ BugType:
     id: 3 
     name: bug
 
-BugPriority:
+TaskPriority:
   critical:
     id: 1
     name: critical
@@ -136,19 +163,57 @@ BugPriority:
   backlist:
     id: 4
     name: backlist
+
+TaskWork:
+  development:
+    id: 1
+    name: Development
+    rate: 95.00
+    description: entails all frontend and backend software development
+  design:
+    id: 2
+    name: Design
+    rate: 75.00
+    description: entails all graphic design and page markuup and styling
+  projectmanagement:
+    id: 3 
+    name: Project Management
+    rate: 110.00
+    description: entials interacting with clients creating and delegating tasks
     
-BugComment:
+TaskComment:
 <?php for($i = 1; $i <=5; $i++):?>
   comment_<?php echo $i*2-1 ?>:
     id: <?php echo $i*2-1 . "\n"?>
-    bug_id: <?php echo $i*2-1 . "\n"?>
-    staff_id: <?php echo $i ?>
+    task_id: <?php echo $i*2-1 . "\n"?>
+    staff_id: <?php echo $i . "\n" ?>
     title: bug <?php echo $i*2-1 . "\n"?>
     comment: description for bug <?php echo $i*2-1 . "\n"?>
   comment_<?php echo $i*2 ?>:
     id: <?php echo $i*2 . "\n"?>
-    bug_id: <?php echo $i*2 . "\n"?>
-    staff_id: <?php echo $i ?>
+    task_id: <?php echo $i*2 . "\n"?>
+    staff_id: <?php echo $i . "\n" ?>
     title: bug <?php echo $i*2 . "\n"?>
     comment: description for bug <?php echo $i*2 . "\n"?>
 <?php endfor ?>
+
+TaskLog:
+<?php for($i = 1; $i <=5; $i++):?>
+  log_<?php echo $i*2-1 ?>:
+    id: <?php echo $i*2-1 . "\n"?>
+    task_id: <?php echo $i*2-1 . "\n"?>
+    task_work_id: 1
+    staff_id: <?php echo $i . "\n" ?>
+    title: bug <?php echo $i*2-1 . "\n"?>
+    description: had to make it functional
+    hours_logged: 4.5
+  log_<?php echo $i*2 ?>:
+    id: <?php echo $i*2 . "\n"?>
+    task_id: <?php echo $i*2 . "\n"?>
+    task_work_id: 2
+    staff_id: <?php echo $i . "\n" ?>
+    title: bug <?php echo $i*2 . "\n"?>
+    description: had to make it pretty
+    hours_logged: 2
+<?php endfor ?>
+

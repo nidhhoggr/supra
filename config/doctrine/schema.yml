@@ -81,7 +81,7 @@ Task:
     task_status_id:   { type: integer, notnull: true }
     task_type_id:     { type: integer, notnull: true }
     task_priority_id: { type: integer, notnull: true }
-    task_work_id:     { type: integer, notnul;: true }
+    task_work_id:     { type: integer, notnull: true }
     ref_no:           { type: string(255), unique: true }
     name:             { type: string(255) }
     description:      { type: clob } 
@@ -122,6 +122,7 @@ TaskLog:
   columns:
     id:           { type: integer, primary: true, autoincrement: true }
     task_id:      { type: integer, notnull: true }
+    task_work_id: { type: integer, notnull: true }
     staff_id:     { type: integer, notnull: true }
     title:        { type: string(255) }
     description:  { type: clob }

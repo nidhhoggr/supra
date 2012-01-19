@@ -13,7 +13,7 @@
  * @property Client $Client
  * @property Doctrine_Collection $AccountInvoice
  * @property Doctrine_Collection $AccountRecord
- * @property Doctrine_Collection $Bug
+ * @property Doctrine_Collection $Task
  * 
  * @method integer             getId()             Returns the current record's "id" value
  * @method integer             getClientId()       Returns the current record's "client_id" value
@@ -23,7 +23,7 @@
  * @method Client              getClient()         Returns the current record's "Client" value
  * @method Doctrine_Collection getAccountInvoice() Returns the current record's "AccountInvoice" collection
  * @method Doctrine_Collection getAccountRecord()  Returns the current record's "AccountRecord" collection
- * @method Doctrine_Collection getBug()            Returns the current record's "Bug" collection
+ * @method Doctrine_Collection getTask()           Returns the current record's "Task" collection
  * @method Account             setId()             Sets the current record's "id" value
  * @method Account             setClientId()       Sets the current record's "client_id" value
  * @method Account             setDomainName()     Sets the current record's "domain_name" value
@@ -32,7 +32,7 @@
  * @method Account             setClient()         Sets the current record's "Client" value
  * @method Account             setAccountInvoice() Sets the current record's "AccountInvoice" collection
  * @method Account             setAccountRecord()  Sets the current record's "AccountRecord" collection
- * @method Account             setBug()            Sets the current record's "Bug" collection
+ * @method Account             setTask()           Sets the current record's "Task" collection
  * 
  * @package    supra
  * @subpackage model
@@ -83,7 +83,7 @@ abstract class BaseAccount extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'account_id'));
 
-        $this->hasMany('Bug', array(
+        $this->hasMany('Task', array(
              'local' => 'id',
              'foreign' => 'account_id'));
 
