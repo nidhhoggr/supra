@@ -55,6 +55,7 @@ abstract class BaseAccount extends sfDoctrineRecord
              ));
         $this->hasColumn('domain_name', 'string', 255, array(
              'type' => 'string',
+             'notnull' => true,
              'length' => 255,
              ));
         $this->hasColumn('description', 'clob', null, array(
@@ -62,6 +63,8 @@ abstract class BaseAccount extends sfDoctrineRecord
              ));
         $this->hasColumn('active', 'boolean', null, array(
              'type' => 'boolean',
+             'notnull' => true,
+             'default' => 0,
              ));
     }
 

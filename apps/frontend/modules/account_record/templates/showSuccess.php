@@ -1,16 +1,15 @@
 <table>
   <tbody>
-    <tr>
-      <th>Id:</th>
-      <td><?php echo $account_record->getId() ?></td>
     </tr>
-    <tr>
-      <th>Account:</th>
-      <td><?php echo $account_record->getAccountId() ?></td>
-    </tr>
-    <tr>
-      <th>Name:</th>
       <td><?php echo $account_record->getName() ?></td>
+    </tr>
+    <tr>
+      <th>Account</th>
+      <td>
+        <a href="<?php echo url_for('account/show?id='.$account_record->getAccountId())?>">
+        <?php echo $account_record->getAccount()->getDomainName()?>
+        </a>
+      </td>
     </tr>
     <tr>
       <th>Description:</th>
@@ -18,11 +17,11 @@
     </tr>
     <tr>
       <th>Created at:</th>
-      <td><?php echo $account_record->getCreatedAt() ?></td>
+      <td><?php echo $account_record->getDateTimeObject('created_at')->format('M d, Y h:i:s a') ?></td>
     </tr>
     <tr>
       <th>Updated at:</th>
-      <td><?php echo $account_record->getUpdatedAt() ?></td>
+      <td><?php echo $account_record->getDateTimeObject('updated_at')->format('M d, Y h:i:s a') ?></td>
     </tr>
   </tbody>
 </table>

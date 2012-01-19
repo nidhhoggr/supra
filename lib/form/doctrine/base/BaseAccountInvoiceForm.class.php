@@ -36,6 +36,10 @@ abstract class BaseAccountInvoiceForm extends BaseFormDoctrine
       'updated_at'  => new sfValidatorDateTime(),
     ));
 
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorDoctrineUnique(array('model' => 'AccountInvoice', 'column' => array('ref_no')))
+    );
+
     $this->widgetSchema->setNameFormat('account_invoice[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);

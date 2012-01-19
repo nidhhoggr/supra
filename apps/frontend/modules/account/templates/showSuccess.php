@@ -1,32 +1,28 @@
 <table>
   <tbody>
     <tr>
-      <th>Id:</th>
-      <td><?php echo $account->getId() ?></td>
-    </tr>
-    <tr>
-      <th>Client:</th>
-      <td><?php echo $account->getClientId() ?></td>
-    </tr>
-    <tr>
-      <th>Domain name:</th>
-      <td><?php echo $account->getDomainName() ?></td>
+      <td>
+        <?php echo $account->getDomainName() ?>
+        (
+        <?php if($account->getActive()):?>
+            <span class="active">Active</span>
+        <?php else: ?>
+            <span class="inactive">Inactive</span>
+        <?php endif ?>
+        )
+      </td>
     </tr>
     <tr>
       <th>Description:</th>
       <td><?php echo $account->getDescription() ?></td>
     </tr>
     <tr>
-      <th>Active:</th>
-      <td><?php echo $account->getActive() ?></td>
+      <th>Client Since:</th>
+      <td><?php echo $account->getDateTimeObject('created_at')->format('M d, Y h:i a') ?></td>
     </tr>
     <tr>
-      <th>Created at:</th>
-      <td><?php echo $account->getCreatedAt() ?></td>
-    </tr>
-    <tr>
-      <th>Updated at:</th>
-      <td><?php echo $account->getUpdatedAt() ?></td>
+      <th>Account Updated:</th>
+      <td><?php echo $account->getDateTimeObject('updated_at')->format('M d, Y h:i a') ?></td>
     </tr>
   </tbody>
 </table>

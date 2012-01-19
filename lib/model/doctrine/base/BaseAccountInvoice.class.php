@@ -49,6 +49,7 @@ abstract class BaseAccountInvoice extends sfDoctrineRecord
              ));
         $this->hasColumn('ref_no', 'string', 255, array(
              'type' => 'string',
+             'unique' => true,
              'length' => 255,
              ));
         $this->hasColumn('ammount_due', 'decimal', null, array(
@@ -59,6 +60,8 @@ abstract class BaseAccountInvoice extends sfDoctrineRecord
              ));
         $this->hasColumn('paid_off', 'boolean', null, array(
              'type' => 'boolean',
+             'notnull' => true,
+             'default' => 0,
              ));
     }
 

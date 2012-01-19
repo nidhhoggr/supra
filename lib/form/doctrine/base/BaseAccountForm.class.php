@@ -27,7 +27,7 @@ abstract class BaseAccountForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'client_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Client'), 'required' => false)),
-      'domain_name' => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'domain_name' => new sfValidatorString(array('max_length' => 255)),
       'description' => new sfValidatorString(array('required' => false)),
       'active'      => new sfValidatorBoolean(array('required' => false)),
       'created_at'  => new sfValidatorDateTime(),

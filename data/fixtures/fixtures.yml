@@ -1,131 +1,154 @@
-# # Populate this file with data to be loaded by your ORM's *:data-load task.
-# # You can create multiple files in this directory (i.e. 010_users.yml,
-# # 020_articles.yml, etc) which will be loaded in alphabetical order.
-# # 
-# # See documentation for your ORM's *:data-load task for more information.
-# 
-# User:
-#   fabien:
-#     username: fabien
-#     password: changeme
-#     name:     Fabien Potencier
-#     email:    fabien.potencier@symfony-project.com
-#   kris:
-#     username: Kris.Wallsmith
-#     password: changeme
-#     name:     Kris Wallsmith
-#     email:    kris.wallsmith@symfony-project.com
-
 sfGuardUser:
-  client:
-    id: 1
-    email_address: "client@client.com"
-    username: "TomTran"
+<?php for($i = 1; $i <=10; $i++):?>
+  user_<?php echo $i ?>:
+    id: <?php echo $i."\n" ?>
+    email_address: "user<?php echo $i ?>@supraliminal.com"
+    username: user<?php echo $i."\n" ?>
     algorithm: "sha1"
-    salt: "179f09d254837998aa8e864f79a1fb04"
-    password: "7a92f0f23b8a81fd80ae18848132394eeaeef892"
     is_active: 1
     is_super_admin: 0
-  admin:
-    id: 2
-    email_address: "staff@staff.com"
-    username: "josephP"
-    algorithm: "sha1"
-    salt: "9832e222bb572e123247792ee9769106"
-    password: "2de551f6c83ba47785c40d3eabc7e00704bcde88"
-    is_active: 1
-    is_super_admin: 0
+<?php endfor ?>
 
 Client:
-  tom:
-    id: 1
-    user_id: 1
-    firstname: tom
-    lastname:  tran
+<?php for($i = 1; $i <=5; $i++):?>
+  client_<?php echo $i ?>:
+    id: <?php echo $i."\n" ?>
+    user_id: <?php echo $i."\n" ?>
+    firstname: client_fn<?php echo $i."\n" ?>
+    lastname: client_ln<?php echo $i."\n" ?>
     track_record: good customer
+<?php endfor ?>
 
 Staff:
-  joseph:
-    id: 1
-    user_id: 2
-    firstname: joseph
-    lastname: persie
-    title: Owner
-    bio: jospeh is the founder of supraliminal.info
+<?php for($i = 6; $i <=10; $i++):?>
+  staff_<?php echo $i ?>:
+    id: <?php echo $i - 5 . "\n" ?>
+    user_id: <?php echo $i."\n" ?>
+    firstname: staff_fn<?php echo $i - 5 . "\n" ?>
+    lastname: staff_ln<?php echo $i - 5 . "\n" ?>
+    title: staff
+    bio: is a staff of supraliminal.info
+<?php endfor ?>
 
 Account:
-  sss:
-    id: 1
-    client_id: 1
-    domain_name: starsalonspafl.com
-    description: a dynaminc cake site built for the salon
+<?php for($i = 1; $i <=5; $i++):?>
+  site_<?php echo $i*2-1 ?>:
+    id: <?php echo $i*2-1 . "\n" ?>
+    client_id: <?php echo $i . "\n" ?>
+    domain_name: user<?php echo $i ?>domain1.com
+    description: another dynbamic site
     active: 1
-  riceforafrcia:
-    id: 2
-    client_id: 1
-    domain_name: riceforafrica.com
-    description: a dynamic site t calculate and keep track of order of rice from asia to africa
+  site_<?php echo $i*2 ?>:
+    id: <?php echo $i*2 . "\n" ?>
+    client_id: <?php echo $i . "\n" ?>
+    domain_name: user<?php echo $i ?>domain2.com
+    description: a dynamic site t calculate 
+    active: 1
+<?php endfor ?>
 
 AccountInvoice:
-  sss:
-    account_id: 1
-    ref_no: 320388
-    ammount_due: 600.00
-    description: for the whole design and implemeantation of the site, good customer discount
+<?php for($i = 1; $i <=5; $i++):?>
+  invoice_<?php echo $i*2-1 ?>:
+    account_id: <?php echo $i*2-1 . "\n" ?>
+    ref_no: <?php echo 320388 + ($i * 2 - 1) . "\n" ?>
+    ammount_due: 300.00
+    description: for the whole design and implemeantation of the site good customer discount
     paid_off: 1
-  riceforafrica:
-    account_id: 2
-    ref_no: 320938
+  invoice_<?php echo $i*2 ?>:
+    account_id: <?php echo $i*2  . "\n" ?>
+    ref_no: <?php echo 320388 + ($i * 2) . "\n" ?>
     ammount_due: 100.00
-    description: built a simple calculator out of jquery
+    description: built a simple calculator
     paid_off: 0
+<?php endfor ?>
 
 AccountRecord:
-  sss:
-    id: 1
-    account_id: 1
-    name: StarSalonSpa Credentials
-    description: these are the starsalonspa credentials
+<?php for($i = 1; $i <=10; $i++):?>
+  record_<?php echo $i ?>:
+    id: <?php echo $i . "\n" ?>
+    account_id: <?php echo $i . "\n" ?>
+    name: Account<?php echo $i ?> Credentials
+    description: these are the account<?php echo $i ?> credentials
+<?php endfor ?>
 
 Bug:
-  sss:
-    id: 1
-    account_id: 1
-    staff_id: 1
+<?php for($i = 1; $i <=5; $i++):?>
+  bug_<?php echo $i*2-1 ?>:
+    id: <?php echo $i*2-1 . "\n"?>
+    account_id: <?php echo $i*2-1 . "\n"?>
+    staff_id: <?php echo $i . "\n"?>
     bug_status_id: 4
+    bug_type_id: 3
+    bug_priority_id: 2
+    name: bug_<?php echo $i*2-1 . "\n"?>
+    ref_no: <?php echo 320388 + ($i * 2 - 1) . "\n" ?>
     description: need to be able to edit the site
-  riceforafrica:
-    id: 2
-    account_id: 2
-    staff_id: 1
+  bug_<?php echo $i*2 ?>:
+    id: <?php echo $i*2 . "\n"?>
+    account_id: <?php echo $i*2 . "\n"?>
+    staff_id: <?php echo $i . "\n"?>
     bug_status_id: 2
+    bug_type_id: 1
+    bug_priority_id: 1
+    name: bug_<?php echo $i*2 . "\n" ?>
+    ref_no: <?php echo 320388 + ($i * 2) . "\n" ?>
     description: tax doesnt show up
+<?php endfor ?>
 
 BugStatus:
-  fixed:
+  incomplete:
     id: 1
-    name: fixed
-  broken:
+    name: incomplete
+  progress:
     id: 2
-    name: broken
-  critical:
+    name: in progress
+  complete:
     id: 3
-    name: critical
-  improvement:
+    name: complete
+  moreinfo:
     id: 4
-    name: improvement
+    name: need more info
+  onhold:
+    id: 5
+    name: on hold
 
-BugComment:
-  sss_tutorial:
+BugType:
+  addition:
     id: 1
-    bug_id: 1
-    staff_id: 1
-    title: Im getting to it
-    comment: im going to make a tutorial to display its functionality
-  broken_tax:
+    name: addition
+  improvement:
     id: 2
-    bug_id: 2
-    staff_id: 1
-    title: cannot replicate
-    comment: cannot replicate the error s please clarify
+    name: improvement
+  bug:
+    id: 3 
+    name: bug
 
+BugPriority:
+  critical:
+    id: 1
+    name: critical
+  blocker:
+    id: 2
+    name: blocker
+  minor:
+    id: 3
+    name: minor
+  backlist:
+    id: 4
+    name: backlist
+    
+BugComment:
+<?php for($i = 1; $i <=5; $i++):?>
+  comment_<?php echo $i*2-1 ?>:
+    id: <?php echo $i*2-1 . "\n"?>
+    bug_id: <?php echo $i*2-1 . "\n"?>
+    staff_id: <?php echo $i ?>
+    title: bug <?php echo $i*2-1 . "\n"?>
+    comment: description for bug <?php echo $i*2-1 . "\n"?>
+  comment_<?php echo $i*2 ?>:
+    id: <?php echo $i*2 . "\n"?>
+    bug_id: <?php echo $i*2 . "\n"?>
+    staff_id: <?php echo $i ?>
+    title: bug <?php echo $i*2 . "\n"?>
+    comment: description for bug <?php echo $i*2 . "\n"?>
+<?php endfor ?>

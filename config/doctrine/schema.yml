@@ -35,6 +35,11 @@ Staff:
       foreignType: one
       foreignAlias: Staff
 
+StaffTaskWork:
+  columns:
+    staff_id:     { type: integer, notnull: true }
+    task_work_id: { type: integer, notnull: true }
+
 Account:
   actAs: [Timestampable]
   columns:
@@ -54,6 +59,11 @@ AccountInvoice:
     description: { type: clob }
     paid_off:    { type: boolean, notnull: true, default: 0 }
 
+AccountInvoiceTask:
+  columns: 
+    account_invoice_id: { type: integer, notnull: true }
+    task_id :           { type: integer, notnull: true }
+
 AccountRecord:
   actAs: [Timestampable]
   columns: 
@@ -62,28 +72,60 @@ AccountRecord:
     name:        { type: string(255), notnull: true }
     description: { type: clob }
 
-Bug:
+Task:
   actAs: [Timestampable]
   columns: 
-    id:            { type: integer, primary: true, autoincrement: true }
-    account_id:    { type: integer, notnull: true }
-    staff_id:      { type: integer } 
-    bug_status_id: { type: integer, notnull: true }
-    ref_no:        { type: string(255), unique: true }
-    name:          { type: string(255) }
-    description:   { type: clob } 
+    id:               { type: integer, primary: true, autoincrement: true }
+    account_id:       { type: integer, notnull: true }
+    staff_id:         { type: integer } 
+    task_status_id:   { type: integer, notnull: true }
+    task_type_id:     { type: integer, notnull: true }
+    task_priority_id: { type: integer, notnull: true }
+    task_work_id:     { type: integer, notnul;: true }
+    ref_no:           { type: string(255), unique: true }
+    name:             { type: string(255) }
+    description:      { type: clob } 
 
-BugStatus:
+TaskStatus:
   columns:
     id:           { type: integer, primary: true, autoincrement: true }
     name:         { type: string(255) }
 
-BugComment:
+TaskType:
+  columns:
+    id:           { type: integer, primary: true, autoincrement: true }
+    name:         { type: string(255) }
+
+TaskPriority:
+  columns:
+    id:           { type: integer, primary: true, autoincrement: true }
+    name:         { type: string(255) }
+
+TaskWork:
+  columns:
+    id:           { type: integer, primary: true, autoincrement: true }
+    name:         { type: string(255) }
+    rate:         { type: decimal }
+    description:  { type: clob }
+
+TaskComment:
   actAs: [Timestampable] 
   columns:
     id:           { type: integer, primary: true, autoincrement: true }
-    bug_id:       { type: integer }
-    staff_id:     { type: integer } 
+    task_id:      { type: integer, notnull: true }
+    staff_id:     { type: integer, notnull: true } 
     title:        { type: string(255) }
     comment:      { type: clob }
+
+TaskLog:
+  actAs: [Timestampable]
+  columns:
+    id:           { type: integer, primary: true, autoincrement: true }
+    task_id:      { type: integer, notnull: true }
+    staff_id:     { type: integer, notnull: true }
+    title:        { type: string(255) }
+    description:  { type: clob }
+    hours_logged: { type: decimal }
+    
+    
 

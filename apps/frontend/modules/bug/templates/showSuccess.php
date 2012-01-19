@@ -1,20 +1,35 @@
 <table>
   <tbody>
     <tr>
-      <th>Id:</th>
-      <td><?php echo $bug->getId() ?></td>
+      <td><?php echo $bug->getName() . ' - ' . $bug->getRefNo() ?></td>
     </tr>
     <tr>
-      <th>Account:</th>
-      <td><?php echo $bug->getAccountId() ?></td>
+      <th>Account</th>
+      <td>
+        <a href="<?php echo url_for('account/show?id='.$bug->getAccountId())?>">
+        <?php echo $bug->getAccount()->getDomainName()?>
+        </a>
+      </td>
     </tr>
     <tr>
-      <th>Staff:</th>
-      <td><?php echo $bug->getStaffId() ?></td>
+      <th>Assigned To:</th>
+      <td>      
+        <a href="<?php echo url_for('staff/show?id='.$bug->getStaffId())?>"> 
+        <?php echo $bug->getStaff()->getFirstName() . ' ' . $bug->getStaff()->getLastName() ?></td>
+        </a>
+      </td>
     </tr>
     <tr>
-      <th>Bug status:</th>
-      <td><?php echo $bug->getBugStatusId() ?></td>
+      <th>Bug Type:</th>
+      <td><?php echo $bug->getBugType()->getName() ?></td>
+    </tr>
+    <tr>
+      <th>Bug Status:</th>
+      <td><?php echo $bug->getBugStatus()->getName() ?></td>
+    </tr>
+    <tr>
+      <th>Bug Priority:</th>
+      <td><?php echo $bug->getBugPriority()->getName() ?></td>
     </tr>
     <tr>
       <th>Description:</th>
@@ -22,12 +37,32 @@
     </tr>
     <tr>
       <th>Created at:</th>
-      <td><?php echo $bug->getCreatedAt() ?></td>
+      <td><?php echo $bug->getDateTimeObject('created_at')->format('M d, Y h:i a') ?></td>
     </tr>
     <tr>
       <th>Updated at:</th>
-      <td><?php echo $bug->getUpdatedAt() ?></td>
+      <td><?php echo $bug->getDateTimeObject('updated_at')->format('M d, Y h:i a') ?></td>
     </tr>
+    <tr>
+      <td><h3>Comments</h3></td>
+    </tr>
+    <?php foreach($bug->getBugComment() as $comment):?>
+    <tr>
+      <td>
+      <?php echo $comment->getStaff()->getFirstName() . ' ' . $comment->getStaff()->getLastName() ?>
+      wrote on
+      <?php echo $comment->getDateTimeObject('created_at')->format('M d, Y h:i a') ?>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <?php
+         echo $comment->getTitle();
+         echo $comment->getComment();
+        ?>
+      </td>
+    </tr>
+    <?php endforeach ?>
   </tbody>
 </table>
 

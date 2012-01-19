@@ -1,19 +1,23 @@
 <table>
   <tbody>
     <tr>
-      <th>Id:</th>
-      <td><?php echo $account_invoice->getId() ?></td>
-    </tr>
-    <tr>
       <th>Account:</th>
-      <td><?php echo $account_invoice->getAccountId() ?></td>
+      <td>
+        <a href="<?php link_to('/account/show?id='.$account_invoice->getAccount()->getDomainName());?>">
+            <?php echo $account_invoice->getAccount()->getDomainName() ?>
+        </a>
+      </td>
     </tr>
     <tr>
       <th>Ref no:</th>
       <td><?php echo $account_invoice->getRefNo() ?></td>
     </tr>
     <tr>
-      <th>Ammount due:</th>
+      <?php if($account_invoice->getPaidOff()):?>
+      <th class="paid">Ammount paid:</th>
+      <?php else: ?>
+      <th class="due">Ammount due:</th>
+      <?php endif ?>
       <td><?php echo $account_invoice->getAmmountDue() ?></td>
     </tr>
     <tr>
@@ -21,22 +25,15 @@
       <td><?php echo $account_invoice->getDescription() ?></td>
     </tr>
     <tr>
-      <th>Paid off:</th>
-      <td><?php echo $account_invoice->getPaidOff() ?></td>
-    </tr>
-    <tr>
       <th>Created at:</th>
-      <td><?php echo $account_invoice->getCreatedAt() ?></td>
+      <td><?php echo $account_invoice->getDateTimeObject('created_at')->format('M d, Y h:i a') ?></td>
     </tr>
     <tr>
       <th>Updated at:</th>
-      <td><?php echo $account_invoice->getUpdatedAt() ?></td>
+      <td><?php echo $account_invoice->getDateTimeObject('updated_at')->format('M d. Y h:i a') ?></td>
     </tr>
   </tbody>
 </table>
 
 <hr />
-
-<a href="<?php echo url_for('invoice/edit?id='.$account_invoice->getId()) ?>">Edit</a>
-&nbsp;
 <a href="<?php echo url_for('invoice/index') ?>">List</a>

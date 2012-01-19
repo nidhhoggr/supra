@@ -9,30 +9,48 @@
  * @property integer $account_id
  * @property integer $staff_id
  * @property integer $bug_status_id
+ * @property integer $bug_type_id
+ * @property integer $bug_priority_id
+ * @property string $ref_no
+ * @property string $name
  * @property clob $description
  * @property Account $Account
  * @property Staff $Staff
  * @property BugStatus $BugStatus
+ * @property BugType $BugType
+ * @property BugPriority $BugPriority
  * @property Doctrine_Collection $BugComment
  * 
- * @method integer             getId()            Returns the current record's "id" value
- * @method integer             getAccountId()     Returns the current record's "account_id" value
- * @method integer             getStaffId()       Returns the current record's "staff_id" value
- * @method integer             getBugStatusId()   Returns the current record's "bug_status_id" value
- * @method clob                getDescription()   Returns the current record's "description" value
- * @method Account             getAccount()       Returns the current record's "Account" value
- * @method Staff               getStaff()         Returns the current record's "Staff" value
- * @method BugStatus           getBugStatus()     Returns the current record's "BugStatus" value
- * @method Doctrine_Collection getBugComment()    Returns the current record's "BugComment" collection
- * @method Bug                 setId()            Sets the current record's "id" value
- * @method Bug                 setAccountId()     Sets the current record's "account_id" value
- * @method Bug                 setStaffId()       Sets the current record's "staff_id" value
- * @method Bug                 setBugStatusId()   Sets the current record's "bug_status_id" value
- * @method Bug                 setDescription()   Sets the current record's "description" value
- * @method Bug                 setAccount()       Sets the current record's "Account" value
- * @method Bug                 setStaff()         Sets the current record's "Staff" value
- * @method Bug                 setBugStatus()     Sets the current record's "BugStatus" value
- * @method Bug                 setBugComment()    Sets the current record's "BugComment" collection
+ * @method integer             getId()              Returns the current record's "id" value
+ * @method integer             getAccountId()       Returns the current record's "account_id" value
+ * @method integer             getStaffId()         Returns the current record's "staff_id" value
+ * @method integer             getBugStatusId()     Returns the current record's "bug_status_id" value
+ * @method integer             getBugTypeId()       Returns the current record's "bug_type_id" value
+ * @method integer             getBugPriorityId()   Returns the current record's "bug_priority_id" value
+ * @method string              getRefNo()           Returns the current record's "ref_no" value
+ * @method string              getName()            Returns the current record's "name" value
+ * @method clob                getDescription()     Returns the current record's "description" value
+ * @method Account             getAccount()         Returns the current record's "Account" value
+ * @method Staff               getStaff()           Returns the current record's "Staff" value
+ * @method BugStatus           getBugStatus()       Returns the current record's "BugStatus" value
+ * @method BugType             getBugType()         Returns the current record's "BugType" value
+ * @method BugPriority         getBugPriority()     Returns the current record's "BugPriority" value
+ * @method Doctrine_Collection getBugComment()      Returns the current record's "BugComment" collection
+ * @method Bug                 setId()              Sets the current record's "id" value
+ * @method Bug                 setAccountId()       Sets the current record's "account_id" value
+ * @method Bug                 setStaffId()         Sets the current record's "staff_id" value
+ * @method Bug                 setBugStatusId()     Sets the current record's "bug_status_id" value
+ * @method Bug                 setBugTypeId()       Sets the current record's "bug_type_id" value
+ * @method Bug                 setBugPriorityId()   Sets the current record's "bug_priority_id" value
+ * @method Bug                 setRefNo()           Sets the current record's "ref_no" value
+ * @method Bug                 setName()            Sets the current record's "name" value
+ * @method Bug                 setDescription()     Sets the current record's "description" value
+ * @method Bug                 setAccount()         Sets the current record's "Account" value
+ * @method Bug                 setStaff()           Sets the current record's "Staff" value
+ * @method Bug                 setBugStatus()       Sets the current record's "BugStatus" value
+ * @method Bug                 setBugType()         Sets the current record's "BugType" value
+ * @method Bug                 setBugPriority()     Sets the current record's "BugPriority" value
+ * @method Bug                 setBugComment()      Sets the current record's "BugComment" collection
  * 
  * @package    supra
  * @subpackage model
@@ -51,6 +69,7 @@ abstract class BaseBug extends sfDoctrineRecord
              ));
         $this->hasColumn('account_id', 'integer', 8, array(
              'type' => 'integer',
+             'notnull' => true,
              'length' => 8,
              ));
         $this->hasColumn('staff_id', 'integer', 8, array(
@@ -59,7 +78,27 @@ abstract class BaseBug extends sfDoctrineRecord
              ));
         $this->hasColumn('bug_status_id', 'integer', 8, array(
              'type' => 'integer',
+             'notnull' => true,
              'length' => 8,
+             ));
+        $this->hasColumn('bug_type_id', 'integer', 8, array(
+             'type' => 'integer',
+             'notnull' => true,
+             'length' => 8,
+             ));
+        $this->hasColumn('bug_priority_id', 'integer', 8, array(
+             'type' => 'integer',
+             'notnull' => true,
+             'length' => 8,
+             ));
+        $this->hasColumn('ref_no', 'string', 255, array(
+             'type' => 'string',
+             'unique' => true,
+             'length' => 255,
+             ));
+        $this->hasColumn('name', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
              ));
         $this->hasColumn('description', 'clob', null, array(
              'type' => 'clob',
@@ -79,6 +118,14 @@ abstract class BaseBug extends sfDoctrineRecord
 
         $this->hasOne('BugStatus', array(
              'local' => 'bug_status_id',
+             'foreign' => 'id'));
+
+        $this->hasOne('BugType', array(
+             'local' => 'bug_type_id',
+             'foreign' => 'id'));
+
+        $this->hasOne('BugPriority', array(
+             'local' => 'bug_priority_id',
              'foreign' => 'id'));
 
         $this->hasMany('BugComment', array(
