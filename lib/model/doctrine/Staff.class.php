@@ -10,6 +10,30 @@
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
-class Staff extends BaseStaff
-{
+class Staff extends BaseStaff {
+
+    public function getTaskLogsByStaffId() {
+      return  Doctrine_Core::getTable('TaskLog')
+        ->createQuery('a')
+        ->where('a.staff_id = ?', $this->id)
+        ->execute();
+    }
+
+    public function getTasksByStaffId() {
+      return Doctrine_Query::create()
+        ->from('Task t')
+        ->where('t.staff_id = ?', $this->id);
+    }
+
+    public function countCompleteTasksByStaffId() {
+      return $this->getTasksByStaffId()
+        ->andWhere('t.task_status_id = ?', 3)->count();
+    }
+
+    public function countIncompleteTasksByStaffId() {
+       return $this->getTasksByStaffId()
+         ->andWhere('t.task_status_id <> ?', 3)->count();
+    }
+
+
 }

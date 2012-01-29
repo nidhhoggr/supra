@@ -31,12 +31,10 @@
   <div class="client_accounts">
     <?php foreach($client->getAccount() as $account):?>
       <div class="client_account">
-         <a href="<?php echo url_for('account/show?id='.$account->getId())?>">
-           <?php echo $account->getDomainName(); ?>
-         </a>
+         <?php include_partial('account/linkto', array('account' => $account)) ?>
       </div>
       <div class="client_associated">
-        <?php include_partial('client/bug', array('bugs' => $account->getBug())) ?>
+        <?php include_partial('client/task', array('tasks' => $account->getTask())) ?>
         <?php include_partial('client/invoice', array('invoices' => $account->getAccountInvoice())) ?>
         <?php include_partial('client/record', array('records' => $account->getAccountRecord())) ?>
       </div>

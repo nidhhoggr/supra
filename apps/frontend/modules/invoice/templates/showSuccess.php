@@ -2,11 +2,7 @@
   <tbody>
     <tr>
       <th>Account:</th>
-      <td>
-        <a href="<?php link_to('/account/show?id='.$account_invoice->getAccount()->getDomainName());?>">
-            <?php echo $account_invoice->getAccount()->getDomainName() ?>
-        </a>
-      </td>
+      <td><?php include_partial('account/linkto',array('account'=>$account_invoice->getAccount()))?></td>
     </tr>
     <tr>
       <th>Ref no:</th>
@@ -18,11 +14,45 @@
       <?php else: ?>
       <th class="due">Ammount due:</th>
       <?php endif ?>
-      <td><?php echo $account_invoice->getAmmountDue() ?></td>
+      <td><?php echo $total ?></td>
     </tr>
     <tr>
       <th>Description:</th>
       <td><?php echo $account_invoice->getDescription() ?></td>
+    </tr>
+    <tr>
+      <th>Tasks</th>
+      <td>
+        <?php foreach($account_invoice->getAccountInvoiceTask() as $inv_task): ?>
+          <?php 
+            $task = $inv_task->getTask(); 
+            $work = $task->getTaskWork();
+          ?>
+          <p><?php echo link_to($task->getName(),'task/show?id='.$task->getId()) ?></p>
+          <p><?php echo $task->getDescription() ?>
+      </td>
+    </tr>
+    <tr>
+      <th>Work Completed</th>
+      <td>
+        <ol>     
+          <?php foreach($task->getTaskLog() as $log):?>
+          <li>
+            <p>
+              <?php echo $log->getTitle() . ' - '; ?>
+              <?php include_partial('staff/linkto', array('staff' => $log->getStaff())) ?>
+            </p>
+            <p>
+              <?php echo $log->getDescription() ?> 
+            </p>
+            <p>
+              <?php echo $log->getHoursLogged() . ' hours of ' . link_to($work->getName(),'work/show?id='. $work->getId()).' at $' . $work->getRate();?>/hr = <?php echo $total ?>
+            </p>
+          </li>
+        <?php endforeach ?>
+        <?php endforeach ?>
+        </ol>
+      </td>
     </tr>
     <tr>
       <th>Created at:</th>

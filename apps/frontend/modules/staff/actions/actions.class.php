@@ -21,6 +21,18 @@ class staffActions extends sfActions
   {
     $this->staff = Doctrine_Core::getTable('Staff')->find(array($request->getParameter('id')));
     $this->forward404Unless($this->staff);
+
+    $id = $request->getParameter('id');
+
+
+    $this->logs = $this->staff->getTaskLogsByStaffId();
+    //get the total hours
+    foreach($this->logs as $log){
+        $this->hours += $log->getHoursLogged();
+    }
+
+    $this->tasks_complete = $this->staff->countCompleteTasksByStaffId();
+    $this->tasks_incomplete = $this->staff->countIncompleteTasksByStaffId();
   }
 
   public function executeNew(sfWebRequest $request)
