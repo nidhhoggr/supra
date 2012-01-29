@@ -2,11 +2,6 @@ CREATE TABLE account (id BIGINT AUTO_INCREMENT, client_id BIGINT, domain_name VA
 CREATE TABLE account_invoice (id BIGINT AUTO_INCREMENT, account_id BIGINT, ref_no VARCHAR(255) UNIQUE, ammount_due DECIMAL(18, 2), description LONGTEXT, paid_off TINYINT(1) DEFAULT '0' NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX account_id_idx (account_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE account_invoice_task (id BIGINT AUTO_INCREMENT, account_invoice_id BIGINT NOT NULL, task_id BIGINT NOT NULL, INDEX account_invoice_id_idx (account_invoice_id), INDEX task_id_idx (task_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE account_record (id BIGINT AUTO_INCREMENT, account_id BIGINT, name VARCHAR(255) NOT NULL, description LONGTEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX account_id_idx (account_id), PRIMARY KEY(id)) ENGINE = INNODB;
-CREATE TABLE bug (id BIGINT AUTO_INCREMENT, account_id BIGINT NOT NULL, staff_id BIGINT, bug_status_id BIGINT NOT NULL, bug_type_id BIGINT NOT NULL, bug_priority_id BIGINT NOT NULL, ref_no VARCHAR(255) UNIQUE, name VARCHAR(255), description LONGTEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX account_id_idx (account_id), INDEX staff_id_idx (staff_id), INDEX bug_status_id_idx (bug_status_id), INDEX bug_type_id_idx (bug_type_id), INDEX bug_priority_id_idx (bug_priority_id), PRIMARY KEY(id)) ENGINE = INNODB;
-CREATE TABLE bug_comment (id BIGINT AUTO_INCREMENT, bug_id BIGINT, staff_id BIGINT, title VARCHAR(255), comment LONGTEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX bug_id_idx (bug_id), INDEX staff_id_idx (staff_id), PRIMARY KEY(id)) ENGINE = INNODB;
-CREATE TABLE bug_priority (id BIGINT AUTO_INCREMENT, name VARCHAR(255), PRIMARY KEY(id)) ENGINE = INNODB;
-CREATE TABLE bug_status (id BIGINT AUTO_INCREMENT, name VARCHAR(255), PRIMARY KEY(id)) ENGINE = INNODB;
-CREATE TABLE bug_type (id BIGINT AUTO_INCREMENT, name VARCHAR(255), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE client (id BIGINT AUTO_INCREMENT, user_id BIGINT, firstname VARCHAR(255), lastname VARCHAR(255), track_record LONGTEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE staff (id BIGINT AUTO_INCREMENT, user_id BIGINT, firstname VARCHAR(255), lastname VARCHAR(255), title VARCHAR(255), bio LONGTEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE staff_task_work (id BIGINT AUTO_INCREMENT, staff_id BIGINT NOT NULL, task_work_id BIGINT NOT NULL, INDEX staff_id_idx (staff_id), INDEX task_work_id_idx (task_work_id), PRIMARY KEY(id)) ENGINE = INNODB;
@@ -30,13 +25,6 @@ ALTER TABLE account_invoice ADD CONSTRAINT account_invoice_account_id_account_id
 ALTER TABLE account_invoice_task ADD CONSTRAINT account_invoice_task_task_id_task_id FOREIGN KEY (task_id) REFERENCES task(id);
 ALTER TABLE account_invoice_task ADD CONSTRAINT account_invoice_task_account_invoice_id_account_invoice_id FOREIGN KEY (account_invoice_id) REFERENCES account_invoice(id);
 ALTER TABLE account_record ADD CONSTRAINT account_record_account_id_account_id FOREIGN KEY (account_id) REFERENCES account(id);
-ALTER TABLE bug ADD CONSTRAINT bug_staff_id_staff_id FOREIGN KEY (staff_id) REFERENCES staff(id);
-ALTER TABLE bug ADD CONSTRAINT bug_bug_type_id_bug_type_id FOREIGN KEY (bug_type_id) REFERENCES bug_type(id);
-ALTER TABLE bug ADD CONSTRAINT bug_bug_status_id_bug_status_id FOREIGN KEY (bug_status_id) REFERENCES bug_status(id);
-ALTER TABLE bug ADD CONSTRAINT bug_bug_priority_id_bug_priority_id FOREIGN KEY (bug_priority_id) REFERENCES bug_priority(id);
-ALTER TABLE bug ADD CONSTRAINT bug_account_id_account_id FOREIGN KEY (account_id) REFERENCES account(id);
-ALTER TABLE bug_comment ADD CONSTRAINT bug_comment_staff_id_staff_id FOREIGN KEY (staff_id) REFERENCES staff(id);
-ALTER TABLE bug_comment ADD CONSTRAINT bug_comment_bug_id_bug_id FOREIGN KEY (bug_id) REFERENCES bug(id);
 ALTER TABLE client ADD CONSTRAINT client_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id);
 ALTER TABLE staff ADD CONSTRAINT staff_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id);
 ALTER TABLE staff_task_work ADD CONSTRAINT staff_task_work_task_work_id_task_work_id FOREIGN KEY (task_work_id) REFERENCES task_work(id);
