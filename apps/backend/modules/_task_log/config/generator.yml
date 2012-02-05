@@ -22,11 +22,10 @@ generator:
         title: Log Management
         display: [title,=staff_name,=task,=task_work]
       filter: 
-      form:   
-        display: 
-      edit:
+        display:
+      form:    ~
+      edit:   
         title: Editing Log '%%title%%'
-
+        
       new:
         title: Log Creation
-

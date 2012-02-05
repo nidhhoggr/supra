@@ -13,7 +13,7 @@ task_log:
 # default rules
 homepage:
   url:   /
-  param: { module: default, action: index }
+  param: { module: task_log, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules
@@ -41,3 +41,18 @@ sf_guard_password:
   param: 
     module: sfGuardAuth
     action: password
+
+sf_gaurd_user:
+  url: /guard/user
+  param: 
+    module: sfGuardUser
+
+sf_guard_group:
+  url: /guard/group
+  param: 
+    module: sfGuardGroup
+
+sf_guard_permission:
+  url: /guard/permission
+  param: 
+    module: sfGuardPermission
