@@ -12,11 +12,22 @@
  */
 class Staff extends BaseStaff {
 
-    public function getTaskLogsByStaffId() {
+    public function getStaffName() {
+        return $this->firstname . ' ' . $this->lastname;
+    }
+
+    private function getTaskLogs() {
       return  Doctrine_Core::getTable('TaskLog')
         ->createQuery('a')
-        ->where('a.staff_id = ?', $this->id)
-        ->execute();
+        ->where('a.staff_id = ?', $this->id);
+    }
+
+    public function getTaskLogsByStaffId() {
+      return  $this->getTaskLogs()->execute();
+    }
+
+    public function countTaskLogsByStaffId() {
+      return  $this->getTaskLogs()->count();
     }
 
     public function getTasksByStaffId() {
@@ -35,5 +46,7 @@ class Staff extends BaseStaff {
          ->andWhere('t.task_status_id <> ?', 3)->count();
     }
 
-
+    function __toString() {
+      return $this->getStaffName();
+    }
 }

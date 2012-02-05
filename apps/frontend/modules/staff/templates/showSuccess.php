@@ -23,6 +23,10 @@
       </td>
     </tr>
     <tr>
+      <th>Total Task Logs</th>
+      <td><?php echo $total_task_logs ?></td>
+    </tr>
+    <tr>
       <th>Total Hours</th>
       <td><?php echo $hours ?></td> 
     </tr>

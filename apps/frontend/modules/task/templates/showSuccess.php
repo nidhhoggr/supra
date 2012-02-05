@@ -67,20 +67,20 @@
       </td>
     </tr>
     <tr>
-      <td><h3>Work Log</h3></td>
+        <td><h3>Work Log</h3></td>
     </tr>
     <tr>
       <td>
         <ol>
           <?php foreach($task->getTaskLog() as $log):?>
             <li>
-              <p><?php echo $log->getTitle() ?> - 
-                <?php include_partial('work/linkto', array('work' => $log->getTaskWork())) ?>
+              <p><?php echo $log->getTitle() ?> -
+              <?php include_partial('work/linkto', array('work' => $log->getTaskWork())) ?>
               </p>
               <p>
-                <?php include_partial('staff/linkto', array('staff' => $log->getStaff())) ?>
-                completed <?php echo $log->getHoursLogged() ?> hours on
-                <?php echo $log->getDateTimeObject('created_at')->format('M d, Y h:i a') ?>
+              <?php include_partial('staff/linkto', array('staff' => $log->getStaff())) ?>
+              completed <?php echo $log->getHours() ?> hours on
+              <?php echo $log->getDateTimeObject('created_at')->format('M d, Y h:i a') ?>
               </p>
               <p><?php echo $log->getDescription(); ?></p>
             </li>
@@ -93,6 +93,6 @@
 
 <hr />
 
-<a href="<?php echo url_for('task/edit?id='.$task->getId()) ?>">Edit</a>
+<a href="<?php echo url_for('task/edit?id='.$task  ->getId()) ?>">Edit</a>
 &nbsp;
 <a href="<?php echo url_for('task/index') ?>">List</a>

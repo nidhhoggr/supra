@@ -11,4 +11,31 @@
  * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 class TaskLog extends BaseTaskLog {
+
+  public function getStaffName() {
+    return $this->Staff->getStaffName();
+  }
+
+  function hoursDiff($time1, $time2) {
+      $time1 = strtotime($time1);
+      $time2 = strtotime($time2);
+
+      if ($time1 > $time2) {
+          $ttime = $time1;
+          $time1 = $time2;
+          $time2 = $ttime;
+      }
+      $total_time = $time2 - $time1;
+      $hours = round((($time2 - $time1) / 3600 ),2);
+      return $hours;
+  }
+
+  public function getHours() {
+      if($this->getClockIn() && $this->getClockOut()) {
+          return $this->hoursDiff($this->getClockIn(),$this->getClockOut());
+      }
+      else {
+          return $this->getHoursLogged();
+      }
+  }
 }

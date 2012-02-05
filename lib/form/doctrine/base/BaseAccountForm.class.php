@@ -17,6 +17,9 @@ abstract class BaseAccountForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'          => new sfWidgetFormInputHidden(),
       'client_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Client'), 'add_empty' => true)),
+      'plan_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Plan'), 'add_empty' => true)),
+      'title'       => new sfWidgetFormInputText(),
+      'credit'      => new sfWidgetFormInputText(),
       'domain_name' => new sfWidgetFormInputText(),
       'description' => new sfWidgetFormTextarea(),
       'active'      => new sfWidgetFormInputCheckbox(),
@@ -27,7 +30,10 @@ abstract class BaseAccountForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'client_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Client'), 'required' => false)),
-      'domain_name' => new sfValidatorString(array('max_length' => 255)),
+      'plan_id'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Plan'), 'required' => false)),
+      'title'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'credit'      => new sfValidatorNumber(array('required' => false)),
+      'domain_name' => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'description' => new sfValidatorString(array('required' => false)),
       'active'      => new sfValidatorBoolean(array('required' => false)),
       'created_at'  => new sfValidatorDateTime(),

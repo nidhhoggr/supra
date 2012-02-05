@@ -1,3 +1,9 @@
+<?php
+
+function usd($price) {
+    return '$'. sprintf("%01.2f",$price);
+}
+?>
 <table>
   <tbody>
     <tr>
@@ -14,16 +20,16 @@
       <?php else: ?>
       <th class="due">Ammount due:</th>
       <?php endif ?>
-      <td><?php echo $total ?></td>
+      <td><?php echo usd($total) ?></td>
     </tr>
     <tr>
       <th>Description:</th>
       <td><?php echo $account_invoice->getDescription() ?></td>
     </tr>
+    <?php foreach($account_invoice->getAccountInvoiceTask() as $inv_task): ?>
     <tr>
       <th>Tasks</th>
       <td>
-        <?php foreach($account_invoice->getAccountInvoiceTask() as $inv_task): ?>
           <?php 
             $task = $inv_task->getTask(); 
             $work = $task->getTaskWork();
@@ -35,7 +41,7 @@
     <tr>
       <th>Work Completed</th>
       <td>
-        <ol>     
+        <ol>
           <?php foreach($task->getTaskLog() as $log):?>
           <li>
             <p>
@@ -43,25 +49,19 @@
               <?php include_partial('staff/linkto', array('staff' => $log->getStaff())) ?>
             </p>
             <p>
-              <?php echo $log->getDescription() ?> 
+              <?php echo $log->getDescription() ?>
             </p>
             <p>
-              <?php echo $log->getHoursLogged() . ' hours of ' . link_to($work->getName(),'work/show?id='. $work->getId()).' at $' . $work->getRate();?>/hr = <?php echo $total ?>
+              <?php echo $log->getHours() . ' hours of ' . link_to($work->getName(),'work/show?id='. $work->getId()).' at '.usd($work->getRate());?>/hr = <?php echo usd(round($log->getHours() * $work->getRate(),2)) ?>
             </p>
           </li>
-        <?php endforeach ?>
-        <?php endforeach ?>
+          <?php endforeach ?>
         </ol>
+        <hr />
+        <p>Total: <?php echo usd($total) ?></p>
       </td>
     </tr>
-    <tr>
-      <th>Created at:</th>
-      <td><?php echo $account_invoice->getDateTimeObject('created_at')->format('M d, Y h:i a') ?></td>
-    </tr>
-    <tr>
-      <th>Updated at:</th>
-      <td><?php echo $account_invoice->getDateTimeObject('updated_at')->format('M d. Y h:i a') ?></td>
-    </tr>
+    <?php endforeach ?>
   </tbody>
 </table>
 

@@ -15,25 +15,27 @@ abstract class BaseStaffForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'         => new sfWidgetFormInputHidden(),
-      'user_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'add_empty' => true)),
-      'firstname'  => new sfWidgetFormInputText(),
-      'lastname'   => new sfWidgetFormInputText(),
-      'title'      => new sfWidgetFormInputText(),
-      'bio'        => new sfWidgetFormTextarea(),
-      'created_at' => new sfWidgetFormDateTime(),
-      'updated_at' => new sfWidgetFormDateTime(),
+      'id'               => new sfWidgetFormInputHidden(),
+      'user_id'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'add_empty' => true)),
+      'firstname'        => new sfWidgetFormInputText(),
+      'lastname'         => new sfWidgetFormInputText(),
+      'title'            => new sfWidgetFormInputText(),
+      'bio'              => new sfWidgetFormTextarea(),
+      'is_subcontractor' => new sfWidgetFormInputCheckbox(),
+      'created_at'       => new sfWidgetFormDateTime(),
+      'updated_at'       => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
-      'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'user_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'required' => false)),
-      'firstname'  => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'lastname'   => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'title'      => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'bio'        => new sfValidatorString(array('required' => false)),
-      'created_at' => new sfValidatorDateTime(),
-      'updated_at' => new sfValidatorDateTime(),
+      'id'               => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'user_id'          => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'required' => false)),
+      'firstname'        => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'lastname'         => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'title'            => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'bio'              => new sfValidatorString(array('required' => false)),
+      'is_subcontractor' => new sfValidatorBoolean(array('required' => false)),
+      'created_at'       => new sfValidatorDateTime(),
+      'updated_at'       => new sfValidatorDateTime(),
     ));
 
     $this->widgetSchema->setNameFormat('staff[%s]');

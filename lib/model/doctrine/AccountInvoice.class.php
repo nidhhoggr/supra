@@ -19,4 +19,20 @@ class AccountInvoice extends BaseAccountInvoice {
              ->limit(5)
              ->execute();
   }
+
+  public function getTotal() {
+    $total = 0;
+ 
+    foreach($this->getAccountInvoiceTask() as $inv_task) {
+        $task = $inv_task->getTask();
+        $work = $task->getTaskWork();
+        foreach($task->getTaskLog() as $log) {
+            if($log->getHours()) {
+                $total += $work->getRate() * $log->getHours();
+            }
+        }
+    }
+
+    return round($total,2);
+  }
 }

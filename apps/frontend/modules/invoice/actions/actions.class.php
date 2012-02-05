@@ -21,16 +21,18 @@ class invoiceActions extends sfActions
   {
     $this->account_invoice = Doctrine_Core::getTable('AccountInvoice')->find(array($request->getParameter('id')));
     $this->forward404Unless($this->account_invoice);
-
+/*
     //get the total of the invoice
     foreach($this->account_invoice->getAccountInvoiceTask() as $inv_task):
       $task = $inv_task->getTask();
       $work = $task->getTaskWork();
-      foreach($task->getTaskLog() as $log):
-        $this->total += $log->getHoursLogged() * $work->getRate();
+	foreach($task->getTaskLog() as $log):
+		$this->total += $log->getHoursLogged() * $work->getRate();
       endforeach;
     endforeach;
+*/
 
+    $this->total = $this->account_invoice->getTotal();
   }
 
   public function executeNew(sfWebRequest $request)

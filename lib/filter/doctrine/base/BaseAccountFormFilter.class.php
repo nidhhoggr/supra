@@ -14,7 +14,10 @@ abstract class BaseAccountFormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'client_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Client'), 'add_empty' => true)),
-      'domain_name' => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'plan_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Plan'), 'add_empty' => true)),
+      'title'       => new sfWidgetFormFilterInput(),
+      'credit'      => new sfWidgetFormFilterInput(),
+      'domain_name' => new sfWidgetFormFilterInput(),
       'description' => new sfWidgetFormFilterInput(),
       'active'      => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
       'created_at'  => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
@@ -23,6 +26,9 @@ abstract class BaseAccountFormFilter extends BaseFormFilterDoctrine
 
     $this->setValidators(array(
       'client_id'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Client'), 'column' => 'id')),
+      'plan_id'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Plan'), 'column' => 'id')),
+      'title'       => new sfValidatorPass(array('required' => false)),
+      'credit'      => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
       'domain_name' => new sfValidatorPass(array('required' => false)),
       'description' => new sfValidatorPass(array('required' => false)),
       'active'      => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
@@ -49,6 +55,9 @@ abstract class BaseAccountFormFilter extends BaseFormFilterDoctrine
     return array(
       'id'          => 'Number',
       'client_id'   => 'ForeignKey',
+      'plan_id'     => 'ForeignKey',
+      'title'       => 'Text',
+      'credit'      => 'Number',
       'domain_name' => 'Text',
       'description' => 'Text',
       'active'      => 'Boolean',

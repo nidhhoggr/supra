@@ -8,6 +8,7 @@ Client:
     firstname:    { type: string(255) }
     lastname:     { type: string(255) }
     track_record: { type: clob }
+    
   relations: 
     User:
       class: sfGuardUser
@@ -20,12 +21,13 @@ Client:
 Staff:
   actAs: [Timestampable]
   columns:
-    id:           { type: integer, primary: true, autoincrement: true }
-    user_id:      { type: integer(255) }
-    firstname:    { type: string(255) }
-    lastname:     { type: string(255) }
-    title:        { type: string(255) }
-    bio:          { type: clob }
+    id:               { type: integer, primary: true, autoincrement: true }
+    user_id:          { type: integer(255) }
+    firstname:        { type: string(255) }
+    lastname:         { type: string(255) }
+    title:            { type: string(255) }
+    bio:              { type: clob }
+    is_subcontractor: { type: boolean, notnull: true, default: 0 }
   relations:
     User:
       class: sfGuardUser
@@ -45,9 +47,39 @@ Account:
   columns:
     id:           { type: integer, primary: true, autoincrement: true }
     client_id:    { type: integer }    
-    domain_name:  { type: string(255), notnull: true }
+    plan_id:      { type: integer }
+    title:        { type: string(255) }
+    credit:       { type: decimal }
+    domain_name:  { type: string(255) }
     description:  { type: clob }
     active:       { type: boolean, notnull: true, default: 0 }
+
+AccountPlan:
+  actAs: [Timestampable]
+  columns: 
+    account_id: { type: integer, notnull: true }
+    plan_id:    { type: integer, notnull: true }
+
+Plan:
+  columns:
+    id:          { type: integer, primary: true, autoincrement: true }
+    title:       { type: string(255) }
+    description: { type: clob }
+    deduction:   { type: decimal }
+    period_id:   { type: integer }
+
+Period:
+  columns:
+    id:          { type: integer, primary: true, autoincrement: true }
+    title:       { type: string(255) }
+    description: { type: clob }
+    days:        { type: integer }
+
+DeductionsLog:
+  columns:
+    id:          { type: integer, primary: true, autoincrement: true }
+    account_id:  { type: intger }
+    deduced_on:  { type: timestamp }  
 
 AccountInvoice:
   actAs: [Timestampable]
@@ -120,13 +152,24 @@ TaskComment:
 TaskLog:
   actAs: [Timestampable]
   columns:
-    id:           { type: integer, primary: true, autoincrement: true }
-    task_id:      { type: integer, notnull: true }
-    task_work_id: { type: integer, notnull: true }
-    staff_id:     { type: integer, notnull: true }
-    title:        { type: string(255) }
-    description:  { type: clob }
-    hours_logged: { type: decimal }
+    id:            { type: integer, primary: true, autoincrement: true }
+    task_id:       { type: integer, notnull: true }
+    task_work_id:  { type: integer, notnull: true }
+    staff_id:      { type: integer, notnull: true }
+    title:         { type: string(255) }
+    description:   { type: clob }
+    gen_desc_id:   { type: integer }
+    staff_comment: { type: clob }
+    clock_in:      { type: timestamp }
+    clock_out:     { type: timestamp } 
+    hours_logged:  { type: decimal }
+    mileage:       { type: decimal }
+    percentage:    { type: integer }
+    is_billable:   { type: boolean }
     
-    
+GenDesc:
+  columns:
+    id:            { type:integer, primary: true, autoincrement: true }
+    title:         { type: string }
+    description:   { type: clob } 
 

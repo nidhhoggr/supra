@@ -11,34 +11,37 @@
  * @property string $lastname
  * @property string $title
  * @property clob $bio
+ * @property boolean $is_subcontractor
  * @property sfGuardUser $User
  * @property Doctrine_Collection $StaffTaskWork
  * @property Doctrine_Collection $Task
  * @property Doctrine_Collection $TaskComment
  * @property Doctrine_Collection $TaskLog
  * 
- * @method integer             getId()            Returns the current record's "id" value
- * @method integer             getUserId()        Returns the current record's "user_id" value
- * @method string              getFirstname()     Returns the current record's "firstname" value
- * @method string              getLastname()      Returns the current record's "lastname" value
- * @method string              getTitle()         Returns the current record's "title" value
- * @method clob                getBio()           Returns the current record's "bio" value
- * @method sfGuardUser         getUser()          Returns the current record's "User" value
- * @method Doctrine_Collection getStaffTaskWork() Returns the current record's "StaffTaskWork" collection
- * @method Doctrine_Collection getTask()          Returns the current record's "Task" collection
- * @method Doctrine_Collection getTaskComment()   Returns the current record's "TaskComment" collection
- * @method Doctrine_Collection getTaskLog()       Returns the current record's "TaskLog" collection
- * @method Staff               setId()            Sets the current record's "id" value
- * @method Staff               setUserId()        Sets the current record's "user_id" value
- * @method Staff               setFirstname()     Sets the current record's "firstname" value
- * @method Staff               setLastname()      Sets the current record's "lastname" value
- * @method Staff               setTitle()         Sets the current record's "title" value
- * @method Staff               setBio()           Sets the current record's "bio" value
- * @method Staff               setUser()          Sets the current record's "User" value
- * @method Staff               setStaffTaskWork() Sets the current record's "StaffTaskWork" collection
- * @method Staff               setTask()          Sets the current record's "Task" collection
- * @method Staff               setTaskComment()   Sets the current record's "TaskComment" collection
- * @method Staff               setTaskLog()       Sets the current record's "TaskLog" collection
+ * @method integer             getId()               Returns the current record's "id" value
+ * @method integer             getUserId()           Returns the current record's "user_id" value
+ * @method string              getFirstname()        Returns the current record's "firstname" value
+ * @method string              getLastname()         Returns the current record's "lastname" value
+ * @method string              getTitle()            Returns the current record's "title" value
+ * @method clob                getBio()              Returns the current record's "bio" value
+ * @method boolean             getIsSubcontractor()  Returns the current record's "is_subcontractor" value
+ * @method sfGuardUser         getUser()             Returns the current record's "User" value
+ * @method Doctrine_Collection getStaffTaskWork()    Returns the current record's "StaffTaskWork" collection
+ * @method Doctrine_Collection getTask()             Returns the current record's "Task" collection
+ * @method Doctrine_Collection getTaskComment()      Returns the current record's "TaskComment" collection
+ * @method Doctrine_Collection getTaskLog()          Returns the current record's "TaskLog" collection
+ * @method Staff               setId()               Sets the current record's "id" value
+ * @method Staff               setUserId()           Sets the current record's "user_id" value
+ * @method Staff               setFirstname()        Sets the current record's "firstname" value
+ * @method Staff               setLastname()         Sets the current record's "lastname" value
+ * @method Staff               setTitle()            Sets the current record's "title" value
+ * @method Staff               setBio()              Sets the current record's "bio" value
+ * @method Staff               setIsSubcontractor()  Sets the current record's "is_subcontractor" value
+ * @method Staff               setUser()             Sets the current record's "User" value
+ * @method Staff               setStaffTaskWork()    Sets the current record's "StaffTaskWork" collection
+ * @method Staff               setTask()             Sets the current record's "Task" collection
+ * @method Staff               setTaskComment()      Sets the current record's "TaskComment" collection
+ * @method Staff               setTaskLog()          Sets the current record's "TaskLog" collection
  * 
  * @package    supra
  * @subpackage model
@@ -73,6 +76,11 @@ abstract class BaseStaff extends sfDoctrineRecord
              ));
         $this->hasColumn('bio', 'clob', null, array(
              'type' => 'clob',
+             ));
+        $this->hasColumn('is_subcontractor', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             'default' => 0,
              ));
     }
 

@@ -28,9 +28,10 @@ class staffActions extends sfActions
     $this->logs = $this->staff->getTaskLogsByStaffId();
     //get the total hours
     foreach($this->logs as $log){
-        $this->hours += $log->getHoursLogged();
+        $this->hours += $log->getHours();
     }
 
+    $this->total_task_logs = $this->staff->countTaskLogsByStaffId();
     $this->tasks_complete = $this->staff->countCompleteTasksByStaffId();
     $this->tasks_incomplete = $this->staff->countIncompleteTasksByStaffId();
   }

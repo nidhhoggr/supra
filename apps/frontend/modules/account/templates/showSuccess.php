@@ -2,7 +2,7 @@
   <tbody>
     <tr>
       <td>
-        <?php echo $account->getDomainName() ?>
+        <?php echo $account->getTitle() ?>
         (
         <?php if($account->getActive()):?>
             <span class="active">Active</span>
@@ -12,6 +12,24 @@
         )
       </td>
     </tr>
+    <?php if($account->getCredit()): ?>
+    <tr>
+      <th>Credit</th>
+      <td>$<?php echo $account->getCredit() ?></td>
+    </tr>
+    <?php endif ?>
+    <?php if($account->getDomainName()): ?>
+    <tr>
+      <th>Domain:</th>
+      <td><?php echo $account->getDomainName() ?></td>
+    </tr>
+    <?php endif ?>
+    <?php if($account->getPlanId()): ?>
+    <tr>
+      <th>Plan</th>
+      <td><?php echo $account->getPlan()->getTitle() ?></td>
+    </tr>
+    <?php endif ?>
     <tr>
       <th>Description:</th>
       <td><?php echo $account->getDescription() ?></td>
