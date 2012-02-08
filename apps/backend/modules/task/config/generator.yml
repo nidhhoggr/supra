@@ -1,0 +1,25 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Task
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          task
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Task Management
+        display: [ref_no,name,=account,=task_work,=task_priority]
+      filter:  ~
+      form:    ~
+      edit:
+        title: Editing Task '%%name%%'
+      new: 
+        title: Task Creation

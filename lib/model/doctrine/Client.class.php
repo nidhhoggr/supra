@@ -12,4 +12,12 @@
  */
 class Client extends BaseClient
 {
+  public function getFullName() {
+      return $this->firstname . ' ' . $this->lastname;
+
+  }
+
+  function __toString() {
+      return $this->getFullName();
+  }
 }

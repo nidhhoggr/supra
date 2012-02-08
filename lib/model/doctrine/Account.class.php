@@ -12,4 +12,13 @@
  */
 class Account extends BaseAccount{
 
+  function __toString() {
+
+    if($this->title)
+        return $this->title;
+    else
+        return $this->domain_name;
+    
+  }
+
 }

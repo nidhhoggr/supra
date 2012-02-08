@@ -1,0 +1,25 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Staff
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          staff
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Staff Management 
+        display: [firstname,lastname,title]
+      filter:  ~
+      form:    ~
+      edit:
+        title: Editing Staff '%%firstname%% %%lastname%%'
+      new: 
+        title: Staff Creation

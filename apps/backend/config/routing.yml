@@ -1,3 +1,48 @@
+account_invoice:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                AccountInvoice
+    module:               invoice
+    prefix_path:          /invoice
+    column:               id
+    with_wildcard_routes: true
+
+staff:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Staff
+    module:               staff
+    prefix_path:          /staff
+    column:               id
+    with_wildcard_routes: true
+
+client:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Client
+    module:               client
+    prefix_path:          /client
+    column:               id
+    with_wildcard_routes: true
+
+account:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Account
+    module:               account
+    prefix_path:          /account
+    column:               id
+    with_wildcard_routes: true
+
+task:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Task
+    module:               task
+    prefix_path:          /task
+    column:               id
+    with_wildcard_routes: true
+
 task_log:
   class: sfDoctrineRouteCollection
   options:

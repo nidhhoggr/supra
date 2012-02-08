@@ -1,0 +1,25 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Client
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          client
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Client Management
+        display: [firstname,lastname,track_record]
+      filter:  ~
+      form:    ~
+      edit:
+        title: Editing Client '%%firstname%%'
+      new:
+        title: Client Creation
