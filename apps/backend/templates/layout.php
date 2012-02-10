@@ -21,8 +21,46 @@
       <div id="menu">
         <ul>
           <li>
+            <?php echo link_to('Tasks','task/index') ?>         
           </li>
           <li>
+            <?php echo link_to('Task Logs','task_log/index') ?>
+          </li>
+          <li>
+            <?php echo link_to('Task Comments','task_comment/index') ?>
+          </li>
+          <li>
+            <?php echo link_to('Task Work','task_work/index') ?>
+          </li>
+          <li>
+            <?php echo link_to('Task Priority','task_priority/index') ?>
+          </li>
+          <li>
+            <?php echo link_to('Task Status','task_status/index') ?>
+          </li>
+          <li>
+            <?php echo link_to('Task Type','task_type/index') ?>
+          </li>
+          <li>
+            <?php echo link_to('Account','account/index') ?>
+          </li>
+          <li>
+            <?php echo link_to('Clients','client/index') ?>
+          </li>
+          <li>
+            <?php echo link_to('Employees','staff/index') ?>
+          </li>
+          <li>
+            <?php echo link_to('Account Records','account_record/index') ?> 
+          </li>
+          <li>
+            <?php echo link_to('Account Invoices','invoice/index') ?>           
+          </li>
+          <li>
+            <?php echo link_to('Plans','plan/index') ?>
+          </li>
+          <li>
+            <?php echo link_to('Periods','period/index') ?>
           </li>
         </ul>
       </div>

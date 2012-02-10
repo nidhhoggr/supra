@@ -20,7 +20,7 @@ generator:
           label: Work Type
       list:
         title: Log Management
-        display: [title,=staff_name,=task,=task_work]
+        display: [title,staff_name,task,task_work]
       filter: 
       form:   
         display: 

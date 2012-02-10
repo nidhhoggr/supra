@@ -1,13 +1,13 @@
 generator:
   class: sfDoctrineGenerator
   param:
-    model_class:           AccountInvoice
+    model_class:           Plan
     theme:                 admin
     non_verbose_templates: true
     with_show:             false
     singular:              ~
     plural:                ~
-    route_prefix:          account_invoice
+    route_prefix:          plan
     with_doctrine_route:   true
     actions_base_class:    sfActions
 
@@ -15,12 +15,11 @@ generator:
       actions: ~
       fields:  ~
       list:
-        title: Invoice Management
-        display: [ref_no,account,ammount_due,paid_off]
+        title: Plan Management
+        display: [title]
       filter:  ~
       form:    ~
-      edit:  
-        title: Editing Invoice '%%ref_no%%'
+      edit:
+        title: Editing Plan '%%title%%'
       new:
-        title: Invoice Creation
-
+        title: Plan Creation

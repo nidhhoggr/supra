@@ -16,7 +16,7 @@ generator:
       fields:  ~
       list:
         title: Account Management
-        display: [=client,title,domain_name]
+        display: [client,title,domain_name]
       filter:  ~
       form:    ~
       edit:

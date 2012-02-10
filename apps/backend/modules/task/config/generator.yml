@@ -16,7 +16,7 @@ generator:
       fields:  ~
       list:
         title: Task Management
-        display: [ref_no,name,=account,=task_work,=task_priority]
+        display: [ref_no,name,account,task_work,task_priority]
       filter:  ~
       form:    ~
       edit:

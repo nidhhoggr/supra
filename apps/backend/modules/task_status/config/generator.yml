@@ -1,13 +1,13 @@
 generator:
   class: sfDoctrineGenerator
   param:
-    model_class:           AccountInvoice
+    model_class:           TaskStatus
     theme:                 admin
     non_verbose_templates: true
     with_show:             false
     singular:              ~
     plural:                ~
-    route_prefix:          account_invoice
+    route_prefix:          task_status
     with_doctrine_route:   true
     actions_base_class:    sfActions
 
@@ -15,12 +15,12 @@ generator:
       actions: ~
       fields:  ~
       list:
-        title: Invoice Management
-        display: [ref_no,account,ammount_due,paid_off]
+        title: Status Type Management
+        display: [name]
       filter:  ~
       form:    ~
-      edit:  
-        title: Editing Invoice '%%ref_no%%'
+      edit:
+        title: Editing Status Type '%%name%%'
       new:
-        title: Invoice Creation
+        title: Status Type Creation
 
