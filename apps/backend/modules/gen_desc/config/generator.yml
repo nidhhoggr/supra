@@ -15,7 +15,7 @@ generator:
       actions: ~
       fields:  ~
       list:
-        title: Priority Type Management
+        title: General Description Management
         display: [title]
       filter:  ~
       form:    ~

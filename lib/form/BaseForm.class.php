@@ -10,4 +10,16 @@
  */
 class BaseForm extends sfFormSymfony
 {
+    protected function unsetTimeStampable() {
+        unset(
+            $this['created_at'],
+            $this['updated_at']
+        );
+    } 
+
+    protected function embedUser() {
+        unset($this['user_id']);
+        $formUser = new SfGuardUserAdminForm($this->getObject()->getUser());
+        $this->embedForm('User',$formUser);
+    }
 }

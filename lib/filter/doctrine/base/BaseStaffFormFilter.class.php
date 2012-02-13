@@ -14,8 +14,6 @@ abstract class BaseStaffFormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'user_id'          => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('User'), 'add_empty' => true)),
-      'firstname'        => new sfWidgetFormFilterInput(),
-      'lastname'         => new sfWidgetFormFilterInput(),
       'title'            => new sfWidgetFormFilterInput(),
       'bio'              => new sfWidgetFormFilterInput(),
       'is_subcontractor' => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
@@ -25,8 +23,6 @@ abstract class BaseStaffFormFilter extends BaseFormFilterDoctrine
 
     $this->setValidators(array(
       'user_id'          => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('User'), 'column' => 'id')),
-      'firstname'        => new sfValidatorPass(array('required' => false)),
-      'lastname'         => new sfValidatorPass(array('required' => false)),
       'title'            => new sfValidatorPass(array('required' => false)),
       'bio'              => new sfValidatorPass(array('required' => false)),
       'is_subcontractor' => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
@@ -53,8 +49,6 @@ abstract class BaseStaffFormFilter extends BaseFormFilterDoctrine
     return array(
       'id'               => 'Number',
       'user_id'          => 'ForeignKey',
-      'firstname'        => 'Text',
-      'lastname'         => 'Text',
       'title'            => 'Text',
       'bio'              => 'Text',
       'is_subcontractor' => 'Boolean',

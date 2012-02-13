@@ -12,6 +12,7 @@ class TaskLogForm extends BaseTaskLogForm
 {
   public function configure()
   {
+      $this->unsetTimeStampable();
   }
 
 }

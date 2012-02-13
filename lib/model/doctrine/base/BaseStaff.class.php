@@ -7,8 +7,6 @@
  * 
  * @property integer $id
  * @property integer $user_id
- * @property string $firstname
- * @property string $lastname
  * @property string $title
  * @property clob $bio
  * @property boolean $is_subcontractor
@@ -20,8 +18,6 @@
  * 
  * @method integer             getId()               Returns the current record's "id" value
  * @method integer             getUserId()           Returns the current record's "user_id" value
- * @method string              getFirstname()        Returns the current record's "firstname" value
- * @method string              getLastname()         Returns the current record's "lastname" value
  * @method string              getTitle()            Returns the current record's "title" value
  * @method clob                getBio()              Returns the current record's "bio" value
  * @method boolean             getIsSubcontractor()  Returns the current record's "is_subcontractor" value
@@ -32,8 +28,6 @@
  * @method Doctrine_Collection getTaskLog()          Returns the current record's "TaskLog" collection
  * @method Staff               setId()               Sets the current record's "id" value
  * @method Staff               setUserId()           Sets the current record's "user_id" value
- * @method Staff               setFirstname()        Sets the current record's "firstname" value
- * @method Staff               setLastname()         Sets the current record's "lastname" value
  * @method Staff               setTitle()            Sets the current record's "title" value
  * @method Staff               setBio()              Sets the current record's "bio" value
  * @method Staff               setIsSubcontractor()  Sets the current record's "is_subcontractor" value
@@ -60,14 +54,6 @@ abstract class BaseStaff extends sfDoctrineRecord
              ));
         $this->hasColumn('user_id', 'integer', 255, array(
              'type' => 'integer',
-             'length' => 255,
-             ));
-        $this->hasColumn('firstname', 'string', 255, array(
-             'type' => 'string',
-             'length' => 255,
-             ));
-        $this->hasColumn('lastname', 'string', 255, array(
-             'type' => 'string',
              'length' => 255,
              ));
         $this->hasColumn('title', 'string', 255, array(

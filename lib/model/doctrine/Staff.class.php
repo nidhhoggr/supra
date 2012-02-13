@@ -12,8 +12,8 @@
  */
 class Staff extends BaseStaff {
 
-    public function getStaffName() {
-        return $this->firstname . ' ' . $this->lastname;
+    public function getFullName() {
+        return $this->getUser()->first_name . ' ' . $this->getUser()->last_name;
     }
 
     private function getTaskLogs() {
@@ -47,6 +47,6 @@ class Staff extends BaseStaff {
     }
 
     function __toString() {
-      return $this->getStaffName();
+      return $this->getFullName();
     }
 }

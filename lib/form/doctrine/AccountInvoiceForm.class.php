@@ -12,5 +12,6 @@ class AccountInvoiceForm extends BaseAccountInvoiceForm
 {
   public function configure()
   {
+      $this->unsetTimeStampable();
   }
 }

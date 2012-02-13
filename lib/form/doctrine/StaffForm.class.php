@@ -12,5 +12,7 @@ class StaffForm extends BaseStaffForm
 {
   public function configure()
   {
+      $this->unsetTimeStampable();
+      $this->embedUser();
   }
 }

@@ -139,7 +139,7 @@ task_log:
 # default rules
 homepage:
   url:   /
-  param: { module: default, action: index }
+  param: { module: task_log, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules

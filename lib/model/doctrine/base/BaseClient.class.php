@@ -7,23 +7,17 @@
  * 
  * @property integer $id
  * @property integer $user_id
- * @property string $firstname
- * @property string $lastname
  * @property clob $track_record
  * @property sfGuardUser $User
  * @property Doctrine_Collection $Account
  * 
  * @method integer             getId()           Returns the current record's "id" value
  * @method integer             getUserId()       Returns the current record's "user_id" value
- * @method string              getFirstname()    Returns the current record's "firstname" value
- * @method string              getLastname()     Returns the current record's "lastname" value
  * @method clob                getTrackRecord()  Returns the current record's "track_record" value
  * @method sfGuardUser         getUser()         Returns the current record's "User" value
  * @method Doctrine_Collection getAccount()      Returns the current record's "Account" collection
  * @method Client              setId()           Sets the current record's "id" value
  * @method Client              setUserId()       Sets the current record's "user_id" value
- * @method Client              setFirstname()    Sets the current record's "firstname" value
- * @method Client              setLastname()     Sets the current record's "lastname" value
  * @method Client              setTrackRecord()  Sets the current record's "track_record" value
  * @method Client              setUser()         Sets the current record's "User" value
  * @method Client              setAccount()      Sets the current record's "Account" collection
@@ -45,14 +39,6 @@ abstract class BaseClient extends sfDoctrineRecord
              ));
         $this->hasColumn('user_id', 'integer', 255, array(
              'type' => 'integer',
-             'length' => 255,
-             ));
-        $this->hasColumn('firstname', 'string', 255, array(
-             'type' => 'string',
-             'length' => 255,
-             ));
-        $this->hasColumn('lastname', 'string', 255, array(
-             'type' => 'string',
              'length' => 255,
              ));
         $this->hasColumn('track_record', 'clob', null, array(

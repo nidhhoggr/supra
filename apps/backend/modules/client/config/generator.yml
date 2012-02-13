@@ -16,10 +16,11 @@ generator:
       fields:  ~
       list:
         title: Client Management
-        display: [firstname,lastname,track_record]
+        display: [User,track_record]
       filter:  ~
-      form:    ~
+      form:
+        display: [User,track_record]
       edit:
-        title: Editing Client '%%firstname%%'
+        title: Editing Client '%%User%%'
       new:
         title: Client Creation

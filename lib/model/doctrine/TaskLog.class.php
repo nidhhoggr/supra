@@ -13,7 +13,7 @@
 class TaskLog extends BaseTaskLog {
 
   public function getStaffName() {
-    return $this->Staff->getStaffName();
+    return $this->Staff->getFullname();
   }
 
   function hoursDiff($time1, $time2) {

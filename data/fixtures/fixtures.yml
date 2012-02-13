@@ -4,6 +4,8 @@ sfGuardUser:
     id: <?php echo $i . "\n" ?>
     email_address: "user<?php echo $i ?>@supraliminal.com"
     username: user<?php echo $i . "\n" ?>
+    first_name: ufn_<?php echo $i . "\n" ?>
+    last_name: uln_<?php echo $i . "\n" ?>
     algorithm: "sha1"
     is_active: 1
     is_super_admin: 0
@@ -14,8 +16,6 @@ Client:
   client_<?php echo $i ?>:
     id: <?php echo $i . "\n" ?>
     user_id: <?php echo $i . "\n" ?>
-    firstname: client_fn<?php echo $i . "\n" ?>
-    lastname: client_ln<?php echo $i . "\n" ?>
     track_record: good customer
 <?php endfor ?>
 
@@ -24,8 +24,6 @@ Staff:
   staff_<?php echo $i ?>:
     id: <?php echo $i - 5 . "\n" ?>
     user_id: <?php echo $i . "\n" ?>
-    firstname: staff_fn<?php echo $i - 5 . "\n" ?>
-    lastname: staff_ln<?php echo $i - 5 . "\n" ?>
     title: staff
     bio: is a staff of supraliminal.info
 <?php endfor ?>

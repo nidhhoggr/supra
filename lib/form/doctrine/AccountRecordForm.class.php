@@ -12,5 +12,6 @@ class AccountRecordForm extends BaseAccountRecordForm
 {
   public function configure()
   {
+      $this->unsetTimeStampable();
   }
 }

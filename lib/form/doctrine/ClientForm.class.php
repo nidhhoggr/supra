@@ -12,5 +12,8 @@ class ClientForm extends BaseClientForm
 {
   public function configure()
   {
+      $this->unsetTimeStampable();
+
+      $this->embedUser();
   }
 }

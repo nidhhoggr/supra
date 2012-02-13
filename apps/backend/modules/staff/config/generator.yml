@@ -16,10 +16,12 @@ generator:
       fields:  ~
       list:
         title: Staff Management 
-        display: [firstname,lastname,title]
+        display: [user, title]
+        table_method: retrieveAssociatedUser
       filter:  ~
-      form:    ~
+      form:
+        display: [User,title,bio,is_subcontractor]
       edit:
-        title: Editing Staff '%%firstname%% %%lastname%%'
+        title: Editing Staff '%%User%%'
       new: 
         title: Staff Creation

@@ -12,5 +12,6 @@ class AccountForm extends BaseAccountForm
 {
   public function configure()
   {
+    $this->unsetTimestampable();
   }
 }

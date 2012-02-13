@@ -12,5 +12,6 @@ class TaskForm extends BaseTaskForm
 {
   public function configure()
   {
+      $this->unsetTimeStampable();
   }
 }

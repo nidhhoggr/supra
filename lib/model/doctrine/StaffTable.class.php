@@ -17,4 +17,10 @@ class StaffTable extends Doctrine_Table
         return Doctrine_Core::getTable('Staff');
     }
 
+    public function retrieveAssociatedUser(Doctrine_Query $q) {
+      $rootAlias = $q->getRootAlias();
+      $q->leftJoin($rootAlias . '.User u');
+      return $q;
+    }
+
 }
