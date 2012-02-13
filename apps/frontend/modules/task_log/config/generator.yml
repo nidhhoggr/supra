@@ -1,0 +1,27 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           TaskLog
+    theme:                 admin
+    non_verbose_templates: false
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          task_log
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Task Log Management
+        display: [title,task,task_work]
+      filter:
+        display: [task_id,task_work_id,staff_id,title,description,gen_desc_id,staff_comment,clock_in,clock_out,hours_logged,mileage]
+      form:
+        display: [task_id,task_work_id,staff_id,title,description,gen_desc_id,staff_comment,clock_in,clock_out,hours_logged,mileage]
+      edit:
+        title: editing Task Log %%title%%
+      new:
+        title: Task Log Creation

@@ -21,11 +21,10 @@
   }
 </style>
 <div id="jobs">
+  <?php if($client): ?>
   <h2 class="welcome">
-    Welcome, 
-    <a href="<?php echo url_for('client/show?id='.$client->getId()) ?>">
-    <?php echo $client; ?>
-    </a>
+    Welcome,
+    <?php link_to($sf_user,'client/show?id='.$client->getId()) ?>    
   </h2>
   <h2>Accounts</h2>
   <div class="client_accounts">
@@ -40,4 +39,15 @@
       </div>
     <?php endforeach ?>      
   </div>
+  <?php else: ?>
+  <h2>Clients</h2>
+  <div class="clients">
+    <ul>
+      <?php foreach($clients as $client):?>
+        <li>
+          <?php echo link_to($client,'client/show?id='.$client->getUser()->getId()) ?>                 </li>
+      <?php endforeach ?>
+    </ul>
+  </div>
+  <?php endif ?>
 </div>

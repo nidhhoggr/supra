@@ -127,6 +127,11 @@ class sfGuardSecurityUser extends sfBasicSecurityUser
     $this->clearCredentials();
     $this->addCredentials($user->getAllPermissionNames());
 
+    if ($this->isSuperAdmin()) {
+        $this->addCredential('superadmin');
+    }
+
+
     // save last login
     $user->setLastLogin(date('Y-m-d H:i:s'));
     $user->save($con);

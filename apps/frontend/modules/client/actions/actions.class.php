@@ -12,11 +12,17 @@ class clientActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $u = Doctrine_Query::create()
-      ->from('Client c')
-      ->where('c.user_id = ?', $this->getUser()->getId());
-	    
-    $this->client = $u->fetchOne();
+        $this->client = Doctrine_Query::create()
+                        ->from('Client c')
+                        ->where('c.user_id = ?', $this->getUser()->getId())
+               	        ->fetchOne();   
+
+        if(!$this->client) {
+            $this->clients = Doctrine_Query::create()
+                             ->from('Client c, c.User u')
+                             ->orderBy('u.first_name ASC')
+                             ->execute();
+        }
   }
 
   public function executeShow(sfWebRequest $request)

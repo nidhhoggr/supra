@@ -13,6 +13,8 @@ class TaskLogForm extends BaseTaskLogForm
   public function configure()
   {
       $this->unsetTimeStampable();
+     
+      $this->setDefault('staff_id',Staff::loggedIn());
   }
 
 }

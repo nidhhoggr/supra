@@ -46,6 +46,18 @@ class Staff extends BaseStaff {
          ->andWhere('t.task_status_id <> ?', 3)->count();
     }
 
+    public static function loggedIn() {
+      $currentUser = sfContext::getInstance()->getUser();
+
+      $q = Doctrine_Query::create()
+      ->select('s.id')
+      ->from('Staff s')
+      ->where('s.user_id = ?',$currentUser->getId())
+      ->fetchOne()->id;
+
+      return $q;
+    }
+
     function __toString() {
       return $this->getFullName();
     }
