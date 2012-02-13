@@ -20,19 +20,20 @@ class AccountInvoice extends BaseAccountInvoice {
              ->execute();
   }
 
-  public function getTotal() {
-    $total = 0;
+  public function getTotal($is_admin = false) {
+      $total = 0;
  
-    foreach($this->getAccountInvoiceTask() as $inv_task) {
-        $task = $inv_task->getTask();
-        $work = $task->getTaskWork();
-        foreach($task->getTaskLog() as $log) {
-            if($log->getHours()) {
-                $total += $work->getRate() * $log->getHours();
-            }
-        }
-    }
+      foreach($this->getAccountInvoiceTask() as $inv_task) {
+          $task = $inv_task->getTask();
+          $work = $task->getTaskWork();
+          foreach($task->getTaskLog() as $log) {
+              //must be admin to override is_viewable
+              if($log->getHours() && ($log->getIsViewable() || $is_admin)) {
+                  $total += $work->getRate() * $log->getHours();
+              }
+          }
+      }
 
-    return round($total,2);
+      return round($total,2);
   }
 }

@@ -6,7 +6,6 @@ Client:
     id:           { type: integer, primary: true, autoincrement: true }
     user_id:      { type: integer(255) }
     track_record: { type: clob }
-    
   relations: 
     User:
       class: sfGuardUser
@@ -15,6 +14,7 @@ Client:
       type: one
       foreignType: one
       foreignAlias: Client
+      onDelete: cascade
 
 Staff:
   actAs: [Timestampable]
@@ -45,7 +45,6 @@ Account:
     client_id:    { type: integer }    
     plan_id:      { type: integer }
     title:        { type: string(255) }
-    credit:       { type: decimal }
     domain_name:  { type: string(255) }
     description:  { type: clob }
     active:       { type: boolean, notnull: true, default: 0 }
@@ -71,11 +70,15 @@ Period:
     description: { type: clob }
     days:        { type: integer }
 
-DeductionsLog:
+Deduction:
+  actAs: [Timestampable]
   columns:
     id:          { type: integer, primary: true, autoincrement: true }
-    account_id:  { type: intger }
-    deduced_on:  { type: timestamp }  
+    account_invoice_id: { type: integer, notnull: true }
+    title:       { type: string(255) }
+    description: { type: clob }
+    deduction:   { type: decimal }
+    approved:    { type: boolean, notnull: true, default: 1 }
 
 AccountInvoice:
   actAs: [Timestampable]
@@ -83,14 +86,24 @@ AccountInvoice:
     id:          { type: integer, primary: true, autoincrement: true }
     account_id:  { type: integer }
     ref_no:      { type: string(255), unique: true }
-    ammount_due: { type: decimal }
     description: { type: clob }
     paid_off:    { type: boolean, notnull: true, default: 0 }
+    is_viewable: { type: boolean, notnull: true, default: 0 }
+  relations:
+    Tasks: 
+      refClass: AccountInvoiceTask
+      class: Task
+      foreignAlias: AccountInvoice
 
 AccountInvoiceTask:
   columns: 
     account_invoice_id: { type: integer, notnull: true }
     task_id :           { type: integer, notnull: true }
+  relations: 
+    AccountInovice:
+      foreignAlias: AccountInoviceTask 
+    Task:
+      foreignAlias: AccountInvoiceTask
 
 AccountRecord:
   actAs: [Timestampable]
@@ -161,7 +174,8 @@ TaskLog:
     hours_logged:  { type: decimal }
     mileage:       { type: decimal }
     percentage:    { type: integer }
-    is_billable:   { type: boolean }
+    is_billable:   { type: boolean, notnull: true, default: 1 }
+    is_viewable:   { type: boolean, notnull: true, default: 0 }
     
 GenDesc:
   columns:

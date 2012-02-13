@@ -7,17 +7,17 @@
  * 
  * @property integer $account_invoice_id
  * @property integer $task_id
- * @property AccountInvoice $AccountInvoice
  * @property Task $Task
+ * @property AccountInvoice $AccountInvoice
  * 
  * @method integer            getAccountInvoiceId()   Returns the current record's "account_invoice_id" value
  * @method integer            getTaskId()             Returns the current record's "task_id" value
- * @method AccountInvoice     getAccountInvoice()     Returns the current record's "AccountInvoice" value
  * @method Task               getTask()               Returns the current record's "Task" value
+ * @method AccountInvoice     getAccountInvoice()     Returns the current record's "AccountInvoice" value
  * @method AccountInvoiceTask setAccountInvoiceId()   Sets the current record's "account_invoice_id" value
  * @method AccountInvoiceTask setTaskId()             Sets the current record's "task_id" value
- * @method AccountInvoiceTask setAccountInvoice()     Sets the current record's "AccountInvoice" value
  * @method AccountInvoiceTask setTask()               Sets the current record's "Task" value
+ * @method AccountInvoiceTask setAccountInvoice()     Sets the current record's "AccountInvoice" value
  * 
  * @package    supra
  * @subpackage model
@@ -34,22 +34,21 @@ abstract class BaseAccountInvoiceTask extends sfDoctrineRecord
              'notnull' => true,
              'length' => 8,
              ));
-        $this->hasColumn('task_id', 'integer', 8, array(
+        $this->hasColumn('task_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 8,
              ));
     }
 
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('AccountInvoice', array(
-             'local' => 'account_invoice_id',
-             'foreign' => 'id'));
-
         $this->hasOne('Task', array(
              'local' => 'task_id',
+             'foreign' => 'id'));
+
+        $this->hasOne('AccountInvoice', array(
+             'local' => 'account_invoice_id',
              'foreign' => 'id'));
     }
 }

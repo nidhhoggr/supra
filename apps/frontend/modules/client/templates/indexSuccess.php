@@ -24,7 +24,7 @@
   <h2 class="welcome">
     Welcome, 
     <a href="<?php echo url_for('client/show?id='.$client->getId()) ?>">
-    <?php echo $client->getFirstname() . ' ' . $client->getLastname(); ?>
+    <?php echo $client; ?>
     </a>
   </h2>
   <h2>Accounts</h2>

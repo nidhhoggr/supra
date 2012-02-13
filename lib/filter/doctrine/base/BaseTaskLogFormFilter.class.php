@@ -26,6 +26,7 @@ abstract class BaseTaskLogFormFilter extends BaseFormFilterDoctrine
       'mileage'       => new sfWidgetFormFilterInput(),
       'percentage'    => new sfWidgetFormFilterInput(),
       'is_billable'   => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
+      'is_viewable'   => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
       'created_at'    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'    => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
@@ -44,6 +45,7 @@ abstract class BaseTaskLogFormFilter extends BaseFormFilterDoctrine
       'mileage'       => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
       'percentage'    => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'is_billable'   => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
+      'is_viewable'   => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
       'created_at'    => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at'    => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
     ));
@@ -79,6 +81,7 @@ abstract class BaseTaskLogFormFilter extends BaseFormFilterDoctrine
       'mileage'       => 'Number',
       'percentage'    => 'Number',
       'is_billable'   => 'Boolean',
+      'is_viewable'   => 'Boolean',
       'created_at'    => 'Date',
       'updated_at'    => 'Date',
     );

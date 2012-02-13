@@ -1,3 +1,12 @@
+deduction:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Deduction
+    module:               deduction
+    prefix_path:          /deduction
+    column:               id
+    with_wildcard_routes: true
+
 period:
   class: sfDoctrineRouteCollection
   options:

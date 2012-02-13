@@ -14,7 +14,7 @@ class clientActions extends sfActions
   {
     $u = Doctrine_Query::create()
       ->from('Client c')
-      ->where('c.id = ?', $this->getUser()->getId());
+      ->where('c.user_id = ?', $this->getUser()->getId());
 	    
     $this->client = $u->fetchOne();
   }

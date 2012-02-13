@@ -29,6 +29,7 @@ abstract class BaseTaskLogForm extends BaseFormDoctrine
       'mileage'       => new sfWidgetFormInputText(),
       'percentage'    => new sfWidgetFormInputText(),
       'is_billable'   => new sfWidgetFormInputCheckbox(),
+      'is_viewable'   => new sfWidgetFormInputCheckbox(),
       'created_at'    => new sfWidgetFormDateTime(),
       'updated_at'    => new sfWidgetFormDateTime(),
     ));
@@ -48,6 +49,7 @@ abstract class BaseTaskLogForm extends BaseFormDoctrine
       'mileage'       => new sfValidatorNumber(array('required' => false)),
       'percentage'    => new sfValidatorInteger(array('required' => false)),
       'is_billable'   => new sfValidatorBoolean(array('required' => false)),
+      'is_viewable'   => new sfValidatorBoolean(array('required' => false)),
       'created_at'    => new sfValidatorDateTime(),
       'updated_at'    => new sfValidatorDateTime(),
     ));

@@ -8,27 +8,33 @@
  * @property integer $id
  * @property integer $account_id
  * @property string $ref_no
- * @property decimal $ammount_due
  * @property clob $description
  * @property boolean $paid_off
+ * @property boolean $is_viewable
+ * @property Doctrine_Collection $Tasks
  * @property Account $Account
+ * @property Doctrine_Collection $Deduction
  * @property Doctrine_Collection $AccountInvoiceTask
  * 
  * @method integer             getId()                 Returns the current record's "id" value
  * @method integer             getAccountId()          Returns the current record's "account_id" value
  * @method string              getRefNo()              Returns the current record's "ref_no" value
- * @method decimal             getAmmountDue()         Returns the current record's "ammount_due" value
  * @method clob                getDescription()        Returns the current record's "description" value
  * @method boolean             getPaidOff()            Returns the current record's "paid_off" value
+ * @method boolean             getIsViewable()         Returns the current record's "is_viewable" value
+ * @method Doctrine_Collection getTasks()              Returns the current record's "Tasks" collection
  * @method Account             getAccount()            Returns the current record's "Account" value
+ * @method Doctrine_Collection getDeduction()          Returns the current record's "Deduction" collection
  * @method Doctrine_Collection getAccountInvoiceTask() Returns the current record's "AccountInvoiceTask" collection
  * @method AccountInvoice      setId()                 Sets the current record's "id" value
  * @method AccountInvoice      setAccountId()          Sets the current record's "account_id" value
  * @method AccountInvoice      setRefNo()              Sets the current record's "ref_no" value
- * @method AccountInvoice      setAmmountDue()         Sets the current record's "ammount_due" value
  * @method AccountInvoice      setDescription()        Sets the current record's "description" value
  * @method AccountInvoice      setPaidOff()            Sets the current record's "paid_off" value
+ * @method AccountInvoice      setIsViewable()         Sets the current record's "is_viewable" value
+ * @method AccountInvoice      setTasks()              Sets the current record's "Tasks" collection
  * @method AccountInvoice      setAccount()            Sets the current record's "Account" value
+ * @method AccountInvoice      setDeduction()          Sets the current record's "Deduction" collection
  * @method AccountInvoice      setAccountInvoiceTask() Sets the current record's "AccountInvoiceTask" collection
  * 
  * @package    supra
@@ -55,13 +61,15 @@ abstract class BaseAccountInvoice extends sfDoctrineRecord
              'unique' => true,
              'length' => 255,
              ));
-        $this->hasColumn('ammount_due', 'decimal', null, array(
-             'type' => 'decimal',
-             ));
         $this->hasColumn('description', 'clob', null, array(
              'type' => 'clob',
              ));
         $this->hasColumn('paid_off', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             'default' => 0,
+             ));
+        $this->hasColumn('is_viewable', 'boolean', null, array(
              'type' => 'boolean',
              'notnull' => true,
              'default' => 0,
@@ -71,9 +79,18 @@ abstract class BaseAccountInvoice extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
+        $this->hasMany('Task as Tasks', array(
+             'refClass' => 'AccountInvoiceTask',
+             'local' => 'account_invoice_id',
+             'foreign' => 'task_id'));
+
         $this->hasOne('Account', array(
              'local' => 'account_id',
              'foreign' => 'id'));
+
+        $this->hasMany('Deduction', array(
+             'local' => 'id',
+             'foreign' => 'account_invoice_id'));
 
         $this->hasMany('AccountInvoiceTask', array(
              'local' => 'id',

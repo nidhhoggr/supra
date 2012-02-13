@@ -27,13 +27,14 @@ function usd($price) {
       <td><?php echo $account_invoice->getDescription() ?></td>
     </tr>
     <?php foreach($account_invoice->getAccountInvoiceTask() as $inv_task): ?>
+    <?php 
+        $task = $inv_task->getTask();
+        $work = $task->getTaskWork();
+    ?>
+         
     <tr>
-      <th>Tasks</th>
+      <th>Task</th>
       <td>
-          <?php 
-            $task = $inv_task->getTask(); 
-            $work = $task->getTaskWork();
-          ?>
           <p><?php echo link_to($task->getName(),'task/show?id='.$task->getId()) ?></p>
           <p><?php echo $task->getDescription() ?>
       </td>
@@ -43,6 +44,7 @@ function usd($price) {
       <td>
         <ol>
           <?php foreach($task->getTaskLog() as $log):?>
+          <?php if(!$log->getIsViewable()) continue; ?>
           <li>
             <p>
               <?php echo $log->getTitle() . ' - '; ?>
@@ -57,11 +59,15 @@ function usd($price) {
           </li>
           <?php endforeach ?>
         </ol>
+      </td>
+    </tr>
+    <?php endforeach ?>
+    <tr>
+      <td>
         <hr />
         <p>Total: <?php echo usd($total) ?></p>
       </td>
     </tr>
-    <?php endforeach ?>
   </tbody>
 </table>
 

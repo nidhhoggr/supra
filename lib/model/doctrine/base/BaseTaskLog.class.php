@@ -19,6 +19,7 @@
  * @property decimal $mileage
  * @property integer $percentage
  * @property boolean $is_billable
+ * @property boolean $is_viewable
  * @property Task $Task
  * @property TaskWork $TaskWork
  * @property Staff $Staff
@@ -38,6 +39,7 @@
  * @method decimal   getMileage()       Returns the current record's "mileage" value
  * @method integer   getPercentage()    Returns the current record's "percentage" value
  * @method boolean   getIsBillable()    Returns the current record's "is_billable" value
+ * @method boolean   getIsViewable()    Returns the current record's "is_viewable" value
  * @method Task      getTask()          Returns the current record's "Task" value
  * @method TaskWork  getTaskWork()      Returns the current record's "TaskWork" value
  * @method Staff     getStaff()         Returns the current record's "Staff" value
@@ -56,6 +58,7 @@
  * @method TaskLog   setMileage()       Sets the current record's "mileage" value
  * @method TaskLog   setPercentage()    Sets the current record's "percentage" value
  * @method TaskLog   setIsBillable()    Sets the current record's "is_billable" value
+ * @method TaskLog   setIsViewable()    Sets the current record's "is_viewable" value
  * @method TaskLog   setTask()          Sets the current record's "Task" value
  * @method TaskLog   setTaskWork()      Sets the current record's "TaskWork" value
  * @method TaskLog   setStaff()         Sets the current record's "Staff" value
@@ -122,6 +125,13 @@ abstract class BaseTaskLog extends sfDoctrineRecord
              ));
         $this->hasColumn('is_billable', 'boolean', null, array(
              'type' => 'boolean',
+             'notnull' => true,
+             'default' => 1,
+             ));
+        $this->hasColumn('is_viewable', 'boolean', null, array(
+             'type' => 'boolean',
+             'notnull' => true,
+             'default' => 0,
              ));
     }
 

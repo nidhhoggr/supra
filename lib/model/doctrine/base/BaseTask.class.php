@@ -21,6 +21,7 @@
  * @property TaskType $TaskType
  * @property TaskPriority $TaskPriority
  * @property TaskWork $TaskWork
+ * @property Doctrine_Collection $AccountInvoice
  * @property Doctrine_Collection $AccountInvoiceTask
  * @property Doctrine_Collection $TaskComment
  * @property Doctrine_Collection $TaskLog
@@ -41,6 +42,7 @@
  * @method TaskType            getTaskType()           Returns the current record's "TaskType" value
  * @method TaskPriority        getTaskPriority()       Returns the current record's "TaskPriority" value
  * @method TaskWork            getTaskWork()           Returns the current record's "TaskWork" value
+ * @method Doctrine_Collection getAccountInvoice()     Returns the current record's "AccountInvoice" collection
  * @method Doctrine_Collection getAccountInvoiceTask() Returns the current record's "AccountInvoiceTask" collection
  * @method Doctrine_Collection getTaskComment()        Returns the current record's "TaskComment" collection
  * @method Doctrine_Collection getTaskLog()            Returns the current record's "TaskLog" collection
@@ -60,6 +62,7 @@
  * @method Task                setTaskType()           Sets the current record's "TaskType" value
  * @method Task                setTaskPriority()       Sets the current record's "TaskPriority" value
  * @method Task                setTaskWork()           Sets the current record's "TaskWork" value
+ * @method Task                setAccountInvoice()     Sets the current record's "AccountInvoice" collection
  * @method Task                setAccountInvoiceTask() Sets the current record's "AccountInvoiceTask" collection
  * @method Task                setTaskComment()        Sets the current record's "TaskComment" collection
  * @method Task                setTaskLog()            Sets the current record's "TaskLog" collection
@@ -148,6 +151,11 @@ abstract class BaseTask extends sfDoctrineRecord
         $this->hasOne('TaskWork', array(
              'local' => 'task_work_id',
              'foreign' => 'id'));
+
+        $this->hasMany('AccountInvoice', array(
+             'refClass' => 'AccountInvoiceTask',
+             'local' => 'task_id',
+             'foreign' => 'account_invoice_id'));
 
         $this->hasMany('AccountInvoiceTask', array(
              'local' => 'id',

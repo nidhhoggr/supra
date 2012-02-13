@@ -56,10 +56,8 @@
           <?php echo $comment->getDateTimeObject('created_at')->format('M d, Y h:i a') ?>
         </p>
         <p>
-          <?php
-            echo $comment->getTitle();
-            echo $comment->getComment();
-          ?>
+          <b><?php echo $comment->getTitle() ?></b>
+          <?php echo $comment->getComment() ?>
         </p>
         </li>
         <?php endforeach ?>
@@ -73,6 +71,7 @@
       <td>
         <ol>
           <?php foreach($task->getTaskLog() as $log):?>
+          <?php if(!$log->getIsViewable()) continue; ?>
             <li>
               <p><?php echo $log->getTitle() ?> -
               <?php include_partial('work/linkto', array('work' => $log->getTaskWork())) ?>

@@ -1,7 +1,7 @@
 <table>
   <tbody>
     <tr>
-      <td><?php echo $staff->getFirstname() . ' ' . $staff->getLastname() . ' - ' . $staff->getTitle() ?></td>
+      <td><?php echo $staff . ' - ' . $staff->getTitle() ?></td>
     </tr>
     <tr>
       <th>Bio:</th>

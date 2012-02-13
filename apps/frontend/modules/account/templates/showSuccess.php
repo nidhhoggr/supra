@@ -12,12 +12,6 @@
         )
       </td>
     </tr>
-    <?php if($account->getCredit()): ?>
-    <tr>
-      <th>Credit</th>
-      <td>$<?php echo $account->getCredit() ?></td>
-    </tr>
-    <?php endif ?>
     <?php if($account->getDomainName()): ?>
     <tr>
       <th>Domain:</th>
