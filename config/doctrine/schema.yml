@@ -49,6 +49,37 @@ Account:
     description:  { type: clob }
     active:       { type: boolean, notnull: true, default: 0 }
 
+AccountRate:
+  columns:       
+    id:           { type: integer, primary: true, autoincrement: true }
+    account_id:   { type: integer, notnull: true }
+    task_work_id: { type: integer, notnull: true }
+    title:        { type: string(255) }
+    description:  { type: clob }
+    hour_qouta:   { type: decimal } 
+    rate_before:  { type: decimal }
+    rate_after:   { type: decimal }
+    
+Credential:
+  actAs: [Timestampable]
+  columns:
+    id:                 { type: integer, primary: true, autoincrement: true }
+    account_id:         { type: integer, notnull: true }  
+    credential_type_id: { type: integer, notnull: true }
+    name:               { type: string(255) }
+    internal_ip:        { type: string(255) }
+    external_ip:        { type: string(255) }
+    device:             { type: string(255) }
+    url:                { type: string(255) }
+    user:               { type: string(255) }
+    pass:               { type: string(255) }
+    notes:              { type: clob } 
+
+CredentialType:
+  columns: 
+    id:   { type: integer, primary: true, autoincrement: true }
+    name: { type: string(255) } 
+
 AccountPlan:
   actAs: [Timestampable]
   columns: 

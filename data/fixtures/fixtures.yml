@@ -66,13 +66,11 @@ AccountInvoice:
   invoice_<?php echo $i*2-1 ?>:
     account_id: <?php echo $i*2-1 . "\n" ?>
     ref_no: <?php echo 320388 + ($i * 2 - 1) . "\n" ?>
-    ammount_due: 300.00
     description: for the whole design and implemeantation of the site good customer discount
     paid_off: 1
   invoice_<?php echo $i*2 ?>:
     account_id: <?php echo $i*2  . "\n" ?>
     ref_no: <?php echo 320388 + ($i * 2) . "\n" ?>
-    ammount_due: 100.00
     description: built a simple calculator
     paid_off: 0
 <?php endfor ?>

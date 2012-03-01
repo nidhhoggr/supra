@@ -14,6 +14,8 @@
  * @property boolean $active
  * @property Client $Client
  * @property Plan $Plan
+ * @property Doctrine_Collection $AccountRate
+ * @property Doctrine_Collection $Credential
  * @property Doctrine_Collection $AccountPlan
  * @property Doctrine_Collection $AccountInvoice
  * @property Doctrine_Collection $AccountRecord
@@ -28,6 +30,8 @@
  * @method boolean             getActive()         Returns the current record's "active" value
  * @method Client              getClient()         Returns the current record's "Client" value
  * @method Plan                getPlan()           Returns the current record's "Plan" value
+ * @method Doctrine_Collection getAccountRate()    Returns the current record's "AccountRate" collection
+ * @method Doctrine_Collection getCredential()     Returns the current record's "Credential" collection
  * @method Doctrine_Collection getAccountPlan()    Returns the current record's "AccountPlan" collection
  * @method Doctrine_Collection getAccountInvoice() Returns the current record's "AccountInvoice" collection
  * @method Doctrine_Collection getAccountRecord()  Returns the current record's "AccountRecord" collection
@@ -41,6 +45,8 @@
  * @method Account             setActive()         Sets the current record's "active" value
  * @method Account             setClient()         Sets the current record's "Client" value
  * @method Account             setPlan()           Sets the current record's "Plan" value
+ * @method Account             setAccountRate()    Sets the current record's "AccountRate" collection
+ * @method Account             setCredential()     Sets the current record's "Credential" collection
  * @method Account             setAccountPlan()    Sets the current record's "AccountPlan" collection
  * @method Account             setAccountInvoice() Sets the current record's "AccountInvoice" collection
  * @method Account             setAccountRecord()  Sets the current record's "AccountRecord" collection
@@ -97,6 +103,14 @@ abstract class BaseAccount extends sfDoctrineRecord
         $this->hasOne('Plan', array(
              'local' => 'plan_id',
              'foreign' => 'id'));
+
+        $this->hasMany('AccountRate', array(
+             'local' => 'id',
+             'foreign' => 'account_id'));
+
+        $this->hasMany('Credential', array(
+             'local' => 'id',
+             'foreign' => 'account_id'));
 
         $this->hasMany('AccountPlan', array(
              'local' => 'id',

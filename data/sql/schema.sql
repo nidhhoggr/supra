@@ -2,8 +2,11 @@ CREATE TABLE account (id BIGINT AUTO_INCREMENT, client_id BIGINT, plan_id BIGINT
 CREATE TABLE account_invoice (id BIGINT AUTO_INCREMENT, account_id BIGINT, ref_no VARCHAR(255) UNIQUE, description LONGTEXT, paid_off TINYINT(1) DEFAULT '0' NOT NULL, is_viewable TINYINT(1) DEFAULT '0' NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX account_id_idx (account_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE account_invoice_task (id BIGINT AUTO_INCREMENT, account_invoice_id BIGINT NOT NULL, task_id BIGINT NOT NULL, INDEX task_id_idx (task_id), INDEX account_invoice_id_idx (account_invoice_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE account_plan (id BIGINT AUTO_INCREMENT, account_id BIGINT NOT NULL, plan_id BIGINT NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX account_id_idx (account_id), INDEX plan_id_idx (plan_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE account_rate (id BIGINT AUTO_INCREMENT, account_id BIGINT NOT NULL, task_work_id BIGINT NOT NULL, title VARCHAR(255), description LONGTEXT, hour_qouta DECIMAL(18, 2), rate_before DECIMAL(18, 2), rate_after DECIMAL(18, 2), INDEX account_id_idx (account_id), INDEX task_work_id_idx (task_work_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE account_record (id BIGINT AUTO_INCREMENT, account_id BIGINT, name VARCHAR(255) NOT NULL, description LONGTEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX account_id_idx (account_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE client (id BIGINT AUTO_INCREMENT, user_id BIGINT, track_record LONGTEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE credential (id BIGINT AUTO_INCREMENT, account_id BIGINT NOT NULL, credential_type_id BIGINT NOT NULL, name VARCHAR(255), internal_ip VARCHAR(255), external_ip VARCHAR(255), device VARCHAR(255), url VARCHAR(255), user VARCHAR(255), pass VARCHAR(255), notes LONGTEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX account_id_idx (account_id), INDEX credential_type_id_idx (credential_type_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE credential_type (id BIGINT AUTO_INCREMENT, name VARCHAR(255), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE deduction (id BIGINT AUTO_INCREMENT, account_invoice_id BIGINT NOT NULL, title VARCHAR(255), description LONGTEXT, deduction DECIMAL(18, 2), approved TINYINT(1) DEFAULT '1' NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX account_invoice_id_idx (account_invoice_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE gen_desc (id BIGINT AUTO_INCREMENT, title TEXT, description LONGTEXT, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE period (id BIGINT AUTO_INCREMENT, title VARCHAR(255), description LONGTEXT, days BIGINT, PRIMARY KEY(id)) ENGINE = INNODB;
@@ -17,7 +20,6 @@ CREATE TABLE task_priority (id BIGINT AUTO_INCREMENT, name VARCHAR(255), PRIMARY
 CREATE TABLE task_status (id BIGINT AUTO_INCREMENT, name VARCHAR(255), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE task_type (id BIGINT AUTO_INCREMENT, name VARCHAR(255), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE task_work (id BIGINT AUTO_INCREMENT, name VARCHAR(255), rate DECIMAL(18, 2), description LONGTEXT, PRIMARY KEY(id)) ENGINE = INNODB;
-CREATE TABLE test_client (id BIGINT AUTO_INCREMENT, first_name VARCHAR(255), last_name VARCHAR(255), email_address VARCHAR(255) NOT NULL UNIQUE, username VARCHAR(128) NOT NULL UNIQUE, algorithm VARCHAR(128) DEFAULT 'sha1' NOT NULL, salt VARCHAR(128), password VARCHAR(128), is_active TINYINT(1) DEFAULT '1', is_super_admin TINYINT(1) DEFAULT '0', last_login DATETIME, track_record LONGTEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX is_active_idx_idx (is_active), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_forgot_password (id BIGINT AUTO_INCREMENT, user_id BIGINT NOT NULL, unique_key VARCHAR(255), expires_at DATETIME NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_group (id BIGINT AUTO_INCREMENT, name VARCHAR(255) UNIQUE, description TEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_group_permission (group_id BIGINT, permission_id BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(group_id, permission_id)) ENGINE = INNODB;
@@ -33,8 +35,12 @@ ALTER TABLE account_invoice_task ADD CONSTRAINT account_invoice_task_task_id_tas
 ALTER TABLE account_invoice_task ADD CONSTRAINT account_invoice_task_account_invoice_id_account_invoice_id FOREIGN KEY (account_invoice_id) REFERENCES account_invoice(id);
 ALTER TABLE account_plan ADD CONSTRAINT account_plan_plan_id_plan_id FOREIGN KEY (plan_id) REFERENCES plan(id);
 ALTER TABLE account_plan ADD CONSTRAINT account_plan_account_id_account_id FOREIGN KEY (account_id) REFERENCES account(id);
+ALTER TABLE account_rate ADD CONSTRAINT account_rate_task_work_id_task_work_id FOREIGN KEY (task_work_id) REFERENCES task_work(id);
+ALTER TABLE account_rate ADD CONSTRAINT account_rate_account_id_account_id FOREIGN KEY (account_id) REFERENCES account(id);
 ALTER TABLE account_record ADD CONSTRAINT account_record_account_id_account_id FOREIGN KEY (account_id) REFERENCES account(id);
 ALTER TABLE client ADD CONSTRAINT client_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id) ON DELETE CASCADE;
+ALTER TABLE credential ADD CONSTRAINT credential_credential_type_id_credential_type_id FOREIGN KEY (credential_type_id) REFERENCES credential_type(id);
+ALTER TABLE credential ADD CONSTRAINT credential_account_id_account_id FOREIGN KEY (account_id) REFERENCES account(id);
 ALTER TABLE deduction ADD CONSTRAINT deduction_account_invoice_id_account_invoice_id FOREIGN KEY (account_invoice_id) REFERENCES account_invoice(id);
 ALTER TABLE plan ADD CONSTRAINT plan_period_id_period_id FOREIGN KEY (period_id) REFERENCES period(id);
 ALTER TABLE staff ADD CONSTRAINT staff_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id);

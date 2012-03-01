@@ -10,6 +10,7 @@
  * @property decimal $rate
  * @property clob $description
  * @property Doctrine_Collection $StaffTaskWork
+ * @property Doctrine_Collection $AccountRate
  * @property Doctrine_Collection $Task
  * @property Doctrine_Collection $TaskLog
  * 
@@ -18,6 +19,7 @@
  * @method decimal             getRate()          Returns the current record's "rate" value
  * @method clob                getDescription()   Returns the current record's "description" value
  * @method Doctrine_Collection getStaffTaskWork() Returns the current record's "StaffTaskWork" collection
+ * @method Doctrine_Collection getAccountRate()   Returns the current record's "AccountRate" collection
  * @method Doctrine_Collection getTask()          Returns the current record's "Task" collection
  * @method Doctrine_Collection getTaskLog()       Returns the current record's "TaskLog" collection
  * @method TaskWork            setId()            Sets the current record's "id" value
@@ -25,6 +27,7 @@
  * @method TaskWork            setRate()          Sets the current record's "rate" value
  * @method TaskWork            setDescription()   Sets the current record's "description" value
  * @method TaskWork            setStaffTaskWork() Sets the current record's "StaffTaskWork" collection
+ * @method TaskWork            setAccountRate()   Sets the current record's "AccountRate" collection
  * @method TaskWork            setTask()          Sets the current record's "Task" collection
  * @method TaskWork            setTaskLog()       Sets the current record's "TaskLog" collection
  * 
@@ -59,6 +62,10 @@ abstract class BaseTaskWork extends sfDoctrineRecord
     {
         parent::setUp();
         $this->hasMany('StaffTaskWork', array(
+             'local' => 'id',
+             'foreign' => 'task_work_id'));
+
+        $this->hasMany('AccountRate', array(
              'local' => 'id',
              'foreign' => 'task_work_id'));
 
