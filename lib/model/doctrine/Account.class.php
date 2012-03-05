@@ -12,6 +12,15 @@
  */
 class Account extends BaseAccount{
 
+  public function getViewableAccountInvoice() {
+
+      return Doctrine_Query::create() 
+             ->from('AccountInvoice ai')
+             ->where('ai.account_id = ?', $this->id)
+             ->andWhere('ai.is_viewable = 1')
+             ->execute();
+  }
+
   function __toString() {
 
     if($this->title)

@@ -20,6 +20,8 @@ CREATE TABLE task_priority (id BIGINT AUTO_INCREMENT, name VARCHAR(255), PRIMARY
 CREATE TABLE task_status (id BIGINT AUTO_INCREMENT, name VARCHAR(255), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE task_type (id BIGINT AUTO_INCREMENT, name VARCHAR(255), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE task_work (id BIGINT AUTO_INCREMENT, name VARCHAR(255), rate DECIMAL(18, 2), description LONGTEXT, PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE time_log (id BIGINT AUTO_INCREMENT, time_log_type_id BIGINT NOT NULL, staff_id BIGINT NOT NULL, time DATETIME NOT NULL, notes LONGTEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX time_log_type_id_idx (time_log_type_id), INDEX staff_id_idx (staff_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE time_log_type (id BIGINT AUTO_INCREMENT, name VARCHAR(255), clock_in TINYINT(1) NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_forgot_password (id BIGINT AUTO_INCREMENT, user_id BIGINT NOT NULL, unique_key VARCHAR(255), expires_at DATETIME NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_group (id BIGINT AUTO_INCREMENT, name VARCHAR(255) UNIQUE, description TEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_group_permission (group_id BIGINT, permission_id BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(group_id, permission_id)) ENGINE = INNODB;
@@ -58,6 +60,8 @@ ALTER TABLE task_log ADD CONSTRAINT task_log_task_work_id_task_work_id FOREIGN K
 ALTER TABLE task_log ADD CONSTRAINT task_log_task_id_task_id FOREIGN KEY (task_id) REFERENCES task(id);
 ALTER TABLE task_log ADD CONSTRAINT task_log_staff_id_staff_id FOREIGN KEY (staff_id) REFERENCES staff(id);
 ALTER TABLE task_log ADD CONSTRAINT task_log_gen_desc_id_gen_desc_id FOREIGN KEY (gen_desc_id) REFERENCES gen_desc(id);
+ALTER TABLE time_log ADD CONSTRAINT time_log_time_log_type_id_time_log_type_id FOREIGN KEY (time_log_type_id) REFERENCES time_log_type(id);
+ALTER TABLE time_log ADD CONSTRAINT time_log_staff_id_staff_id FOREIGN KEY (staff_id) REFERENCES staff(id);
 ALTER TABLE sf_guard_forgot_password ADD CONSTRAINT sf_guard_forgot_password_user_id_sf_guard_user_id FOREIGN KEY (user_id) REFERENCES sf_guard_user(id) ON DELETE CASCADE;
 ALTER TABLE sf_guard_group_permission ADD CONSTRAINT sf_guard_group_permission_permission_id_sf_guard_permission_id FOREIGN KEY (permission_id) REFERENCES sf_guard_permission(id) ON DELETE CASCADE;
 ALTER TABLE sf_guard_group_permission ADD CONSTRAINT sf_guard_group_permission_group_id_sf_guard_group_id FOREIGN KEY (group_id) REFERENCES sf_guard_group(id) ON DELETE CASCADE;

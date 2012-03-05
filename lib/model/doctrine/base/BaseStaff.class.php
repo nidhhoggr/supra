@@ -15,6 +15,7 @@
  * @property Doctrine_Collection $Task
  * @property Doctrine_Collection $TaskComment
  * @property Doctrine_Collection $TaskLog
+ * @property Doctrine_Collection $TimeLog
  * 
  * @method integer             getId()               Returns the current record's "id" value
  * @method integer             getUserId()           Returns the current record's "user_id" value
@@ -26,6 +27,7 @@
  * @method Doctrine_Collection getTask()             Returns the current record's "Task" collection
  * @method Doctrine_Collection getTaskComment()      Returns the current record's "TaskComment" collection
  * @method Doctrine_Collection getTaskLog()          Returns the current record's "TaskLog" collection
+ * @method Doctrine_Collection getTimeLog()          Returns the current record's "TimeLog" collection
  * @method Staff               setId()               Sets the current record's "id" value
  * @method Staff               setUserId()           Sets the current record's "user_id" value
  * @method Staff               setTitle()            Sets the current record's "title" value
@@ -36,6 +38,7 @@
  * @method Staff               setTask()             Sets the current record's "Task" collection
  * @method Staff               setTaskComment()      Sets the current record's "TaskComment" collection
  * @method Staff               setTaskLog()          Sets the current record's "TaskLog" collection
+ * @method Staff               setTimeLog()          Sets the current record's "TimeLog" collection
  * 
  * @package    supra
  * @subpackage model
@@ -90,6 +93,10 @@ abstract class BaseStaff extends sfDoctrineRecord
              'foreign' => 'staff_id'));
 
         $this->hasMany('TaskLog', array(
+             'local' => 'id',
+             'foreign' => 'staff_id'));
+
+        $this->hasMany('TimeLog', array(
              'local' => 'id',
              'foreign' => 'staff_id'));
 

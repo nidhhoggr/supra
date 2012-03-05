@@ -1,0 +1,25 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           TimeLog
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          time_log
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Time Log Management
+        display: [=time_log_type,time,staff]
+      filter:  ~
+      form:    ~
+      edit:
+        title: Modifying Time Log 
+      new:
+        title: Time Log Creation

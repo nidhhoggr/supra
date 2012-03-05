@@ -27,7 +27,16 @@
             <?php echo link_to('Account','account/index') ?>
           </li>
           <li>
+            <?php echo link_to('Account Credentials','credential/index') ?>
+          </li>
+          <li>
+            <?php echo link_to('Account Credential Types','credential_type/index') ?>
+          </li>
+          <li>
             <?php echo link_to('Account Invoices','invoice/index') ?>
+          </li>
+          <li>
+            <?php echo link_to('Account Rates','account_rate/index') ?>
           </li>
           <li>
             <?php echo link_to('Account Records','account_record/index') ?>
@@ -76,6 +85,12 @@
           </li>
           <li>
             <?php echo link_to('Task Work','task_work/index') ?>
+          </li>
+          <li>
+            <?php echo link_to('Time Logs','time_log/index') ?>
+          </li>
+          <li>
+            <?php echo link_to('Time Log Types','time_log_type/index') ?>
           </li>
         </ul>
       </div>

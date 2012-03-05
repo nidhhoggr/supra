@@ -34,8 +34,9 @@
       </div>
       <div class="client_associated">
         <?php include_partial('client/task', array('tasks' => $account->getTask())) ?>
-        <?php include_partial('client/invoice', array('invoices' => $account->getAccountInvoice())) ?>
+        <?php include_partial('client/invoice', array('invoices' => $account->getViewableAccountInvoice())) ?>
         <?php include_partial('client/record', array('records' => $account->getAccountRecord())) ?>
+        <?php include_partial('client/credentials', array('credentials' => $account->getCredential())) ?>
       </div>
     <?php endforeach ?>      
   </div>

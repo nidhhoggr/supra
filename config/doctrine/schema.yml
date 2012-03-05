@@ -207,10 +207,24 @@ TaskLog:
     percentage:    { type: integer }
     is_billable:   { type: boolean, notnull: true, default: 1 }
     is_viewable:   { type: boolean, notnull: true, default: 0 }
-    
+
+TimeLog:
+  actAs: [Timestampable]
+  columns:
+    id:               { type: integer, primary: true, autoincrement: true }
+    time_log_type_id: { type: integer, notnull: true }
+    staff_id:         { type: integer, notnull: true }
+    time:             { type: timestamp, notnull: true }
+    notes:            { type: clob } 
+
+TimeLogType: 
+  columns:
+    id:   { type: integer, primary: true, autoincrement: true }
+    name: { type: string(255) }
+    clock_in:   { type: boolean, notnull: true }
+
 GenDesc:
   columns:
     id:            { type:integer, primary: true, autoincrement: true }
     title:         { type: string }
     description:   { type: clob } 
-

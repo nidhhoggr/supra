@@ -1,3 +1,4 @@
+<?php if($tasks->count() > 0): ?>
 <div class="account_task">
   <h3>Tasks</h3>
   <?php foreach($tasks as $task): ?>
@@ -13,4 +14,4 @@
   </div>
   <?php endif ?>
 </div>
-
+<?php endif ?>

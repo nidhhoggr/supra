@@ -1,3 +1,48 @@
+time_log_type:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TimeLogType
+    module:               time_log_type
+    prefix_path:          /time_log_type
+    column:               id
+    with_wildcard_routes: true
+
+time_log:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TimeLog
+    module:               time_log
+    prefix_path:          /time_log
+    column:               id
+    with_wildcard_routes: true
+
+credential_type:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                CredentialType
+    module:               credential_type
+    prefix_path:          /credential_type
+    column:               id
+    with_wildcard_routes: true
+
+credential:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Credential
+    module:               credential
+    prefix_path:          /credential
+    column:               id
+    with_wildcard_routes: true
+
+account_rate:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                AccountRate
+    module:               account_rate
+    prefix_path:          /account_rate
+    column:               id
+    with_wildcard_routes: true
+
 deduction:
   class: sfDoctrineRouteCollection
   options:

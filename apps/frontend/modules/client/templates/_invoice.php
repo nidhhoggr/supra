@@ -1,3 +1,4 @@
+<?php if($invoices->count() > 0): ?>
 <div class="client_invoice">
   <h3>Invoices</h3>
   <?php foreach($invoices as $invoice): ?>
@@ -14,4 +15,4 @@
   </div>
   <?php endif ?>
 </div>
-
+<?php endif ?>

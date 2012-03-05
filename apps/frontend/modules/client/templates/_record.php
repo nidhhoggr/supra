@@ -1,3 +1,4 @@
+<?php if($records->count() > 0): ?>
 <div class="client_record">
   <h3>Records</h3>
   <?php foreach($records as $record): ?>
@@ -13,4 +14,4 @@
   </div>
   <?php endif ?>
 </div>
-
+<?php endif ?>

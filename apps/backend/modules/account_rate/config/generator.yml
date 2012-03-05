@@ -1,0 +1,25 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           AccountRate
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          account_rate
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Account Rate Management
+        display: [=title,account,task_work]
+      filter:  ~
+      form:    ~
+      edit:
+        title: Modifying Account Rate '%%title%%'
+      new:
+        title: Account Rate Creation
