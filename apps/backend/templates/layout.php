@@ -45,7 +45,7 @@
             <?php echo link_to('Clients','client/index') ?>
           </li>
           <li>
-            <?php echo link_to('Deductions','deductions/index') ?>
+            <?php echo link_to('Deductions','deduction/index') ?>
           </li>
           <li>
             <?php echo link_to('General Descriptions','gen_desc/index') ?>

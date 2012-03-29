@@ -1,32 +1,16 @@
 <table>
   <tbody>
     <tr>
-      <th>Id:</th>
-      <td><?php echo $client->getId() ?></td>
+      <th>Username:</th>
+      <td><?php echo $client->getUser()->getUsername() ?></td>
     </tr>
     <tr>
-      <th>User:</th>
-      <td><?php echo $client->getUserId() ?></td>
-    </tr>
-    <tr>
-      <th>Firstname:</th>
-      <td><?php echo $client->getFirstname() ?></td>
-    </tr>
-    <tr>
-      <th>Lastname:</th>
-      <td><?php echo $client->getLastname() ?></td>
+      <th>Full Name:</th>
+      <td><?php echo $client->getFullName() ?></td>
     </tr>
     <tr>
       <th>Track record:</th>
       <td><?php echo $client->getTrackRecord() ?></td>
-    </tr>
-    <tr>
-      <th>Created at:</th>
-      <td><?php echo $client->getCreatedAt() ?></td>
-    </tr>
-    <tr>
-      <th>Updated at:</th>
-      <td><?php echo $client->getUpdatedAt() ?></td>
     </tr>
   </tbody>
 </table>

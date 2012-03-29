@@ -213,3 +213,38 @@ TaskLog:
     hours_logged: 2
 <?php endfor ?>
 
+TimeLogType:
+  started_day:
+    name: Started Day
+    clock_in: 1
+  ended_day:
+    name: Ended Day
+    clock_in: 0
+  started_break:
+    name: Started Break
+    clock_in: 0
+  ended_break:
+    name: Ended Break
+    clock_in: 1
+
+Period:
+  yearly:
+    title: yearly
+    description: every year
+    days: 365
+  monthly:
+    title: monthly
+    description: every month
+    days: 31
+
+Plan:
+  monthly_hosting_plan:
+    title: Monthly Hosting Plan
+    description: host website with one hour of maintenance 
+    deduction: 70
+    Period: [monthly]
+
+GenDesc:
+  virus_removal:
+    title: Virus Removal
+    description: virus removal of the computer 
