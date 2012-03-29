@@ -14,11 +14,16 @@ abstract class BaseTimeLogForm extends BaseFormDoctrine
 {
   public function setup()
   {
+    if(!$this->getCurrentUser()->isSuperAdmin())
+        $staff_input = new sfWidgetFormInputHidden;
+    else 
+        $staff_input = new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Staff'), 'add_empty' => false));
+
     $this->setWidgets(array(
       'id'               => new sfWidgetFormInputHidden(),
       'time_log_type_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TimeLogType'), 'add_empty' => false)),
-      'staff_id'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Staff'), 'add_empty' => false)),
-      'time'             => new sfWidgetFormDateTime(),
+      'staff_id'         => $staff_input,
+      'time'             => $this->sfWidgetFormHumanTime(),
       'notes'            => new sfWidgetFormTextarea(),
       'created_at'       => new sfWidgetFormDateTime(),
       'updated_at'       => new sfWidgetFormDateTime(),

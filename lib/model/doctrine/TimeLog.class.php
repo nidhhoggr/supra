@@ -12,4 +12,14 @@
  */
 class TimeLog extends BaseTimeLog
 {
+
+    public static function getLastByStaffId($staff_id) {
+        return Doctrine_Query::create()
+        ->from('TimeLog t')
+        ->where('t.staff_id = ?', $staff_id)
+        ->orderBy('t.time DESC')
+        ->limit(1)
+        ->fetchOne();
+    }
+
 }

@@ -13,5 +13,9 @@ class TimeLogForm extends BaseTimeLogForm
   public function configure()
   {
       $this->unsetTimeStampable();
+ 
+      $this->setDefault('staff_id',Staff::loggedIn());
+
+      $this->setDefault('time',time());
   }
 }

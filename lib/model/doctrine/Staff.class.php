@@ -12,6 +12,13 @@
  */
 class Staff extends BaseStaff {
 
+    public static function fetchAllIds() {
+        return Doctrine_Query::create()
+               ->select('s.id')
+               ->from('Staff s')
+               ->fetchArray();
+    }
+
     public function getFullName() {
         return $this->getUser()->first_name . ' ' . $this->getUser()->last_name;
     }
