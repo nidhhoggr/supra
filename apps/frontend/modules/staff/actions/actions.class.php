@@ -12,9 +12,17 @@ class staffActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->staffs = Doctrine_Core::getTable('Staff')
-      ->createQuery('a')
-      ->execute();
+        $this->staff = Doctrine_Query::create()
+                        ->from('Staff s') 
+                        ->where('s.user_id = ?', $this->getUser()->getId())
+                        ->fetchOne();   
+    
+        if(!$this->staff) {
+            $this->staffs = Doctrine_Query::create()
+                             ->from('Staff s, s.User u')
+                             ->orderBy('u.first_name ASC')
+                             ->execute();
+        }
   }
 
   public function executeShow(sfWebRequest $request)

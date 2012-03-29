@@ -1,3 +1,2 @@
-<h1>Edit Staff</h1>
-
+<h1>Edit Employee</h1>
 <?php include_partial('form', array('form' => $form)) ?>

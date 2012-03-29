@@ -1,32 +1,55 @@
-<h1>Staffs List</h1>
+<div id="jobs">
+  <?php if($staff): ?>
+  <h2 class="welcome">
+    Welcome,
+    <?php echo link_to($sf_user,'staff/show?id='.$staff->getId()) ?>    
+  </h2>
+  <h2>Accounts</h2>
+  <div class="client_accounts">
 
+    <h3>Incomplete</h3>
+    <?php foreach($staff->getIncompleteTasks() as $task):?>
+        <div id="tasks_incomplete">
+            <?=link_to($task->getName(),'task/show?id='.$task->getId())?>
+            <?=link_to($task->getAccount(),'account/show?id='.$task->getAccount()->getId())?>
+        </div>
+    <?php endforeach ?>
+
+    <h3>Complete</h3>
+    <?php foreach($staff->getSomeCompleteTasks() as $task):?>
+        <div id="tasks_complete">
+            <?=link_to($task->getName(),'task/show?id='.$task->getId())?>
+            <?=link_to($task->getAccount(),'account/show?id='.$task->getAccount()->getId())?>
+        </div>
+    <?php endforeach ?>
+
+  </div>
+  <?php else: ?>
+
+<h1>Employees</h1>
 <table>
   <thead>
     <tr>
-      <th>Id</th>
-      <th>User</th>
-      <th>Firstname</th>
-      <th>Lastname</th>
+      <th>Employee</th>
       <th>Title</th>
-      <th>Bio</th>
-      <th>Created at</th>
-      <th>Updated at</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($staffs as $staff): ?>
     <tr>
-      <td><a href="<?php echo url_for('staff/show?id='.$staff->getId()) ?>"><?php echo $staff->getId() ?></a></td>
-      <td><?php echo $staff->getUserId() ?></td>
-      <td><?php echo $staff->getFirstname() ?></td>
-      <td><?php echo $staff->getLastname() ?></td>
+      <td><?php echo $staff ?></td>
       <td><?php echo $staff->getTitle() ?></td>
-      <td><?php echo $staff->getBio() ?></td>
-      <td><?php echo $staff->getCreatedAt() ?></td>
-      <td><?php echo $staff->getUpdatedAt() ?></td>
+      <td>
+          <?php echo link_to('show','staff/show?id='.$staff->getId()) ?>
+          <?php echo link_to('edit','staff/edit?id='.$staff->getId()) ?>
+      </td>
     </tr>
     <?php endforeach; ?>
   </tbody>
 </table>
 
   <a href="<?php echo url_for('staff/new') ?>">New</a>
+
+  <?php endif ?>
+</div>

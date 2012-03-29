@@ -33,6 +33,21 @@ class Staff extends BaseStaff {
       return  $this->getTaskLogs()->execute();
     }
 
+    public function getSomeCompleteTasks() {
+      return $this->getTasksByStaffId()
+        ->andWhere('t.task_status_id = ?', 3)
+        ->orderBy('t.created_at DESC')
+        ->limit(5)
+        ->execute();
+    }
+
+    public function getIncompleteTasks() {
+      return $this->getTasksByStaffId()
+        ->andWhere('t.task_status_id <> ?', 3)
+        ->orderBy('t.created_at DESC')
+        ->execute();
+    }
+
     public function countTaskLogsByStaffId() {
       return  $this->getTaskLogs()->count();
     }
