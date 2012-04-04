@@ -12,7 +12,6 @@
  */
 class TimeLog extends BaseTimeLog
 {
-
     public static function getLastByStaffId($staff_id) {
         return Doctrine_Query::create()
         ->from('TimeLog t')
@@ -20,6 +19,10 @@ class TimeLog extends BaseTimeLog
         ->orderBy('t.time DESC')
         ->limit(1)
         ->fetchOne();
+    }
+
+    public static function getTotalByStaffIdSince($staff_id,$since) {
+
     }
 
     public static function getTotalByStaffId($staff_id) {
@@ -30,34 +33,46 @@ class TimeLog extends BaseTimeLog
         ->orderBy('t.time DESC')
         ->fetchArray();
 
-        if(TimeLogType::getClockInById($times[0]['time_log_type_id'])) {
-            $times = array_reverse($times);    
-            array_pop($times);
-            $times = array_reverse($times);    
-        }
-
-        $times = TimeLog::popUnclosedSession($times);
-
-        $times = array_chunk($times,2);
+        return TimeLog::getTotal($times);
+    }
+ 
+    private static function getTotal($times) {
 
         $total = 0;
 
-        foreach($times as $time) {
-            $d_start    = new DateTime($time[1]['time']);
-            $d_end      = new DateTime($time[0]['time']);
-            $diff = $d_start->diff($d_end);
+        if($times && count($times) > 1) {
+            $times = TimeLog::popUnclosedSession($times);
+            
+            $times = array_chunk($times,2);
 
-            $hour = $diff->h;
-            $minute = $diff->i + ( $hour * 60 );
-            $second = $diff->s + ( $minute * 60 );
+            foreach($times as $time) {
 
-            $total += $second;
+                @$time1 = $time[1]['time'];
+                @$time2 = $time[0]['time'];
+
+                if($time1 && $time2) {
+
+                    $d_start    = new DateTime($time1);
+                    $d_end      = new DateTime($time2);
+    
+                    $diff = $d_start->diff($d_end);
+                   
+                    $day    = $diff->d;
+                    $hour   = $diff->h + ( $day * 24 );
+                    $minute = $diff->i + ( $hour * 60 );
+                    $second = $diff->s + ( $minute * 60 );
+
+                    $total += $second;
+                }
+            }
         }
+
         return $total;
     }
- 
-    private static function popUnclosedSession($times) {
 
+    private static function popUnclosedSession($times) {
+        
+        //pop a clockin from the last entry
         if(TimeLogType::getClockInById($times[0]['time_log_type_id'])) {
             $times = array_reverse($times);
             array_pop($times);
@@ -66,6 +81,7 @@ class TimeLog extends BaseTimeLog
 
         $times = array_reverse($times);    
         
+        //pop a clockout from the first entry
         if(!TimeLogType::getClockInById($times[0]['time_log_type_id'])) {
             $times = array_reverse($times);
             array_pop($times);
