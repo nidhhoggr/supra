@@ -21,27 +21,32 @@ class TimeLog extends BaseTimeLog
         ->fetchOne();
     }
 
-    public static function getTotalByStaffIdSince($staff_id,$since) {
-
+    public function queryByStaffId($staff_id) {
+        return Doctrine_Query::create()
+            ->from('TimeLog t')
+            ->where('t.staff_id = ?', $staff_id)
+            ->orderBy('t.time DESC');
     }
 
-    public static function getTotalByStaffId($staff_id) {
+    public static function getTotalByStaffIdSince($staff_id,$since) {
+    
+    }
 
-        $times = Doctrine_Query::create()
-        ->from('TimeLog t')
-        ->where('t.staff_id = ?', $staff_id)
-        ->orderBy('t.time DESC')
-        ->fetchArray();
+    public function getTotalByStaffId($staff_id) {
 
-        return TimeLog::getTotal($times);
+        $times = $this->queryByStaffId($staff_id)->fetchArray();
+
+        $total = $this->getTotal($times);
+
+        return $this->secToTime($total);
     }
  
-    private static function getTotal($times) {
+    private function getTotal($times) {
 
         $total = 0;
 
         if($times && count($times) > 1) {
-            $times = TimeLog::popUnclosedSession($times);
+            $times = $this->popUnclosedSession($times);
             
             $times = array_chunk($times,2);
 
@@ -70,7 +75,7 @@ class TimeLog extends BaseTimeLog
         return $total;
     }
 
-    private static function popUnclosedSession($times) {
+    private function popUnclosedSession($times) {
         
         //pop a clockin from the last entry
         if(TimeLogType::getClockInById($times[0]['time_log_type_id'])) {

@@ -19,6 +19,12 @@ class Staff extends BaseStaff {
                ->fetchArray();
     }
 
+
+    public function getTotalTime() {
+        $tl = new TimeLog();
+        return $tl->getTotalByStaffId($this->id);
+    }
+
     public function getFullName() {
         return $this->getUser()->first_name . ' ' . $this->getUser()->last_name;
     }
@@ -30,6 +36,7 @@ class Staff extends BaseStaff {
     }
 
     public function getTaskLogsByStaffId() {
+
       return  $this->getTaskLogs()->execute();
     }
 

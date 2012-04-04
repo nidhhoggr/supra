@@ -5,11 +5,8 @@
     <?php echo link_to($sf_user,'staff/show?id='.$staff->getId()) ?>    
   </h2>
   <?php
-      $seconds = TimeLog::getTotalByStaffId($staff->getId());
-
-      $t = new TimeLog();
-
-      var_dump($t->secToTime($seconds));
+      $total = $staff->getTotalTime();
+      echo "Total Hours: ". $total['h'] . ' hours ' . $total['m'] . ' minutes';
   ?>
   <h2>Accounts</h2>
   <div class="client_accounts">
