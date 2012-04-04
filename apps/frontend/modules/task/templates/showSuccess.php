@@ -71,7 +71,7 @@
       <td>
         <ol>
           <?php foreach($task->getTaskLog() as $log):?>
-          <?php if(!$log->getIsViewable()) continue; ?>
+          <?php if(!$log->getIsViewable() && !$sf_user->isStaff()) continue; ?>
             <li>
               <p><?php echo $log->getTitle() ?> -
               <?php include_partial('work/linkto', array('work' => $log->getTaskWork())) ?>

@@ -12,4 +12,10 @@
  */
 class TimeLogType extends BaseTimeLogType
 {
+
+    public static function getClockInById($id) {
+        $tlt = Doctrine::getTable('TimeLogType')->find($id);
+        return $tlt->clock_in;
+    }
+
 }

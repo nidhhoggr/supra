@@ -22,4 +22,81 @@ class TimeLog extends BaseTimeLog
         ->fetchOne();
     }
 
+    public static function getTotalByStaffId($staff_id) {
+
+        $times = Doctrine_Query::create()
+        ->from('TimeLog t')
+        ->where('t.staff_id = ?', $staff_id)
+        ->orderBy('t.time DESC')
+        ->fetchArray();
+
+        if(TimeLogType::getClockInById($times[0]['time_log_type_id'])) {
+            $times = array_reverse($times);    
+            array_pop($times);
+            $times = array_reverse($times);    
+        }
+
+        $times = TimeLog::popUnclosedSession($times);
+
+        $times = array_chunk($times,2);
+
+        $total = 0;
+
+        foreach($times as $time) {
+            $d_start    = new DateTime($time[1]['time']);
+            $d_end      = new DateTime($time[0]['time']);
+            $diff = $d_start->diff($d_end);
+
+            $hour = $diff->h;
+            $minute = $diff->i + ( $hour * 60 );
+            $second = $diff->s + ( $minute * 60 );
+
+            $total += $second;
+        }
+        return $total;
+    }
+ 
+    private static function popUnclosedSession($times) {
+
+        if(TimeLogType::getClockInById($times[0]['time_log_type_id'])) {
+            $times = array_reverse($times);
+            array_pop($times);
+            $times = array_reverse($times);
+        }
+
+        $times = array_reverse($times);    
+        
+        if(!TimeLogType::getClockInById($times[0]['time_log_type_id'])) {
+            $times = array_reverse($times);
+            array_pop($times);
+            $times = array_reverse($times);
+        }
+
+        $times = array_reverse($times);    
+
+        return $times;
+    }
+
+    public function secToTime($seconds) {
+
+        // extract hours
+        $hours = floor($seconds / (60 * 60));
+ 
+        // extract minutes
+        $divisor_for_minutes = $seconds % (60 * 60);
+        $minutes = floor($divisor_for_minutes / 60);
+   
+        // extract the remaining seconds
+        $divisor_for_seconds = $divisor_for_minutes % 60;
+        $seconds = ceil($divisor_for_seconds);
+ 
+        // return the final array
+        $obj = array(
+            "h" => (int) $hours,
+            "m" => (int) $minutes,
+            "s" => (int) $seconds,
+        );
+
+        return $obj;
+    }
 }
