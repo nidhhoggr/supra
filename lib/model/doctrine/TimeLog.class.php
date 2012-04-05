@@ -28,8 +28,14 @@ class TimeLog extends BaseTimeLog
             ->orderBy('t.time DESC');
     }
 
-    public static function getTotalByStaffIdSince($staff_id,$since) {
-    
+    public function getTotalByStaffIdSince($staff_id,$since) {
+        $times = $this->queryByStaffId($staff_id)
+                 ->andWhere('t.time > ?', $since)
+                 ->fetchArray();
+
+        $total = $this->getTotal($times);
+
+        return $this->secToTime($total);
     }
 
     public function getTotalByStaffId($staff_id) {
