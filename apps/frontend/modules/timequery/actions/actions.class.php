@@ -30,12 +30,14 @@ class timequeryActions extends sfActions
           );
 
           $from  = $this->convertParamToDatetime($params['from']);
+
           $until = $this->convertParamToDatetime($params['until']);
 
-          $total = $tl->getTotalByStaffIdSince($params['staff'],$from,$until);
+          $result = $tl->getByStaffIdBetween($params['staff'],$from,$until);
       }
 
-      $this->total = $total;
+      $this->total = $result['total'];
+      $this->records  = $result['list'];
       $this->form = new TimeQueryForm(array(),array('params'=>$params));
   }
 

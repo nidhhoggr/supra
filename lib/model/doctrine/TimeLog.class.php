@@ -23,27 +23,25 @@ class TimeLog extends BaseTimeLog
             ->orderBy('t.time DESC');
     }
 
-    public function getTotalByStaffIdSince($staff_id,$since,$until) {
-        $times = $this->queryByStaffId($staff_id)
+    private function queryTimeByStaffIdBetween($staff_id,$since,$until) {
+        return  $this->queryByStaffId($staff_id)
                  ->andWhere('t.time > ?', $since)
-                 ->andWhere('t.time < ?', $until)
-                 ->fetchArray();
+                 ->andWhere('t.time < ?', $until);
+    }
+
+    public function getByStaffIdBetween($staff_id,$since,$until) {
+
+        $times = $this->queryTimeByStaffIdBetween($staff_id,$since,$until);
+
+        $list  = $times->execute();
 
         $total = $this->getTotal($times);
 
-        return $this->secToTime($total);
+        return array('list'=>$list,'total'=>$this->secToTime($total));
     }
 
-    public function getTotalByStaffId($staff_id) {
-
-        $times = $this->queryByStaffId($staff_id)->fetchArray();
-
-        $total = $this->getTotal($times);
-
-        return $this->secToTime($total);
-    }
- 
-    private function getTotal($times) {
+    private function getTotal($timeQuery) {
+        $times = $timeQuery->fetchArray();
 
         $total = 0;
 
