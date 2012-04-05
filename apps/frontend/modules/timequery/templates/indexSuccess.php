@@ -1,3 +1,4 @@
+<?php include_partial('staff/staffnav') ?>
 <form action="<?php echo url_for('timequery/index') ?>" method="POST">
   <table>
     <?php echo $form ?>
@@ -15,7 +16,6 @@
 <table>
   <thead>
     <tr>
-      <th>Staff</th>
       <th>Status</th>
       <th>Time</th>
       <th>Notes</th>
@@ -25,7 +25,6 @@
   <tbody>
     <?php foreach ($records as $time_log): ?>
     <tr>
-      <td><?php echo $time_log->getStaff() ?></td>
       <td><?php echo $time_log->getTimeLogType() ?></td>
       <td><?php echo $time_log->getDateTimeObject('time')->format('M d, Y h:i a') ?></td>
       <td><?php echo $time_log->getNotes() ?></td>

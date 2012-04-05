@@ -1,3 +1,4 @@
+<?php include_partial('staff/staffnav') ?>
 <h1>Tasks List</h1>
 
 <table>

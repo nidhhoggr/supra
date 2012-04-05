@@ -1,13 +1,10 @@
 <div id="jobs">
   <?php if($staff): ?>
+  <?php include_partial('staff/staffnav') ?>
   <h2 class="welcome">
     Welcome,
     <?php echo link_to($sf_user,'staff/show?id='.$staff->getId()) ?>    
   </h2>
-  <?php
-      $total = $staff->getTotalTime();
-      echo "Total Hours: ". $total['h'] . ' hours ' . $total['m'] . ' minutes';
-  ?>
   <h2>Accounts</h2>
   <div class="client_accounts">
 

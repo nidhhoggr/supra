@@ -17,6 +17,7 @@ class timequeryActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
+      
       $total = null;
       $params = array();
 
@@ -36,8 +37,8 @@ class timequeryActions extends sfActions
           $result = $tl->getByStaffIdBetween($params['staff'],$from,$until);
       }
 
-      $this->total = $result['total'];
-      $this->records  = $result['list'];
+      @$this->total = $result['total'];
+      @$this->records  = $result['list'];
       $this->form = new TimeQueryForm(array(),array('params'=>$params));
   }
 

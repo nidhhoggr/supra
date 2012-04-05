@@ -15,9 +15,11 @@ class time_logActions extends sfActions
     
     $staffs = Staff::fetchAllIds(); 
 
+    $tl = new TimeLog();
+
     foreach($staffs as $staff) {
 
-        $time_log = TimeLog::getLastByStaffId($staff['id']);
+        $time_log = $tl->getLastByStaffId($staff['id']);
 
         if($time_log)
             $time_logs[] = $time_log;

@@ -12,7 +12,7 @@
  */
 class TimeLog extends BaseTimeLog
 {
-    public static function getLastByStaffId($staff_id) {
+    public function getLastByStaffId($staff_id) {
         return $this->queryByStaffId($staff_id)->limit(1)->fetchOne();
     }
 
