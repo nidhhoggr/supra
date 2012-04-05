@@ -29,9 +29,10 @@ class timequeryActions extends sfActions
               'until'   => $request->getParameter('until'),
           );
 
-          $from = $this->convertParamToDatetime($params['from']);
+          $from  = $this->convertParamToDatetime($params['from']);
+          $until = $this->convertParamToDatetime($params['until']);
 
-          $total = $tl->getTotalByStaffIdSince($params['staff'],$from);
+          $total = $tl->getTotalByStaffIdSince($params['staff'],$from,$until);
       }
 
       $this->total = $total;

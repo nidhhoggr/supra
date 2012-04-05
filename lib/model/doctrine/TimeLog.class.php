@@ -13,12 +13,7 @@
 class TimeLog extends BaseTimeLog
 {
     public static function getLastByStaffId($staff_id) {
-        return Doctrine_Query::create()
-        ->from('TimeLog t')
-        ->where('t.staff_id = ?', $staff_id)
-        ->orderBy('t.time DESC')
-        ->limit(1)
-        ->fetchOne();
+        return $this->queryByStaffId($staff_id)->limit(1)->fetchOne();
     }
 
     public function queryByStaffId($staff_id) {
@@ -28,9 +23,10 @@ class TimeLog extends BaseTimeLog
             ->orderBy('t.time DESC');
     }
 
-    public function getTotalByStaffIdSince($staff_id,$since) {
+    public function getTotalByStaffIdSince($staff_id,$since,$until) {
         $times = $this->queryByStaffId($staff_id)
                  ->andWhere('t.time > ?', $since)
+                 ->andWhere('t.time < ?', $until)
                  ->fetchArray();
 
         $total = $this->getTotal($times);

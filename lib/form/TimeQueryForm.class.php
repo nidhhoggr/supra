@@ -17,5 +17,9 @@ class TimeQueryForm extends BaseForm
           $this->setDefault('from',  $params['from']);
           $this->setDefault('until', $params['until']);
       }
+      else {
+          $this->setDefault('staff',Staff::loggedIn());
+          $this->setDefault('until',time());
+      }
   }
 }
