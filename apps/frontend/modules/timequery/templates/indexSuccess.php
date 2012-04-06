@@ -1,4 +1,3 @@
-<?php include_partial('staff/staffnav') ?>
 <form action="<?php echo url_for('timequery/index') ?>" method="POST">
   <table>
     <?php echo $form ?>

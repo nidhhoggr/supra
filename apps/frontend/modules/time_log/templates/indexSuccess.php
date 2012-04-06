@@ -1,4 +1,3 @@
-<?php include_partial('staff/staffnav') ?>
 <h1>Time Entries</h1>
 
 <table>

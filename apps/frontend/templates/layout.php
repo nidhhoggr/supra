@@ -12,10 +12,11 @@
     <div id="container">
       <div id="header">
         <div class="content">
-          <h1><a href="<?php echo url_for('job/index') ?>">
-            <img src="/images/logo.jpg" alt="Supraliminal Web Solutions" />
-          </a></h1>
- 
+          <h1>
+              <a href="<?php echo url_for('job/index') ?>">
+              <img src="/images/logo.jpg" alt="Supraliminal Web Solutions" />
+              </a>
+          </h1>
           <div id="sub_header">
             <div class="post">
               <h2>Create A Bug</h2>
@@ -38,7 +39,14 @@
           </div>
         </div>
       </div>
- 
+      <div id="nav">
+          <?php
+          if($sf_user->isAuthenticated()) {
+              if($sf_user->isStaff()) 
+                  include_partial('staff/staffnav');    
+          }
+          ?>
+      </div> 
       <div id="content">
         <?php if ($sf_user->hasFlash('notice')): ?>
           <div class="flash_notice">

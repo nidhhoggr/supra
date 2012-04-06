@@ -1,6 +1,5 @@
 <div id="jobs">
   <?php if($staff): ?>
-  <?php include_partial('staff/staffnav') ?>
   <h2 class="welcome">
     Welcome,
     <?php echo link_to($sf_user,'staff/show?id='.$staff->getId()) ?>    
