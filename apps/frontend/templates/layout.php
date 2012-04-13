@@ -26,18 +26,18 @@
                 <h2>Super Accountant - Painless Automation</h2>           	
                 <div id="nav">
                     <ul id="nav-pages">
-                <?php
-                //include the menu respective to the nav
-                $page = sfContext::getInstance()->getModuleName();
-                $user_type = $sf_user->getUserType();
-                $user_types = array('client','staff');
-                foreach($user_types as $ut) {
-                    if($user_type == $ut) {
-                        include_partial($ut.'/nav',array('page'=>$page,'user_type'=>$user_type));
-                        break;
+                    <?php
+                    //include the menu respective to the nav
+                    $page = sfContext::getInstance()->getModuleName();
+                    $user_type = $sf_user->getUserType();
+                    $user_types = array('client','staff');
+                    foreach($user_types as $ut) {
+                        if($user_type == $ut) {
+                            include_partial($ut.'/nav',array('page'=>$page,'user_type'=>$user_type));
+                            break;
+                        }
                     }
-                }
-                ?>
+                    ?>
                     </ul><!--end nav-pages-->
                 </div><!--end nav-->
             </div><!--end header-->

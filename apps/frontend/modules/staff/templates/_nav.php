@@ -1,6 +1,7 @@
 <?php
 $page_info = array(
                    'Profile'       => 'main/index',
+                   'Clients'      =>  'client/index',
                    'Current Staff' => 'time_log/index',
                    'Time Entry'    => 'time_log/new',
                    'Time Report'   => 'timequery/index',

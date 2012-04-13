@@ -25,7 +25,9 @@ class credentialActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
-    $this->form = new CredentialForm();
+    $account_id = $request->getParameter('account_id');
+
+    $this->form = new CredentialForm(array(),array('params'=>array('account_id'=>$account_id)));
   }
 
   public function executeCreate(sfWebRequest $request)

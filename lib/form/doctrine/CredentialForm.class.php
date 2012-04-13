@@ -12,6 +12,10 @@ class CredentialForm extends BaseCredentialForm
 {
   public function configure()
   {
+      $params = $this->getOption('params');
+
       $this->unsetTimeStampable();
+
+      $this->setDefault('account_id',$params['account_id']);
   }
 }

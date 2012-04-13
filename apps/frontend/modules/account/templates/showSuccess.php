@@ -38,7 +38,15 @@
     </tr>
   </tbody>
 </table>
+<h2>Credentials</h2>
+<ul style="margin-left: 50px;">
+<?php foreach($account->getCredential() as $credential):?>
 
+    <li><?php echo link_to($credential->getName(),'credential/show?id='.$credential->getId()) ?></li>
+
+<?php endforeach;?>
+</ul>
+<?php echo link_to('add credential','credential/new?account_id='.$account->getId()); ?>
 <hr />
 
 <a href="<?php echo url_for('account/edit?id='.$account->getId()) ?>">Edit</a>
