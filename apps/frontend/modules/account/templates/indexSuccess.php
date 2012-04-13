@@ -3,25 +3,26 @@
 <table>
   <thead>
     <tr>
-      <th>Id</th>
       <th>Client</th>
+      <th>Title</th>
       <th>Domain name</th>
-      <th>Description</th>
       <th>Active</th>
       <th>Created at</th>
-      <th>Updated at</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($accounts as $account): ?>
     <tr>
-      <td><a href="<?php echo url_for('account/show?id='.$account->getId()) ?>"><?php echo $account->getId() ?></a></td>
-      <td><?php echo $account->getClientId() ?></td>
+      <td><?php include_partial('client/linkto',array('client'=>$account->getClient())) ?></td>
+      <td><?php echo $account->getTitle() ?></td>
       <td><?php echo $account->getDomainName() ?></td>
-      <td><?php echo $account->getDescription() ?></td>
-      <td><?php echo $account->getActive() ?></td>
-      <td><?php echo $account->getCreatedAt() ?></td>
-      <td><?php echo $account->getUpdatedAt() ?></td>
+      <td><?php echo $account->getActive()?'yes':'no' ?></td>
+      <td><?php echo $account->getDateTimeObject('created_at')->format('M d, Y') ?></td>
+      <td>
+          <?php echo link_to('edit','account/edit?id='.$account->getId()) ?>
+          <?php echo link_to('show','account/show?id='.$account->getId()) ?>
+      </td>
     </tr>
     <?php endforeach; ?>
   </tbody>

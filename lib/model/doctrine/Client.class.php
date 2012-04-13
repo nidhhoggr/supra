@@ -12,6 +12,25 @@
  */
 class Client extends BaseClient
 {
+    public static function getLoggedIn() {
+      $currentUser = sfContext::getInstance()->getUser();
+
+      $q = Doctrine_Query::create()
+      ->from('Client c')
+      ->where('c.user_id = ?',$currentUser->getId());
+
+      return $q;
+    }
+
+    public static function loggedIn() {
+      return Client::getLoggedIn()->fetchOne();
+    }
+
+    public static function loggedInId() {
+      return Client::getLoggedIn()->fetchOne()->id;
+    }
+
+
   public function getFullName() {
       return $this->getUser()->first_name . ' ' . $this->getUser()->last_name;
 

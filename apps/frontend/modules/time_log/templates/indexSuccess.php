@@ -1,5 +1,3 @@
-<h1>Time Entries</h1>
-
 <table>
   <thead>
     <tr>
@@ -13,7 +11,7 @@
   <tbody>
     <?php foreach ($time_logs as $time_log): ?>
     <tr>
-      <td><?php echo $time_log->getStaff() ?></td>
+      <td><?php include_partial('staff/linkto',array('staff'=>$time_log->getStaff()))?></td>
       <td><?php echo $time_log->getTimeLogType() ?></td>
       <td><?php echo $time_log->getDateTimeObject('time')->format('M d, Y h:i a') ?></td>
       <td><?php echo $time_log->getNotes() ?></td>

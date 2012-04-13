@@ -13,7 +13,7 @@ task_log:
 # default rules
 homepage:
   url:   /
-  param: { module: staff, action: index }
+  param: { module: main, action: index }
 
 # generic rules
 # please, remove them by adding more specific rules
@@ -25,11 +25,11 @@ default:
   url:   /:module/:action/*
 
 sf_guard_signin:
-  url: /login
+  url: /guard/login
   param: { module: sfGuardAuth, action: signin }
 
 sf_guard_signout:
-  url: /logout
+  url: /guard/logout
   param: { module: sfGuardAuth, action: signout }
 
 sf_guard_password:

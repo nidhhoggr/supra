@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">	
+	
+	<head>		
+		
+		<meta charset="utf-8">
+		<title>[ADD PAGE TITLE]</title>
+		
+		<link rel="stylesheet" href="styles/style.css" />
+				
+		<!--[if IE 6]>
+            <link rel="stylesheet" href="styles/ie6.css" />
+        <![endif]--> 
+        <!--[if IE 7]>
+            <link rel="stylesheet" href="styles/ie7.css" />
+        <![endif]-->
+		
+	</head>
+	
+	<body>	
+		
+		<div id="wrap">
+        	
+        	<div id="header">
+            	
+        		<a href="index.html" title="[ADD LINK TITLE]"><h1>[ADD COMPANY NAME]</h1></a>       	
+        		<h2>[ADD SUBTITLE]</h2>           	
+
+            	<div id="nav">
+            	
+                	<ul id="nav-pages"> 
+                	                	     	
+						<li><a href="index.html">Home</a><span>/</span></li>
+						<li><a href="services.html">Services</a><span>/</span></li>
+						<li><a href="portfolio.html">Portfolio</a><span>/</span></li>
+						<li><a href="blog.html">Blog</a><span>/</span></li>
+						<li><a href="contact.html" class="current">Contact</a></li>	
+										
+            		</ul><!--end nav-pages-->
+            		
+            	</div><!--end nav-->
+
+            </div><!--end header-->
+            
+            <div id="main">
+	            
+	            <div id="contact-page">
+				
+					<!-- The Contact Form -->
+					<h2 class="title">Contact</h2>    		
+		    		<p>[ADD INTRODUCTION]</p>
+					<p class='hide' id='response'></p>
+					
+					<!-- TO CONFIGURE THE CONTACT FORM EDIT LINE 33 IN "scripts/contact-process.php" FILE AND REPLACE "your@email.com" WITH YOUR OWN EMAIL ADDRESS -->
+					<form id='contact-form' method='post' action='scripts/contact-process.php'>
+						<fieldset>					
+							<input id='form_name' type='text' name='name' value='Name' onfocus="if(this.value=='Name'){this.value=''};" onblur="if(this.value==''){this.value='Name'};" />					
+							<input id='form_email' type='text' name='email' value="Email" onfocus="if(this.value=='Email'){this.value=''};" onblur="if(this.value==''){this.value='Email'};" />
+							<input id='form_subject' type='text' name='subject' value="Subject" onfocus="if(this.value=='Subject'){this.value=''};" onblur="if(this.value==''){this.value='Subject'};" />			
+							<textarea id='form_message' rows='10' cols='40' name='message'></textarea>				
+							<input id='form_submit' class="submit" type='submit' name='submit' value='' />			
+							<div class='hide'>
+								<label>Do not fill out this field</label>
+								<input name='spam_check' type='text' value='' />
+							</div>
+						</fieldset>
+					</form>
+				
+				</div><!--end contact-page-->
+				
+				<div id="sidebar-contact">			    
+				    	
+					<h3>Get In Touch</h3>
+					<h4>Email</h4>
+					<p>[ADD EMAIL]</p>
+					<h4>Phone</h4>
+					<p>[ADD PHONE]</p>
+					<h4>Twitter</h4>
+					<p>[ADD TWITTER USERNAME]</p>
+					<h4>Address</h4>
+					<p>[ADD ADDRESS]</p>
+							    
+				</div><!--end sidebar-contact-->
+			
+			</div><!--end main-->
+                		
+    		<div id="footer">
+				
+				<p class="copyright">Copyright &copy; 2012 &middot; [ADD COMPANY NAME] &middot; All Rights Reserved</p>
+				
+			</div><!--end footer-->
+            
+    	</div><!--end wrap-->
+    	
+    	<div class="cache-images">
+	        <img src="images/submit-button-blue-hover.png" width="0" height="0" alt="" />
+	    </div><!--end cache-images-->
+	    		
+	</body>	
+	
+</html>

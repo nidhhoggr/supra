@@ -26,13 +26,18 @@ class timequeryActions extends sfActions
 
           $params = array(
               'staff'   => $request->getParameter('staff'),
-              'from'    => $request->getParameter('from'),
-              'until'   => $request->getParameter('until'),
+              'from_date'    => $request->getParameter('from_date'),
+              'from_time'    => $request->getParameter('from_time'),
+              'until_date'    => $request->getParameter('until_date'),
+              'until_time'   => $request->getParameter('until_time'),
           );
 
-          $from  = $this->convertParamToDatetime($params['from']);
+          $from_date = $params['from_date'].' '.$params['from_time'];
+          $until_date = $params['until_date'].' '.$params['until_time'];
 
-          $until = $this->convertParamToDatetime($params['until']);
+          $from  = $this->convertParamToDatetime($from_date);
+
+          $until = $this->convertParamToDatetime($until_date);
 
           $result = $tl->getByStaffIdBetween($params['staff'],$from,$until);
       }
@@ -43,8 +48,7 @@ class timequeryActions extends sfActions
   }
 
   private function convertParamToDatetime($time) {
-      $time = implode('-',$time);
-      $time = DateTime::createFromFormat('m-d-Y-H-i',$time);
+      $time = DateTime::createFromFormat('Y-m-d h:i A',$time);
       return $time->format('Y-m-d H:i:s');
   }
 }

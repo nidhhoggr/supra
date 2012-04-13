@@ -16,4 +16,12 @@ class TaskCommentTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('TaskComment');
     }
+
+    public function getByStaffId() {
+
+        return Doctrine_Query::Create()
+               ->from('TaskComment tc')
+               ->where('tc.staff_id = ?',Staff::loggedInId())
+               ->execute();
+    }
 }

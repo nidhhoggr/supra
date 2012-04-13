@@ -12,9 +12,7 @@ class taskActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->tasks = Doctrine_Core::getTable('Task')
-      ->createQuery('a')
-      ->execute();
+    $this->tasks = Doctrine_Core::getTable('Task')->getByStaffId();
   }
 
   public function executeShow(sfWebRequest $request)

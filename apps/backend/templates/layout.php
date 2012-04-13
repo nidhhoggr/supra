@@ -13,7 +13,7 @@
       <div id="header">
         <h1>
           <a href="<?php echo url_for('homepage') ?>">
-            <img src="/images/logo.jpg" alt="Jobeet Job Board" />
+            <img src="" alt="SuperAccountant" />
           </a>
         </h1>
       </div>

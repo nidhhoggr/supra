@@ -12,9 +12,9 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [main.css]
+  stylesheets:    [ main.css, jquery-ui.css, timePicker.css ]
 
-  javascripts:    []
+  javascripts:    [ date.js, jquery.js, jquery-ui.js, jquery.timePicker.js ]
 
   has_layout:     true
   layout:         layout

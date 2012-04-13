@@ -16,4 +16,13 @@ class TaskTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Task');
     }
+
+    public function getByStaffId() {
+
+        return Doctrine_Query::Create() 
+        ->from('Task t')
+        ->where('t.staff_id = ?',Staff::loggedInId())
+        ->execute();
+
+    }
 }

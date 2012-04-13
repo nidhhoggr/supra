@@ -1,86 +1,73 @@
-<!-- apps/frontend/templates/layout.php -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <title>Jobeet - Your best job board</title>
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <?php include_javascripts() ?>
-    <?php include_stylesheets() ?>
-  </head>
-  <body>
-    <div id="container">
-      <div id="header">
-        <div class="content">
-          <h1>
-              <a href="<?php echo url_for('job/index') ?>">
-              <img src="/images/logo.jpg" alt="Supraliminal Web Solutions" />
-              </a>
-          </h1>
-          <div id="sub_header">
-            <div class="post">
-              <h2>Create A Bug</h2>
-              <div>
-                <a href="<?php echo url_for('bug/new') ?>">Create A Bug</a>
-              </div>
-            </div>
-
-            <div class="search">
-              <h2>Check A Bug</h2>
-              <form action="" method="get">
-                <input type="text" name="keywords"
-                  id="search_keywords" />
-                <input type="submit" value="search" />
-                <div class="help">
-                   enter the reference number of a bug
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="nav">
-          <?php
-          if($sf_user->isAuthenticated()) {
-              if($sf_user->isStaff()) 
-                  include_partial('staff/staffnav');    
-          }
-          ?>
-      </div> 
-      <div id="content">
-        <?php if ($sf_user->hasFlash('notice')): ?>
-          <div class="flash_notice">
-            <?php echo $sf_user->getFlash('notice') ?>
-          </div>
-        <?php endif ?>
- 
-        <?php if ($sf_user->hasFlash('error')): ?>
-          <div class="flash_error">
-            <?php echo $sf_user->getFlash('error') ?>
-          </div>
-        <?php endif ?>
- 
-        <div class="content">
-          <?php echo $sf_content ?>
-        </div>
-      </div>
- 
-      <div id="footer">
-        <div class="content">
-          <span class="symfony">
-            <img src="/images/jobeet-mini.png" />
-            powered by <a href="http://www.symfony-project.org/">
-            <img src="/images/symfony.gif" alt="symfony framework" />
-            </a>
-          </span>
-          <ul>
-            <li><a href="">Link 1</a></li>
-            <li class="feed"><a href="">Link 2</a></li>
-            <li><a href="">Link 3</a></li>
-            <li class="last"><a href="">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </body>
+<!DOCTYPE html>
+<html lang="en">	
+    <head>		
+        <meta charset="utf-8">
+        <title>SuperAccountant</title>
+        <link rel="stylesheet" href="/css/bobo/style.css" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <!--[if IE 6]>
+            <link rel="stylesheet" href="/css/bobo/ie6.css" />
+        <![endif]--> 
+        <!--[if IE 7]>
+            <link rel="stylesheet" href="/css/bobo/ie7.css" />
+        <![endif]-->
+        <?php include_http_metas() ?>
+        <?php include_metas() ?>
+        <?php include_title() ?>
+        <?php include_stylesheets() ?>
+        <?php include_javascripts() ?>
+    </head>
+    <body>	
+        <div id="wrap">
+            <div id="header">
+                <a href="#" title="[ADD LINK TITLE]">
+                    <img src="/images/logo.png" />
+                </a>       	
+                <h2>Super Accountant - Painless Automation</h2>           	
+                <div id="nav">
+                    <ul id="nav-pages">
+                <?php
+                //include the menu respective to the nav
+                $page = sfContext::getInstance()->getModuleName();
+                $user_type = $sf_user->getUserType();
+                $user_types = array('client','staff');
+                foreach($user_types as $ut) {
+                    if($user_type == $ut) {
+                        include_partial($ut.'/nav',array('page'=>$page,'user_type'=>$user_type));
+                        break;
+                    }
+                }
+                ?>
+                    </ul><!--end nav-pages-->
+                </div><!--end nav-->
+            </div><!--end header-->
+            <div id="frontpage-content">      
+    			
+    			<div id="frontpage-intro">    	
+    				
+    				<p>[ADD BRIEF INTRODUCTION]</p>    	
+    				
+    			</div><!--end frontpage-info-->    	
+    	
+    			<div id="frontpage-intro">   	
+                                    <?php echo $sf_content ?>
+<!--
+    					<a href="[ADD LINK TO PROJECT PAGE]" title="[ADD LINK TITLE]"><img class="featured-project-image" src="images/[ADD IMAGE FILE NAME]" alt="[ADD ALTERNATIVE TEXT]" /></a>
+    					<a href="[ADD LINK TO PROJECT PAGE]" title="[ADD LINK TITLE]"><img class="featured-project-image" src="images/[ADD IMAGE FILE NAME]" alt="[ADD ALTERNATIVE TEXT]" /></a>
+-->    				
+    				 	
+    			</div><!--end featured-projects--> 
+    			    			
+    		</div><!--end frontpage-content--> 
+    		
+    		<div id="footer">
+				
+				<p class="copyright">Copyright &copy; 2012 &middot; SuperAccountant &middot; All Rights Reserved</p>
+				   
+                </div><!--end footer-->
+            
+    	</div><!--end wrap-->	
+    	
+	</body>	
+	
 </html>

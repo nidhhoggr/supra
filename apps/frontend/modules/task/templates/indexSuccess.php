@@ -17,11 +17,11 @@
     <?php foreach ($tasks as $task): ?>
     <tr>
       <td><?php echo $task->getName() ?></td>
-      <td><?php echo $task->getAccount() ?></td>
-      <td><?php echo $task->getStaff() ?></td>
-      <td><?php echo $task->getTaskStatus() ?></td>
-      <td><?php echo $task->getTaskType() ?></td>
-      <td><?php echo $task->getTaskPriority() ?></td>
+      <td><?php include_partial('account/linkto',array('account'=>$task->getAccount())) ?></td>
+      <td><?php include_partial('staff/linkto',array('staff'=>$task->getStaff())) ?></td>
+      <td><?php include_partial('task_status/linkto', array('task_status'=>$task->getTaskStatus())) ?></td>
+      <td><?php include_partial('task_type/linkto', array('task_type'=>$task->getTaskType())) ?></td>
+      <td><?php include_partial('task_priority/linkto', array('task_priority'=>$task->getTaskPriority())) ?></td>
       <td><?php echo $task->getRefNo() ?></td>
       <td>
           <?=link_to('show','task/show?id='.$task->getId())?> |

@@ -16,4 +16,12 @@ class TaskLogTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('TaskLog');
     }
+
+
+    public function getByStaffId() {
+        return Doctrine_Query::Create()
+               ->from('TaskLog tl')
+               ->where('tl.staff_id = ?',Staff::loggedInId())
+               ->execute();
+    }
 }

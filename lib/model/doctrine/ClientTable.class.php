@@ -16,4 +16,17 @@ class ClientTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Client');
     }
+
+    public static function loggedIn() {
+      $currentUser = sfContext::getInstance()->getUser();
+
+      $q = Doctrine_Query::create()
+      ->select('c.id')
+      ->from('Client c')
+      ->where('c.user_id = ?',$currentUser->getId())
+      ->fetchOne()->id;
+
+      return $q;
+    }
+
 }

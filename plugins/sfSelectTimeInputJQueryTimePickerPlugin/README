@@ -1,0 +1,50 @@
+#sfSelectTimeInputJQueryTimePickerPlugin#
+
+A plugin using juqery TimePicker library to provide a dropdown of time based on specification of intervals and start and stop times.
+Feel free to contact me with any questions.
+
+## Installation ##
+
+  * Install jQuery (http://www.jquery.com) somewhere under your web folder (preferably under web/js).
+
+  * Install jQuery timePicker (http://github.com/perifer/timePicker) somewhere under your web folder (preferably under web/js).
+
+  * Add the jQuery and timePicker JavaScript files to the javascripts list in your application's config/view.yml file.
+
+  * Add any CSS files you want to use for timePicker, and add them to the stylesheets list in view.yml.
+
+  * Install the plugin.
+      Using symfony command line:
+          ./symfony plugin:install sfSelectTimeInputJQueryTimePickerPlugin
+      Or get the latest version from the subversion repository:
+          svn co http://svn.symfony-project.com/plugins/sfSelectTimeInputJQueryTimePickerPlugin plugins/sfSelectTimeInputJQueryTimePickerPlugin
+
+  * If you installed by subversion, activate the plugin in the config/ProjectConfiguration.class.php file (this will have already been done automatically if you used the plugin:install symfony command).
+
+        [php]
+        class ProjectConfiguration extends sfProjectConfiguration
+        {
+          public function setup()
+          {
+            ...
+            $this->enablePlugins('sfSelectTimeInputJQueryTimePickerPlugin');
+            ...
+          }
+        }
+
+
+
+## How to use ##
+
+  * Edit a form, for example lib/form/doctrine/MyForm.class.php.  To use the date component, do something like this:
+            $this->widgetSchema['posting_time'] = new sfWidgetFormSelectTimeInputJQueryTimePicker();
+
+  * Clear your cache.
+        ./symfony cc
+
+  * Test your form.
+
+## Options ##
+
+exa: $options = array('interval'=>"15",'start_stop'=>array('start'=>'02.00','stop'=>'11.00'));
+ 

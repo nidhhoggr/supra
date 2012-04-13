@@ -12,6 +12,11 @@ class TaskCommentForm extends BaseTaskCommentForm
 {
   public function configure()
   {
+      $params = $this->getOption('params');
+
       $this->unsetTimeStampable();
+
+      $this->setDefault('task_id',$params['task_id']);
+      
   }
 }

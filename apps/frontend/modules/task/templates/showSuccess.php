@@ -65,6 +65,11 @@
       </td>
     </tr>
     <tr>
+      <td>
+        <?php echo link_to('add comment','task_comment/new?task_id='.$task->getId());?>
+      </td>
+    </tr>
+    <tr>
         <td><h3>Work Log</h3></td>
     </tr>
     <tr>
@@ -85,6 +90,11 @@
             </li>
           <?php endforeach ?>
         </ol>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <?php echo link_to('add work log','task_log/new?task_id='.$task->getId());?>
       </td>
     </tr>
   </tbody>
