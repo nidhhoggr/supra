@@ -1,0 +1,980 @@
+StaffTaskWork:
+  StaffTaskWork_1:
+    Staff: Staff_1
+    TaskWork: TaskWork_1
+  StaffTaskWork_2:
+    Staff: Staff_2
+    TaskWork: TaskWork_2
+  StaffTaskWork_3:
+    Staff: Staff_3
+    TaskWork: TaskWork_3
+  StaffTaskWork_4:
+    Staff: Staff_4
+    TaskWork: TaskWork_2
+  StaffTaskWork_5:
+    Staff: Staff_5
+    TaskWork: TaskWork_1
+TaskComment:
+  TaskComment_1:
+    Task: Task_1
+    Staff: Staff_1
+    title: 'bug 1'
+    comment: 'description for bug 1'
+    created_at: '2012-03-29 00:30:01'
+    updated_at: '2012-03-29 00:30:01'
+  TaskComment_2:
+    Task: Task_2
+    Staff: Staff_1
+    title: 'bug 2'
+    comment: 'description for bug 2'
+    created_at: '2012-03-29 00:30:01'
+    updated_at: '2012-03-29 00:30:01'
+  TaskComment_3:
+    Task: Task_3
+    Staff: Staff_2
+    title: 'bug 3'
+    comment: 'description for bug 3'
+    created_at: '2012-03-29 00:30:01'
+    updated_at: '2012-03-29 00:30:01'
+  TaskComment_4:
+    Task: Task_4
+    Staff: Staff_2
+    title: 'bug 4'
+    comment: 'description for bug 4'
+    created_at: '2012-03-29 00:30:01'
+    updated_at: '2012-03-29 00:30:01'
+  TaskComment_5:
+    Task: Task_5
+    Staff: Staff_3
+    title: 'bug 5'
+    comment: 'description for bug 5'
+    created_at: '2012-03-29 00:30:01'
+    updated_at: '2012-03-29 00:30:01'
+  TaskComment_6:
+    Task: Task_6
+    Staff: Staff_3
+    title: 'bug 6'
+    comment: 'description for bug 6'
+    created_at: '2012-03-29 00:30:01'
+    updated_at: '2012-03-29 00:30:01'
+  TaskComment_7:
+    Task: Task_7
+    Staff: Staff_4
+    title: 'bug 7'
+    comment: 'description for bug 7'
+    created_at: '2012-03-29 00:30:01'
+    updated_at: '2012-03-29 00:30:01'
+  TaskComment_8:
+    Task: Task_8
+    Staff: Staff_4
+    title: 'bug 8'
+    comment: 'description for bug 8'
+    created_at: '2012-03-29 00:30:01'
+    updated_at: '2012-03-29 00:30:01'
+  TaskComment_9:
+    Task: Task_9
+    Staff: Staff_5
+    title: 'bug 9'
+    comment: 'description for bug 9'
+    created_at: '2012-03-29 00:30:01'
+    updated_at: '2012-03-29 00:30:01'
+  TaskComment_10:
+    Task: Task_10
+    Staff: Staff_5
+    title: 'bug 10'
+    comment: 'description for bug 10'
+    created_at: '2012-03-29 00:30:01'
+    updated_at: '2012-03-29 00:30:01'
+Period:
+  Period_1:
+    title: yearly
+    description: 'every year'
+    days: '365'
+  Period_2:
+    title: monthly
+    description: 'every month'
+    days: '31'
+Plan:
+  Plan_1:
+    title: 'Monthly Hosting Plan'
+    description: 'host website with one hour of maintenance'
+    deduction: '70.00'
+    Period: Period_2
+TaskLog:
+  TaskLog_1:
+    Task: Task_1
+    TaskWork: TaskWork_1
+    Staff: Staff_1
+    title: 'bug 1'
+    description: 'had to make it functional'
+    staff_comment: null
+    clock_in: null
+    clock_out: null
+    hours_logged: '4.50'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: false
+    created_at: '2012-03-29 00:30:00'
+    updated_at: '2012-03-29 00:30:00'
+  TaskLog_2:
+    Task: Task_2
+    TaskWork: TaskWork_2
+    Staff: Staff_1
+    title: 'bug 2'
+    description: 'had to make it pretty'
+    staff_comment: null
+    clock_in: null
+    clock_out: null
+    hours_logged: '2.00'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: false
+    created_at: '2012-03-29 00:30:00'
+    updated_at: '2012-03-29 00:30:00'
+  TaskLog_3:
+    Task: Task_3
+    TaskWork: TaskWork_1
+    Staff: Staff_2
+    title: 'bug 3'
+    description: 'had to make it functional'
+    staff_comment: null
+    clock_in: null
+    clock_out: null
+    hours_logged: '4.50'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: false
+    created_at: '2012-03-29 00:30:00'
+    updated_at: '2012-03-29 00:30:00'
+  TaskLog_4:
+    Task: Task_4
+    TaskWork: TaskWork_2
+    Staff: Staff_2
+    title: 'bug 4'
+    description: 'had to make it pretty'
+    staff_comment: null
+    clock_in: null
+    clock_out: null
+    hours_logged: '2.00'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: false
+    created_at: '2012-03-29 00:30:00'
+    updated_at: '2012-03-29 00:30:00'
+  TaskLog_5:
+    Task: Task_5
+    TaskWork: TaskWork_1
+    Staff: Staff_3
+    title: 'bug 5'
+    description: 'had to make it functional'
+    staff_comment: null
+    clock_in: null
+    clock_out: null
+    hours_logged: '4.50'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: false
+    created_at: '2012-03-29 00:30:00'
+    updated_at: '2012-03-29 00:30:00'
+  TaskLog_6:
+    Task: Task_6
+    TaskWork: TaskWork_2
+    Staff: Staff_3
+    title: 'bug 6'
+    description: 'had to make it pretty'
+    staff_comment: null
+    clock_in: null
+    clock_out: null
+    hours_logged: '2.00'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: false
+    created_at: '2012-03-29 00:30:00'
+    updated_at: '2012-03-29 00:30:00'
+  TaskLog_7:
+    Task: Task_7
+    TaskWork: TaskWork_1
+    Staff: Staff_4
+    title: 'bug 7'
+    description: 'had to make it functional'
+    staff_comment: null
+    clock_in: null
+    clock_out: null
+    hours_logged: '4.50'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: false
+    created_at: '2012-03-29 00:30:00'
+    updated_at: '2012-03-29 00:30:00'
+  TaskLog_8:
+    Task: Task_8
+    TaskWork: TaskWork_2
+    Staff: Staff_4
+    title: 'bug 8'
+    description: 'had to make it pretty'
+    staff_comment: null
+    clock_in: null
+    clock_out: null
+    hours_logged: '2.00'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: false
+    created_at: '2012-03-29 00:30:00'
+    updated_at: '2012-03-29 00:30:00'
+  TaskLog_9:
+    Task: Task_9
+    TaskWork: TaskWork_1
+    Staff: Staff_5
+    title: 'bug 9'
+    description: 'had to make it functional'
+    staff_comment: null
+    clock_in: null
+    clock_out: null
+    hours_logged: '4.50'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: false
+    created_at: '2012-03-29 00:30:01'
+    updated_at: '2012-03-29 00:30:01'
+  TaskLog_10:
+    Task: Task_10
+    TaskWork: TaskWork_2
+    Staff: Staff_5
+    title: 'bug 10'
+    description: 'had to make it pretty'
+    staff_comment: null
+    clock_in: null
+    clock_out: null
+    hours_logged: '2.00'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: false
+    created_at: '2012-03-29 00:30:01'
+    updated_at: '2012-03-29 00:30:01'
+GenDesc:
+  GenDesc_1:
+    title: 'Virus Removal'
+    description: 'virus removal of the computer'
+TimeLogType:
+  TimeLogType_1:
+    name: 'Started Day'
+    clock_in: true
+  TimeLogType_2:
+    name: 'Ended Day'
+    clock_in: false
+  TimeLogType_3:
+    name: 'Started Break'
+    clock_in: false
+  TimeLogType_4:
+    name: 'Ended Break'
+    clock_in: true
+AccountRecord:
+  AccountRecord_1:
+    Account: Account_1
+    name: 'Account1 Credentials'
+    description: 'these are the account1 credentials'
+    created_at: '2012-03-29 00:30:02'
+    updated_at: '2012-03-29 00:30:02'
+  AccountRecord_2:
+    Account: Account_2
+    name: 'Account2 Credentials'
+    description: 'these are the account2 credentials'
+    created_at: '2012-03-29 00:30:02'
+    updated_at: '2012-03-29 00:30:02'
+  AccountRecord_3:
+    Account: Account_3
+    name: 'Account3 Credentials'
+    description: 'these are the account3 credentials'
+    created_at: '2012-03-29 00:30:02'
+    updated_at: '2012-03-29 00:30:02'
+  AccountRecord_4:
+    Account: Account_4
+    name: 'Account4 Credentials'
+    description: 'these are the account4 credentials'
+    created_at: '2012-03-29 00:30:02'
+    updated_at: '2012-03-29 00:30:02'
+  AccountRecord_5:
+    Account: Account_5
+    name: 'Account5 Credentials'
+    description: 'these are the account5 credentials'
+    created_at: '2012-03-29 00:30:02'
+    updated_at: '2012-03-29 00:30:02'
+  AccountRecord_6:
+    Account: Account_6
+    name: 'Account6 Credentials'
+    description: 'these are the account6 credentials'
+    created_at: '2012-03-29 00:30:02'
+    updated_at: '2012-03-29 00:30:02'
+  AccountRecord_7:
+    Account: Account_7
+    name: 'Account7 Credentials'
+    description: 'these are the account7 credentials'
+    created_at: '2012-03-29 00:30:02'
+    updated_at: '2012-03-29 00:30:02'
+  AccountRecord_8:
+    Account: Account_8
+    name: 'Account8 Credentials'
+    description: 'these are the account8 credentials'
+    created_at: '2012-03-29 00:30:02'
+    updated_at: '2012-03-29 00:30:02'
+  AccountRecord_9:
+    Account: Account_9
+    name: 'Account9 Credentials'
+    description: 'these are the account9 credentials'
+    created_at: '2012-03-29 00:30:02'
+    updated_at: '2012-03-29 00:30:02'
+  AccountRecord_10:
+    Account: Account_10
+    name: 'Account10 Credentials'
+    description: 'these are the account10 credentials'
+    created_at: '2012-03-29 00:30:02'
+    updated_at: '2012-03-29 00:30:02'
+TaskWork:
+  TaskWork_1:
+    name: Development
+    rate: '95.00'
+    description: 'entails all frontend and backend software development'
+  TaskWork_2:
+    name: Design
+    rate: '75.00'
+    description: 'entails all graphic design and page markuup and styling'
+  TaskWork_3:
+    name: 'Project Management'
+    rate: '110.00'
+    description: 'entials interacting with clients creating and delegating tasks'
+Client:
+  Client_1:
+    User: sfGuardUser_1
+    track_record: 'good customer'
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+  Client_2:
+    User: sfGuardUser_2
+    track_record: 'good customer'
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+  Client_3:
+    User: sfGuardUser_3
+    track_record: 'good customer'
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+  Client_4:
+    User: sfGuardUser_4
+    track_record: 'good customer'
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+  Client_5:
+    User: sfGuardUser_5
+    track_record: 'good customer'
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+TimeLog:
+  TimeLog_4:
+    TimeLogType: TimeLogType_1
+    Staff: Staff_4
+    time: '2012-03-29 01:46:00'
+    notes: test
+    created_at: '2012-03-29 01:46:36'
+    updated_at: '2012-03-29 01:46:36'
+  TimeLog_5:
+    TimeLogType: TimeLogType_2
+    Staff: Staff_4
+    time: '2012-03-29 02:21:00'
+    notes: 'im done'
+    created_at: '2012-03-29 02:21:18'
+    updated_at: '2012-03-29 02:21:18'
+  TimeLog_6:
+    TimeLogType: TimeLogType_1
+    Staff: Staff_4
+    time: '2012-03-30 01:46:00'
+    notes: test
+    created_at: '2012-03-30 01:46:36'
+    updated_at: '2012-03-30 01:46:36'
+  TimeLog_7:
+    TimeLogType: TimeLogType_2
+    Staff: Staff_4
+    time: '2012-03-30 02:21:00'
+    notes: 'im done'
+    created_at: '2012-03-30 02:21:18'
+    updated_at: '2012-03-30 02:21:18'
+  TimeLog_8:
+    TimeLogType: TimeLogType_1
+    Staff: Staff_4
+    time: '2012-03-31 01:46:00'
+    notes: test
+    created_at: '2012-03-31 01:46:36'
+    updated_at: '2012-03-31 01:46:36'
+  TimeLog_9:
+    TimeLogType: TimeLogType_2
+    Staff: Staff_4
+    time: '2012-03-31 02:21:00'
+    notes: 'im done'
+    created_at: '2012-03-31 02:21:18'
+    updated_at: '2012-03-31 02:21:18'
+  TimeLog_10:
+    TimeLogType: TimeLogType_1
+    Staff: Staff_4
+    time: '2012-04-01 01:46:00'
+    notes: test
+    created_at: '2012-04-01 01:46:36'
+    updated_at: '2012-04-01 01:46:36'
+  TimeLog_11:
+    TimeLogType: TimeLogType_2
+    Staff: Staff_4
+    time: '2012-04-01 02:21:00'
+    notes: 'im done'
+    created_at: '2012-04-01 02:21:18'
+    updated_at: '2012-04-01 02:21:18'
+  TimeLog_12:
+    TimeLogType: TimeLogType_1
+    Staff: Staff_1
+    time: '2012-03-29 02:21:00'
+    notes: 'drink some coffee '
+    created_at: '2012-03-29 02:22:07'
+    updated_at: '2012-03-29 02:22:07'
+  TimeLog_13:
+    TimeLogType: TimeLogType_1
+    Staff: Staff_4
+    time: '2012-04-04 01:46:00'
+    notes: test
+    created_at: '2012-04-04 01:46:00'
+    updated_at: '2012-04-04 01:46:00'
+  TimeLog_14:
+    TimeLogType: TimeLogType_2
+    Staff: Staff_4
+    time: '2012-03-24 01:46:00'
+    notes: test
+    created_at: '2012-03-24 01:46:36'
+    updated_at: '2012-03-24 01:46:36'
+  TimeLog_15:
+    TimeLogType: TimeLogType_2
+    Staff: Staff_1
+    time: '2012-04-04 11:30:00'
+    notes: 'im done'
+    created_at: '2012-04-04 11:30:39'
+    updated_at: '2012-04-04 11:30:39'
+  TimeLog_16:
+    TimeLogType: TimeLogType_1
+    Staff: Staff_1
+    time: '2012-04-12 16:13:00'
+    notes: ''
+    created_at: '2012-04-12 16:14:00'
+    updated_at: '2012-04-12 16:14:00'
+AccountInvoiceTask:
+  AccountInvoiceTask_1:
+    AccountInvoice: AccountInvoice_1
+    Task: Task_10
+  AccountInvoiceTask_2:
+    AccountInvoice: AccountInvoice_2
+    Task: Task_9
+  AccountInvoiceTask_3:
+    AccountInvoice: AccountInvoice_3
+    Task: Task_8
+  AccountInvoiceTask_4:
+    AccountInvoice: AccountInvoice_4
+    Task: Task_7
+  AccountInvoiceTask_5:
+    AccountInvoice: AccountInvoice_5
+    Task: Task_6
+  AccountInvoiceTask_6:
+    AccountInvoice: AccountInvoice_6
+    Task: Task_5
+  AccountInvoiceTask_7:
+    AccountInvoice: AccountInvoice_7
+    Task: Task_4
+  AccountInvoiceTask_8:
+    AccountInvoice: AccountInvoice_8
+    Task: Task_3
+  AccountInvoiceTask_9:
+    AccountInvoice: AccountInvoice_9
+    Task: Task_2
+  AccountInvoiceTask_10:
+    AccountInvoice: AccountInvoice_10
+    Task: Task_1
+TaskType:
+  TaskType_1:
+    name: addition
+  TaskType_2:
+    name: improvement
+  TaskType_3:
+    name: bug
+sfGuardUser:
+  sfGuardUser_1:
+    first_name: ufn_1
+    last_name: uln_1
+    email_address: user1@supraliminal.com
+    username: user1
+    algorithm: sha1
+    salt: 2501e623683acffa9f672ce96dd9ecd5
+    password: 80a6630a1debdcbadae1f6f74d3e6fef8eae8b1c
+    is_active: true
+    is_super_admin: false
+    last_login: '2012-03-29 17:48:46'
+    created_at: '2012-03-29 00:29:57'
+    updated_at: '2012-03-29 17:48:46'
+  sfGuardUser_2:
+    first_name: ufn_2
+    last_name: uln_2
+    email_address: user2@supraliminal.com
+    username: user2
+    algorithm: sha1
+    salt: null
+    password: null
+    is_active: true
+    is_super_admin: false
+    last_login: null
+    created_at: '2012-03-29 00:29:57'
+    updated_at: '2012-03-29 00:29:57'
+  sfGuardUser_3:
+    first_name: ufn_3
+    last_name: uln_3
+    email_address: user3@supraliminal.com
+    username: user3
+    algorithm: sha1
+    salt: null
+    password: null
+    is_active: true
+    is_super_admin: false
+    last_login: null
+    created_at: '2012-03-29 00:29:57'
+    updated_at: '2012-03-29 00:29:57'
+  sfGuardUser_4:
+    first_name: ufn_4
+    last_name: uln_4
+    email_address: user4@supraliminal.com
+    username: user4
+    algorithm: sha1
+    salt: null
+    password: null
+    is_active: true
+    is_super_admin: false
+    last_login: null
+    created_at: '2012-03-29 00:29:57'
+    updated_at: '2012-03-29 00:29:57'
+  sfGuardUser_5:
+    first_name: ufn_5
+    last_name: uln_5
+    email_address: user5@supraliminal.com
+    username: user5
+    algorithm: sha1
+    salt: null
+    password: null
+    is_active: true
+    is_super_admin: false
+    last_login: null
+    created_at: '2012-03-29 00:29:57'
+    updated_at: '2012-03-29 00:29:57'
+  sfGuardUser_6:
+    first_name: ufn_6
+    last_name: uln_6
+    email_address: user6@supraliminal.com
+    username: user6
+    algorithm: sha1
+    salt: 338316c860858b9d2604ee65d0ab75a7
+    password: 45094700aa7061c3579b49f0711e973e728c2d20
+    is_active: true
+    is_super_admin: true
+    last_login: '2012-04-12 21:59:08'
+    created_at: '2012-03-29 00:29:57'
+    updated_at: '2012-04-12 21:59:08'
+  sfGuardUser_7:
+    first_name: ufn_7
+    last_name: uln_7
+    email_address: user7@supraliminal.com
+    username: user7
+    algorithm: sha1
+    salt: null
+    password: null
+    is_active: true
+    is_super_admin: false
+    last_login: null
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+  sfGuardUser_8:
+    first_name: ufn_8
+    last_name: uln_8
+    email_address: user8@supraliminal.com
+    username: user8
+    algorithm: sha1
+    salt: null
+    password: null
+    is_active: true
+    is_super_admin: false
+    last_login: null
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+  sfGuardUser_9:
+    first_name: ufn_9
+    last_name: uln_9
+    email_address: user9@supraliminal.com
+    username: user9
+    algorithm: sha1
+    salt: 40272f878a2235381f87519670668121
+    password: 4bbde18f96e4959c60d83fa65a92c3b23afe11a4
+    is_active: true
+    is_super_admin: false
+    last_login: '2012-04-12 21:52:37'
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-04-12 21:52:37'
+  sfGuardUser_10:
+    first_name: ufn_10
+    last_name: uln_10
+    email_address: user10@supraliminal.com
+    username: user10
+    algorithm: sha1
+    salt: null
+    password: null
+    is_active: true
+    is_super_admin: false
+    last_login: null
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+Staff:
+  Staff_1:
+    User: sfGuardUser_6
+    title: staff
+    bio: 'is a staff of supraliminal.info'
+    is_subcontractor: false
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+  Staff_2:
+    User: sfGuardUser_7
+    title: staff
+    bio: 'is a staff of supraliminal.info'
+    is_subcontractor: false
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+  Staff_3:
+    User: sfGuardUser_8
+    title: staff
+    bio: 'is a staff of supraliminal.info'
+    is_subcontractor: false
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+  Staff_4:
+    User: sfGuardUser_9
+    title: staff
+    bio: 'is a staff of supraliminal.info'
+    is_subcontractor: false
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+  Staff_5:
+    User: sfGuardUser_10
+    title: staff
+    bio: 'is a staff of supraliminal.info'
+    is_subcontractor: false
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+Task:
+  Task_1:
+    Account: Account_1
+    Staff: Staff_1
+    TaskStatus: TaskStatus_4
+    TaskType: TaskType_3
+    TaskPriority: TaskPriority_2
+    TaskWork: TaskWork_1
+    ref_no: '320389'
+    name: bug_1
+    description: 'need to be able to edit the site'
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  Task_2:
+    Account: Account_2
+    Staff: Staff_1
+    TaskStatus: TaskStatus_2
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_2
+    ref_no: '320390'
+    name: bug_2
+    description: 'tax doesnt show up'
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  Task_3:
+    Account: Account_3
+    Staff: Staff_2
+    TaskStatus: TaskStatus_4
+    TaskType: TaskType_3
+    TaskPriority: TaskPriority_2
+    TaskWork: TaskWork_1
+    ref_no: '320391'
+    name: bug_3
+    description: 'need to be able to edit the site'
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  Task_4:
+    Account: Account_4
+    Staff: Staff_2
+    TaskStatus: TaskStatus_2
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_2
+    ref_no: '320392'
+    name: bug_4
+    description: 'tax doesnt show up'
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  Task_5:
+    Account: Account_5
+    Staff: Staff_3
+    TaskStatus: TaskStatus_4
+    TaskType: TaskType_3
+    TaskPriority: TaskPriority_2
+    TaskWork: TaskWork_1
+    ref_no: '320393'
+    name: bug_5
+    description: 'need to be able to edit the site'
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  Task_6:
+    Account: Account_6
+    Staff: Staff_3
+    TaskStatus: TaskStatus_2
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_2
+    ref_no: '320394'
+    name: bug_6
+    description: 'tax doesnt show up'
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  Task_7:
+    Account: Account_7
+    Staff: Staff_4
+    TaskStatus: TaskStatus_4
+    TaskType: TaskType_3
+    TaskPriority: TaskPriority_2
+    TaskWork: TaskWork_1
+    ref_no: '320395'
+    name: bug_7
+    description: 'need to be able to edit the site'
+    created_at: '2012-03-29 00:30:00'
+    updated_at: '2012-03-29 00:30:00'
+  Task_8:
+    Account: Account_8
+    Staff: Staff_4
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_2
+    ref_no: '320396'
+    name: bug_8
+    description: 'tax doesnt show up'
+    created_at: '2012-03-29 00:30:00'
+    updated_at: '2012-03-29 18:44:24'
+  Task_9:
+    Account: Account_9
+    Staff: Staff_5
+    TaskStatus: TaskStatus_4
+    TaskType: TaskType_3
+    TaskPriority: TaskPriority_2
+    TaskWork: TaskWork_1
+    ref_no: '320397'
+    name: bug_9
+    description: 'need to be able to edit the site'
+    created_at: '2012-03-29 00:30:00'
+    updated_at: '2012-03-29 00:30:00'
+  Task_10:
+    Account: Account_10
+    Staff: Staff_5
+    TaskStatus: TaskStatus_2
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_2
+    ref_no: '320398'
+    name: bug_10
+    description: 'tax doesnt show up'
+    created_at: '2012-03-29 00:30:00'
+    updated_at: '2012-03-29 00:30:00'
+TaskStatus:
+  TaskStatus_1:
+    name: incomplete
+  TaskStatus_2:
+    name: 'in progress'
+  TaskStatus_3:
+    name: complete
+  TaskStatus_4:
+    name: 'need more info'
+  TaskStatus_5:
+    name: 'on hold'
+TaskPriority:
+  TaskPriority_1:
+    name: critical
+  TaskPriority_2:
+    name: blocker
+  TaskPriority_3:
+    name: minor
+  TaskPriority_4:
+    name: backlist
+AccountInvoice:
+  AccountInvoice_1:
+    Account: Account_1
+    ref_no: '320389'
+    description: 'for the whole design and implemeantation of the site good customer discount'
+    paid_off: true
+    is_viewable: false
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  AccountInvoice_2:
+    Account: Account_2
+    ref_no: '320390'
+    description: 'built a simple calculator'
+    paid_off: false
+    is_viewable: false
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  AccountInvoice_3:
+    Account: Account_3
+    ref_no: '320391'
+    description: 'for the whole design and implemeantation of the site good customer discount'
+    paid_off: true
+    is_viewable: false
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  AccountInvoice_4:
+    Account: Account_4
+    ref_no: '320392'
+    description: 'built a simple calculator'
+    paid_off: false
+    is_viewable: false
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  AccountInvoice_5:
+    Account: Account_5
+    ref_no: '320393'
+    description: 'for the whole design and implemeantation of the site good customer discount'
+    paid_off: true
+    is_viewable: false
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  AccountInvoice_6:
+    Account: Account_6
+    ref_no: '320394'
+    description: 'built a simple calculator'
+    paid_off: false
+    is_viewable: false
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  AccountInvoice_7:
+    Account: Account_7
+    ref_no: '320395'
+    description: 'for the whole design and implemeantation of the site good customer discount'
+    paid_off: true
+    is_viewable: false
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  AccountInvoice_8:
+    Account: Account_8
+    ref_no: '320396'
+    description: 'built a simple calculator'
+    paid_off: false
+    is_viewable: false
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  AccountInvoice_9:
+    Account: Account_9
+    ref_no: '320397'
+    description: 'for the whole design and implemeantation of the site good customer discount'
+    paid_off: true
+    is_viewable: false
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  AccountInvoice_10:
+    Account: Account_10
+    ref_no: '320398'
+    description: 'built a simple calculator'
+    paid_off: false
+    is_viewable: false
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+Account:
+  Account_1:
+    Client: Client_1
+    title: ''
+    domain_name: user1domain1.com
+    description: 'another dynbamic site'
+    active: true
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-04-12 21:26:38'
+  Account_2:
+    Client: Client_1
+    title: null
+    domain_name: user1domain2.com
+    description: 'a dynamic site t calculate'
+    active: true
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+  Account_3:
+    Client: Client_2
+    title: null
+    domain_name: user2domain1.com
+    description: 'another dynbamic site'
+    active: true
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+  Account_4:
+    Client: Client_2
+    title: null
+    domain_name: user2domain2.com
+    description: 'a dynamic site t calculate'
+    active: true
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+  Account_5:
+    Client: Client_3
+    title: null
+    domain_name: user3domain1.com
+    description: 'another dynbamic site'
+    active: true
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+  Account_6:
+    Client: Client_3
+    title: null
+    domain_name: user3domain2.com
+    description: 'a dynamic site t calculate'
+    active: true
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+  Account_7:
+    Client: Client_4
+    title: null
+    domain_name: user4domain1.com
+    description: 'another dynbamic site'
+    active: true
+    created_at: '2012-03-29 00:29:58'
+    updated_at: '2012-03-29 00:29:58'
+  Account_8:
+    Client: Client_4
+    title: null
+    domain_name: user4domain2.com
+    description: 'a dynamic site t calculate'
+    active: true
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  Account_9:
+    Client: Client_5
+    title: null
+    domain_name: user5domain1.com
+    description: 'another dynbamic site'
+    active: true
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
+  Account_10:
+    Client: Client_5
+    title: null
+    domain_name: user5domain2.com
+    description: 'a dynamic site t calculate'
+    active: true
+    created_at: '2012-03-29 00:29:59'
+    updated_at: '2012-03-29 00:29:59'
