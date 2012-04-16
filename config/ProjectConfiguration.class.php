@@ -11,7 +11,7 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins('sfDoctrineGuardPlugin');
     $this->enablePlugins('sfSelectTimeInputJQueryTimePickerPlugin');
     $this->enablePlugins('sfTextDateInputJQueryDatePickerPlugin');
-    $this->enablePlugins('sfJQueryDateTimeFormWidgetPlugin');
     $this->enablePlugins('sfTaskExtraPlugin');
+    $this->enablePlugins('sfJQueryDateTimeFormWidgetPlugin');
   }
 }
