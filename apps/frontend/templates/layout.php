@@ -3,8 +3,6 @@
     <head>		
         <meta charset="utf-8">
         <title>SuperAccountant</title>
-        <link rel="stylesheet" href="/css/bobo/style.css" />
-        <link rel="shortcut icon" href="/favicon.ico" />
         <!--[if IE 6]>
             <link rel="stylesheet" href="/css/bobo/ie6.css" />
         <![endif]--> 

@@ -12,7 +12,7 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [ main.css, jquery-ui.css, timePicker.css ]
+  stylesheets:    [ main.css, jquery-ui.css, timePicker.css, bobo/style.css ]
 
   javascripts:    [ date.js, jquery.js, jquery-ui.js, jquery.timePicker.js ]
 
