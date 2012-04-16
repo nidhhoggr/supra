@@ -12,17 +12,20 @@ class clientActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-        $this->client = Doctrine_Query::create()
-                        ->from('Client c')
-                        ->where('c.user_id = ?', $this->getUser()->getId())
-               	        ->fetchOne();   
 
-        if(!$this->client) {
-            $this->clients = Doctrine_Query::create()
+            $dpu = new DoctrinePagerUtil('Client', 2);
+            $sort = $dpu->getSort($request);
+
+            $clients = Doctrine_Query::create()
                              ->from('Client c, c.User u')
-                             ->orderBy('u.first_name ASC')
-                             ->execute();
-        }
+                             ->orderBy('u.first_name '. $sort);
+
+            $pagerOptions = array(
+                                 'query'=>$clients,
+                                 'request'=>$request
+                                );
+
+            $this->pager = $dpu->getPager($pagerOptions);
   }
 
   public function executeShow(sfWebRequest $request)

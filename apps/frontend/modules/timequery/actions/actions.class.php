@@ -26,14 +26,12 @@ class timequeryActions extends sfActions
 
           $params = array(
               'staff'   => $request->getParameter('staff'),
-              'from_date'    => $request->getParameter('from_date'),
-              'from_time'    => $request->getParameter('from_time'),
-              'until_date'    => $request->getParameter('until_date'),
-              'until_time'   => $request->getParameter('until_time'),
+              'from'    => $request->getParameter('from'),
+              'until'    => $request->getParameter('until')
           );
 
-          $from_date = $params['from_date'].' '.$params['from_time'];
-          $until_date = $params['until_date'].' '.$params['until_time'];
+          $from_date = $params['from'];
+          $until_date = $params['until'];
 
           $from  = $this->convertParamToDatetime($from_date);
 
@@ -45,10 +43,16 @@ class timequeryActions extends sfActions
       @$this->total = $result['total'];
       @$this->records  = $result['list'];
       $this->form = new TimeQueryForm(array(),array('params'=>$params));
+
   }
 
   private function convertParamToDatetime($time) {
       $time = DateTime::createFromFormat('Y-m-d h:i A',$time);
-      return $time->format('Y-m-d H:i:s');
+    
+      if($time instanceof DateTime)
+          return $time->format('Y-m-d H:i:s');
+      else 
+          return null;;
   }
+
 }

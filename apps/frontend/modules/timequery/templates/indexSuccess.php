@@ -12,6 +12,7 @@
      if($total) {
          echo "Total hours: " . $total['h'] . " hours " . $total['m'] . " minutes";
 ?>
+
 <table>
   <thead>
     <tr>
