@@ -2,6 +2,6 @@ all:
   doctrine:
     class: sfDoctrineDatabase
     param:
-      dsn: 'mysql:host=localhost;dbname=supra'
-      username: root
-      password: root
+      dsn: 'mysql:host=localhost;dbname=clonedpa_supra'
+      username: clonedpa
+      password: cloned4311!
