@@ -25,7 +25,7 @@ class timequeryActions extends sfActions
           $tl = new TimeLog();
 
           $params = array(
-              'staff'   => $request->getParameter('staff'),
+              'staff_id'   => $request->getParameter('staff_id'),
               'from'    => $request->getParameter('from'),
               'until'    => $request->getParameter('until')
           );
@@ -37,7 +37,7 @@ class timequeryActions extends sfActions
 
           $until = $this->convertParamToDatetime($until_date);
 
-          $result = $tl->getByStaffIdBetween($params['staff'],$from,$until);
+          $result = $tl->getByStaffIdBetween($params['staff_id'],$from,$until);
       }
 
       @$this->total = $result['total'];

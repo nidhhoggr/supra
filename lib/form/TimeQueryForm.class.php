@@ -6,8 +6,6 @@ class TimeQueryForm extends BaseForm
   {
       $params = $this->getOption('params');
 
-      var_dump($params);
-
       $fromOptions = array(
                            'widget_name'=>'from',
                            'params'=>$params,
@@ -23,10 +21,15 @@ class TimeQueryForm extends BaseForm
                            );
 
       $this->setWidgets(array(
-          'staff'      => new sfWidgetFormDoctrineChoice(array('model' => 'Staff', 'add_empty' => false)),
+          'staff_id'      => new sfWidgetFormDoctrineChoice(array('model' => 'Staff', 'add_empty' => false)),
           'from'     => new sfJQueryDateTimeWidget($fromOptions),
           'until'    => new sfJQueryDateTimeWidget($untilOptions),
       ));
 
+  
+    if(@$params['staff_id']) 
+        $this->setDefault('staff_id',$params['staff_id']);
+    else
+        $this->setDefault('staff_id',Staff::loggedInId());
   }
 }
