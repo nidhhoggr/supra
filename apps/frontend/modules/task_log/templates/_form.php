@@ -9,7 +9,10 @@
     <tfoot>
       <tr>
         <td colspan="2">
-          &nbsp;<?php echo link_to('Back To Task','task/show?id='.$task_id);?>
+
+          <?php $id = ($task_id) ? $task_id  : $form->getObject()->getTask()->getId(); ?>
+
+          &nbsp;<?php echo link_to('Back To Task','task/show?id='.$id);?>
           <?php if (!$form->getObject()->isNew()): ?>
             &nbsp;<?php echo link_to('Delete', 'task_log/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
           <?php endif; ?>

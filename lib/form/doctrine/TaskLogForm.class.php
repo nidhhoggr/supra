@@ -15,6 +15,8 @@ class TaskLogForm extends BaseTaskLogForm
       $params = $this->getOption('params');
 
       $this->unsetTimeStampable();
+
+      $this->setWidget('staff_id', new sfWidgetFormInputHidden());
      
       $this->setDefault('staff_id',Staff::loggedInId());
 
