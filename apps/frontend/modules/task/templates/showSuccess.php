@@ -58,7 +58,7 @@
         <p>
           <?php echo $comment->getTitle() ?>
           - 
-          <?php echo link_to('edit','comment/edit?id='.$comment->getId());?>
+          <?php echo link_to('edit','task_comment/edit?id='.$comment->getId());?>
         </p>
         <p>
           <?php echo $comment->getComment() ?>

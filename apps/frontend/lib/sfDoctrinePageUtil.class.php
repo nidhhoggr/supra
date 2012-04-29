@@ -66,6 +66,13 @@ class sfDoctrinePagerUtil extends sfDoctrinePager {
 
     public function getSortDir($field) {
         if($this->isSorted($field))
+           return $this->sort['dir'];
+        else
+           return "decc";
+    }     
+
+    public function getSortableDir($field) {
+        if($this->isSorted($field))
            return ($this->sort['dir'] == "asc") ? "desc" : "asc";
         else
            return "desc";
