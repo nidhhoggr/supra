@@ -17,7 +17,7 @@ abstract class BaseTaskForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'                   => new sfWidgetFormInputHidden(),
       'account_id'           => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Account'), 'add_empty' => false)),
-      'staff_id'             => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Staff'), 'add_empty' => true)),
+      'staff_id'             => new sfWidgetFormDoctrineChoice(array('label'=>'Employee','model' => $this->getRelatedModelName('Staff'), 'add_empty' => true)),
       'task_status_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TaskStatus'), 'add_empty' => false)),
       'task_type_id'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TaskType'), 'add_empty' => false)),
       'task_priority_id'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TaskPriority'), 'add_empty' => false)),

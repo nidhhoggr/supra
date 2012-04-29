@@ -20,7 +20,7 @@ class staffActions extends sfActions
                              ->orderBy('s.'.$sort);
 
             $fields = array(
-                            'id' => array('Staff','staff'),
+                            'id' => array('Employee','staff'),
                             'title' => array('Title','staff','getTitle')
                            );
 

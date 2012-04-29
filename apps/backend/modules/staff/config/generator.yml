@@ -15,13 +15,13 @@ generator:
       actions: ~
       fields:  ~
       list:
-        title: Staff Management 
+        title: Employee Management 
         display: [user, title]
         table_method: retrieveAssociatedUser
       filter:  ~
       form:
         display: [User,title,bio,is_subcontractor]
       edit:
-        title: Editing Staff '%%User%%'
+        title: Editing Employee '%%User%%'
       new: 
-        title: Staff Creation
+        title: Employee Creation

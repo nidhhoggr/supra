@@ -18,7 +18,7 @@ abstract class BaseTaskLogForm extends BaseFormDoctrine
       'id'            => new sfWidgetFormInputHidden(),
       'task_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Task'), 'add_empty' => false)),
       'task_work_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TaskWork'), 'add_empty' => false)),
-      'staff_id'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Staff'), 'add_empty' => false)),
+      'staff_id'      => new sfWidgetFormDoctrineChoice(array('label'=>'Employee','model' => $this->getRelatedModelName('Staff'), 'add_empty' => false)),
       'title'         => new sfWidgetFormInputText(),
       'description'   => new sfWidgetFormTextarea(),
       'gen_desc_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('GenDesc'), 'add_empty' => true)),

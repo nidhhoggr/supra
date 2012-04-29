@@ -17,7 +17,7 @@ abstract class BaseTimeLogForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'               => new sfWidgetFormInputHidden(),
       'time_log_type_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TimeLogType'), 'add_empty' => false)),
-      'staff_id'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Staff'), 'add_empty' => false)),
+      'staff_id'         => new sfWidgetFormDoctrineChoice(array('label'=>'Employee','model' => $this->getRelatedModelName('Staff'), 'add_empty' => false)),
       'time'             => $this->sfWidgetFormHumanTime(),
       'notes'            => new sfWidgetFormTextarea(),
       'created_at'       => new sfWidgetFormDateTime(),

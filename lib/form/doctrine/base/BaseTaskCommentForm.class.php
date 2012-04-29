@@ -17,7 +17,7 @@ abstract class BaseTaskCommentForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'         => new sfWidgetFormInputHidden(),
       'task_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Task'), 'add_empty' => false)),
-      'staff_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Staff'), 'add_empty' => false)),
+      'staff_id'   => new sfWidgetFormDoctrineChoice(array('label'=>'Employee','model' => $this->getRelatedModelName('Staff'), 'add_empty' => false)),
       'title'      => new sfWidgetFormInputText(),
       'comment'    => new sfWidgetFormTextarea(),
       'created_at' => new sfWidgetFormDateTime(),

@@ -5,7 +5,7 @@
       <td><?php echo $time_log->getTimeLogType() ?></td>
     </tr>
     <tr>
-      <th>Staff:</th>
+      <th>Employee:</th>
       <td><?php echo $time_log->getStaff() ?></td>
     </tr>
     <tr>

@@ -1,7 +1,7 @@
 <table>
   <thead>
     <tr>
-      <th>Staff</th>
+      <th>Employee</th>
       <th>Status</th>
       <th>Time</th>
       <th>Notes</th>

@@ -48,6 +48,9 @@
             <?php echo link_to('Deductions','deduction/index') ?>
           </li>
           <li>
+            <?php echo link_to('Employees','staff/index') ?>
+          </li>
+          <li>
             <?php echo link_to('General Descriptions','gen_desc/index') ?>
           </li>
           <li>
@@ -61,9 +64,6 @@
           </li>
           <li>
             <?php echo link_to('Permissions','guard/permission') ?>
-          </li>
-          <li>
-            <?php echo link_to('Staff','staff/index') ?>
           </li>
           <li>
             <?php echo link_to('Tasks','task/index') ?>         

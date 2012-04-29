@@ -21,7 +21,7 @@ class TimeQueryForm extends BaseForm
                            );
 
       $this->setWidgets(array(
-          'staff_id'      => new sfWidgetFormDoctrineChoice(array('model' => 'Staff', 'add_empty' => false)),
+          'staff_id'      => new sfWidgetFormDoctrineChoice(array('label'=>'Employee','model' => 'Staff', 'add_empty' => false)),
           'from'     => new sfJQueryDateTimeWidget($fromOptions),
           'until'    => new sfJQueryDateTimeWidget($untilOptions),
       ));
