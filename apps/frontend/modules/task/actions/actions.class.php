@@ -13,7 +13,7 @@ class taskActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
 
-    $dpu = new sfDoctrinePagerUtil('Task', 10);
+    $dpu = new sfDoctrinePagerUtil('Task', 3);
     $sort = $dpu->getSort($request);
 
     if($this->getUser()->isSuperAdmin())
