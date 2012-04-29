@@ -22,7 +22,6 @@ class TaskLogForm extends BaseTaskLogForm
 
       if(!$this->getCurrentUser()->isSuperAdmin()) {
           unset(
-              $this['is_billable'],
               $this['is_viewable'],
               $this['percentage']
           );
