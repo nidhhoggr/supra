@@ -15,7 +15,9 @@ class TaskCommentForm extends BaseTaskCommentForm
       $params = $this->getOption('params');
 
       $this->unsetTimeStampable();
+      $this->setWidget('staff_id', new sfWidgetFormInputHidden());
 
+      $this->setDefault('staff_id',Staff::loggedInId());
       $this->setDefault('task_id',$params['task_id']);
       
   }
