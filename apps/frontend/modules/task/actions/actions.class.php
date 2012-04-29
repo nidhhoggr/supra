@@ -12,7 +12,33 @@ class taskActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->tasks = Doctrine_Core::getTable('Task')->getByStaffId();
+
+    $dpu = new sfDoctrinePagerUtil('Task', 10);
+    $sort = $dpu->getSort($request);
+
+    if($this->getUser()->isSuperAdmin())
+        $tasks = Doctrine_Core::getTable('Task')->getQueryOfAll($sort);
+    else
+        $tasks = Doctrine_Core::getTable('Task')->getQueryByStaffId($sort);
+
+
+    $fields = array(
+                    'name'             => array('Name','task','getName'),
+                    'account_id'       => array('Account','account','getAccount'),
+                    'staff_id'         => array('Employee','staff','getStaff'),
+                    'task_status_id'   => array('Task Status','task_status','getTaskStatus'),
+                    'task_type_id'     => array('Task Type','task_type','getTaskType'),
+                    'task_priority_id' => array('Task Priority','task_priority','getTaskPriority'),
+                    'ref_no'          => array('Ref No'),
+                   );
+
+    $pagerOptions = array(
+                          'query'=>$tasks,
+                          'fields'=>$fields,
+                          'request'=>$request
+                         );
+
+    $this->pager = $dpu->getPager($pagerOptions);
   }
 
   public function executeShow(sfWebRequest $request)

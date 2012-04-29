@@ -26,6 +26,11 @@ class TimeQueryForm extends BaseForm
           'until'    => new sfJQueryDateTimeWidget($untilOptions),
       ));
 
+
+      $this->setValidators(array(
+          'from' => new sfJQueryDateTimeValidator(array('widget_name'=>'from')),
+          'until' => new sfJQueryDateTimeValidator(array('widget_name'=>'until')),
+      ));
   
     if(@$params['staff_id']) 
         $this->setDefault('staff_id',$params['staff_id']);

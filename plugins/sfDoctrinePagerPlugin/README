@@ -1,0 +1,79 @@
+#sfDoctrinePagerPlugin#
+
+A pluign used to display pagination of a given object and its specified fields with ease of use.
+The plugin come with a utilitey to be included in the action, parameters specified in the action and a template
+to be included in the the template on the implemented action. The plugin requires the specification of fields
+parametrs which help to display the field and provide links to the onjects view action.
+
+## Installation ##
+
+  * Install the plugin.
+      Using symfony command line:
+          ./symfony plugin:install sfDoctrinePagerPlugin
+      Or get the latest version from the subversion repository:
+          svn co http://svn.symfony-project.com/plugins/sfDoctrinePagerPlugin
+
+  * If you installed by subversion, activate the plugin in the config/ProjectConfiguration.class.php file (this will have already been done automatically if you used the plugin:install symfony command).
+
+        [php]
+        class ProjectConfiguration extends sfProjectConfiguration
+        {
+          public function setup()
+          {
+            ...
+            $this->enablePlugins('sfDoctrinePagerPlugin');
+            ...
+          }
+        }
+
+  * Publish the Assets.
+      Using symfony command line:
+          ./symfony plugin:publish-assets
+
+
+## How to use ##
+
+  * Edit an action, for example apps/frontend/modules/task/actions/actions.class.php. do something like this:
+
+        [php]   
+        $dpu = new sfDoctrinePagerPlugin('Task', 10);
+        $sort = $dpu->getSort($request);
+
+        $tasks = Doctrine_Core::getTable('Task')->getQueryByStaffId($sort);
+
+
+        $fields = array(
+                        'name'             => array('Name','task','getName'),
+                        'account_id'       => array('Account','account','getAccount'),
+                        'staff_id'         => array('Employee','staff','getStaff'),
+                        'task_status_id'   => array('Task Status','task_status','getTaskStatus'),
+                        'task_type_id'     => array('Task Type','task_type','getTaskType'),
+                        'task_priority_id' => array('Task Priority','task_priority','getTaskPriority'),
+                        'ref_no'          => array('Ref No'),
+                       );
+
+        $pagerOptions = array(
+                              'query'=>$tasks,
+                              'fields'=>$fields,
+                              'request'=>$request
+                             );
+
+        $this->pager = $dpu->getPager($pagerOptions);
+
+  * create a method in your model class with the sorting, for example lib/model/doctrine/TaskTable.class.php:
+        [php]
+        public function getQueryByStaffId($sort) {
+            return Doctrine_Query::Create()
+            ->from('Task t')
+            ->where('t.staff_id = ?',Staff::loggedInId())
+            ->orderBy('t.'.$sort);
+        }
+
+
+  * include the following in the app/fronted/modules/task/templates/indexSuccess.php:
+
+        [php]
+        <?php include_partial('pager/pager', array('pager'=>$pager,'module'=>'task'));?>
+
+  * Clear your cache.
+        ./symfony cc

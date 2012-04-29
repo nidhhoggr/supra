@@ -1,0 +1,419 @@
+Apr 29 00:04:55 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 00:04:55 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 00:04:55 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 00:04:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 00:04:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 00:04:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 00:04:55 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 00:05:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 00:05:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 00:05:04 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 00:05:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 00:05:04 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 00:05:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 00:05:04 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 00:05:04 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/supra/apps/frontend/lib/sfDoctrinePageUtil.php on line 19 (Undefined index: fields)
+Apr 29 00:05:04 symfony [warning] {sfWebDebugLogger}  Warning at /home/sfprojects/supra/apps/frontend/lib/sfDoctrinePageUtil.php on line 42 (Invalid argument supplied for foreach())
+Apr 29 00:05:04 symfony [notice] {sfWebDebugLogger}  Notice at /home/sfprojects/supra/apps/frontend/lib/sfDoctrinePageUtil.php on line 49 (Undefined variable: field_arr)
+Apr 29 00:05:04 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 00:05:04 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 29 00:05:04 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 29 00:05:04 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY s.first_name c.id asc LIMIT 10 - ()
+Apr 29 00:05:04 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'c.id asc LIMIT 10' at line 1. Failing Query: "SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY s.first_name c.id asc LIMIT 10"
+Apr 29 00:05:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 00:05:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 00:05:04 symfony [info] {sfWebDebugLogger} Configuration 6.55 ms (10)
+Apr 29 00:05:04 symfony [info] {sfWebDebugLogger} Factories 4.61 ms (1)
+Apr 29 00:05:04 symfony [info] {sfWebDebugLogger} Action "client/index" 5.91 ms (1)
+Apr 29 00:05:04 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 29 00:05:04 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 47.80 ms (1)
+Apr 29 00:17:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 00:17:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 00:17:51 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 00:17:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 00:17:51 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 00:17:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 00:17:51 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 00:17:51 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 00:17:51 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 29 00:17:51 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 29 00:17:51 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY s.id asc LIMIT 10 - ()
+Apr 29 00:17:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (1)
+Apr 29 00:17:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (2)
+Apr 29 00:17:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (3)
+Apr 29 00:17:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (4)
+Apr 29 00:17:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (5)
+Apr 29 00:17:51 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager.php"
+Apr 29 00:17:51 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY s.id asc LIMIT 10 - ()
+Apr 29 00:17:51 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:17:51 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:17:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 29 00:17:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 00:17:51 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 00:17:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 00:17:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 00:17:51 symfony [info] {sfWebDebugLogger} Configuration 0.96 ms (9)
+Apr 29 00:17:51 symfony [info] {sfWebDebugLogger} Factories 4.26 ms (1)
+Apr 29 00:17:51 symfony [info] {sfWebDebugLogger} Action "client/index" 5.46 ms (1)
+Apr 29 00:17:51 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (11)
+Apr 29 00:17:51 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 44.02 ms (1)
+Apr 29 00:17:51 symfony [info] {sfWebDebugLogger} Partial "global/_pager" 5.28 ms (1)
+Apr 29 00:17:51 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.66 ms (1)
+Apr 29 00:17:51 symfony [info] {sfWebResponse} Send content (62959 o)
+Apr 29 00:21:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 00:21:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 00:21:12 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 00:21:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 00:21:12 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 00:21:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 00:21:12 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 00:21:12 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 00:21:12 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 29 00:21:12 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 29 00:21:12 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY s.id asc LIMIT 10 - ()
+Apr 29 00:21:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (1)
+Apr 29 00:21:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (2)
+Apr 29 00:21:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (3)
+Apr 29 00:21:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (4)
+Apr 29 00:21:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (5)
+Apr 29 00:21:12 symfony [err] {sfRenderException} The template "_pager_foot.php" does not exist or is unreadable in "".
+Apr 29 00:21:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 00:21:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 00:21:12 symfony [info] {sfWebDebugLogger} Configuration 1.47 ms (9)
+Apr 29 00:21:12 symfony [info] {sfWebDebugLogger} Factories 8.70 ms (1)
+Apr 29 00:21:12 symfony [info] {sfWebDebugLogger} Action "client/index" 6.72 ms (1)
+Apr 29 00:21:12 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (8)
+Apr 29 00:21:12 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 42.88 ms (1)
+Apr 29 00:21:12 symfony [info] {sfWebDebugLogger} Partial "global/_pager_foot" 15.58 ms (1)
+Apr 29 00:22:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 00:22:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 00:22:43 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 00:22:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 00:22:43 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 00:22:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 00:22:43 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 00:22:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 00:22:43 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 29 00:22:43 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 29 00:22:43 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY s.id asc LIMIT 10 - ()
+Apr 29 00:22:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (1)
+Apr 29 00:22:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (2)
+Apr 29 00:22:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (3)
+Apr 29 00:22:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (4)
+Apr 29 00:22:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (5)
+Apr 29 00:22:43 symfony [err] {sfRenderException} The template "_pager_foot.php" does not exist or is unreadable in "".
+Apr 29 00:22:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 00:22:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 00:22:43 symfony [info] {sfWebDebugLogger} Configuration 1.99 ms (9)
+Apr 29 00:22:43 symfony [info] {sfWebDebugLogger} Factories 4.45 ms (1)
+Apr 29 00:22:43 symfony [info] {sfWebDebugLogger} Action "client/index" 6.18 ms (1)
+Apr 29 00:22:43 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (8)
+Apr 29 00:22:43 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 52.48 ms (1)
+Apr 29 00:22:43 symfony [info] {sfWebDebugLogger} Partial "global/_pager_foot" 20.88 ms (1)
+Apr 29 00:23:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 00:23:18 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 00:23:18 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 00:23:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 00:23:18 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 00:23:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 00:23:18 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 00:23:18 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 00:23:18 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 29 00:23:18 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 29 00:23:18 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY s.id asc LIMIT 10 - ()
+Apr 29 00:23:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (1)
+Apr 29 00:23:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (2)
+Apr 29 00:23:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (3)
+Apr 29 00:23:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (4)
+Apr 29 00:23:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (5)
+Apr 29 00:23:18 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_footer.php"
+Apr 29 00:23:18 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:23:18 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:23:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 29 00:23:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 00:23:18 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 00:23:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 00:23:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 00:23:18 symfony [info] {sfWebDebugLogger} Configuration 1.70 ms (9)
+Apr 29 00:23:18 symfony [info] {sfWebDebugLogger} Factories 8.67 ms (1)
+Apr 29 00:23:18 symfony [info] {sfWebDebugLogger} Action "client/index" 7.23 ms (1)
+Apr 29 00:23:18 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (10)
+Apr 29 00:23:18 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 38.02 ms (1)
+Apr 29 00:23:18 symfony [info] {sfWebDebugLogger} Partial "global/_pager_footer" 2.33 ms (1)
+Apr 29 00:23:18 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.65 ms (1)
+Apr 29 00:23:18 symfony [info] {sfWebResponse} Send content (58688 o)
+Apr 29 00:23:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 00:23:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 00:23:22 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 00:23:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 00:23:22 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 00:23:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 00:23:22 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 00:23:22 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 00:23:22 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 29 00:23:22 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 29 00:23:22 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY s.id asc LIMIT 10 - ()
+Apr 29 00:23:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (1)
+Apr 29 00:23:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (2)
+Apr 29 00:23:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (3)
+Apr 29 00:23:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (4)
+Apr 29 00:23:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (5)
+Apr 29 00:23:22 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_footer.php"
+Apr 29 00:23:22 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:23:22 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:23:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 29 00:23:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 00:23:22 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 00:23:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 00:23:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 00:23:22 symfony [info] {sfWebDebugLogger} Configuration 2.60 ms (9)
+Apr 29 00:23:22 symfony [info] {sfWebDebugLogger} Factories 13.33 ms (1)
+Apr 29 00:23:22 symfony [info] {sfWebDebugLogger} Action "client/index" 7.68 ms (1)
+Apr 29 00:23:22 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (10)
+Apr 29 00:23:22 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 38.50 ms (1)
+Apr 29 00:23:22 symfony [info] {sfWebDebugLogger} Partial "global/_pager_footer" 1.38 ms (1)
+Apr 29 00:23:22 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.66 ms (1)
+Apr 29 00:23:22 symfony [info] {sfWebResponse} Send content (58815 o)
+Apr 29 00:31:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 00:31:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 00:31:49 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 00:31:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 00:31:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 00:31:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 00:31:49 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 00:31:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 00:31:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 29 00:31:49 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 29 00:31:49 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_header.php"
+Apr 29 00:31:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY s.id asc LIMIT 10 - ()
+Apr 29 00:31:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (1)
+Apr 29 00:31:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (2)
+Apr 29 00:31:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (3)
+Apr 29 00:31:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (4)
+Apr 29 00:31:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (5)
+Apr 29 00:31:49 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_footer.php"
+Apr 29 00:31:49 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:31:49 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:31:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 29 00:31:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 00:31:49 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 00:31:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 00:31:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 00:31:49 symfony [info] {sfWebDebugLogger} Configuration 1.15 ms (9)
+Apr 29 00:31:49 symfony [info] {sfWebDebugLogger} Factories 5.03 ms (1)
+Apr 29 00:31:49 symfony [info] {sfWebDebugLogger} Action "client/index" 7.32 ms (1)
+Apr 29 00:31:49 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (10)
+Apr 29 00:31:49 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 39.04 ms (1)
+Apr 29 00:31:49 symfony [info] {sfWebDebugLogger} Partial "global/_pager_header" 2.06 ms (1)
+Apr 29 00:31:49 symfony [info] {sfWebDebugLogger} Partial "global/_pager_footer" 1.46 ms (1)
+Apr 29 00:31:49 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.65 ms (1)
+Apr 29 00:31:49 symfony [info] {sfWebResponse} Send content (60203 o)
+Apr 29 00:32:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 00:32:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 00:32:08 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 00:32:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 00:32:08 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 00:32:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 00:32:08 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 00:32:08 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 00:32:08 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 29 00:32:08 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 29 00:32:08 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_header.php"
+Apr 29 00:32:08 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY s.id asc LIMIT 10 - ()
+Apr 29 00:32:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (1)
+Apr 29 00:32:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (2)
+Apr 29 00:32:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (3)
+Apr 29 00:32:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (4)
+Apr 29 00:32:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (5)
+Apr 29 00:32:08 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_footer.php"
+Apr 29 00:32:08 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:32:08 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:32:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 29 00:32:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 00:32:08 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 00:32:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 00:32:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 00:32:08 symfony [info] {sfWebDebugLogger} Configuration 1.36 ms (9)
+Apr 29 00:32:08 symfony [info] {sfWebDebugLogger} Factories 8.93 ms (1)
+Apr 29 00:32:08 symfony [info] {sfWebDebugLogger} Action "client/index" 5.05 ms (1)
+Apr 29 00:32:08 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (10)
+Apr 29 00:32:08 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 40.47 ms (1)
+Apr 29 00:32:08 symfony [info] {sfWebDebugLogger} Partial "global/_pager_header" 0.74 ms (1)
+Apr 29 00:32:08 symfony [info] {sfWebDebugLogger} Partial "global/_pager_footer" 1.45 ms (1)
+Apr 29 00:32:08 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 3.78 ms (1)
+Apr 29 00:32:08 symfony [info] {sfWebResponse} Send content (60203 o)
+Apr 29 00:34:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 00:34:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 00:34:25 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 00:34:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 00:34:25 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 00:34:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 00:34:25 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 00:34:25 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 00:34:25 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 29 00:34:25 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 29 00:34:25 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_header.php"
+Apr 29 00:34:25 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY s.id asc LIMIT 10 - ()
+Apr 29 00:34:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (1)
+Apr 29 00:34:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (2)
+Apr 29 00:34:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (3)
+Apr 29 00:34:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (4)
+Apr 29 00:34:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (5)
+Apr 29 00:34:25 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_footer.php"
+Apr 29 00:34:25 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:34:25 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:34:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 29 00:34:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 00:34:25 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 00:34:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 00:34:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 00:34:25 symfony [info] {sfWebDebugLogger} Configuration 1.51 ms (9)
+Apr 29 00:34:25 symfony [info] {sfWebDebugLogger} Factories 5.08 ms (1)
+Apr 29 00:34:25 symfony [info] {sfWebDebugLogger} Action "client/index" 9.38 ms (1)
+Apr 29 00:34:25 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (10)
+Apr 29 00:34:25 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 68.29 ms (1)
+Apr 29 00:34:25 symfony [info] {sfWebDebugLogger} Partial "global/_pager_header" 4.90 ms (1)
+Apr 29 00:34:25 symfony [info] {sfWebDebugLogger} Partial "global/_pager_footer" 1.51 ms (1)
+Apr 29 00:34:25 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.76 ms (1)
+Apr 29 00:34:25 symfony [info] {sfWebResponse} Send content (60200 o)
+Apr 29 00:34:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 00:34:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 00:34:34 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 00:34:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 00:34:34 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 00:34:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 00:34:34 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 00:34:34 symfony [err] {Doctrine_Query_Exception} Unknown column client_id
+Apr 29 00:34:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 00:34:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 00:34:34 symfony [info] {sfWebDebugLogger} Configuration 1.57 ms (8)
+Apr 29 00:34:34 symfony [info] {sfWebDebugLogger} Factories 11.12 ms (1)
+Apr 29 00:34:34 symfony [info] {sfWebDebugLogger} Action "client/index" 56.10 ms (1)
+Apr 29 00:35:21 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 00:35:21 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 00:35:21 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 00:35:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 00:35:21 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 00:35:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 00:35:21 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 00:35:21 symfony [err] {Doctrine_Query_Exception} Unknown column client_id
+Apr 29 00:35:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 00:35:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 00:35:21 symfony [info] {sfWebDebugLogger} Configuration 0.85 ms (8)
+Apr 29 00:35:21 symfony [info] {sfWebDebugLogger} Factories 5.21 ms (1)
+Apr 29 00:35:21 symfony [info] {sfWebDebugLogger} Action "client/index" 53.76 ms (1)
+Apr 29 00:35:27 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 00:35:27 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 00:35:27 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 00:35:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 00:35:27 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 00:35:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 00:35:27 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 00:35:27 symfony [err] {Doctrine_Query_Exception} Unknown column cid
+Apr 29 00:35:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 00:35:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 00:35:27 symfony [info] {sfWebDebugLogger} Configuration 1.04 ms (8)
+Apr 29 00:35:27 symfony [info] {sfWebDebugLogger} Factories 4.96 ms (1)
+Apr 29 00:35:27 symfony [info] {sfWebDebugLogger} Action "client/index" 55.44 ms (1)
+Apr 29 00:35:30 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 00:35:30 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 00:35:30 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 00:35:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 00:35:30 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 00:35:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 00:35:30 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 00:35:30 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 00:35:30 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 29 00:35:30 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 29 00:35:30 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_header.php"
+Apr 29 00:35:30 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY s.id desc LIMIT 10 - ()
+Apr 29 00:35:30 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (5)
+Apr 29 00:35:30 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (4)
+Apr 29 00:35:30 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (3)
+Apr 29 00:35:30 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (2)
+Apr 29 00:35:30 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (1)
+Apr 29 00:35:30 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_footer.php"
+Apr 29 00:35:30 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:35:30 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:35:30 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 29 00:35:30 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 00:35:30 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 00:35:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 00:35:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 00:35:30 symfony [info] {sfWebDebugLogger} Configuration 1.42 ms (9)
+Apr 29 00:35:30 symfony [info] {sfWebDebugLogger} Factories 8.47 ms (1)
+Apr 29 00:35:30 symfony [info] {sfWebDebugLogger} Action "client/index" 6.86 ms (1)
+Apr 29 00:35:30 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (10)
+Apr 29 00:35:30 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 43.99 ms (1)
+Apr 29 00:35:30 symfony [info] {sfWebDebugLogger} Partial "global/_pager_header" 0.75 ms (1)
+Apr 29 00:35:30 symfony [info] {sfWebDebugLogger} Partial "global/_pager_footer" 1.48 ms (1)
+Apr 29 00:35:30 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 2.06 ms (1)
+Apr 29 00:35:30 symfony [info] {sfWebResponse} Send content (60345 o)
+Apr 29 00:35:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 00:35:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 00:35:35 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 00:35:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 00:35:35 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 00:35:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 00:35:35 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 00:35:35 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 00:35:35 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 29 00:35:35 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 29 00:35:35 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_header.php"
+Apr 29 00:35:35 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY s.id asc LIMIT 10 - ()
+Apr 29 00:35:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (1)
+Apr 29 00:35:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (2)
+Apr 29 00:35:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (3)
+Apr 29 00:35:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (4)
+Apr 29 00:35:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (5)
+Apr 29 00:35:35 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_footer.php"
+Apr 29 00:35:35 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:35:35 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:35:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 29 00:35:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 00:35:35 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 00:35:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 00:35:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 00:35:35 symfony [info] {sfWebDebugLogger} Configuration 1.63 ms (9)
+Apr 29 00:35:35 symfony [info] {sfWebDebugLogger} Factories 9.93 ms (1)
+Apr 29 00:35:35 symfony [info] {sfWebDebugLogger} Action "client/index" 6.16 ms (1)
+Apr 29 00:35:35 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (10)
+Apr 29 00:35:35 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 39.41 ms (1)
+Apr 29 00:35:35 symfony [info] {sfWebDebugLogger} Partial "global/_pager_header" 0.69 ms (1)
+Apr 29 00:35:35 symfony [info] {sfWebDebugLogger} Partial "global/_pager_footer" 2.09 ms (1)
+Apr 29 00:35:35 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.67 ms (1)
+Apr 29 00:35:35 symfony [info] {sfWebResponse} Send content (60458 o)
+Apr 29 00:35:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 00:35:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 00:35:48 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 00:35:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 00:35:48 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 00:35:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 00:35:48 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 00:35:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 00:35:48 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 29 00:35:48 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 29 00:35:48 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_header.php"
+Apr 29 00:35:48 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY s.id desc LIMIT 10 - ()
+Apr 29 00:35:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (5)
+Apr 29 00:35:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (4)
+Apr 29 00:35:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (3)
+Apr 29 00:35:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (2)
+Apr 29 00:35:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (1)
+Apr 29 00:35:48 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_footer.php"
+Apr 29 00:35:48 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:35:48 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 00:35:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 29 00:35:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 00:35:48 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 00:35:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 00:35:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 00:35:48 symfony [info] {sfWebDebugLogger} Configuration 1.60 ms (9)
+Apr 29 00:35:48 symfony [info] {sfWebDebugLogger} Factories 3.83 ms (1)
+Apr 29 00:35:48 symfony [info] {sfWebDebugLogger} Action "client/index" 9.52 ms (1)
+Apr 29 00:35:48 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (10)
+Apr 29 00:35:48 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 35.19 ms (1)
+Apr 29 00:35:48 symfony [info] {sfWebDebugLogger} Partial "global/_pager_header" 0.78 ms (1)
+Apr 29 00:35:48 symfony [info] {sfWebDebugLogger} Partial "global/_pager_footer" 1.43 ms (1)
+Apr 29 00:35:48 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.66 ms (1)
+Apr 29 00:35:48 symfony [info] {sfWebResponse} Send content (60461 o)

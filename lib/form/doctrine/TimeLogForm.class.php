@@ -12,10 +12,24 @@ class TimeLogForm extends BaseTimeLogForm
 {
   public function configure()
   {
-      $this->unsetTimeStampable();
- 
+      $this->unsetTimeStampable(); 
       $this->setDefault('staff_id',Staff::loggedInId());
 
-      $this->setDefault('time',time());
+      if(!$this->getCurrentUser()->isSuperAdmin()) {
+          $staff_input = new sfWidgetFormInputHidden;
+          $this->setWidget('staff_id', $staff_input);
+      }
+
+      $params = $this->getOption('params');
+
+      $options = array(
+                       'widget_name'=>'time',
+                       'params'=>$params,
+                       'default_date'=>date('Y-m-d'),
+                       'default_time'=>date('h:i A')
+                      );
+
+      $this->setWidget('time',new sfJQueryDateTimeWidget($options));
+      $this->setValidator('time', new sfJQueryDateTimeValidator(array('widget_name'=>'time')));
   }
 }

@@ -17,12 +17,18 @@ class TaskTable extends Doctrine_Table
         return Doctrine_Core::getTable('Task');
     }
 
-    public function getByStaffId() {
+    public function getQueryOfAll($sort) {
+        return Doctrine_Query::Create()
+               ->from('Task t')
+               ->orderBy('t.'.$sort);
+    }
+
+    public function getQueryByStaffId($sort) {
 
         return Doctrine_Query::Create() 
         ->from('Task t')
         ->where('t.staff_id = ?',Staff::loggedInId())
-        ->execute();
+        ->orderBy('t.'.$sort);
 
     }
 }
