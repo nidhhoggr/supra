@@ -4486,3 +4486,374 @@ Apr 29 02:39:55 symfony [info] {sfWebDebugLogger} View "Success" for "task_log/n
 Apr 29 02:39:55 symfony [info] {sfWebDebugLogger} Partial "task_log/_form" 22.01 ms (1)
 Apr 29 02:39:55 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.98 ms (1)
 Apr 29 02:39:55 symfony [info] {sfWebResponse} Send content (74228 o)
+Apr 29 02:48:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 02:48:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 02:48:11 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /task with parameters array (  'module' => 'task',  'action' => 'index',)
+Apr 29 02:48:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 02:48:11 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 02:48:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 02:48:11 symfony [info] {taskActions} Call "taskActions->executeIndex()"
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM task t - ()
+Apr 29 02:48:11 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/task/templates/indexSuccess.php"
+Apr 29 02:48:11 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager.php"
+Apr 29 02:48:11 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_header.php"
+Apr 29 02:48:11 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_body.php"
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.account_id AS t__account_id, t.staff_id AS t__staff_id, t.task_status_id AS t__task_status_id, t.task_type_id AS t__task_type_id, t.task_priority_id AS t__task_priority_id, t.task_work_id AS t__task_work_id, t.ref_no AS t__ref_no, t.name AS t__name, t.description AS t__description, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task t ORDER BY t.id asc LIMIT 10 - ()
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (1)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (1)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (6)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (2)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (1)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (2)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (1)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (1)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (3)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (2)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (7)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (4)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (2)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (2)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (1)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (1)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (5)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (3)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (8)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (6)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (3)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (2)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (1)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (1)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (7)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (4)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (9)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (8)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (4)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (3)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (1)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (1)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (9)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (5)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (10)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (10)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (5)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (2)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (1)
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (1)
+Apr 29 02:48:11 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_footer.php"
+Apr 29 02:48:11 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 02:48:11 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 02:48:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 02:48:11 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 02:48:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 02:48:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 02:48:11 symfony [info] {sfWebDebugLogger} Configuration 1.12 ms (9)
+Apr 29 02:48:11 symfony [info] {sfWebDebugLogger} Factories 7.30 ms (1)
+Apr 29 02:48:11 symfony [info] {sfWebDebugLogger} Action "task/index" 11.08 ms (1)
+Apr 29 02:48:11 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.11 ms (60)
+Apr 29 02:48:11 symfony [info] {sfWebDebugLogger} View "Success" for "task/index" 149.50 ms (1)
+Apr 29 02:48:11 symfony [info] {sfWebDebugLogger} Partial "global/_pager" 143.32 ms (1)
+Apr 29 02:48:11 symfony [info] {sfWebDebugLogger} Partial "global/_pager_header" 2.76 ms (1)
+Apr 29 02:48:11 symfony [info] {sfWebDebugLogger} Partial "global/_pager_body" 138.32 ms (1)
+Apr 29 02:48:11 symfony [info] {sfWebDebugLogger} Partial "global/_pager_footer" 1.48 ms (1)
+Apr 29 02:48:11 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.90 ms (1)
+Apr 29 02:48:11 symfony [info] {sfWebResponse} Send content (142366 o)
+Apr 29 02:48:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 02:48:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 02:48:15 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /account/show/id/1 with parameters array (  'module' => 'account',  'action' => 'show',  'id' => '1',)
+Apr 29 02:48:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 02:48:15 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 02:48:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 02:48:15 symfony [info] {accountActions} Call "accountActions->executeShow()"
+Apr 29 02:48:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 02:48:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) LIMIT 1 - (1)
+Apr 29 02:48:15 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/account/templates/showSuccess.php"
+Apr 29 02:48:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.account_id AS c__account_id, c.credential_type_id AS c__credential_type_id, c.name AS c__name, c.internal_ip AS c__internal_ip, c.external_ip AS c__external_ip, c.device AS c__device, c.url AS c__url, c.user AS c__user, c.pass AS c__pass, c.notes AS c__notes, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM credential c WHERE (c.account_id IN (?)) - (1)
+Apr 29 02:48:15 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 02:48:15 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 02:48:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 29 02:48:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 02:48:15 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 02:48:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 02:48:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 02:48:15 symfony [info] {sfWebDebugLogger} Configuration 11.21 ms (10)
+Apr 29 02:48:15 symfony [info] {sfWebDebugLogger} Factories 12.28 ms (1)
+Apr 29 02:48:15 symfony [info] {sfWebDebugLogger} Action "account/show" 7.66 ms (1)
+Apr 29 02:48:15 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (5)
+Apr 29 02:48:15 symfony [info] {sfWebDebugLogger} View "Success" for "account/show" 21.66 ms (1)
+Apr 29 02:48:15 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.88 ms (1)
+Apr 29 02:48:15 symfony [info] {sfWebResponse} Send content (44743 o)
+Apr 29 02:48:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 02:48:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 02:48:19 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /task with parameters array (  'module' => 'task',  'action' => 'index',)
+Apr 29 02:48:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 02:48:19 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 02:48:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 02:48:19 symfony [info] {taskActions} Call "taskActions->executeIndex()"
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM task t - ()
+Apr 29 02:48:19 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/task/templates/indexSuccess.php"
+Apr 29 02:48:19 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager.php"
+Apr 29 02:48:19 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_header.php"
+Apr 29 02:48:19 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_body.php"
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.account_id AS t__account_id, t.staff_id AS t__staff_id, t.task_status_id AS t__task_status_id, t.task_type_id AS t__task_type_id, t.task_priority_id AS t__task_priority_id, t.task_work_id AS t__task_work_id, t.ref_no AS t__ref_no, t.name AS t__name, t.description AS t__description, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task t ORDER BY t.id asc LIMIT 10 - ()
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (1)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (1)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (6)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (2)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (1)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (2)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (1)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (1)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (3)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (2)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (7)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (4)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (2)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (2)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (1)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (1)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (5)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (3)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (8)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (6)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (3)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (2)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (1)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (1)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (7)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (4)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (9)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (8)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (4)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (3)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (1)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (1)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (9)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (5)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (10)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (10)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (5)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (2)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (1)
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (1)
+Apr 29 02:48:19 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_footer.php"
+Apr 29 02:48:19 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 02:48:19 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 02:48:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 02:48:19 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 02:48:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 02:48:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 02:48:19 symfony [info] {sfWebDebugLogger} Configuration 1.12 ms (9)
+Apr 29 02:48:19 symfony [info] {sfWebDebugLogger} Factories 9.00 ms (1)
+Apr 29 02:48:19 symfony [info] {sfWebDebugLogger} Action "task/index" 7.29 ms (1)
+Apr 29 02:48:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.11 ms (60)
+Apr 29 02:48:19 symfony [info] {sfWebDebugLogger} View "Success" for "task/index" 152.04 ms (1)
+Apr 29 02:48:19 symfony [info] {sfWebDebugLogger} Partial "global/_pager" 144.48 ms (1)
+Apr 29 02:48:19 symfony [info] {sfWebDebugLogger} Partial "global/_pager_header" 4.40 ms (1)
+Apr 29 02:48:19 symfony [info] {sfWebDebugLogger} Partial "global/_pager_body" 137.34 ms (1)
+Apr 29 02:48:19 symfony [info] {sfWebDebugLogger} Partial "global/_pager_footer" 1.49 ms (1)
+Apr 29 02:48:19 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.95 ms (1)
+Apr 29 02:48:19 symfony [info] {sfWebResponse} Send content (142365 o)
+Apr 29 02:48:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 02:48:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 02:48:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /task/show/id/1 with parameters array (  'module' => 'task',  'action' => 'show',  'id' => '1',)
+Apr 29 02:48:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 02:48:22 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 02:48:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 02:48:22 symfony [info] {taskActions} Call "taskActions->executeShow()"
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.account_id AS t__account_id, t.staff_id AS t__staff_id, t.task_status_id AS t__task_status_id, t.task_type_id AS t__task_type_id, t.task_priority_id AS t__task_priority_id, t.task_work_id AS t__task_work_id, t.ref_no AS t__ref_no, t.name AS t__name, t.description AS t__description, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task t WHERE (t.id = ?) LIMIT 1 - (1)
+Apr 29 02:48:22 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/task/templates/showSuccess.php"
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (1)
+Apr 29 02:48:22 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/account/templates/_linkto.php"
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (1)
+Apr 29 02:48:22 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_linkto.php"
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (6)
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name, t.rate AS t__rate, t.description AS t__description FROM task_work t WHERE (t.id = ?) - (1)
+Apr 29 02:48:22 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/work/templates/_linkto.php"
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.task_id AS t__task_id, t.staff_id AS t__staff_id, t.title AS t__title, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task_comment t WHERE (t.task_id IN (?)) - (1)
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (1)
+Apr 29 02:48:22 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_linkto.php"
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (1)
+Apr 29 02:48:22 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_linkto.php"
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.task_id AS t__task_id, t.task_work_id AS t__task_work_id, t.staff_id AS t__staff_id, t.title AS t__title, t.description AS t__description, t.gen_desc_id AS t__gen_desc_id, t.staff_comment AS t__staff_comment, t.clock_in AS t__clock_in, t.clock_out AS t__clock_out, t.hours_logged AS t__hours_logged, t.mileage AS t__mileage, t.percentage AS t__percentage, t.is_billable AS t__is_billable, t.is_viewable AS t__is_viewable, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task_log t WHERE (t.task_id IN (?)) - (1)
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name, t.rate AS t__rate, t.description AS t__description FROM task_work t WHERE (t.id = ?) - (1)
+Apr 29 02:48:22 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/work/templates/_linkto.php"
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (1)
+Apr 29 02:48:22 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_linkto.php"
+Apr 29 02:48:22 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 02:48:22 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 02:48:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 02:48:22 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 02:48:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 02:48:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 02:48:22 symfony [info] {sfWebDebugLogger} Configuration 1.67 ms (9)
+Apr 29 02:48:22 symfony [info] {sfWebDebugLogger} Factories 6.51 ms (1)
+Apr 29 02:48:22 symfony [info] {sfWebDebugLogger} Action "task/show" 6.95 ms (1)
+Apr 29 02:48:22 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.06 ms (18)
+Apr 29 02:48:22 symfony [info] {sfWebDebugLogger} View "Success" for "task/show" 71.56 ms (1)
+Apr 29 02:48:22 symfony [info] {sfWebDebugLogger} Partial "account/_linkto" 2.76 ms (1)
+Apr 29 02:48:22 symfony [info] {sfWebDebugLogger} Partial "staff/_linkto" 14.98 ms (4)
+Apr 29 02:48:22 symfony [info] {sfWebDebugLogger} Partial "work/_linkto" 1.26 ms (2)
+Apr 29 02:48:22 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.98 ms (1)
+Apr 29 02:48:22 symfony [info] {sfWebResponse} Send content (76440 o)
+Apr 29 02:52:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 02:52:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 02:52:53 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /task/show/id/1 with parameters array (  'module' => 'task',  'action' => 'show',  'id' => '1',)
+Apr 29 02:52:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 02:52:53 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 02:52:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 02:52:53 symfony [info] {taskActions} Call "taskActions->executeShow()"
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.account_id AS t__account_id, t.staff_id AS t__staff_id, t.task_status_id AS t__task_status_id, t.task_type_id AS t__task_type_id, t.task_priority_id AS t__task_priority_id, t.task_work_id AS t__task_work_id, t.ref_no AS t__ref_no, t.name AS t__name, t.description AS t__description, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task t WHERE (t.id = ?) LIMIT 1 - (1)
+Apr 29 02:52:53 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/task/templates/showSuccess.php"
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (1)
+Apr 29 02:52:53 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/account/templates/_linkto.php"
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (1)
+Apr 29 02:52:53 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_linkto.php"
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (6)
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name, t.rate AS t__rate, t.description AS t__description FROM task_work t WHERE (t.id = ?) - (1)
+Apr 29 02:52:53 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/work/templates/_linkto.php"
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.task_id AS t__task_id, t.staff_id AS t__staff_id, t.title AS t__title, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task_comment t WHERE (t.task_id IN (?)) - (1)
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (1)
+Apr 29 02:52:53 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_linkto.php"
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (1)
+Apr 29 02:52:53 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_linkto.php"
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.task_id AS t__task_id, t.task_work_id AS t__task_work_id, t.staff_id AS t__staff_id, t.title AS t__title, t.description AS t__description, t.gen_desc_id AS t__gen_desc_id, t.staff_comment AS t__staff_comment, t.clock_in AS t__clock_in, t.clock_out AS t__clock_out, t.hours_logged AS t__hours_logged, t.mileage AS t__mileage, t.percentage AS t__percentage, t.is_billable AS t__is_billable, t.is_viewable AS t__is_viewable, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task_log t WHERE (t.task_id IN (?)) - (1)
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name, t.rate AS t__rate, t.description AS t__description FROM task_work t WHERE (t.id = ?) - (1)
+Apr 29 02:52:53 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/work/templates/_linkto.php"
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (1)
+Apr 29 02:52:53 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_linkto.php"
+Apr 29 02:52:53 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 02:52:53 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 02:52:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 02:52:53 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 02:52:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 02:52:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 02:52:53 symfony [info] {sfWebDebugLogger} Configuration 1.88 ms (9)
+Apr 29 02:52:53 symfony [info] {sfWebDebugLogger} Factories 7.22 ms (1)
+Apr 29 02:52:53 symfony [info] {sfWebDebugLogger} Action "task/show" 6.98 ms (1)
+Apr 29 02:52:53 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (18)
+Apr 29 02:52:53 symfony [info] {sfWebDebugLogger} View "Success" for "task/show" 45.97 ms (1)
+Apr 29 02:52:53 symfony [info] {sfWebDebugLogger} Partial "account/_linkto" 1.24 ms (1)
+Apr 29 02:52:53 symfony [info] {sfWebDebugLogger} Partial "staff/_linkto" 5.47 ms (4)
+Apr 29 02:52:53 symfony [info] {sfWebDebugLogger} Partial "work/_linkto" 1.22 ms (2)
+Apr 29 02:52:53 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.94 ms (1)
+Apr 29 02:52:53 symfony [info] {sfWebResponse} Send content (76400 o)
+Apr 29 02:53:05 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 02:53:05 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 02:53:05 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /work/edit/id/1 with parameters array (  'module' => 'work',  'action' => 'edit',  'id' => '1',)
+Apr 29 02:53:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 02:53:05 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 02:53:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 02:53:05 symfony [info] {workActions} Call "workActions->executeEdit()"
+Apr 29 02:53:05 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 02:53:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name, t.rate AS t__rate, t.description AS t__description FROM task_work t WHERE (t.id = ?) LIMIT 1 - (1)
+Apr 29 02:53:05 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/work/templates/editSuccess.php"
+Apr 29 02:53:05 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/work/templates/_form.php"
+Apr 29 02:53:05 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 02:53:05 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 02:53:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 29 02:53:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 02:53:05 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 02:53:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 02:53:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 02:53:05 symfony [info] {sfWebDebugLogger} Configuration 7.83 ms (10)
+Apr 29 02:53:05 symfony [info] {sfWebDebugLogger} Factories 6.02 ms (1)
+Apr 29 02:53:05 symfony [info] {sfWebDebugLogger} Action "work/edit" 19.15 ms (1)
+Apr 29 02:53:05 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Apr 29 02:53:05 symfony [info] {sfWebDebugLogger} View "Success" for "work/edit" 15.62 ms (1)
+Apr 29 02:53:05 symfony [info] {sfWebDebugLogger} Partial "work/_form" 2.38 ms (1)
+Apr 29 02:53:05 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.87 ms (1)
+Apr 29 02:53:05 symfony [info] {sfWebResponse} Send content (45858 o)
+Apr 29 02:53:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 02:53:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 02:53:12 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /task/show/id/1 with parameters array (  'module' => 'task',  'action' => 'show',  'id' => '1',)
+Apr 29 02:53:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 02:53:12 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 02:53:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 02:53:12 symfony [info] {taskActions} Call "taskActions->executeShow()"
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.account_id AS t__account_id, t.staff_id AS t__staff_id, t.task_status_id AS t__task_status_id, t.task_type_id AS t__task_type_id, t.task_priority_id AS t__task_priority_id, t.task_work_id AS t__task_work_id, t.ref_no AS t__ref_no, t.name AS t__name, t.description AS t__description, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task t WHERE (t.id = ?) LIMIT 1 - (1)
+Apr 29 02:53:12 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/task/templates/showSuccess.php"
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (1)
+Apr 29 02:53:12 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/account/templates/_linkto.php"
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (1)
+Apr 29 02:53:12 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_linkto.php"
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (6)
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name, t.rate AS t__rate, t.description AS t__description FROM task_work t WHERE (t.id = ?) - (1)
+Apr 29 02:53:12 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/work/templates/_linkto.php"
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.task_id AS t__task_id, t.staff_id AS t__staff_id, t.title AS t__title, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task_comment t WHERE (t.task_id IN (?)) - (1)
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (1)
+Apr 29 02:53:12 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_linkto.php"
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (1)
+Apr 29 02:53:12 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_linkto.php"
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.task_id AS t__task_id, t.task_work_id AS t__task_work_id, t.staff_id AS t__staff_id, t.title AS t__title, t.description AS t__description, t.gen_desc_id AS t__gen_desc_id, t.staff_comment AS t__staff_comment, t.clock_in AS t__clock_in, t.clock_out AS t__clock_out, t.hours_logged AS t__hours_logged, t.mileage AS t__mileage, t.percentage AS t__percentage, t.is_billable AS t__is_billable, t.is_viewable AS t__is_viewable, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task_log t WHERE (t.task_id IN (?)) - (1)
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name, t.rate AS t__rate, t.description AS t__description FROM task_work t WHERE (t.id = ?) - (1)
+Apr 29 02:53:12 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/work/templates/_linkto.php"
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (1)
+Apr 29 02:53:12 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_linkto.php"
+Apr 29 02:53:12 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 02:53:12 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 02:53:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 29 02:53:12 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 02:53:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 02:53:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 02:53:12 symfony [info] {sfWebDebugLogger} Configuration 1.16 ms (9)
+Apr 29 02:53:12 symfony [info] {sfWebDebugLogger} Factories 6.09 ms (1)
+Apr 29 02:53:12 symfony [info] {sfWebDebugLogger} Action "task/show" 10.03 ms (1)
+Apr 29 02:53:12 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (18)
+Apr 29 02:53:12 symfony [info] {sfWebDebugLogger} View "Success" for "task/show" 56.00 ms (1)
+Apr 29 02:53:12 symfony [info] {sfWebDebugLogger} Partial "account/_linkto" 0.91 ms (1)
+Apr 29 02:53:12 symfony [info] {sfWebDebugLogger} Partial "staff/_linkto" 5.26 ms (4)
+Apr 29 02:53:12 symfony [info] {sfWebDebugLogger} Partial "work/_linkto" 1.40 ms (2)
+Apr 29 02:53:12 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.95 ms (1)
+Apr 29 02:53:12 symfony [info] {sfWebResponse} Send content (76402 o)

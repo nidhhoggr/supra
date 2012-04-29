@@ -56,7 +56,11 @@
           <?php echo $comment->getDateTimeObject('created_at')->format('M d, Y h:i a') ?>
         </p>
         <p>
-          <b><?php echo $comment->getTitle() ?></b>
+          <?php echo $comment->getTitle() ?>
+          - 
+          <?php echo link_to('edit','comment/edit?id='.$comment->getId());?>
+        </p>
+        <p>
           <?php echo $comment->getComment() ?>
         </p>
         </li>
@@ -78,8 +82,12 @@
           <?php foreach($task->getTaskLog() as $log):?>
           <?php if(!$log->getIsViewable() && !$sf_user->isStaff()) continue; ?>
             <li>
-              <p><?php echo $log->getTitle() ?> -
+              <p>
+              <?php echo $log->getTitle() ?> 
+              -
               <?php include_partial('work/linkto', array('work' => $log->getTaskWork())) ?>
+              -
+              <?php echo link_to('edit','work/edit?id='.$log->getId());?>
               </p>
               <p>
               <?php include_partial('staff/linkto', array('staff' => $log->getStaff())) ?>
@@ -99,9 +107,5 @@
     </tr>
   </tbody>
 </table>
-
 <hr />
-
 <a href="<?php echo url_for('task/edit?id='.$task  ->getId()) ?>">Edit</a>
-&nbsp;
-<a href="<?php echo url_for('task/index') ?>">List</a>
