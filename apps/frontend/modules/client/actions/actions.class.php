@@ -18,7 +18,7 @@ class clientActions extends sfActions
 
             $clients = Doctrine_Query::create()
                              ->from('Client c, c.User u')
-                             ->orderBy('u.'.$sort);
+                             ->orderBy('c.'.$sort);
 
             $fields = array(
                             'id' => array('Client')

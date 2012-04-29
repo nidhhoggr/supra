@@ -12,11 +12,25 @@ class staffActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    
-            $this->staffs = Doctrine_Query::create()
+            $dpu = new sfDoctrinePagerUtil('Staff', 10);
+            $sort = $dpu->getSort($request);
+
+            $staff = Doctrine_Query::create()
                              ->from('Staff s, s.User u')
-                             ->orderBy('u.first_name ASC')
-                             ->execute();
+                             ->orderBy('s.'.$sort);
+
+            $fields = array(
+                            'id' => array('Staff','staff'),
+                            'title' => array('Title','staff','getTitle')
+                           );
+
+            $pagerOptions = array(
+                                  'query'=>$staff,
+                                  'request'=>$request,
+                                  'fields'=>$fields
+                                 );
+
+            $this->pager = $dpu->getPager($pagerOptions);
   }
 
   public function executeShow(sfWebRequest $request)

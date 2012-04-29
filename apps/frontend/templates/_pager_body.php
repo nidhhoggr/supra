@@ -1,4 +1,3 @@
-<table id="pager_content">
   <?php foreach ($pager->getResults() as $object): ?>
     <tr>
         <?php foreach($pager->getFields() as $field): ?>
@@ -18,7 +17,7 @@
                       echo link_to($object->{$getter}(),$route.'/show?id='.$id); 
                   }
                   else {
-                      echo $object;
+                      echo link_to($object,$route.'/show?id='.$object->getId()); 
                   }
                 ?>
             </td>

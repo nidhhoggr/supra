@@ -1,4 +1,5 @@
 <?php include_partial('global/pager_header', array('pager'=>$pager,'module'=>'client')); ?>
+</table>
 <div id="jobs">
   <h2><?php echo link_to('Clients','client/index');?></h2>  
   <div class="clients">

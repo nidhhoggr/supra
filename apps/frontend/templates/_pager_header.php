@@ -1,9 +1,8 @@
-<table id="pager_header">
+<table>
   <tr>
     <?php foreach ($pager->getFields() as $field): ?>
-      <td>
+      <th>
         <?php echo link_to($field['display'], $module . '/index?page='.$pager->getLastPage().'&sort_dir='.$pager->getSortDir($field['name']).'&sort_field='.$field['name'],'id="sortable_'.$pager->getSortDir($field['name']).' "') ?>
-      </td>
+      </th>
     <?php endforeach ?>
   </tr>
-</table>

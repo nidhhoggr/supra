@@ -41,4 +41,4 @@
 </table>
 
 <hr />
-<a href="<?php echo url_for('staff/index') ?>">List</a>
+<a href="<?php echo url_for('staff/edit?id='.$staff->getId()) ?>">Edit Profile</a>
