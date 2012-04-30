@@ -17,7 +17,7 @@ abstract class BaseCredentialForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'                 => new sfWidgetFormInputHidden(),
       'account_id'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Account'), 'add_empty' => false)),
-      'credential_type_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('CredentialType'), 'add_empty' => false)),
+      'credential_type_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('CredentialType'), 'add_empty' => true)),
       'name'               => new sfWidgetFormInputText(),
       'internal_ip'        => new sfWidgetFormInputText(),
       'external_ip'        => new sfWidgetFormInputText(),
@@ -33,7 +33,7 @@ abstract class BaseCredentialForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'                 => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'account_id'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Account'))),
-      'credential_type_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('CredentialType'))),
+      'credential_type_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('CredentialType'), 'required' => false)),
       'name'               => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'internal_ip'        => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'external_ip'        => new sfValidatorString(array('max_length' => 255, 'required' => false)),

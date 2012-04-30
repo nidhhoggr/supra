@@ -55,9 +55,9 @@ abstract class BaseStaff extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('user_id', 'integer', 255, array(
+        $this->hasColumn('user_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 255,
+             'notnull' => true,
              ));
         $this->hasColumn('title', 'string', 255, array(
              'type' => 'string',
@@ -78,7 +78,8 @@ abstract class BaseStaff extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('sfGuardUser as User', array(
              'local' => 'user_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'cascade'));
 
         $this->hasMany('StaffTaskWork', array(
              'local' => 'id',

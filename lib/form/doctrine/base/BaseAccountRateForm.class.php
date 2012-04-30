@@ -17,7 +17,7 @@ abstract class BaseAccountRateForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'           => new sfWidgetFormInputHidden(),
       'account_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Account'), 'add_empty' => false)),
-      'task_work_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TaskWork'), 'add_empty' => false)),
+      'task_work_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TaskWork'), 'add_empty' => true)),
       'title'        => new sfWidgetFormInputText(),
       'description'  => new sfWidgetFormTextarea(),
       'hour_qouta'   => new sfWidgetFormInputText(),
@@ -28,7 +28,7 @@ abstract class BaseAccountRateForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'           => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'account_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Account'))),
-      'task_work_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TaskWork'))),
+      'task_work_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TaskWork'), 'required' => false)),
       'title'        => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'description'  => new sfValidatorString(array('required' => false)),
       'hour_qouta'   => new sfValidatorNumber(array('required' => false)),

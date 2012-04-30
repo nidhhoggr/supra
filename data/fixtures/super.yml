@@ -470,37 +470,6 @@ TimeLog:
     notes: ''
     created_at: '2012-04-12 16:14:00'
     updated_at: '2012-04-12 16:14:00'
-AccountInvoiceTask:
-  AccountInvoiceTask_1:
-    AccountInvoice: AccountInvoice_1
-    Task: Task_10
-  AccountInvoiceTask_2:
-    AccountInvoice: AccountInvoice_2
-    Task: Task_9
-  AccountInvoiceTask_3:
-    AccountInvoice: AccountInvoice_3
-    Task: Task_8
-  AccountInvoiceTask_4:
-    AccountInvoice: AccountInvoice_4
-    Task: Task_7
-  AccountInvoiceTask_5:
-    AccountInvoice: AccountInvoice_5
-    Task: Task_6
-  AccountInvoiceTask_6:
-    AccountInvoice: AccountInvoice_6
-    Task: Task_5
-  AccountInvoiceTask_7:
-    AccountInvoice: AccountInvoice_7
-    Task: Task_4
-  AccountInvoiceTask_8:
-    AccountInvoice: AccountInvoice_8
-    Task: Task_3
-  AccountInvoiceTask_9:
-    AccountInvoice: AccountInvoice_9
-    Task: Task_2
-  AccountInvoiceTask_10:
-    AccountInvoice: AccountInvoice_10
-    Task: Task_1
 TaskType:
   TaskType_1:
     name: addition
@@ -678,6 +647,7 @@ Staff:
 Task:
   Task_1:
     Account: Account_1
+    AccountInvoice: AccountInvoice_1
     Staff: Staff_1
     TaskStatus: TaskStatus_4
     TaskType: TaskType_3
@@ -690,6 +660,7 @@ Task:
     updated_at: '2012-03-29 00:29:59'
   Task_2:
     Account: Account_2
+    AccountInvoice: AccountInvoice_2
     Staff: Staff_1
     TaskStatus: TaskStatus_2
     TaskType: TaskType_1
@@ -702,6 +673,7 @@ Task:
     updated_at: '2012-03-29 00:29:59'
   Task_3:
     Account: Account_3
+    AccountInvoice: AccountInvoice_3
     Staff: Staff_2
     TaskStatus: TaskStatus_4
     TaskType: TaskType_3
@@ -714,6 +686,7 @@ Task:
     updated_at: '2012-03-29 00:29:59'
   Task_4:
     Account: Account_4
+    AccountInvoice: AccountInvoice_4
     Staff: Staff_2
     TaskStatus: TaskStatus_2
     TaskType: TaskType_1
@@ -726,6 +699,7 @@ Task:
     updated_at: '2012-03-29 00:29:59'
   Task_5:
     Account: Account_5
+    AccountInvoice: AccountInvoice_5
     Staff: Staff_3
     TaskStatus: TaskStatus_4
     TaskType: TaskType_3
@@ -738,6 +712,7 @@ Task:
     updated_at: '2012-03-29 00:29:59'
   Task_6:
     Account: Account_6
+    AccountInvoice: AccountInvoice_6
     Staff: Staff_3
     TaskStatus: TaskStatus_2
     TaskType: TaskType_1
@@ -750,6 +725,7 @@ Task:
     updated_at: '2012-03-29 00:29:59'
   Task_7:
     Account: Account_7
+    AccountInvoice: AccountInvoice_7
     Staff: Staff_4
     TaskStatus: TaskStatus_4
     TaskType: TaskType_3
@@ -762,6 +738,7 @@ Task:
     updated_at: '2012-03-29 00:30:00'
   Task_8:
     Account: Account_8
+    AccountInvoice: AccountInvoice_8
     Staff: Staff_4
     TaskStatus: TaskStatus_3
     TaskType: TaskType_1
@@ -774,6 +751,7 @@ Task:
     updated_at: '2012-03-29 18:44:24'
   Task_9:
     Account: Account_9
+    AccountInvoice: AccountInvoice_9
     Staff: Staff_5
     TaskStatus: TaskStatus_4
     TaskType: TaskType_3
@@ -786,6 +764,7 @@ Task:
     updated_at: '2012-03-29 00:30:00'
   Task_10:
     Account: Account_10
+    AccountInvoice: AccountInvoice_10
     Staff: Staff_5
     TaskStatus: TaskStatus_2
     TaskType: TaskType_1

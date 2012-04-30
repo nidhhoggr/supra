@@ -61,15 +61,12 @@ abstract class BaseCredential extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('account_id', 'integer', 8, array(
+        $this->hasColumn('account_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 8,
              ));
-        $this->hasColumn('credential_type_id', 'integer', 8, array(
+        $this->hasColumn('credential_type_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
-             'length' => 8,
              ));
         $this->hasColumn('name', 'string', 255, array(
              'type' => 'string',
@@ -109,11 +106,13 @@ abstract class BaseCredential extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Account', array(
              'local' => 'account_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'cascade'));
 
         $this->hasOne('CredentialType', array(
              'local' => 'credential_type_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'set null'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));

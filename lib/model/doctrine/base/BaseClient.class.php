@@ -39,6 +39,7 @@ abstract class BaseClient extends sfDoctrineRecord
              ));
         $this->hasColumn('user_id', 'integer', 255, array(
              'type' => 'integer',
+             'notnull' => true,
              'length' => 255,
              ));
         $this->hasColumn('track_record', 'clob', null, array(

@@ -7030,3 +7030,1293 @@ Apr 29 04:14:43 symfony [info] {sfWebDebugLogger} Partial "staff/_linkto" 5.32 m
 Apr 29 04:14:43 symfony [info] {sfWebDebugLogger} Partial "work/_linkto" 1.26 ms (2)
 Apr 29 04:14:43 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.80 ms (1)
 Apr 29 04:14:43 symfony [info] {sfWebResponse} Send content (76497 o)
+Apr 29 04:23:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:23:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:23:26 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /task/show/id/7 with parameters array (  'module' => 'task',  'action' => 'show',  'id' => '7',)
+Apr 29 04:23:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:23:26 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:23:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:23:26 symfony [info] {taskActions} Call "taskActions->executeShow()"
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.account_id AS t__account_id, t.staff_id AS t__staff_id, t.task_status_id AS t__task_status_id, t.task_type_id AS t__task_type_id, t.task_priority_id AS t__task_priority_id, t.task_work_id AS t__task_work_id, t.ref_no AS t__ref_no, t.name AS t__name, t.description AS t__description, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task t WHERE (t.id = ?) LIMIT 1 - (7)
+Apr 29 04:23:26 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/task/templates/showSuccess.php"
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (7)
+Apr 29 04:23:26 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/account/templates/_linkto.php"
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (4)
+Apr 29 04:23:26 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_linkto.php"
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (9)
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name, t.rate AS t__rate, t.description AS t__description FROM task_work t WHERE (t.id = ?) - (1)
+Apr 29 04:23:26 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/work/templates/_linkto.php"
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.task_id AS t__task_id, t.staff_id AS t__staff_id, t.title AS t__title, t.comment AS t__comment, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task_comment t WHERE (t.task_id IN (?)) - (7)
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (4)
+Apr 29 04:23:26 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_linkto.php"
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.task_id AS t__task_id, t.task_work_id AS t__task_work_id, t.staff_id AS t__staff_id, t.title AS t__title, t.description AS t__description, t.gen_desc_id AS t__gen_desc_id, t.staff_comment AS t__staff_comment, t.clock_in AS t__clock_in, t.clock_out AS t__clock_out, t.hours_logged AS t__hours_logged, t.mileage AS t__mileage, t.percentage AS t__percentage, t.is_billable AS t__is_billable, t.is_viewable AS t__is_viewable, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task_log t WHERE (t.task_id IN (?)) - (7)
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (9)
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (9)
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name, t.rate AS t__rate, t.description AS t__description FROM task_work t WHERE (t.id = ?) - (1)
+Apr 29 04:23:26 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/work/templates/_linkto.php"
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (4)
+Apr 29 04:23:26 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_linkto.php"
+Apr 29 04:23:26 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 04:23:26 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 04:23:26 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (9)
+Apr 29 04:23:26 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 04:23:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 04:23:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:23:26 symfony [info] {sfWebDebugLogger} Configuration 1.85 ms (9)
+Apr 29 04:23:26 symfony [info] {sfWebDebugLogger} Factories 9.60 ms (1)
+Apr 29 04:23:26 symfony [info] {sfWebDebugLogger} Action "task/show" 9.44 ms (1)
+Apr 29 04:23:26 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (17)
+Apr 29 04:23:26 symfony [info] {sfWebDebugLogger} View "Success" for "task/show" 66.22 ms (1)
+Apr 29 04:23:26 symfony [info] {sfWebDebugLogger} Partial "account/_linkto" 1.47 ms (1)
+Apr 29 04:23:26 symfony [info] {sfWebDebugLogger} Partial "staff/_linkto" 5.46 ms (3)
+Apr 29 04:23:26 symfony [info] {sfWebDebugLogger} Partial "work/_linkto" 1.30 ms (2)
+Apr 29 04:23:26 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 3.64 ms (1)
+Apr 29 04:23:26 symfony [info] {sfWebResponse} Send content (73304 o)
+Apr 29 04:23:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:23:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:23:33 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 04:23:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:23:33 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:23:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:23:33 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 04:23:33 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:23:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 29 04:23:33 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 29 04:23:33 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_header.php"
+Apr 29 04:23:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY c.id asc LIMIT 10 - ()
+Apr 29 04:23:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (1)
+Apr 29 04:23:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (2)
+Apr 29 04:23:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (3)
+Apr 29 04:23:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (4)
+Apr 29 04:23:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (5)
+Apr 29 04:23:33 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_footer.php"
+Apr 29 04:23:33 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 04:23:33 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 04:23:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (9)
+Apr 29 04:23:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (9)
+Apr 29 04:23:33 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 04:23:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 04:23:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:23:33 symfony [info] {sfWebDebugLogger} Configuration 7.00 ms (10)
+Apr 29 04:23:33 symfony [info] {sfWebDebugLogger} Factories 8.15 ms (1)
+Apr 29 04:23:33 symfony [info] {sfWebDebugLogger} Action "client/index" 9.74 ms (1)
+Apr 29 04:23:33 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (10)
+Apr 29 04:23:33 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 37.84 ms (1)
+Apr 29 04:23:33 symfony [info] {sfWebDebugLogger} Partial "global/_pager_header" 0.73 ms (1)
+Apr 29 04:23:33 symfony [info] {sfWebDebugLogger} Partial "global/_pager_footer" 1.61 ms (1)
+Apr 29 04:23:33 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 3.24 ms (1)
+Apr 29 04:23:33 symfony [info] {sfWebResponse} Send content (60562 o)
+Apr 29 04:23:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:23:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:23:41 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/show/id/5 with parameters array (  'module' => 'client',  'action' => 'show',  'id' => '5',)
+Apr 29 04:23:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:23:41 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:23:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:23:41 symfony [info] {clientActions} Call "clientActions->executeShow()"
+Apr 29 04:23:41 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:23:41 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:23:41 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/showSuccess.php"
+Apr 29 04:23:41 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (5)
+Apr 29 04:23:41 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 04:23:41 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 04:23:41 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (9)
+Apr 29 04:23:41 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (9)
+Apr 29 04:23:41 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 04:23:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 04:23:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:23:41 symfony [info] {sfWebDebugLogger} Configuration 1.52 ms (9)
+Apr 29 04:23:41 symfony [info] {sfWebDebugLogger} Factories 4.87 ms (1)
+Apr 29 04:23:41 symfony [info] {sfWebDebugLogger} Action "client/show" 7.16 ms (1)
+Apr 29 04:23:41 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (5)
+Apr 29 04:23:41 symfony [info] {sfWebDebugLogger} View "Success" for "client/show" 20.49 ms (1)
+Apr 29 04:23:41 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.85 ms (1)
+Apr 29 04:23:41 symfony [info] {sfWebResponse} Send content (43691 o)
+Apr 29 04:23:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:23:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:23:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/edit/id/5 with parameters array (  'module' => 'client',  'action' => 'edit',  'id' => '5',)
+Apr 29 04:23:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:23:44 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:23:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:23:44 symfony [info] {clientActions} Call "clientActions->executeEdit()"
+Apr 29 04:23:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:23:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:23:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (5)
+Apr 29 04:23:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (5)
+Apr 29 04:23:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (5)
+Apr 29 04:23:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (9)
+Apr 29 04:23:44 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/editSuccess.php"
+Apr 29 04:23:44 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/_form.php"
+Apr 29 04:23:44 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_group s - ()
+Apr 29 04:23:44 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_permission s - ()
+Apr 29 04:23:44 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 04:23:44 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 04:23:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (9)
+Apr 29 04:23:44 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 04:23:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 04:23:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:23:44 symfony [info] {sfWebDebugLogger} Configuration 1.52 ms (9)
+Apr 29 04:23:44 symfony [info] {sfWebDebugLogger} Factories 7.81 ms (1)
+Apr 29 04:23:44 symfony [info] {sfWebDebugLogger} Action "client/edit" 24.39 ms (1)
+Apr 29 04:23:44 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (9)
+Apr 29 04:23:44 symfony [info] {sfWebDebugLogger} View "Success" for "client/edit" 12.45 ms (1)
+Apr 29 04:23:44 symfony [info] {sfWebDebugLogger} Partial "client/_form" 6.25 ms (1)
+Apr 29 04:23:44 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.88 ms (1)
+Apr 29 04:23:44 symfony [info] {sfWebResponse} Send content (60841 o)
+Apr 29 04:23:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:23:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:23:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/5 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '5',)
+Apr 29 04:23:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:23:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:23:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:23:49 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 29 04:23:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:23:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:23:49 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (5)
+Apr 29 04:23:49 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account`, CONSTRAINT `account_client_id_client_id` FOREIGN KEY (`client_id`) REFERENCES `client` (`id`))
+Apr 29 04:23:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 04:23:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:23:50 symfony [info] {sfWebDebugLogger} Configuration 1.35 ms (8)
+Apr 29 04:23:50 symfony [info] {sfWebDebugLogger} Factories 9.33 ms (1)
+Apr 29 04:23:50 symfony [info] {sfWebDebugLogger} Action "client/delete" 228.46 ms (1)
+Apr 29 04:23:50 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 29 04:26:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:26:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:26:51 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/5 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '5',)
+Apr 29 04:26:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:26:51 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:26:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:26:51 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 29 04:26:51 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:26:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:26:51 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (5)
+Apr 29 04:26:51 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice`, CONSTRAINT `account_invoice_account_id_account_id` FOREIGN KEY (`account_id`) REFERENCES `account` (`id`))
+Apr 29 04:26:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 04:26:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:26:51 symfony [info] {sfWebDebugLogger} Configuration 0.71 ms (8)
+Apr 29 04:26:51 symfony [info] {sfWebDebugLogger} Factories 5.79 ms (1)
+Apr 29 04:26:51 symfony [info] {sfWebDebugLogger} Action "client/delete" 150.98 ms (1)
+Apr 29 04:26:51 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 29 04:29:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:29:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:29:20 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/5 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '5',)
+Apr 29 04:29:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:29:20 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:29:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:29:20 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 29 04:29:20 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:29:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:29:20 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (5)
+Apr 29 04:29:20 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice`, CONSTRAINT `account_invoice_account_id_account_id` FOREIGN KEY (`account_id`) REFERENCES `account` (`id`))
+Apr 29 04:29:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 04:29:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:29:20 symfony [info] {sfWebDebugLogger} Configuration 0.82 ms (8)
+Apr 29 04:29:20 symfony [info] {sfWebDebugLogger} Factories 4.18 ms (1)
+Apr 29 04:29:20 symfony [info] {sfWebDebugLogger} Action "client/delete" 232.49 ms (1)
+Apr 29 04:29:20 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 29 04:31:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:31:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:31:08 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/5 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '5',)
+Apr 29 04:31:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:31:08 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:31:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:31:08 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 29 04:31:08 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:31:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:31:08 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (5)
+Apr 29 04:31:08 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 29 04:31:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 04:31:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:31:08 symfony [info] {sfWebDebugLogger} Configuration 1.10 ms (8)
+Apr 29 04:31:08 symfony [info] {sfWebDebugLogger} Factories 6.99 ms (1)
+Apr 29 04:31:08 symfony [info] {sfWebDebugLogger} Action "client/delete" 224.28 ms (1)
+Apr 29 04:31:08 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 29 04:32:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:32:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:32:37 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/5 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '5',)
+Apr 29 04:32:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:32:37 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:32:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:32:37 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 29 04:32:37 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:32:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:32:37 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (5)
+Apr 29 04:32:38 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 29 04:32:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 04:32:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:32:38 symfony [info] {sfWebDebugLogger} Configuration 0.82 ms (8)
+Apr 29 04:32:38 symfony [info] {sfWebDebugLogger} Factories 5.23 ms (1)
+Apr 29 04:32:38 symfony [info] {sfWebDebugLogger} Action "client/delete" 239.09 ms (1)
+Apr 29 04:32:38 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 29 04:35:55 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:35:55 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:35:55 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/5 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '5',)
+Apr 29 04:35:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:35:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:35:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:35:55 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 29 04:35:55 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:35:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:35:55 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (5)
+Apr 29 04:35:55 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 29 04:35:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 04:35:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:35:55 symfony [info] {sfWebDebugLogger} Configuration 0.66 ms (8)
+Apr 29 04:35:55 symfony [info] {sfWebDebugLogger} Factories 5.43 ms (1)
+Apr 29 04:35:55 symfony [info] {sfWebDebugLogger} Action "client/delete" 282.53 ms (1)
+Apr 29 04:35:55 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Apr 29 04:36:10 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:36:10 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:36:10 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/5 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '5',)
+Apr 29 04:36:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:36:10 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:36:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:36:10 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 29 04:36:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:36:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:36:10 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (5)
+Apr 29 04:36:10 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 29 04:36:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 04:36:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:36:10 symfony [info] {sfWebDebugLogger} Configuration 1.00 ms (8)
+Apr 29 04:36:10 symfony [info] {sfWebDebugLogger} Factories 9.84 ms (1)
+Apr 29 04:36:10 symfony [info] {sfWebDebugLogger} Action "client/delete" 220.66 ms (1)
+Apr 29 04:36:10 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Apr 29 04:41:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:41:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:41:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/5 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '5',)
+Apr 29 04:41:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:41:43 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:41:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:41:43 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 29 04:41:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:41:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:41:43 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (5)
+Apr 29 04:41:43 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 29 04:41:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 04:41:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:41:43 symfony [info] {sfWebDebugLogger} Configuration 0.91 ms (8)
+Apr 29 04:41:43 symfony [info] {sfWebDebugLogger} Factories 4.82 ms (1)
+Apr 29 04:41:43 symfony [info] {sfWebDebugLogger} Action "client/delete" 167.53 ms (1)
+Apr 29 04:41:43 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Apr 29 04:46:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:46:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:46:20 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/5 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '5',)
+Apr 29 04:46:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:46:20 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:46:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:46:20 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 29 04:46:20 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:46:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:46:20 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (5)
+Apr 29 04:46:20 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 29 04:46:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 04:46:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:46:20 symfony [info] {sfWebDebugLogger} Configuration 0.74 ms (8)
+Apr 29 04:46:20 symfony [info] {sfWebDebugLogger} Factories 54.12 ms (1)
+Apr 29 04:46:20 symfony [info] {sfWebDebugLogger} Action "client/delete" 184.71 ms (1)
+Apr 29 04:46:20 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 29 04:46:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:46:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:46:56 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/5 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '5',)
+Apr 29 04:46:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:46:56 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:46:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:46:56 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 29 04:46:56 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:46:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:46:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (5)
+Apr 29 04:46:56 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (5)
+Apr 29 04:46:56 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 29 04:46:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 04:46:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:46:56 symfony [info] {sfWebDebugLogger} Configuration 0.65 ms (8)
+Apr 29 04:46:56 symfony [info] {sfWebDebugLogger} Factories 4.07 ms (1)
+Apr 29 04:46:56 symfony [info] {sfWebDebugLogger} Action "client/delete" 267.94 ms (1)
+Apr 29 04:46:56 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Apr 29 04:50:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:50:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:50:36 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/5 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '5',)
+Apr 29 04:50:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:50:36 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:50:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:50:36 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 29 04:50:36 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:50:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:50:36 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (5)
+Apr 29 04:50:37 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 29 04:50:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 04:50:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:50:37 symfony [info] {sfWebDebugLogger} Configuration 1.04 ms (8)
+Apr 29 04:50:37 symfony [info] {sfWebDebugLogger} Factories 8.69 ms (1)
+Apr 29 04:50:37 symfony [info] {sfWebDebugLogger} Action "client/delete" 428.80 ms (1)
+Apr 29 04:50:37 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Apr 29 04:50:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:50:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:50:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/edit/id/5 with parameters array (  'module' => 'client',  'action' => 'edit',  'id' => '5',)
+Apr 29 04:50:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:50:40 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:50:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:50:40 symfony [info] {clientActions} Call "clientActions->executeEdit()"
+Apr 29 04:50:40 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:50:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:50:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (5)
+Apr 29 04:50:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (5)
+Apr 29 04:50:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (5)
+Apr 29 04:50:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (9)
+Apr 29 04:50:40 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/editSuccess.php"
+Apr 29 04:50:40 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/_form.php"
+Apr 29 04:50:40 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_group s - ()
+Apr 29 04:50:40 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_permission s - ()
+Apr 29 04:50:40 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 04:50:40 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 04:50:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (9)
+Apr 29 04:50:40 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 04:50:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 04:50:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:50:40 symfony [info] {sfWebDebugLogger} Configuration 1.22 ms (9)
+Apr 29 04:50:40 symfony [info] {sfWebDebugLogger} Factories 8.46 ms (1)
+Apr 29 04:50:40 symfony [info] {sfWebDebugLogger} Action "client/edit" 27.14 ms (1)
+Apr 29 04:50:40 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (9)
+Apr 29 04:50:40 symfony [info] {sfWebDebugLogger} View "Success" for "client/edit" 13.68 ms (1)
+Apr 29 04:50:40 symfony [info] {sfWebDebugLogger} Partial "client/_form" 6.29 ms (1)
+Apr 29 04:50:40 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.91 ms (1)
+Apr 29 04:50:40 symfony [info] {sfWebResponse} Send content (60841 o)
+Apr 29 04:50:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:50:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:50:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/edit/id/5 with parameters array (  'module' => 'client',  'action' => 'edit',  'id' => '5',)
+Apr 29 04:50:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:50:46 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:50:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:50:46 symfony [info] {clientActions} Call "clientActions->executeEdit()"
+Apr 29 04:50:46 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:50:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:50:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (5)
+Apr 29 04:50:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (5)
+Apr 29 04:50:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (5)
+Apr 29 04:50:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (9)
+Apr 29 04:50:46 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/editSuccess.php"
+Apr 29 04:50:46 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/_form.php"
+Apr 29 04:50:46 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_group s - ()
+Apr 29 04:50:46 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_permission s - ()
+Apr 29 04:50:46 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 04:50:46 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 04:50:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (9)
+Apr 29 04:50:46 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 04:50:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 04:50:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:50:46 symfony [info] {sfWebDebugLogger} Configuration 0.77 ms (9)
+Apr 29 04:50:46 symfony [info] {sfWebDebugLogger} Factories 5.45 ms (1)
+Apr 29 04:50:46 symfony [info] {sfWebDebugLogger} Action "client/edit" 35.08 ms (1)
+Apr 29 04:50:46 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (9)
+Apr 29 04:50:46 symfony [info] {sfWebDebugLogger} View "Success" for "client/edit" 11.54 ms (1)
+Apr 29 04:50:46 symfony [info] {sfWebDebugLogger} Partial "client/_form" 5.14 ms (1)
+Apr 29 04:50:46 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.96 ms (1)
+Apr 29 04:50:46 symfony [info] {sfWebResponse} Send content (60756 o)
+Apr 29 04:50:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:50:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:50:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/5 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '5',)
+Apr 29 04:50:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:50:52 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:50:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:50:52 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 29 04:50:52 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:50:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:50:52 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (5)
+Apr 29 04:50:52 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 29 04:50:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 04:50:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:50:52 symfony [info] {sfWebDebugLogger} Configuration 0.68 ms (8)
+Apr 29 04:50:52 symfony [info] {sfWebDebugLogger} Factories 6.08 ms (1)
+Apr 29 04:50:52 symfony [info] {sfWebDebugLogger} Action "client/delete" 334.62 ms (1)
+Apr 29 04:50:52 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 29 04:53:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 04:53:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 04:53:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/5 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '5',)
+Apr 29 04:53:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 04:53:22 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 04:53:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 04:53:22 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 29 04:53:22 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 04:53:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 04:53:22 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (5)
+Apr 29 04:53:22 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 29 04:53:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 04:53:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 04:53:22 symfony [info] {sfWebDebugLogger} Configuration 1.63 ms (8)
+Apr 29 04:53:22 symfony [info] {sfWebDebugLogger} Factories 12.92 ms (1)
+Apr 29 04:53:22 symfony [info] {sfWebDebugLogger} Action "client/delete" 256.03 ms (1)
+Apr 29 04:53:22 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 29 05:02:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 05:02:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 05:02:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/5 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '5',)
+Apr 29 05:02:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 05:02:17 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 05:02:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 05:02:17 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 29 05:02:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 05:02:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (5)
+Apr 29 05:02:17 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (5)
+Apr 29 05:02:17 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 29 05:02:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 05:02:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 05:02:17 symfony [info] {sfWebDebugLogger} Configuration 1.24 ms (8)
+Apr 29 05:02:17 symfony [info] {sfWebDebugLogger} Factories 4.43 ms (1)
+Apr 29 05:02:17 symfony [info] {sfWebDebugLogger} Action "client/delete" 158.12 ms (1)
+Apr 29 05:02:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Apr 29 05:02:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 05:02:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 05:02:23 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/5 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '5',)
+Apr 29 05:02:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 05:02:23 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 05:02:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 05:02:23 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 29 05:02:23 symfony [err] {sfValidatorErrorSchema} _csrf_token [Required.]
+Apr 29 05:02:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 05:02:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 05:02:23 symfony [info] {sfWebDebugLogger} Configuration 1.43 ms (8)
+Apr 29 05:02:23 symfony [info] {sfWebDebugLogger} Factories 5.38 ms (1)
+Apr 29 05:02:23 symfony [info] {sfWebDebugLogger} Action "client/delete" 22.68 ms (1)
+Apr 29 05:02:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 05:02:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 05:02:32 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 29 05:02:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 05:02:32 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 05:02:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 05:02:32 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 29 05:02:32 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 05:02:32 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 29 05:02:32 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 29 05:02:32 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_header.php"
+Apr 29 05:02:32 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY c.id asc LIMIT 10 - ()
+Apr 29 05:02:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (1)
+Apr 29 05:02:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (2)
+Apr 29 05:02:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (3)
+Apr 29 05:02:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (4)
+Apr 29 05:02:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (5)
+Apr 29 05:02:32 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_footer.php"
+Apr 29 05:02:32 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 05:02:32 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 05:02:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (9)
+Apr 29 05:02:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (9)
+Apr 29 05:02:32 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 05:02:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 05:02:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 05:02:32 symfony [info] {sfWebDebugLogger} Configuration 0.98 ms (9)
+Apr 29 05:02:32 symfony [info] {sfWebDebugLogger} Factories 5.34 ms (1)
+Apr 29 05:02:32 symfony [info] {sfWebDebugLogger} Action "client/index" 7.83 ms (1)
+Apr 29 05:02:32 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (10)
+Apr 29 05:02:32 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 40.12 ms (1)
+Apr 29 05:02:32 symfony [info] {sfWebDebugLogger} Partial "global/_pager_header" 1.90 ms (1)
+Apr 29 05:02:32 symfony [info] {sfWebDebugLogger} Partial "global/_pager_footer" 1.62 ms (1)
+Apr 29 05:02:32 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.88 ms (1)
+Apr 29 05:02:32 symfony [info] {sfWebResponse} Send content (60479 o)
+Apr 29 05:02:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 05:02:36 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 05:02:36 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/show/id/4 with parameters array (  'module' => 'client',  'action' => 'show',  'id' => '4',)
+Apr 29 05:02:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 05:02:36 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 05:02:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 05:02:36 symfony [info] {clientActions} Call "clientActions->executeShow()"
+Apr 29 05:02:36 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 05:02:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (4)
+Apr 29 05:02:36 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/showSuccess.php"
+Apr 29 05:02:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (4)
+Apr 29 05:02:36 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 05:02:36 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 05:02:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (9)
+Apr 29 05:02:36 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (9)
+Apr 29 05:02:36 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 05:02:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 05:02:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 05:02:36 symfony [info] {sfWebDebugLogger} Configuration 1.59 ms (9)
+Apr 29 05:02:36 symfony [info] {sfWebDebugLogger} Factories 6.37 ms (1)
+Apr 29 05:02:36 symfony [info] {sfWebDebugLogger} Action "client/show" 7.49 ms (1)
+Apr 29 05:02:36 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (5)
+Apr 29 05:02:36 symfony [info] {sfWebDebugLogger} View "Success" for "client/show" 23.05 ms (1)
+Apr 29 05:02:36 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.83 ms (1)
+Apr 29 05:02:36 symfony [info] {sfWebResponse} Send content (43692 o)
+Apr 29 05:02:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 05:02:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 05:02:38 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/edit/id/4 with parameters array (  'module' => 'client',  'action' => 'edit',  'id' => '4',)
+Apr 29 05:02:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 05:02:38 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 05:02:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 05:02:38 symfony [info] {clientActions} Call "clientActions->executeEdit()"
+Apr 29 05:02:38 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 05:02:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (4)
+Apr 29 05:02:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (4)
+Apr 29 05:02:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (4)
+Apr 29 05:02:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (4)
+Apr 29 05:02:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (9)
+Apr 29 05:02:38 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/editSuccess.php"
+Apr 29 05:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/_form.php"
+Apr 29 05:02:38 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_group s - ()
+Apr 29 05:02:38 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_permission s - ()
+Apr 29 05:02:38 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 05:02:38 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 29 05:02:38 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (9)
+Apr 29 05:02:38 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 29 05:02:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 05:02:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 05:02:38 symfony [info] {sfWebDebugLogger} Configuration 1.33 ms (9)
+Apr 29 05:02:38 symfony [info] {sfWebDebugLogger} Factories 3.93 ms (1)
+Apr 29 05:02:38 symfony [info] {sfWebDebugLogger} Action "client/edit" 26.22 ms (1)
+Apr 29 05:02:38 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (9)
+Apr 29 05:02:38 symfony [info] {sfWebDebugLogger} View "Success" for "client/edit" 11.82 ms (1)
+Apr 29 05:02:38 symfony [info] {sfWebDebugLogger} Partial "client/_form" 5.81 ms (1)
+Apr 29 05:02:38 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.90 ms (1)
+Apr 29 05:02:38 symfony [info] {sfWebResponse} Send content (60841 o)
+Apr 29 05:02:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 05:02:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 05:02:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/4 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '4',)
+Apr 29 05:02:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 05:02:44 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 29 05:02:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 05:02:44 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 29 05:02:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 05:02:44 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (4)
+Apr 29 05:02:44 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (4)
+Apr 29 05:02:44 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 29 05:02:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 29 05:02:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 05:02:44 symfony [info] {sfWebDebugLogger} Configuration 0.88 ms (8)
+Apr 29 05:02:44 symfony [info] {sfWebDebugLogger} Factories 4.13 ms (1)
+Apr 29 05:02:44 symfony [info] {sfWebDebugLogger} Action "client/delete" 115.26 ms (1)
+Apr 29 05:02:44 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 30 00:54:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 00:54:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 00:54:56 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'index',)
+Apr 30 00:54:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 00:54:56 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 00:54:56 symfony [info] {sfBasicSecurityFilter} Action "main/index" requires authentication, forwarding to "sfGuardAuth/signin"
+Apr 30 00:54:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 00:54:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 00:54:56 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Apr 30 00:54:56 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Apr 30 00:54:56 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Apr 30 00:54:56 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 00:54:56 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 00:54:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Apr 30 00:54:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 00:54:56 symfony [info] {sfWebDebugLogger} Configuration 1.71 ms (12)
+Apr 30 00:54:56 symfony [info] {sfWebDebugLogger} Factories 269.90 ms (1)
+Apr 30 00:54:56 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 19.78 ms (1)
+Apr 30 00:54:56 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 77.24 ms (1)
+Apr 30 00:54:56 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 5.21 ms (1)
+Apr 30 00:54:56 symfony [info] {sfWebResponse} Send content (35827 o)
+Apr 30 00:56:10 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 00:56:10 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 00:56:10 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/guard/login) for /guard/login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Apr 30 00:56:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 00:56:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 00:56:10 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Apr 30 00:56:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 00:56:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.username = ? AND s.is_active = ?) - (user6, 1)
+Apr 30 00:56:10 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Apr 30 00:56:10 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Apr 30 00:56:10 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 00:56:10 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 00:56:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 00:56:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 00:56:10 symfony [info] {sfWebDebugLogger} Configuration 0.74 ms (9)
+Apr 30 00:56:10 symfony [info] {sfWebDebugLogger} Factories 5.14 ms (1)
+Apr 30 00:56:10 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 128.61 ms (1)
+Apr 30 00:56:10 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 30 00:56:10 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 3.68 ms (1)
+Apr 30 00:56:10 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 1.11 ms (1)
+Apr 30 00:56:10 symfony [info] {sfWebResponse} Send content (39858 o)
+Apr 30 00:56:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 00:56:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 00:56:14 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/guard/login) for /guard/login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Apr 30 00:56:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 00:56:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 00:56:14 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Apr 30 00:56:14 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 00:56:14 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.username = ? AND s.is_active = ?) - (user6, 1)
+Apr 30 00:56:14 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/signinSuccess.php"
+Apr 30 00:56:14 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/plugins/sfDoctrineGuardPlugin/modules/sfGuardAuth/templates/_signin_form.php"
+Apr 30 00:56:14 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 00:56:14 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 00:56:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 00:56:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 00:56:14 symfony [info] {sfWebDebugLogger} Configuration 1.69 ms (9)
+Apr 30 00:56:14 symfony [info] {sfWebDebugLogger} Factories 13.03 ms (1)
+Apr 30 00:56:14 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 13.95 ms (1)
+Apr 30 00:56:14 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Apr 30 00:56:14 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 3.62 ms (1)
+Apr 30 00:56:14 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 1.09 ms (1)
+Apr 30 00:56:14 symfony [info] {sfWebResponse} Send content (39870 o)
+Apr 30 00:57:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 00:57:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 00:57:50 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'main',  'action' => 'index',)
+Apr 30 00:57:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 00:57:50 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 00:57:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 00:57:50 symfony [info] {mainActions} Call "mainActions->executeIndex()"
+Apr 30 00:57:50 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 00:57:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 30 00:57:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 30 00:57:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 30 00:57:50 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/main/templates/indexSuccess.php"
+Apr 30 00:57:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.account_id AS t__account_id, t.staff_id AS t__staff_id, t.task_status_id AS t__task_status_id, t.task_type_id AS t__task_type_id, t.task_priority_id AS t__task_priority_id, t.task_work_id AS t__task_work_id, t.ref_no AS t__ref_no, t.name AS t__name, t.description AS t__description, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task t WHERE (t.staff_id = ? AND t.task_status_id <> ?) ORDER BY t.created_at DESC - (1, 3)
+Apr 30 00:57:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (1)
+Apr 30 00:57:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (2)
+Apr 30 00:57:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.account_id AS t__account_id, t.staff_id AS t__staff_id, t.task_status_id AS t__task_status_id, t.task_type_id AS t__task_type_id, t.task_priority_id AS t__task_priority_id, t.task_work_id AS t__task_work_id, t.ref_no AS t__ref_no, t.name AS t__name, t.description AS t__description, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task t WHERE (t.staff_id = ? AND t.task_status_id = ?) ORDER BY t.created_at DESC LIMIT 5 - (1, 3)
+Apr 30 00:57:50 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 00:57:50 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 00:57:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 30 00:57:50 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 30 00:57:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 00:57:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 00:57:50 symfony [info] {sfWebDebugLogger} Configuration 1.38 ms (9)
+Apr 30 00:57:50 symfony [info] {sfWebDebugLogger} Factories 4.23 ms (1)
+Apr 30 00:57:50 symfony [info] {sfWebDebugLogger} Action "main/index" 17.58 ms (1)
+Apr 30 00:57:50 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (9)
+Apr 30 00:57:50 symfony [info] {sfWebDebugLogger} View "Success" for "main/index" 105.89 ms (1)
+Apr 30 00:57:50 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 10.39 ms (1)
+Apr 30 00:57:50 symfony [info] {sfWebResponse} Send content (53133 o)
+Apr 30 00:57:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 00:57:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 00:57:53 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 30 00:57:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 00:57:53 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 00:57:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 00:57:53 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 30 00:57:54 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 00:57:54 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 30 00:57:54 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 30 00:57:54 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_header.php"
+Apr 30 00:57:54 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY c.id asc LIMIT 10 - ()
+Apr 30 00:57:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (1)
+Apr 30 00:57:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (2)
+Apr 30 00:57:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (3)
+Apr 30 00:57:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (4)
+Apr 30 00:57:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (5)
+Apr 30 00:57:54 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_footer.php"
+Apr 30 00:57:54 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 00:57:54 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 00:57:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 30 00:57:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 30 00:57:54 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 30 00:57:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 00:57:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 00:57:54 symfony [info] {sfWebDebugLogger} Configuration 2.19 ms (9)
+Apr 30 00:57:54 symfony [info] {sfWebDebugLogger} Factories 4.76 ms (1)
+Apr 30 00:57:54 symfony [info] {sfWebDebugLogger} Action "client/index" 48.55 ms (1)
+Apr 30 00:57:54 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (10)
+Apr 30 00:57:54 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 59.40 ms (1)
+Apr 30 00:57:54 symfony [info] {sfWebDebugLogger} Partial "global/_pager_header" 2.48 ms (1)
+Apr 30 00:57:54 symfony [info] {sfWebDebugLogger} Partial "global/_pager_footer" 1.80 ms (1)
+Apr 30 00:57:54 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 2.14 ms (1)
+Apr 30 00:57:54 symfony [info] {sfWebResponse} Send content (60427 o)
+Apr 30 00:57:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 00:57:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 00:57:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/show/id/1 with parameters array (  'module' => 'client',  'action' => 'show',  'id' => '1',)
+Apr 30 00:57:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 00:57:58 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 00:57:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 00:57:58 symfony [info] {clientActions} Call "clientActions->executeShow()"
+Apr 30 00:57:58 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 00:57:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 00:57:58 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/showSuccess.php"
+Apr 30 00:57:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (1)
+Apr 30 00:57:58 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 00:57:58 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 00:57:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 30 00:57:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 30 00:57:58 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 30 00:57:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 00:57:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 00:57:58 symfony [info] {sfWebDebugLogger} Configuration 1.81 ms (9)
+Apr 30 00:57:58 symfony [info] {sfWebDebugLogger} Factories 7.43 ms (1)
+Apr 30 00:57:58 symfony [info] {sfWebDebugLogger} Action "client/show" 5.21 ms (1)
+Apr 30 00:57:58 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (5)
+Apr 30 00:57:58 symfony [info] {sfWebDebugLogger} View "Success" for "client/show" 48.02 ms (1)
+Apr 30 00:57:58 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 2.39 ms (1)
+Apr 30 00:57:58 symfony [info] {sfWebResponse} Send content (43569 o)
+Apr 30 00:58:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 00:58:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 00:58:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/edit/id/1 with parameters array (  'module' => 'client',  'action' => 'edit',  'id' => '1',)
+Apr 30 00:58:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 00:58:00 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 00:58:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 00:58:00 symfony [info] {clientActions} Call "clientActions->executeEdit()"
+Apr 30 00:58:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 00:58:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 00:58:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (1)
+Apr 30 00:58:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (1)
+Apr 30 00:58:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (1)
+Apr 30 00:58:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 30 00:58:00 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/editSuccess.php"
+Apr 30 00:58:00 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/_form.php"
+Apr 30 00:58:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_group s - ()
+Apr 30 00:58:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_permission s - ()
+Apr 30 00:58:00 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 00:58:00 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 00:58:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 30 00:58:00 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 30 00:58:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 00:58:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 00:58:00 symfony [info] {sfWebDebugLogger} Configuration 1.90 ms (9)
+Apr 30 00:58:00 symfony [info] {sfWebDebugLogger} Factories 5.88 ms (1)
+Apr 30 00:58:00 symfony [info] {sfWebDebugLogger} Action "client/edit" 75.56 ms (1)
+Apr 30 00:58:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (9)
+Apr 30 00:58:00 symfony [info] {sfWebDebugLogger} View "Success" for "client/edit" 24.03 ms (1)
+Apr 30 00:58:00 symfony [info] {sfWebDebugLogger} Partial "client/_form" 15.69 ms (1)
+Apr 30 00:58:00 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.86 ms (1)
+Apr 30 00:58:00 symfony [info] {sfWebResponse} Send content (61982 o)
+Apr 30 00:58:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 00:58:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 00:58:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 00:58:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 00:58:06 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 00:58:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 00:58:06 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 00:58:06 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 00:58:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 00:58:06 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 00:58:06 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account`, CONSTRAINT `account_client_id_client_id` FOREIGN KEY (`client_id`) REFERENCES `client` (`id`))
+Apr 30 00:58:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 00:58:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 00:58:06 symfony [info] {sfWebDebugLogger} Configuration 0.70 ms (8)
+Apr 30 00:58:06 symfony [info] {sfWebDebugLogger} Factories 5.35 ms (1)
+Apr 30 00:58:06 symfony [info] {sfWebDebugLogger} Action "client/delete" 238.18 ms (1)
+Apr 30 00:58:06 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 30 00:59:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 00:59:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 00:59:19 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 00:59:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 00:59:19 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 00:59:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 00:59:19 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 00:59:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 00:59:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 00:59:19 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 00:59:19 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account`, CONSTRAINT `account_client_id_client_id` FOREIGN KEY (`client_id`) REFERENCES `client` (`id`))
+Apr 30 00:59:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 00:59:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 00:59:19 symfony [info] {sfWebDebugLogger} Configuration 0.75 ms (8)
+Apr 30 00:59:19 symfony [info] {sfWebDebugLogger} Factories 5.82 ms (1)
+Apr 30 00:59:19 symfony [info] {sfWebDebugLogger} Action "client/delete" 165.13 ms (1)
+Apr 30 00:59:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Apr 30 01:00:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 01:00:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 01:00:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 01:00:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 01:00:17 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 01:00:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 01:00:17 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 01:00:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 01:00:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 01:00:17 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 01:00:17 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice`, CONSTRAINT `account_invoice_account_id_account_id` FOREIGN KEY (`account_id`) REFERENCES `account` (`id`))
+Apr 30 01:00:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 01:00:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 01:00:17 symfony [info] {sfWebDebugLogger} Configuration 0.93 ms (8)
+Apr 30 01:00:17 symfony [info] {sfWebDebugLogger} Factories 292.21 ms (1)
+Apr 30 01:00:17 symfony [info] {sfWebDebugLogger} Action "client/delete" 158.57 ms (1)
+Apr 30 01:00:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 30 01:02:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 01:02:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 01:02:47 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 01:02:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 01:02:47 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 01:02:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 01:02:47 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 01:02:47 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 01:02:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 01:02:47 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 01:02:47 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 30 01:02:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 01:02:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 01:02:47 symfony [info] {sfWebDebugLogger} Configuration 0.86 ms (8)
+Apr 30 01:02:47 symfony [info] {sfWebDebugLogger} Factories 10.41 ms (1)
+Apr 30 01:02:47 symfony [info] {sfWebDebugLogger} Action "client/delete" 334.90 ms (1)
+Apr 30 01:02:47 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Apr 30 01:04:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 01:04:06 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 01:04:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 01:04:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 01:04:06 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 01:04:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 01:04:06 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 01:04:06 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 01:04:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 01:04:06 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 01:04:06 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 30 01:04:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 01:04:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 01:04:06 symfony [info] {sfWebDebugLogger} Configuration 0.67 ms (8)
+Apr 30 01:04:06 symfony [info] {sfWebDebugLogger} Factories 5.81 ms (1)
+Apr 30 01:04:06 symfony [info] {sfWebDebugLogger} Action "client/delete" 147.78 ms (1)
+Apr 30 01:04:06 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 30 01:05:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 01:05:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 01:05:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 01:05:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 01:05:48 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 01:05:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 01:05:48 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 01:05:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 01:05:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 01:05:48 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 01:05:48 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 30 01:05:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 01:05:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 01:05:48 symfony [info] {sfWebDebugLogger} Configuration 1.29 ms (8)
+Apr 30 01:05:48 symfony [info] {sfWebDebugLogger} Factories 7.96 ms (1)
+Apr 30 01:05:48 symfony [info] {sfWebDebugLogger} Action "client/delete" 273.83 ms (1)
+Apr 30 01:05:48 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 30 01:14:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 01:14:48 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 01:14:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 01:14:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 01:14:48 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 01:14:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 01:14:48 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 01:14:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 01:14:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 01:14:48 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 01:14:49 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 30 01:14:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 01:14:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 01:14:49 symfony [info] {sfWebDebugLogger} Configuration 0.95 ms (8)
+Apr 30 01:14:49 symfony [info] {sfWebDebugLogger} Factories 5.75 ms (1)
+Apr 30 01:14:49 symfony [info] {sfWebDebugLogger} Action "client/delete" 376.67 ms (1)
+Apr 30 01:14:49 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 30 01:17:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 01:17:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 01:17:12 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 01:17:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 01:17:12 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 01:17:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 01:17:12 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 01:17:12 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 01:17:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 01:17:12 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 01:17:12 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 30 01:17:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 01:17:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 01:17:12 symfony [info] {sfWebDebugLogger} Configuration 0.82 ms (8)
+Apr 30 01:17:12 symfony [info] {sfWebDebugLogger} Factories 5.33 ms (1)
+Apr 30 01:17:12 symfony [info] {sfWebDebugLogger} Action "client/delete" 187.84 ms (1)
+Apr 30 01:17:12 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Apr 30 01:18:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 01:18:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 01:18:52 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 01:18:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 01:18:52 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 01:18:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 01:18:52 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 01:18:52 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 01:18:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 01:18:52 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 01:18:52 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 30 01:18:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 01:18:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 01:18:52 symfony [info] {sfWebDebugLogger} Configuration 1.20 ms (8)
+Apr 30 01:18:52 symfony [info] {sfWebDebugLogger} Factories 8.98 ms (1)
+Apr 30 01:18:52 symfony [info] {sfWebDebugLogger} Action "client/delete" 148.90 ms (1)
+Apr 30 01:18:52 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 30 01:35:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 01:35:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 01:35:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 01:35:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 01:35:46 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 01:35:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 01:35:46 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 01:35:46 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 01:35:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 01:35:46 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 01:35:46 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 30 01:35:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 01:35:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 01:35:46 symfony [info] {sfWebDebugLogger} Configuration 1.34 ms (8)
+Apr 30 01:35:46 symfony [info] {sfWebDebugLogger} Factories 16.92 ms (1)
+Apr 30 01:35:46 symfony [info] {sfWebDebugLogger} Action "client/delete" 211.86 ms (1)
+Apr 30 01:35:46 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Apr 30 01:35:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 01:35:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 01:35:51 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 01:35:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 01:35:51 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 01:35:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 01:35:51 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 01:35:51 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 01:35:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 01:35:51 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 01:35:51 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 30 01:35:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 01:35:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 01:35:51 symfony [info] {sfWebDebugLogger} Configuration 1.08 ms (8)
+Apr 30 01:35:51 symfony [info] {sfWebDebugLogger} Factories 6.10 ms (1)
+Apr 30 01:35:51 symfony [info] {sfWebDebugLogger} Action "client/delete" 124.99 ms (1)
+Apr 30 01:35:51 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 30 01:36:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 01:36:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 01:36:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 01:36:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 01:36:58 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 01:36:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 01:36:58 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 01:36:58 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 01:36:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 01:36:58 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 01:36:58 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 30 01:36:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 01:36:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 01:36:58 symfony [info] {sfWebDebugLogger} Configuration 1.17 ms (8)
+Apr 30 01:36:58 symfony [info] {sfWebDebugLogger} Factories 9.16 ms (1)
+Apr 30 01:36:58 symfony [info] {sfWebDebugLogger} Action "client/delete" 124.91 ms (1)
+Apr 30 01:36:58 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Apr 30 01:37:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 01:37:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 01:37:34 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 01:37:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 01:37:34 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 01:37:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 01:37:34 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 01:37:34 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 01:37:34 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 01:37:34 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 01:37:34 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_invoice_task`, CONSTRAINT `account_invoice_task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 30 01:37:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 01:37:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 01:37:35 symfony [info] {sfWebDebugLogger} Configuration 1.39 ms (8)
+Apr 30 01:37:35 symfony [info] {sfWebDebugLogger} Factories 10.20 ms (1)
+Apr 30 01:37:35 symfony [info] {sfWebDebugLogger} Action "client/delete" 114.55 ms (1)
+Apr 30 01:37:35 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Apr 30 01:47:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 01:47:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 01:47:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 01:47:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 01:47:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 01:47:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 01:47:49 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 01:47:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 01:47:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 01:47:49 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 01:47:49 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`task`, CONSTRAINT `task_account_invoice_id_account_invoice_id` FOREIGN KEY (`account_invoice_id`) REFERENCES `account_invoice` (`id`))
+Apr 30 01:47:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 01:47:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 01:47:49 symfony [info] {sfWebDebugLogger} Configuration 1.05 ms (8)
+Apr 30 01:47:49 symfony [info] {sfWebDebugLogger} Factories 6.29 ms (1)
+Apr 30 01:47:49 symfony [info] {sfWebDebugLogger} Action "client/delete" 166.87 ms (1)
+Apr 30 01:47:49 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Apr 30 01:50:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 01:50:00 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 01:50:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 01:50:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 01:50:00 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 01:50:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 01:50:00 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 01:50:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 01:50:00 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 01:50:00 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 01:50:00 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`task_comment`, CONSTRAINT `task_comment_task_id_task_id` FOREIGN KEY (`task_id`) REFERENCES `task` (`id`))
+Apr 30 01:50:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 01:50:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 01:50:00 symfony [info] {sfWebDebugLogger} Configuration 0.81 ms (8)
+Apr 30 01:50:00 symfony [info] {sfWebDebugLogger} Factories 5.66 ms (1)
+Apr 30 01:50:00 symfony [info] {sfWebDebugLogger} Action "client/delete" 397.11 ms (1)
+Apr 30 01:50:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Apr 30 01:51:55 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 01:51:55 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 01:51:55 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 01:51:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 01:51:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 01:51:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 01:51:55 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 01:51:55 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 01:51:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 01:51:55 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 01:51:55 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`task_log`, CONSTRAINT `task_log_task_id_task_id` FOREIGN KEY (`task_id`) REFERENCES `task` (`id`))
+Apr 30 01:51:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 01:51:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 01:51:55 symfony [info] {sfWebDebugLogger} Configuration 0.96 ms (8)
+Apr 30 01:51:55 symfony [info] {sfWebDebugLogger} Factories 7.69 ms (1)
+Apr 30 01:51:55 symfony [info] {sfWebDebugLogger} Action "client/delete" 228.08 ms (1)
+Apr 30 01:51:55 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Apr 30 01:53:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 01:53:47 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 01:53:47 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 01:53:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 01:53:47 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 01:53:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 01:53:47 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 01:53:47 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 01:53:47 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 01:53:47 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 01:53:47 symfony [err] {Doctrine_Connection_Mysql_Exception} SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`supra`.`account_record`, CONSTRAINT `account_record_account_id_account_id` FOREIGN KEY (`account_id`) REFERENCES `account` (`id`))
+Apr 30 01:53:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 30 01:53:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 01:53:47 symfony [info] {sfWebDebugLogger} Configuration 0.71 ms (8)
+Apr 30 01:53:47 symfony [info] {sfWebDebugLogger} Factories 6.14 ms (1)
+Apr 30 01:53:47 symfony [info] {sfWebDebugLogger} Action "client/delete" 404.81 ms (1)
+Apr 30 01:53:47 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Apr 30 02:04:42 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 02:04:42 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 02:04:42 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/1 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '1',)
+Apr 30 02:04:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 02:04:42 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 02:04:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 02:04:42 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 02:04:42 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 02:04:42 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (1)
+Apr 30 02:04:43 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (1)
+Apr 30 02:04:43 symfony [info] {sfFrontWebController} Redirect to "http://localhost:7070/frontend_dev.php/client"
+Apr 30 02:04:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Apr 30 02:04:43 symfony [info] {sfWebResponse} Send header "Location: http://localhost:7070/frontend_dev.php/client"
+Apr 30 02:04:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 02:04:43 symfony [info] {sfWebDebugLogger} Configuration 1.51 ms (8)
+Apr 30 02:04:43 symfony [info] {sfWebDebugLogger} Factories 10.76 ms (1)
+Apr 30 02:04:43 symfony [info] {sfWebDebugLogger} Action "client/delete" 127.50 ms (1)
+Apr 30 02:04:43 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (3)
+Apr 30 02:04:43 symfony [info] {sfWebResponse} Send content (116 o)
+Apr 30 02:04:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 02:04:43 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 02:04:43 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 30 02:04:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 02:04:43 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 02:04:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 02:04:43 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 30 02:04:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 02:04:43 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 30 02:04:43 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 30 02:04:43 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_header.php"
+Apr 30 02:04:43 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY c.id asc LIMIT 10 - ()
+Apr 30 02:04:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (2)
+Apr 30 02:04:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (3)
+Apr 30 02:04:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (4)
+Apr 30 02:04:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (5)
+Apr 30 02:04:43 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_footer.php"
+Apr 30 02:04:43 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 02:04:43 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 02:04:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 30 02:04:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 30 02:04:43 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 30 02:04:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 02:04:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 02:04:43 symfony [info] {sfWebDebugLogger} Configuration 2.10 ms (9)
+Apr 30 02:04:43 symfony [info] {sfWebDebugLogger} Factories 7.33 ms (1)
+Apr 30 02:04:43 symfony [info] {sfWebDebugLogger} Action "client/index" 6.79 ms (1)
+Apr 30 02:04:43 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (9)
+Apr 30 02:04:43 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 40.01 ms (1)
+Apr 30 02:04:43 symfony [info] {sfWebDebugLogger} Partial "global/_pager_header" 1.71 ms (1)
+Apr 30 02:04:43 symfony [info] {sfWebDebugLogger} Partial "global/_pager_footer" 1.56 ms (1)
+Apr 30 02:04:43 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.90 ms (1)
+Apr 30 02:04:43 symfony [info] {sfWebResponse} Send content (57812 o)
+Apr 30 02:04:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 02:04:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 02:04:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/show/id/2 with parameters array (  'module' => 'client',  'action' => 'show',  'id' => '2',)
+Apr 30 02:04:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 02:04:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 02:04:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 02:04:49 symfony [info] {clientActions} Call "clientActions->executeShow()"
+Apr 30 02:04:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 02:04:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (2)
+Apr 30 02:04:49 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/showSuccess.php"
+Apr 30 02:04:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (2)
+Apr 30 02:04:49 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 02:04:49 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 02:04:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 30 02:04:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 30 02:04:49 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 30 02:04:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 02:04:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 02:04:49 symfony [info] {sfWebDebugLogger} Configuration 0.76 ms (9)
+Apr 30 02:04:49 symfony [info] {sfWebDebugLogger} Factories 4.03 ms (1)
+Apr 30 02:04:49 symfony [info] {sfWebDebugLogger} Action "client/show" 5.92 ms (1)
+Apr 30 02:04:49 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (5)
+Apr 30 02:04:49 symfony [info] {sfWebDebugLogger} View "Success" for "client/show" 17.36 ms (1)
+Apr 30 02:04:49 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 2.61 ms (1)
+Apr 30 02:04:49 symfony [info] {sfWebResponse} Send content (43570 o)
+Apr 30 02:04:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 02:04:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 02:04:51 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/edit/id/2 with parameters array (  'module' => 'client',  'action' => 'edit',  'id' => '2',)
+Apr 30 02:04:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 02:04:51 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 02:04:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 02:04:51 symfony [info] {clientActions} Call "clientActions->executeEdit()"
+Apr 30 02:04:51 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 02:04:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (2)
+Apr 30 02:04:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (2)
+Apr 30 02:04:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (2)
+Apr 30 02:04:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (2)
+Apr 30 02:04:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 30 02:04:51 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/editSuccess.php"
+Apr 30 02:04:51 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/_form.php"
+Apr 30 02:04:51 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_group s - ()
+Apr 30 02:04:51 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_permission s - ()
+Apr 30 02:04:51 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 02:04:51 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 02:04:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 30 02:04:51 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 30 02:04:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 02:04:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 02:04:51 symfony [info] {sfWebDebugLogger} Configuration 2.51 ms (9)
+Apr 30 02:04:51 symfony [info] {sfWebDebugLogger} Factories 13.10 ms (1)
+Apr 30 02:04:51 symfony [info] {sfWebDebugLogger} Action "client/edit" 22.51 ms (1)
+Apr 30 02:04:51 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (9)
+Apr 30 02:04:51 symfony [info] {sfWebDebugLogger} View "Success" for "client/edit" 12.34 ms (1)
+Apr 30 02:04:51 symfony [info] {sfWebDebugLogger} Partial "client/_form" 6.18 ms (1)
+Apr 30 02:04:51 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.96 ms (1)
+Apr 30 02:04:51 symfony [info] {sfWebResponse} Send content (61981 o)
+Apr 30 02:04:55 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 02:04:55 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 02:04:55 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /client/delete/id/2 with parameters array (  'module' => 'client',  'action' => 'delete',  'id' => '2',)
+Apr 30 02:04:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 02:04:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 02:04:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 02:04:55 symfony [info] {clientActions} Call "clientActions->executeDelete()"
+Apr 30 02:04:55 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 02:04:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM client c WHERE (c.id = ?) LIMIT 1 - (2)
+Apr 30 02:04:55 symfony [info] {Doctrine_Connection_Statement} execute : DELETE FROM client WHERE id = ? - (2)
+Apr 30 02:04:55 symfony [info] {sfFrontWebController} Redirect to "http://localhost:7070/frontend_dev.php/client"
+Apr 30 02:04:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Apr 30 02:04:55 symfony [info] {sfWebResponse} Send header "Location: http://localhost:7070/frontend_dev.php/client"
+Apr 30 02:04:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 02:04:55 symfony [info] {sfWebDebugLogger} Configuration 1.55 ms (8)
+Apr 30 02:04:55 symfony [info] {sfWebDebugLogger} Factories 6.64 ms (1)
+Apr 30 02:04:55 symfony [info] {sfWebDebugLogger} Action "client/delete" 88.51 ms (1)
+Apr 30 02:04:55 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Apr 30 02:04:55 symfony [info] {sfWebResponse} Send content (116 o)
+Apr 30 02:04:55 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 02:04:55 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 02:04:55 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /client with parameters array (  'module' => 'client',  'action' => 'index',)
+Apr 30 02:04:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 02:04:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 02:04:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 02:04:55 symfony [info] {clientActions} Call "clientActions->executeIndex()"
+Apr 30 02:04:55 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 02:04:55 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT c.id FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id GROUP BY c.id) dctrn_count_query - ()
+Apr 30 02:04:55 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/client/templates/indexSuccess.php"
+Apr 30 02:04:55 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_header.php"
+Apr 30 02:04:55 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.user_id AS c__user_id, c.track_record AS c__track_record, c.created_at AS c__created_at, c.updated_at AS c__updated_at, s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM client c LEFT JOIN sf_guard_user s ON c.user_id = s.id ORDER BY c.id asc LIMIT 10 - ()
+Apr 30 02:04:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (3)
+Apr 30 02:04:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (4)
+Apr 30 02:04:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.client_id IN (?)) - (5)
+Apr 30 02:04:55 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_footer.php"
+Apr 30 02:04:55 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 02:04:55 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 02:04:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 30 02:04:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 30 02:04:55 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 30 02:04:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 02:04:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 02:04:55 symfony [info] {sfWebDebugLogger} Configuration 1.75 ms (9)
+Apr 30 02:04:55 symfony [info] {sfWebDebugLogger} Factories 8.99 ms (1)
+Apr 30 02:04:55 symfony [info] {sfWebDebugLogger} Action "client/index" 6.09 ms (1)
+Apr 30 02:04:55 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (8)
+Apr 30 02:04:55 symfony [info] {sfWebDebugLogger} View "Success" for "client/index" 26.43 ms (1)
+Apr 30 02:04:55 symfony [info] {sfWebDebugLogger} Partial "global/_pager_header" 0.72 ms (1)
+Apr 30 02:04:55 symfony [info] {sfWebDebugLogger} Partial "global/_pager_footer" 1.57 ms (1)
+Apr 30 02:04:55 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.86 ms (1)
+Apr 30 02:04:55 symfony [info] {sfWebResponse} Send content (55121 o)
+Apr 30 02:06:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 02:06:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 02:06:28 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /task with parameters array (  'module' => 'task',  'action' => 'index',)
+Apr 30 02:06:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 02:06:28 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 02:06:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 02:06:28 symfony [info] {taskActions} Call "taskActions->executeIndex()"
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM task t - ()
+Apr 30 02:06:28 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/task/templates/indexSuccess.php"
+Apr 30 02:06:28 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager.php"
+Apr 30 02:06:28 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_header.php"
+Apr 30 02:06:28 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_body.php"
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.account_id AS t__account_id, t.account_invoice_id AS t__account_invoice_id, t.staff_id AS t__staff_id, t.task_status_id AS t__task_status_id, t.task_type_id AS t__task_type_id, t.task_priority_id AS t__task_priority_id, t.task_work_id AS t__task_work_id, t.ref_no AS t__ref_no, t.name AS t__name, t.description AS t__description, t.created_at AS t__created_at, t.updated_at AS t__updated_at FROM task t ORDER BY t.id asc LIMIT 10 - ()
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (5)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (3)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (8)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (6)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (3)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (2)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (1)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (1)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (7)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (4)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (9)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (8)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (4)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (3)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (1)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (1)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (9)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (5)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (10)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (4)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (3)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (2)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a WHERE (a.id = ?) - (10)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.id = ?) - (5)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_status t WHERE (t.id = ?) - (2)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_type t WHERE (t.id = ?) - (1)
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t WHERE (t.id = ?) - (1)
+Apr 30 02:06:28 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/templates/_pager_footer.php"
+Apr 30 02:06:28 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 02:06:28 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 02:06:28 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 30 02:06:28 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 30 02:06:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 02:06:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 02:06:28 symfony [info] {sfWebDebugLogger} Configuration 0.99 ms (9)
+Apr 30 02:06:28 symfony [info] {sfWebDebugLogger} Factories 5.08 ms (1)
+Apr 30 02:06:28 symfony [info] {sfWebDebugLogger} Action "task/index" 10.46 ms (1)
+Apr 30 02:06:28 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.14 ms (38)
+Apr 30 02:06:28 symfony [info] {sfWebDebugLogger} View "Success" for "task/index" 118.43 ms (1)
+Apr 30 02:06:28 symfony [info] {sfWebDebugLogger} Partial "global/_pager" 111.89 ms (1)
+Apr 30 02:06:28 symfony [info] {sfWebDebugLogger} Partial "global/_pager_header" 2.88 ms (1)
+Apr 30 02:06:28 symfony [info] {sfWebDebugLogger} Partial "global/_pager_body" 106.60 ms (1)
+Apr 30 02:06:28 symfony [info] {sfWebDebugLogger} Partial "global/_pager_footer" 1.61 ms (1)
+Apr 30 02:06:28 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.82 ms (1)
+Apr 30 02:06:28 symfony [info] {sfWebResponse} Send content (105137 o)
+Apr 30 02:06:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 30 02:06:31 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 30 02:06:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /task/new with parameters array (  'module' => 'task',  'action' => 'new',)
+Apr 30 02:06:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 30 02:06:31 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Apr 30 02:06:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 30 02:06:31 symfony [info] {taskActions} Call "taskActions->executeNew()"
+Apr 30 02:06:31 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/modules/task/templates/newSuccess.php"
+Apr 30 02:06:31 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/task/templates/_form.php"
+Apr 30 02:06:31 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 30 02:06:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.client_id AS a__client_id, a.plan_id AS a__plan_id, a.title AS a__title, a.domain_name AS a__domain_name, a.description AS a__description, a.active AS a__active, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account a - ()
+Apr 30 02:06:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.account_id AS a__account_id, a.ref_no AS a__ref_no, a.description AS a__description, a.paid_off AS a__paid_off, a.is_viewable AS a__is_viewable, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM account_invoice a - ()
+Apr 30 02:06:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s - ()
+Apr 30 02:06:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (6)
+Apr 30 02:06:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (7)
+Apr 30 02:06:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (8)
+Apr 30 02:06:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (9)
+Apr 30 02:06:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (10)
+Apr 30 02:06:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.name AS t__name FROM task_status t - ()
+Apr 30 02:06:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.name AS t__name FROM task_type t - ()
+Apr 30 02:06:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.name AS t__name FROM task_priority t - ()
+Apr 30 02:06:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT t.id AS t__id, t.name AS t__name, t.rate AS t__rate, t.description AS t__description FROM task_work t - ()
+Apr 30 02:06:31 symfony [info] {sfPHPView} Decorate content with "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 02:06:31 symfony [info] {sfPHPView} Render "/home/sfprojects/supra/apps/frontend/templates/layout.php"
+Apr 30 02:06:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (6)
+Apr 30 02:06:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.user_id AS s__user_id, s.title AS s__title, s.bio AS s__bio, s.is_subcontractor AS s__is_subcontractor, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM staff s WHERE (s.user_id = ?) - (6)
+Apr 30 02:06:31 symfony [info] {sfPartialView} Render "/home/sfprojects/supra/apps/frontend/modules/staff/templates/_nav.php"
+Apr 30 02:06:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 30 02:06:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 30 02:06:31 symfony [info] {sfWebDebugLogger} Configuration 2.05 ms (9)
+Apr 30 02:06:31 symfony [info] {sfWebDebugLogger} Factories 6.57 ms (1)
+Apr 30 02:06:31 symfony [info] {sfWebDebugLogger} Action "task/new" 13.92 ms (1)
+Apr 30 02:06:31 symfony [info] {sfWebDebugLogger} View "Success" for "task/new" 48.87 ms (1)
+Apr 30 02:06:31 symfony [info] {sfWebDebugLogger} Partial "task/_form" 39.79 ms (1)
+Apr 30 02:06:31 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (15)
+Apr 30 02:06:31 symfony [info] {sfWebDebugLogger} Partial "staff/_nav" 1.95 ms (1)
+Apr 30 02:06:31 symfony [info] {sfWebResponse} Send content (72373 o)

@@ -17,8 +17,8 @@ abstract class BaseTaskLogForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'            => new sfWidgetFormInputHidden(),
       'task_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Task'), 'add_empty' => false)),
-      'task_work_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TaskWork'), 'add_empty' => false)),
-      'staff_id'      => new sfWidgetFormDoctrineChoice(array('label'=>'Employee','model' => $this->getRelatedModelName('Staff'), 'add_empty' => false)),
+      'task_work_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TaskWork'), 'add_empty' => true)),
+      'staff_id'      => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Staff'), 'add_empty' => false)),
       'title'         => new sfWidgetFormInputText(),
       'description'   => new sfWidgetFormTextarea(),
       'gen_desc_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('GenDesc'), 'add_empty' => true)),
@@ -37,7 +37,7 @@ abstract class BaseTaskLogForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'            => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'task_id'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Task'))),
-      'task_work_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TaskWork'))),
+      'task_work_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TaskWork'), 'required' => false)),
       'staff_id'      => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Staff'))),
       'title'         => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'description'   => new sfValidatorString(array('required' => false)),

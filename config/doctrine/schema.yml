@@ -4,7 +4,7 @@ Client:
   actAs: [Timestampable]
   columns: 
     id:           { type: integer, primary: true, autoincrement: true }
-    user_id:      { type: integer(255) }
+    user_id:      { type: integer(255), notnull: true }
     track_record: { type: clob }
   relations: 
     User:
@@ -20,7 +20,7 @@ Staff:
   actAs: [Timestampable]
   columns:
     id:               { type: integer, primary: true, autoincrement: true }
-    user_id:          { type: integer(255) }
+    user_id:          { type: integer, notnull: true }
     title:            { type: string(255) }
     bio:              { type: clob }
     is_subcontractor: { type: boolean, notnull: true, default: 0 }
@@ -32,6 +32,7 @@ Staff:
       type: one
       foreignType: one
       foreignAlias: Staff
+      onDelete: cascade
 
 StaffTaskWork:
   columns:
@@ -42,30 +43,41 @@ Account:
   actAs: [Timestampable]
   columns:
     id:           { type: integer, primary: true, autoincrement: true }
-    client_id:    { type: integer }    
+    client_id:    { type: integer, notnull: true }    
     plan_id:      { type: integer }
     title:        { type: string(255) }
     domain_name:  { type: string(255) }
     description:  { type: clob }
     active:       { type: boolean, notnull: true, default: 0 }
+  relations:
+    Client:
+      onDelete: cascade
+    Plan:
+      onDelete: set null
+      
 
 AccountRate:
   columns:       
     id:           { type: integer, primary: true, autoincrement: true }
     account_id:   { type: integer, notnull: true }
-    task_work_id: { type: integer, notnull: true }
+    task_work_id: { type: integer }
     title:        { type: string(255) }
     description:  { type: clob }
     hour_qouta:   { type: decimal } 
     rate_before:  { type: decimal }
     rate_after:   { type: decimal }
+  relations:
+    Account:
+      onDelete: cascade
+    TaskWork:
+      onDelete: set null
     
 Credential:
   actAs: [Timestampable]
   columns:
     id:                 { type: integer, primary: true, autoincrement: true }
     account_id:         { type: integer, notnull: true }  
-    credential_type_id: { type: integer, notnull: true }
+    credential_type_id: { type: integer }
     name:               { type: string(255) }
     internal_ip:        { type: string(255) }
     external_ip:        { type: string(255) }
@@ -74,6 +86,11 @@ Credential:
     user:               { type: string(255) }
     pass:               { type: string(255) }
     notes:              { type: clob } 
+  relations:
+    Account:
+      onDelete: cascade
+    CredentialType:
+      onDelete: set null
 
 CredentialType:
   columns: 
@@ -85,6 +102,11 @@ AccountPlan:
   columns: 
     account_id: { type: integer, notnull: true }
     plan_id:    { type: integer, notnull: true }
+  relations:
+    Account:
+      onDelete: cascade
+    Plan:
+      onDelete: cascade
 
 Plan:
   columns:
@@ -104,37 +126,28 @@ Period:
 Deduction:
   actAs: [Timestampable]
   columns:
-    id:          { type: integer, primary: true, autoincrement: true }
+    id:                 { type: integer, primary: true, autoincrement: true }
     account_invoice_id: { type: integer, notnull: true }
-    title:       { type: string(255) }
-    description: { type: clob }
-    deduction:   { type: decimal }
-    approved:    { type: boolean, notnull: true, default: 1 }
+    title:              { type: string(255) }
+    description:        { type: clob }
+    deduction:          { type: decimal }
+    approved:           { type: boolean, notnull: true, default: 1 }
+  relations: 
+    AccountInvoice:
+      onDelete: cascade
 
 AccountInvoice:
   actAs: [Timestampable]
   columns:
     id:          { type: integer, primary: true, autoincrement: true }
-    account_id:  { type: integer }
+    account_id:  { type: integer, notnull: true }
     ref_no:      { type: string(255), unique: true }
     description: { type: clob }
     paid_off:    { type: boolean, notnull: true, default: 0 }
     is_viewable: { type: boolean, notnull: true, default: 0 }
   relations:
-    Tasks: 
-      refClass: AccountInvoiceTask
-      class: Task
-      foreignAlias: AccountInvoice
-
-AccountInvoiceTask:
-  columns: 
-    account_invoice_id: { type: integer, notnull: true }
-    task_id :           { type: integer, notnull: true }
-  relations: 
-    AccountInovice:
-      foreignAlias: AccountInoviceTask 
-    Task:
-      foreignAlias: AccountInvoiceTask
+    Account:
+      onDelete: cascade
 
 AccountRecord:
   actAs: [Timestampable]
@@ -143,20 +156,40 @@ AccountRecord:
     account_id:  { type: integer }
     name:        { type: string(255), notnull: true }
     description: { type: clob }
+  relations:
+    Account:
+      onDelete: cascade
 
 Task:
   actAs: [Timestampable]
   columns: 
-    id:               { type: integer, primary: true, autoincrement: true }
-    account_id:       { type: integer, notnull: true }
-    staff_id:         { type: integer } 
-    task_status_id:   { type: integer, notnull: true }
-    task_type_id:     { type: integer, notnull: true }
-    task_priority_id: { type: integer, notnull: true }
-    task_work_id:     { type: integer, notnull: true }
-    ref_no:           { type: string(255), unique: true }
-    name:             { type: string(255) }
-    description:      { type: clob } 
+    id:                 { type: integer, primary: true, autoincrement: true }
+    account_id:         { type: integer, notnull: true }
+    account_invoice_id: { type: integer }
+    staff_id:           { type: integer } 
+    task_status_id:     { type: integer }
+    task_type_id:       { type: integer }
+    task_priority_id:   { type: integer }
+    task_work_id:       { type: integer }
+    ref_no:             { type: string(255), unique: true }
+    name:               { type: string(255) }
+    description:        { type: clob } 
+  relations:
+    Account:
+      onDelete: cascade
+    AccountInvoice:
+      onDelete: set null
+    Staff:
+      onDelete: set null
+    TaskStatus:
+      onDelete: set null
+    TaskType:
+      onDelete: set null
+    TaskPriority:
+      onDelete: set null
+    TaskWork:
+      onDelete: set null
+      
 
 TaskStatus:
   columns:
@@ -188,13 +221,18 @@ TaskComment:
     staff_id:     { type: integer, notnull: true } 
     title:        { type: string(255) }
     comment:      { type: clob }
+  relations:
+    Staff:
+      onDelete: cascade
+    Task:
+      onDelete: cascade
 
 TaskLog:
   actAs: [Timestampable]
   columns:
     id:            { type: integer, primary: true, autoincrement: true }
     task_id:       { type: integer, notnull: true }
-    task_work_id:  { type: integer, notnull: true }
+    task_work_id:  { type: integer }
     staff_id:      { type: integer, notnull: true }
     title:         { type: string(255) }
     description:   { type: clob }
@@ -207,15 +245,24 @@ TaskLog:
     percentage:    { type: integer }
     is_billable:   { type: boolean, notnull: true, default: 1 }
     is_viewable:   { type: boolean, notnull: true, default: 0 }
+  relations:
+    Task:
+      onDelete: cascade
+    Staff:
+      onDelete: cascade
 
 TimeLog:
   actAs: [Timestampable]
   columns:
     id:               { type: integer, primary: true, autoincrement: true }
-    time_log_type_id: { type: integer, notnull: true }
+    time_log_type_id: { type: integer }
     staff_id:         { type: integer, notnull: true }
     time:             { type: timestamp, notnull: true }
     notes:            { type: clob } 
+  relations:
+    Staff:
+      onDelete: cascade
+    
 
 TimeLogType: 
   columns:
