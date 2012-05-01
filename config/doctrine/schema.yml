@@ -205,6 +205,7 @@ TaskPriority:
   columns:
     id:           { type: integer, primary: true, autoincrement: true }
     name:         { type: string(255) }
+    description:  { type: clob }
 
 TaskWork:
   columns:

@@ -7,14 +7,17 @@
  * 
  * @property integer $id
  * @property string $name
+ * @property clob $description
  * @property Doctrine_Collection $Task
  * 
- * @method integer             getId()   Returns the current record's "id" value
- * @method string              getName() Returns the current record's "name" value
- * @method Doctrine_Collection getTask() Returns the current record's "Task" collection
- * @method TaskPriority        setId()   Sets the current record's "id" value
- * @method TaskPriority        setName() Sets the current record's "name" value
- * @method TaskPriority        setTask() Sets the current record's "Task" collection
+ * @method integer             getId()          Returns the current record's "id" value
+ * @method string              getName()        Returns the current record's "name" value
+ * @method clob                getDescription() Returns the current record's "description" value
+ * @method Doctrine_Collection getTask()        Returns the current record's "Task" collection
+ * @method TaskPriority        setId()          Sets the current record's "id" value
+ * @method TaskPriority        setName()        Sets the current record's "name" value
+ * @method TaskPriority        setDescription() Sets the current record's "description" value
+ * @method TaskPriority        setTask()        Sets the current record's "Task" collection
  * 
  * @package    supra
  * @subpackage model
@@ -34,6 +37,9 @@ abstract class BaseTaskPriority extends sfDoctrineRecord
         $this->hasColumn('name', 'string', 255, array(
              'type' => 'string',
              'length' => 255,
+             ));
+        $this->hasColumn('description', 'clob', null, array(
+             'type' => 'clob',
              ));
     }
 

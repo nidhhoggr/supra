@@ -48,4 +48,14 @@ class TaskTable extends Doctrine_Table
         ->orderBy('t.'.$sort);
 
     }
+
+    public function queryCompleteByStaffId($sort) {
+
+        return Doctrine_Query::Create()
+        ->from('Task t')
+        ->where('t.staff_id = ?',Staff::loggedInId())
+        ->andWhere('t.task_status_id = ?',3)
+        ->orderBy('t.'.$sort);
+
+    }
 }

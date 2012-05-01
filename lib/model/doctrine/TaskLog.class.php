@@ -32,10 +32,13 @@ class TaskLog extends BaseTaskLog {
 
   public function getHours() {
       if($this->getClockIn() && $this->getClockOut()) {
-          return $this->hoursDiff($this->getClockIn(),$this->getClockOut());
+          $diff = $this->hoursDiff($this->getClockIn(),$this->getClockOut());
+   
+          if($diff) 
+              return $diff;
+
       }
-      else {
-          return $this->getHoursLogged();
-      }
+      
+      return $this->getHoursLogged();
   }
 }

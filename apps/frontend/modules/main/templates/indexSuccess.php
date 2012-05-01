@@ -4,7 +4,7 @@
     <?php echo link_to($sf_user,'staff/show?id='.$staff->getId()) ?>    
   </h2>
   <div class="client_accounts">
-        <h3>Incomplete Tasks</h3>
+        <h3><?php echo link_to('Incomplete Tasks','incomplete_task/index'); ?></h3>
         <div id="tasks_incomplete">
             <table>
               <tr>
@@ -20,7 +20,7 @@
             </table>
         </div>
 
-        <h3>Complete Tasks</h3>
+        <h3><?php echo link_to('Complete Tasks','complete_task/index'); ?></h3>
         <div id="tasks_complete">
             <table>
               <tr>
