@@ -20,7 +20,7 @@ abstract class TaskActionsUtil extends sfActions
                     'task_status_id'   => array('Task Status','task_status','getTaskStatus'),
                     'task_type_id'     => array('Task Type','task_type','getTaskType'),
                     'task_priority_id' => array('Task Priority','task_priority','getTaskPriority'),
-                    'ref_no'          => array('Ref No'),
+                    'ref_no'          => array('Ref No','task','getRefNo'),
                    );
 
     $pagerOptions = array(
