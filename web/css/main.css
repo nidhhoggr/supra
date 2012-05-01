@@ -1,6 +1,81 @@
-div#pager {
-
+div#pager_footer {
     margin: 0px auto;
+    padding: 10px;
     width: 200px;
     text-align: center;
+}
+
+div#pager_footer a {
+    display: block;
+    padding: 5px;
+    width: 14px;
+    height: 14px;
+    float:left;
+    background-repeat: no-repeat;
+}
+
+div#pager_footer a.first {
+    background-image: url('../images/first.png');
+}
+
+div#pager_footer a.prev {
+    background-image: url('../images/previous.png');
+}
+
+div#pager_footer a.next {
+    background-image: url('../images/next.png');
+}
+
+div#pager_footer a.last {
+    background-image: url('../images/last.png');
+}
+
+div#pager_footer a.current_page {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+table#sf_pager th {
+    font-size: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+table#sf_pager th, table#sf_pager td {
+    width: 100px;
+}
+
+table#sf_pager th {
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+table#sf_pager th a.sorted {
+    text-decoration: underline;
+}
+
+table#sf_pager td {
+    border: 1px solid #eee;
+    background-color: #ddd;
+}
+
+span#sortable_asc {
+    display:block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/sort_up.png');
+}
+
+span#sortable_desc {
+    display:block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/sort_down.png');
+}
+
+div#cleaner {
+    clear: both;
 }

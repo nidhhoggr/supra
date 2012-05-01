@@ -1,6 +1,5 @@
 CREATE TABLE account (id BIGINT AUTO_INCREMENT, client_id BIGINT NOT NULL, plan_id BIGINT, title VARCHAR(255), domain_name VARCHAR(255), description LONGTEXT, active TINYINT(1) DEFAULT '0' NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX client_id_idx (client_id), INDEX plan_id_idx (plan_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE account_invoice (id BIGINT AUTO_INCREMENT, account_id BIGINT NOT NULL, ref_no VARCHAR(255) UNIQUE, description LONGTEXT, paid_off TINYINT(1) DEFAULT '0' NOT NULL, is_viewable TINYINT(1) DEFAULT '0' NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX account_id_idx (account_id), PRIMARY KEY(id)) ENGINE = INNODB;
-CREATE TABLE account_invoice_task (id BIGINT AUTO_INCREMENT, account_invoice_id BIGINT NOT NULL, task_id BIGINT NOT NULL, INDEX task_id_idx (task_id), INDEX account_invoice_id_idx (account_invoice_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE account_plan (id BIGINT AUTO_INCREMENT, account_id BIGINT NOT NULL, plan_id BIGINT NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX account_id_idx (account_id), INDEX plan_id_idx (plan_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE account_rate (id BIGINT AUTO_INCREMENT, account_id BIGINT NOT NULL, task_work_id BIGINT, title VARCHAR(255), description LONGTEXT, hour_qouta DECIMAL(18, 2), rate_before DECIMAL(18, 2), rate_after DECIMAL(18, 2), INDEX account_id_idx (account_id), INDEX task_work_id_idx (task_work_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE account_record (id BIGINT AUTO_INCREMENT, account_id BIGINT, name VARCHAR(255) NOT NULL, description LONGTEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX account_id_idx (account_id), PRIMARY KEY(id)) ENGINE = INNODB;
@@ -33,8 +32,6 @@ CREATE TABLE sf_guard_user_permission (user_id BIGINT, permission_id BIGINT, cre
 ALTER TABLE account ADD CONSTRAINT account_plan_id_plan_id FOREIGN KEY (plan_id) REFERENCES plan(id) ON DELETE SET NULL;
 ALTER TABLE account ADD CONSTRAINT account_client_id_client_id FOREIGN KEY (client_id) REFERENCES client(id) ON DELETE CASCADE;
 ALTER TABLE account_invoice ADD CONSTRAINT account_invoice_account_id_account_id FOREIGN KEY (account_id) REFERENCES account(id) ON DELETE CASCADE;
-ALTER TABLE account_invoice_task ADD CONSTRAINT account_invoice_task_task_id_task_id FOREIGN KEY (task_id) REFERENCES task(id);
-ALTER TABLE account_invoice_task ADD CONSTRAINT account_invoice_task_account_invoice_id_account_invoice_id FOREIGN KEY (account_invoice_id) REFERENCES account_invoice(id);
 ALTER TABLE account_plan ADD CONSTRAINT account_plan_plan_id_plan_id FOREIGN KEY (plan_id) REFERENCES plan(id) ON DELETE CASCADE;
 ALTER TABLE account_plan ADD CONSTRAINT account_plan_account_id_account_id FOREIGN KEY (account_id) REFERENCES account(id) ON DELETE CASCADE;
 ALTER TABLE account_rate ADD CONSTRAINT account_rate_task_work_id_task_work_id FOREIGN KEY (task_work_id) REFERENCES task_work(id) ON DELETE SET NULL;

@@ -1,15 +1,18 @@
-<div id="pager">
-<?php 
+<div id="pager_footer">
+<?php
 $sorting = '&sort_dir='.$pager->getSortDir($pager->getSortedField()).'&sort_field='.$pager->getSortedField();
+echo link_to(' ', $module . '/index?page='.$pager->getFirstPage().$sorting,'class="first"');
+echo link_to(' ', $module . '/index?page='.$pager->getPreviousPage().$sorting,'class="prev"');
+
+$links = $pager->getLinks(); 
+foreach ($links as $page) {
+    $class = ($page == $pager->getPage()) ? 'current_page' : 'page' ; 
+    echo link_to($page, $module .'/index?page='.$page.$sorting,'class="'.$class.'"');
+    if ($page != $pager->getCurrentMaxLink()){};
+}
+
+echo link_to(' ', $module . '/index?page='.$pager->getNextPage().$sorting,'class="next"');
+echo link_to(' ', $module . '/index?page='.$pager->getLastPage().$sorting,'class="last"');
 ?>
-
-
-<?php echo link_to('&laquo; ', $module . '/index?page='.$pager->getFirstPage().$sorting,'class="first"') ?>
-<?php echo link_to('&lsaquo; ', $module . '/index?page='.$pager->getPreviousPage().$sorting,'class="next"') ?>
-<?php $links = $pager->getLinks(); foreach ($links as $page): ?>
-<?php echo ($page == $pager->getPage()) ? $page : link_to($page, $module .'/index?page='.$page.$sorting,'class="page"') ;?>
-<?php if ($page != $pager->getCurrentMaxLink()): ?> <?php endif ?>
-<?php endforeach ?>
-<?php echo link_to(' &rsaquo;', $module . '/index?page='.$pager->getNextPage().$sorting,'id="next"') ?>
-<?php echo link_to(' &raquo;', $module . '/index?page='.$pager->getLastPage().$sorting,'id="last"') ?>
+<div id="cleaner"></div>
 </div>
