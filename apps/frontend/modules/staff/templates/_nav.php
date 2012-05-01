@@ -6,7 +6,7 @@ $page_info = array(
                    'Clocked In' => 'time_log/index',
                    'Time Entry'    => 'time_log/new',
                    'Time Report'   => 'timequery/index',
-                   'My Tasks'      => 'task/index',
+                   'Tasks'      => 'task/index',
                    'Logout'        => 'guard/logout'
                   );
 

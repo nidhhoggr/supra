@@ -8,23 +8,11 @@
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class taskActions extends sfActions
+abstract class TaskActionsUtil extends sfActions
 {
-  public function executeIndex(sfWebRequest $request)
-  {
+  abstract function executeIndex(sfWebRequest $request);
 
-    $dpu = new sfDoctrinePagerUtil('Task', 10);
-    $sort = $dpu->getSort($request);
-
-    if($this->getUser()->isSuperAdmin())
-        $tasks = Doctrine_Core::getTable('Task')->queryAll($sort);
-    else
-        $tasks = Doctrine_Core::getTable('Task')->queryAllByStaffId($sort);
-
-    $this->pager = $this->_getPager(array('query'=>$tasks,'request'=>$request,'pager'=>$dpu));
-  }
-
-  private function _getPager($args) {
+  protected function _getPager($args) {
     $fields = array(
                     'name'             => array('Name','task','getName'),
                     'account_id'       => array('Account','account','getAccount'),
