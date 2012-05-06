@@ -13,5 +13,9 @@ class TaskForm extends BaseTaskForm
   public function configure()
   {
       $this->unsetTimeStampable();
+
+      $refno = Doctrine_Core::getTable('Task')->createRefNo();
+
+      $this->setDefault('ref_no', $refno);
   }
 }

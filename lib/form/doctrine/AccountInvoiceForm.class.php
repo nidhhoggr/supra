@@ -13,5 +13,10 @@ class AccountInvoiceForm extends BaseAccountInvoiceForm
   public function configure()
   {
       $this->unsetTimeStampable();
+
+      $refno = Doctrine_Core::getTable('AccountInvoice')->createRefNo();
+
+      $this->setDefault('ref_no', $refno);
+
   }
 }

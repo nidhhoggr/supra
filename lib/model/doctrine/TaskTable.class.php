@@ -58,4 +58,31 @@ class TaskTable extends Doctrine_Table
         ->orderBy('t.'.$sort);
 
     }
+
+    public function refNoExists($refno) {
+        return Doctrine_Query::Create()
+               ->from('Task t')
+               ->where('t.ref_no = ?', $refno)
+               ->limit(1)
+               ->fetchOne();
+    }
+
+    public function getLastRefNo() {
+        return Doctrine_Query::Create()
+               ->select('t.ref_no')
+               ->from('Task t')
+               ->orderBy('t.id DESC')
+               ->limit(1)
+               ->fetchOne()->ref_no;
+    }
+
+    public function createRefNo() {
+        $last = $this->getLastRefNo();
+        $next = $last+1;
+        while($this->refNoExists($next)) {
+            $next++;
+            $ref_no = $next;
+        }
+        return $next;
+    }
 }

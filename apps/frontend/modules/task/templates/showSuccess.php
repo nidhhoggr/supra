@@ -87,7 +87,7 @@
               -
               <?php include_partial('work/linkto', array('work' => $log->getTaskWork())) ?>
               -
-              <?php echo link_to('edit','work/edit?id='.$log->getId());?>
+              <?php echo link_to('edit','task_log/edit?id='.$log->getId());?>
               </p>
               <p>
               <?php include_partial('staff/linkto', array('staff' => $log->getStaff())) ?>

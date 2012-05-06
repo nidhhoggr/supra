@@ -16,4 +16,32 @@ class AccountInvoiceTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('AccountInvoice');
     }
+
+    public function refNoExists($refno) {
+        return Doctrine_Query::Create()
+               ->from('AccountInvoice ai')
+               ->where('ai.ref_no = ?', $refno)
+               ->limit(1)
+               ->fetchOne();
+    }
+
+    public function getLastRefNo() {
+        return Doctrine_Query::Create()
+               ->select('ai.ref_no')
+               ->from('AccountInvoice ai')
+               ->orderBy('ai.id DESC')
+               ->limit(1)
+               ->fetchOne()->ref_no;
+    }
+
+    public function createRefNo() {
+        $last = $this->getLastRefNo();
+        $next = $last+1;
+        while($this->refNoExists($next)) {
+            $next++;
+            $ref_no = $next;
+        }
+        return $next;
+    }
+
 }
