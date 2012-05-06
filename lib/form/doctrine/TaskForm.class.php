@@ -17,5 +17,11 @@ class TaskForm extends BaseTaskForm
       $refno = Doctrine_Core::getTable('Task')->createRefNo();
 
       $this->setDefault('ref_no', $refno);
+
+      $this->setWidget(
+                       'account_invoice_id', new sfWidgetFormDoctrineChoice(array(
+'model'=>'AccountInvoice',
+'table_method'=>'getUnpaid','add_empty'=>true), array())
+                      );
   }
 }

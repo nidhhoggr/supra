@@ -17,5 +17,4 @@ class TimeLogType extends BaseTimeLogType
         $tlt = Doctrine::getTable('TimeLogType')->find($id);
         return $tlt->clock_in;
     }
-
 }

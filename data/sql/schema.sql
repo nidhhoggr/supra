@@ -20,7 +20,7 @@ CREATE TABLE task_status (id BIGINT AUTO_INCREMENT, name VARCHAR(255), PRIMARY K
 CREATE TABLE task_type (id BIGINT AUTO_INCREMENT, name VARCHAR(255), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE task_work (id BIGINT AUTO_INCREMENT, name VARCHAR(255), rate DECIMAL(18, 2), description LONGTEXT, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE time_log (id BIGINT AUTO_INCREMENT, time_log_type_id BIGINT, staff_id BIGINT NOT NULL, time DATETIME NOT NULL, notes LONGTEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX staff_id_idx (staff_id), INDEX time_log_type_id_idx (time_log_type_id), PRIMARY KEY(id)) ENGINE = INNODB;
-CREATE TABLE time_log_type (id BIGINT AUTO_INCREMENT, name VARCHAR(255), clock_in TINYINT(1) NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE time_log_type (id BIGINT AUTO_INCREMENT, name VARCHAR(255), clock_in TINYINT(1) NOT NULL, color VARCHAR(255), image VARCHAR(255), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_forgot_password (id BIGINT AUTO_INCREMENT, user_id BIGINT NOT NULL, unique_key VARCHAR(255), expires_at DATETIME NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX user_id_idx (user_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_group (id BIGINT AUTO_INCREMENT, name VARCHAR(255) UNIQUE, description TEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE sf_guard_group_permission (group_id BIGINT, permission_id BIGINT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(group_id, permission_id)) ENGINE = INNODB;

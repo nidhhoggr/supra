@@ -40,10 +40,11 @@ class sfDoctrinePagerUtil extends sfDoctrinePager {
     private function setFields($fields) {
         $i = 0;
         foreach($fields as $k=>$field) {
-            $field_arr[$i]['name']    = $k;
-            $field_arr[$i]['display'] = $field[0];
-            @$field_arr[$i]['route']   = ($field[1]) ? $field[1] : null;
-            @$field_arr[$i]['getter']  = ($field[2]) ? $field[2] : null;
+            $field_arr[$i]['name']         = $k;
+            $field_arr[$i]['display']      = $field[0];
+            @$field_arr[$i]['route']       = ($field[1]) ? $field[1] : null;
+            @$field_arr[$i]['getter']      = ($field[2]) ? $field[2] : null;
+            @$field_arr[$i]['returntype']  = ($field[3]) ? $field[3] : null;
             $i++;
         }
         $this->fields = $field_arr;

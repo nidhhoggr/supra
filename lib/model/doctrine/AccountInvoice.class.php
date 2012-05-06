@@ -22,9 +22,8 @@ class AccountInvoice extends BaseAccountInvoice {
 
   public function getTotal($is_admin = false) {
       $total = 0;
- 
-      foreach($this->getAccountInvoiceTask() as $inv_task) {
-          $task = $inv_task->getTask();
+
+      foreach($this->getAssociatedTasks() as $task) {  
           $work = $task->getTaskWork();
           foreach($task->getTaskLog() as $log) {
               //must be admin to override is_viewable
@@ -35,6 +34,10 @@ class AccountInvoice extends BaseAccountInvoice {
       }
 
       return round($total,2);
+  }
+
+  public function getAssociatedTasks() {
+      return Doctrine_Core::getTable('Task')->getAllByAccountInvoiceId($this->getId());
   }
 
   function __toString() {

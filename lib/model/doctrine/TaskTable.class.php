@@ -85,4 +85,11 @@ class TaskTable extends Doctrine_Table
         }
         return $next;
     }
+
+    public function getAllByAccountInvoiceId($account_invoice_id) {
+        return Doctrine_Query::Create()
+               ->from('Task t')
+               ->where('t.account_invoice_id = ?',$account_invoice_id)
+               ->execute();
+    }
 }

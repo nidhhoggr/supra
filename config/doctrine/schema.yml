@@ -267,9 +267,11 @@ TimeLog:
 
 TimeLogType: 
   columns:
-    id:   { type: integer, primary: true, autoincrement: true }
-    name: { type: string(255) }
+    id:         { type: integer, primary: true, autoincrement: true }
+    name:       { type: string(255) }
     clock_in:   { type: boolean, notnull: true }
+    color:      { type: string(255) } 
+    image:      { type: string(255) }
 
 GenDesc:
   columns:

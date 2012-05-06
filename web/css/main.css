@@ -79,3 +79,11 @@ span#sortable_desc {
 div#cleaner {
     clear: both;
 }
+
+tr#invoice_task th, tr#invoice_work th {
+   padding-left: 100px;
+}
+
+tr#invoice_task td, tr#invoice_task th {
+   border-top: 1px solid #000;
+}

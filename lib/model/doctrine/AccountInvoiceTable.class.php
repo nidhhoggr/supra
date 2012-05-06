@@ -17,6 +17,19 @@ class AccountInvoiceTable extends Doctrine_Table
         return Doctrine_Core::getTable('AccountInvoice');
     }
 
+    public function queryAll($sort) {
+        return Doctrine_Query::Create()
+               ->from('AccountInvoice ai')
+               ->orderBy('ai.'.$sort);
+    }
+
+    public function getUnpaid() {
+       return Doctrine_Query::Create()
+               ->from('AccountInvoice ai')
+               ->where('ai.paid_off = ?', false)
+               ->execute(); 
+    }
+
     public function refNoExists($refno) {
         return Doctrine_Query::Create()
                ->from('AccountInvoice ai')
@@ -43,5 +56,4 @@ class AccountInvoiceTable extends Doctrine_Table
         }
         return $next;
     }
-
 }

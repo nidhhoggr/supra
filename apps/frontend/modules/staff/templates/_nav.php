@@ -3,12 +3,15 @@ $page_info = array(
                    'Profile'       => 'main/index',
                    'Clients'       => 'client/index',
                    'Employees'     => 'staff/index', 
-                   'Clocked In' => 'time_log/index',
+                   'Clocked In'    => 'time_log/index',
                    'Time Entry'    => 'time_log/new',
                    'Time Report'   => 'timequery/index',
-                   'Tasks'      => 'task/index',
+                   'Tasks'         => 'task/index',
+                   'Invoices'      => 'invoice/index',
                    'Logout'        => 'guard/logout'
                   );
+
+
 
 foreach($page_info as $d=>$p) {
     $class = ($p == $page)?"current":"";
