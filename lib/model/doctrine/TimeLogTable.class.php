@@ -16,4 +16,21 @@ class TimeLogTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('TimeLog');
     }
+
+    public function getLastTimeLogTypeByStaffId($staff_id) {
+        return Doctrine_Query::Create()
+               ->select('tl.time_log_type_id')
+               ->from('TimeLog tl')
+               ->where('tl.staff_id = ?', $staff_id)
+               ->orderBy('tl.time DESC')
+               ->limit(1)
+               ->fetchOne()->time_log_type_id;
+    }
+   
+    public function getValidTimeLogTypes($staff_id) {
+        $table = Doctrine_Core::getTable('TimeLogType');
+        $tlt   = $this->getLastTimeLogTypeByStaffId($staff_id);
+        $ci    = $table->getClockInById($tlt);
+        return $table->getByClockIn($ci); 
+    }
 }

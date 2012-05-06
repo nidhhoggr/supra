@@ -6,7 +6,6 @@
       <th>Id</th>
       <th>Account</th>
       <th>Ref no</th>
-      <th>Ammount due</th>
       <th>Description</th>
       <th>Paid off</th>
       <th>Created at</th>
@@ -19,7 +18,6 @@
       <td><a href="<?php echo url_for('invoice/show?id='.$account_invoice->getId()) ?>"><?php echo $account_invoice->getId() ?></a></td>
       <td><?php echo $account_invoice->getAccountId() ?></td>
       <td><?php echo $account_invoice->getRefNo() ?></td>
-      <td><?php echo $account_invoice->getAmmountDue() ?></td>
       <td><?php echo $account_invoice->getDescription() ?></td>
       <td><?php echo $account_invoice->getPaidOff() ?></td>
       <td><?php echo $account_invoice->getCreatedAt() ?></td>

@@ -36,4 +36,10 @@ class AccountInvoice extends BaseAccountInvoice {
 
       return round($total,2);
   }
+
+  function __toString() {
+
+      return $this->getAccount() . ' - ' . $this->getRefNo();
+
+  }
 }
