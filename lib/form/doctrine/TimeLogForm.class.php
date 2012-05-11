@@ -31,10 +31,11 @@ class TimeLogForm extends BaseTimeLogForm
 
       $this->setWidget(
                        'time_log_type_id', 
-                        new sfWidgetFormChoice(array('choices'=>Doctrine_Core::getTable('TimeLog')->getValidTimeLogTypes(Staff::loggedInId())), array())
+                        new sfWidgetFormDoctrineChoice(array('model'=>'TimeLog','table_method'=>'getValidTimeLogTypes'), array())
                       );
 
       $this->setWidget('time',new sfJQueryDateTimeWidget($options));
       $this->setValidator('time', new sfJQueryDateTimeValidator(array('widget_name'=>'time')));
+
   }
 }

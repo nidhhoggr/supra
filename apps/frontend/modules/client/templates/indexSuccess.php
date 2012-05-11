@@ -1,7 +1,8 @@
+<?php include_partial('global/indexCrud',array('module'=>'client')) ?>
+<h2><?php echo link_to('Clients','client/index');?></h2>  
 <?php include_partial('global/pager_header', array('pager'=>$pager,'module'=>'client')); ?>
 </table>
 <div id="jobs">
-  <h2><?php echo link_to('Clients','client/index');?></h2>  
   <div class="clients">
     <ul>
       <?php foreach($pager->getResults() as $client):?>

@@ -1,5 +1,5 @@
-<h1>Accounts List</h1>
-
+<?php include_partial('global/indexCrud',array('module'=>'account'))?>
+<h2>Accounts</h2>
 <table>
   <thead>
     <tr>
@@ -27,5 +27,3 @@
     <?php endforeach; ?>
   </tbody>
 </table>
-
-  <a href="<?php echo url_for('account/new') ?>">New</a>

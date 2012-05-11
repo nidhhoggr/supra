@@ -1,5 +1,5 @@
-<h1>Credentials List</h1>
-
+<?php include_partial('global/indexCrud',array('module'=>'credential')) ?>
+<h2>Credentials</h2>
 <table>
   <thead>
     <tr>
@@ -23,5 +23,3 @@
     <?php endforeach; ?>
   </tbody>
 </table>
-
-  <a href="<?php echo url_for('credential/new') ?>">New</a>

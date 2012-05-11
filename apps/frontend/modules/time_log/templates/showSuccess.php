@@ -1,3 +1,4 @@
+<?php include_partial('global/showCrud',array('module'=>'time_log','object'=>$time_log))?>
 <table>
   <tbody>
     <tr>
@@ -18,9 +19,3 @@
     </tr>
   </tbody>
 </table>
-
-<hr />
-
-<a href="<?php echo url_for('time_log/edit?id='.$time_log->getId()) ?>">Edit</a>
-&nbsp;
-<a href="<?php echo url_for('time_log/index') ?>">List</a>

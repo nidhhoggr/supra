@@ -1,2 +1,3 @@
-<h1>Clock In/Clock Out</h1>
+<h2>Clock In/Clock Out</h2>
+
 <?php include_partial('form', array('form' => $form)) ?>

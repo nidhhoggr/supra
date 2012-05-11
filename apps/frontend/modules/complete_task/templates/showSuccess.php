@@ -1,3 +1,4 @@
+<?php include_partial('global/showCrud',array('module'=>'complete_task','object'=>$task))?>
 <table>
   <tbody>
     <tr>
@@ -107,5 +108,3 @@
     </tr>
   </tbody>
 </table>
-<hr />
-<a href="<?php echo url_for('task/edit?id='.$task  ->getId()) ?>">Edit</a>

@@ -1,3 +1,4 @@
+<?php include_partial('global/showCrud',array('module'=>'credential','object'=>$credential))?>
 <table>
   <tbody>
     <tr>
@@ -50,9 +51,3 @@
     </tr>
   </tbody>
 </table>
-
-<hr />
-
-<a href="<?php echo url_for('credential/edit?id='.$credential->getId()) ?>">Edit</a>
-&nbsp;
-<a href="<?php echo url_for('credential/index') ?>">List</a>

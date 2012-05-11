@@ -87,3 +87,66 @@ tr#invoice_task th, tr#invoice_work th {
 tr#invoice_task td, tr#invoice_task th {
    border-top: 1px solid #000;
 }
+
+table.time_entry td, table.time_entry th {
+    padding: 10px;
+}
+
+table.time_entry {
+    width: 100%;
+}
+
+table.time_entry tr.even td {
+    background-color: #FFF;
+}
+
+table.time_entry tr.odd td {
+    background-color: #DDD;
+}
+
+
+table.time_entry th {
+    font-weight: bold;
+}
+
+table.time_entry td.notes {
+    width: 100px;
+    font-family: courier;
+}
+
+div#actions a {
+    display: block;
+    width: 16px;
+    height: 16px;
+    float: left;
+    padding: 10px;
+    background-repeat: no-repeat;
+}
+
+div#actions a.list {
+    background-image: url('../sfDoctrinePlugin/images/list.png');
+}
+
+div#actions a.new {
+    background-image: url('../sfDoctrinePlugin/images/new.png');
+}
+
+div#actions a.edit {
+    background-image: url('../sfDoctrinePlugin/images/edit.png');
+}
+
+div#actions a.delete {
+    background-image: url('../sfDoctrinePlugin/images/delete.png');
+}
+
+div#bool_false {
+    width: 16px;
+    height: 16px;
+    background-image: url('../sfDoctrinePlugin/images/delete.png');
+}
+
+div#bool_true {
+    width: 16px;
+    height: 16px;
+    background-image: url('../sfDoctrinePlugin/images/tick.png');
+}

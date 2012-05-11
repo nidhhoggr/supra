@@ -1,3 +1,4 @@
+<?php include_partial('global/showCrud',array('module'=>'client','object'=>$client)); ?>
 <table>
   <tbody>
     <tr>
@@ -15,8 +16,3 @@
   </tbody>
 </table>
 
-<hr />
-
-<a href="<?php echo url_for('client/edit?id='.$client->getId()) ?>">Edit</a>
-&nbsp;
-<a href="<?php echo url_for('client/index') ?>">List</a>
