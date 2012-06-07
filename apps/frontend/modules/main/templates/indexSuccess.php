@@ -1,7 +1,7 @@
 <?php if($staff): ?>
   <h2 class="welcome">
     Welcome,
-    <?php echo link_to($sf_user,'staff/show?id='.$staff->getId()) ?>    
+    <?php echo link_to($staff,'staff/show?id='.$staff->getId()) ?>    
   </h2>
   <div class="client_accounts">
         <h3><?php echo link_to('Incomplete Tasks','incomplete_task/index'); ?></h3>
@@ -39,19 +39,21 @@
 <?php elseif($client): ?>
   <h2 class="welcome">
     Welcome,
-    <?php link_to($sf_user,'client/show?id='.$client->getId()) ?>    
+    <?php echo link_to($client,'client/show?id='.$client->getId()) ?>    
   </h2>
   <div class="client_accounts">
-    <h3>Accounts</h3>
-    <?php foreach($client->getAccount() as $account):?>
+    <?php foreach($client->getAccounts() as $account):?>
+      <h3>Account</h3>
       <div class="client_account">
          <?php include_partial('account/linkto', array('account' => $account)) ?>
       </div>
-      <div class="client_associated">
-        <?php include_partial('client/task', array('tasks' => $account->getTask())) ?>
-        <?php include_partial('client/invoice', array('invoices' => $account->getViewableAccountInvoice())) ?>
-        <?php include_partial('client/record', array('records' => $account->getAccountRecord())) ?>
-        <?php include_partial('client/credentials', array('credentials' => $account->getCredential())) ?>
+      <div class="account_details">
+          <div class="client_associated">
+            <?php include_partial('client/task', array('account' => $account)) ?>
+            <?php include_partial('client/invoice', array('invoices' => $account->getViewableAccountInvoice())) ?>
+            <?php include_partial('client/record', array('records' => $account->getAccountRecord())) ?>
+            <?php include_partial('client/credentials', array('credentials' => $account->getCredential())) ?>
+          </div>
       </div>
     <?php endforeach ?>
   </div>

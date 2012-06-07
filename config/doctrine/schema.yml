@@ -51,6 +51,7 @@ Account:
     active:       { type: boolean, notnull: true, default: 0 }
   relations:
     Client:
+      foreignAlias: Accounts
       onDelete: cascade
     Plan:
       onDelete: set null
@@ -166,7 +167,8 @@ Task:
     id:                 { type: integer, primary: true, autoincrement: true }
     account_id:         { type: integer, notnull: true }
     account_invoice_id: { type: integer }
-    staff_id:           { type: integer } 
+    user_id:            { type: integer } 
+    created_by:         { type: integer } 
     task_status_id:     { type: integer }
     task_type_id:       { type: integer }
     task_priority_id:   { type: integer }
@@ -179,7 +181,21 @@ Task:
       onDelete: cascade
     AccountInvoice:
       onDelete: set null
-    Staff:
+    User:
+      class: sfGuardUser
+      local: user_id
+      foreign: id
+      type: one
+      foreignType: one
+      foreignAlias: User
+      onDelete: set null
+    Creator:
+      class: sfGuardUser
+      local: created_by
+      foreign: id
+      type: one
+      foreignType: one
+      foreignAlias: Creator
       onDelete: set null
     TaskStatus:
       onDelete: set null

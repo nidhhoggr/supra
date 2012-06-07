@@ -39,7 +39,7 @@ class BaseForm extends sfFormSymfony
 
     protected function embedUser() {
         unset($this['user_id']);
-        $formUser = new SfGuardUserAdminForm($this->getObject()->getUser());
+        $formUser = new SfGuardUserCustomForm($this->getObject()->getUser());
         if(!$this->getCurrentUser()->isSuperAdmin()) {
             unset($formUser['is_active']);
             unset($formUser['is_super_admin']);

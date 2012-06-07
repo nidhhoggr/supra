@@ -23,11 +23,12 @@ class TaskTable extends Doctrine_Table
                ->orderBy('t.'.$sort);
     }
 
-    public function queryAllByStaffId($sort) {
+    public function queryAllByUserId($sort) {
 
         return Doctrine_Query::Create()
         ->from('Task t')
-        ->where('t.staff_id = ?',Staff::loggedInId())
+        ->where('t.user_id = ?',myUser::getLoggedIn()->getId())
+        ->where('t.created_by = ?',myUser::getLoggedIn()->getId())
         ->orderBy('t.'.$sort);
 
     }
@@ -39,25 +40,34 @@ class TaskTable extends Doctrine_Table
                ->orderBy('t.'.$sort);
     }
 
-    public function queryIncompleteByStaffId($sort) {
+    public function queryCreatedByUserId($sort = "id ASC") {
 
         return Doctrine_Query::Create() 
         ->from('Task t')
-        ->where('t.staff_id = ?',Staff::loggedInId())
+        ->where('t.created_by = ?',myUser::getLoggedIn()->getId())
+        ->orderBy('t.'.$sort);
+    }
+
+    public function queryCompleteByUserId($sort = "id ASC") {
+
+        return Doctrine_Query::Create()
+        ->from('Task t')
+        ->where('t.user_id = ?',myUser::getLoggedIn()->getId())
+        ->andWhere('t.task_status_id = ?',3)
+        ->orderBy('t.'.$sort);
+
+    }
+
+    public function queryIncompleteByUserId($sort = "id ASC") {
+
+        return Doctrine_Query::Create()
+        ->from('Task t')
+        ->where('t.user_id = ?',myUser::getLoggedIn()->getId())
         ->andWhere('t.task_status_id <> ?',3)
         ->orderBy('t.'.$sort);
 
     }
 
-    public function queryCompleteByStaffId($sort) {
-
-        return Doctrine_Query::Create()
-        ->from('Task t')
-        ->where('t.staff_id = ?',Staff::loggedInId())
-        ->andWhere('t.task_status_id = ?',3)
-        ->orderBy('t.'.$sort);
-
-    }
 
     public function refNoExists($refno) {
         return Doctrine_Query::Create()

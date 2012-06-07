@@ -6,7 +6,6 @@
                   $getter = $field['getter'];
                   $route  = $field['route'];
                   $returntype = $field['returntype'];
-                  $displaylink = $object->{$getter}();
           
                   switch($getter) {
                       case "getCreatedAt":
@@ -16,7 +15,16 @@
                           $displaylink = $object->getDateTimeObject('updated_at')->format('M d, Y h:i:s a');
                       break;
                       default:
-                          $displaylink = $object->{$getter}();
+                          if(!empty($getter))
+                              $displaylink = $object->{$getter}();
+                  }
+
+                  switch($route) {
+
+                      case 'sfGuardUser':
+                          $route = myUser::getLoggedIn()->getUserType();
+                      break;
+
                   }
 
                   if(!empty($getter)) {

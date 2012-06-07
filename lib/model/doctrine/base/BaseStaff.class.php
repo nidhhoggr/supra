@@ -12,7 +12,6 @@
  * @property boolean $is_subcontractor
  * @property sfGuardUser $User
  * @property Doctrine_Collection $StaffTaskWork
- * @property Doctrine_Collection $Task
  * @property Doctrine_Collection $TaskComment
  * @property Doctrine_Collection $TaskLog
  * @property Doctrine_Collection $TimeLog
@@ -24,7 +23,6 @@
  * @method boolean             getIsSubcontractor()  Returns the current record's "is_subcontractor" value
  * @method sfGuardUser         getUser()             Returns the current record's "User" value
  * @method Doctrine_Collection getStaffTaskWork()    Returns the current record's "StaffTaskWork" collection
- * @method Doctrine_Collection getTask()             Returns the current record's "Task" collection
  * @method Doctrine_Collection getTaskComment()      Returns the current record's "TaskComment" collection
  * @method Doctrine_Collection getTaskLog()          Returns the current record's "TaskLog" collection
  * @method Doctrine_Collection getTimeLog()          Returns the current record's "TimeLog" collection
@@ -35,7 +33,6 @@
  * @method Staff               setIsSubcontractor()  Sets the current record's "is_subcontractor" value
  * @method Staff               setUser()             Sets the current record's "User" value
  * @method Staff               setStaffTaskWork()    Sets the current record's "StaffTaskWork" collection
- * @method Staff               setTask()             Sets the current record's "Task" collection
  * @method Staff               setTaskComment()      Sets the current record's "TaskComment" collection
  * @method Staff               setTaskLog()          Sets the current record's "TaskLog" collection
  * @method Staff               setTimeLog()          Sets the current record's "TimeLog" collection
@@ -82,10 +79,6 @@ abstract class BaseStaff extends sfDoctrineRecord
              'onDelete' => 'cascade'));
 
         $this->hasMany('StaffTaskWork', array(
-             'local' => 'id',
-             'foreign' => 'staff_id'));
-
-        $this->hasMany('Task', array(
              'local' => 'id',
              'foreign' => 'staff_id'));
 

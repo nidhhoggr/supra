@@ -14,7 +14,7 @@ class complete_taskActions extends TaskActionsUtil
   {
     $dpu = new sfDoctrinePagerUtil('Task', 10);
     $sort = $dpu->getSort($request);
-    $tasks = Doctrine_Core::getTable('Task')->queryCompleteByStaffId($sort);
+    $tasks = Doctrine_Core::getTable('Task')->queryCompleteByUserId($sort);
     $this->pager = $this->_getPager(array('query'=>$tasks,'request'=>$request,'pager'=>$dpu));
   }
 }

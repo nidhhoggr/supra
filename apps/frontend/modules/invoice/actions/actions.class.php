@@ -15,7 +15,11 @@ class invoiceActions extends sfActions
     $dpu = new sfDoctrinePagerUtil('AccountInvoice', 10);
     $sort = $dpu->getSort($request);
 
-    $invoices = Doctrine_Core::getTable('AccountInvoice')->queryAll($sort);
+
+    if(myUser::getLoggedIn()->isSuperAdmin())
+        $invoices = Doctrine_Core::getTable('AccountInvoice')->queryAll($sort);
+    else 
+        $invoices = Doctrine_Core::getTable('AccountInvoice')->queryAllByAccountId($sort);
 
     $this->pager = $this->_getPager(array('query'=>$invoices,'request'=>$request,'pager'=>$dpu));
   }

@@ -21,6 +21,18 @@ class Account extends BaseAccount{
              ->execute();
   }
 
+  public function getIncompleteTasks($some = false) {
+ 
+      return $this->getTable()->getTasks($this->id,$some,false); 
+
+  }
+
+  public function getCompleteTasks($some = false) {
+
+      return $this->getTable()->getTasks($this->id,$some,true);
+
+  }
+
   function __toString() {
 
     if($this->title)

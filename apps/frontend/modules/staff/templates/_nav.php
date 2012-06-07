@@ -1,11 +1,11 @@
 <?php
 $page_info = array(
                    'Profile'       => 'main/index',
+                   'Accounts'      => 'account/index',
                    'Clients'       => 'client/index',
                    'Employees'     => 'staff/index', 
                    'Clocked In'    => 'time_log/index',
                    'Time Entry'    => 'time_log/new',
-                   'Time Report'   => 'timequery/index',
                    'Tasks'         => 'task/index',
                    'Invoices'      => 'invoice/index',
                    'Logout'        => 'guard/logout'

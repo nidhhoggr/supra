@@ -23,5 +23,9 @@ class TaskForm extends BaseTaskForm
 'model'=>'AccountInvoice',
 'table_method'=>'getUnpaid','add_empty'=>true), array())
                       );
+
+      $this->setWidget('created_by', new sfWidgetFormInputHidden());
+
+      $this->setDefault('created_by', $this->getCurrentUser()->getId()); 
   }
 }

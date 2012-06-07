@@ -3,6 +3,7 @@ $page_info = array(
                    'Profile'       => 'main/index',
                    'My Accounts'   => 'account/index',
                    'My Tasks'      => 'task/index',
+                   'Invoices'      => 'invoice/index',
                    'Employees'     => 'staff/index',
                    'Logout'        => 'guard/logout'
                   );

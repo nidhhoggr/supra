@@ -23,6 +23,16 @@ class AccountInvoiceTable extends Doctrine_Table
                ->orderBy('ai.'.$sort);
     }
 
+    public function queryAllByAccountId($sort) {
+
+        $account_ids = myUser::getLoggedIn()->isClient()->getAccountIds();
+
+        return Doctrine_Query::Create()
+               ->from('AccountInvoice ai')
+               ->whereIn('ai.account_id',$account_ids)
+               ->orderBy('ai.'.$sort);
+    }
+
     public function getUnpaid() {
        return Doctrine_Query::Create()
                ->from('AccountInvoice ai')

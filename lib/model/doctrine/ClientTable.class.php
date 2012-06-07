@@ -17,6 +17,16 @@ class ClientTable extends Doctrine_Table
         return Doctrine_Core::getTable('Client');
     }
 
+    public function getByUserId($user_id) {
+
+        return Doctrine_Query::create()
+               ->from('Client c')
+               ->where('c.user_id = ?',$user_id)
+               ->limit(1)
+               ->fetchOne();
+
+    }
+
     public static function loggedIn() {
       $currentUser = sfContext::getInstance()->getUser();
 
@@ -29,4 +39,12 @@ class ClientTable extends Doctrine_Table
       return $q;
     }
 
+
+    public function queryAccounts($client_id) {
+
+        return Doctrine_Query::create()
+        ->from('Account a')
+        ->where('a.client_id = ?',$client_id);
+
+    }
 }

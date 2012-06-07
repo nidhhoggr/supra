@@ -11,7 +11,7 @@
     <tr>
       <th>Assigned To:</th>
       <td>
-        <?php include_partial('staff/linkto', array('staff' => $task->getStaff())) ?>
+        <?php include_partial('global/userlinkto', array('user' => $sf_user)) ?>
       </td>
     </tr>
 

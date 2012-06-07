@@ -17,6 +17,8 @@ class AccountInvoiceForm extends BaseAccountInvoiceForm
       $refno = Doctrine_Core::getTable('AccountInvoice')->createRefNo();
 
       $this->setDefault('ref_no', $refno);
+      $this->setDefault('paid_off', false);
+      $this->setDefault('is_viewable', false);
 
   }
 }

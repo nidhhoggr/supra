@@ -1,4 +1,5 @@
 <?php include_partial('global/indexCrud',array('module'=>'time_log'))?>
+<?php echo link_to('Generate Report','timequery/index') ?>
 <table class="time_entry">
   <thead>
     <tr>

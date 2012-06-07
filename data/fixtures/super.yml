@@ -358,9 +358,7 @@ sfGuardUser:
     last_name: Wilkinson
     email_address: jasonw@nsyncdata.net
     username: jasonw
-    algorithm: sha1
-    salt: 69bcb2f5317bc46e9e1781473f1a1966
-    password: 65c621ed9d728d98131fd8d8c12af0326015743e
+    password: jasonw
     is_active: true
     is_super_admin: true
     last_login: '2012-04-20 16:05:33'
@@ -371,9 +369,7 @@ sfGuardUser:
     last_name: Persie
     email_address: joseph@nsyncdata.net
     username: joseph
-    algorithm: sha1
-    salt: a7e285f8657cb247c5f41bb7ae976379
-    password: d39bc55ea002291c7c653d5c41f48df0690940f4
+    password: joseph
     is_active: true
     is_super_admin: true
     last_login: '2012-05-06 10:57:05'
@@ -384,9 +380,7 @@ sfGuardUser:
     last_name: Parker
     email_address: tim@nsyncdata.net
     username: tim
-    algorithm: sha1
-    salt: 805eecf9b6f2abeb6ea31033ab015380
-    password: 9b639d3b794c3097c1d1ea2e44a4d5f5353cf8d3
+    password: tim
     is_active: true
     is_super_admin: false
     last_login: null
@@ -396,10 +390,8 @@ sfGuardUser:
     first_name: Tim
     last_name: Parker
     email_address: supergeek@nsyncdata.net
-    username: Bongo
-    algorithm: sha1
-    salt: 7edf5d7b03213b948eb8bd92358b5785
-    password: f7efd9e0ba3820f083fc0ee7d7ae991d73705190
+    username: bongo
+    password: bongo
     is_active: true
     is_super_admin: true
     last_login: '2012-04-20 16:59:15'
@@ -409,10 +401,8 @@ sfGuardUser:
     first_name: 'Parker Shook Holdings, LCC'
     last_name: ''
     email_address: search@brevardcounty.com
-    username: ParkerShook
-    algorithm: sha1
-    salt: 7871b97b680ff4a5059f2b3c0b461e41
-    password: 7b7070e94a4b7379c0711044fc05e54fb3ce0bbb
+    username: parkershook
+    password: parkershook
     is_active: true
     is_super_admin: false
     last_login: null
@@ -423,9 +413,7 @@ sfGuardUser:
     last_name: Shook
     email_address: keith@nsyncdata.net
     username: keiths
-    algorithm: sha1
-    salt: 337fd9455d8082d505fc33cbead98d70
-    password: bdd23be876333da46dff3e3cfeb406abfff919a9
+    password: keiths
     is_active: true
     is_super_admin: true
     last_login: '2012-04-20 18:36:09'
@@ -463,7 +451,7 @@ Staff:
 Task:
   Task_1:
     Account: Account_1
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_4
     TaskType: TaskType_2
     TaskPriority: TaskPriority_2
@@ -475,7 +463,7 @@ Task:
     updated_at: '2012-04-19 15:15:25'
   Task_2:
     Account: Account_1
-    Staff: Staff_1
+    User: sfGuardUser_1
     TaskStatus: TaskStatus_2
     TaskType: TaskType_2
     TaskPriority: TaskPriority_2
@@ -487,7 +475,7 @@ Task:
     updated_at: '2012-04-20 17:09:01'
   Task_3:
     Account: Account_1
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_3
     TaskType: TaskType_3
     TaskPriority: TaskPriority_2
@@ -499,7 +487,7 @@ Task:
     updated_at: '2012-04-19 17:15:02'
   Task_4:
     Account: Account_1
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_3
     TaskType: TaskType_2
     TaskPriority: TaskPriority_1
@@ -511,7 +499,7 @@ Task:
     updated_at: '2012-04-22 02:09:49'
   Task_5:
     Account: Account_1
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_3
     TaskType: TaskType_1
     TaskPriority: TaskPriority_1
@@ -524,7 +512,7 @@ Task:
   Task_6:
     Account: Account_1
     AccountInvoice: AccountInvoice_2
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_3
     TaskType: TaskType_1
     TaskPriority: TaskPriority_1
@@ -537,7 +525,7 @@ Task:
   Task_7:
     Account: Account_1
     AccountInvoice: AccountInvoice_2
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_3
     TaskType: TaskType_1
     TaskPriority: TaskPriority_1
@@ -549,7 +537,7 @@ Task:
     updated_at: '2012-05-06 08:01:02'
   Task_8:
     Account: Account_1
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_3
     TaskType: TaskType_2
     TaskPriority: TaskPriority_1
@@ -561,7 +549,7 @@ Task:
     updated_at: '2012-04-19 16:15:17'
   Task_9:
     Account: Account_1
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_2
     TaskType: TaskType_3
     TaskPriority: TaskPriority_1
@@ -573,7 +561,7 @@ Task:
     updated_at: '2012-04-19 17:14:36'
   Task_10:
     Account: Account_1
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_3
     TaskType: TaskType_3
     TaskPriority: TaskPriority_1
@@ -585,7 +573,7 @@ Task:
     updated_at: '2012-04-29 01:41:51'
   Task_11:
     Account: Account_1
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_3
     TaskType: TaskType_3
     TaskPriority: TaskPriority_1
@@ -597,7 +585,7 @@ Task:
     updated_at: '2012-04-29 03:03:21'
   Task_12:
     Account: Account_1
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_1
     TaskType: TaskType_1
     TaskPriority: TaskPriority_3
@@ -609,7 +597,7 @@ Task:
     updated_at: '2012-04-20 17:07:26'
   Task_13:
     Account: Account_2
-    Staff: Staff_3
+    User: sfGuardUser_4
     TaskStatus: TaskStatus_2
     TaskType: TaskType_2
     TaskPriority: TaskPriority_3
@@ -621,7 +609,7 @@ Task:
     updated_at: '2012-04-20 18:09:19'
   Task_14:
     Account: Account_1
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_3
     TaskType: TaskType_1
     TaskPriority: TaskPriority_5
@@ -633,7 +621,7 @@ Task:
     updated_at: '2012-04-29 03:01:27'
   Task_15:
     Account: Account_1
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_1
     TaskType: TaskType_1
     TaskPriority: TaskPriority_5
@@ -645,7 +633,7 @@ Task:
     updated_at: '2012-04-20 18:28:33'
   Task_16:
     Account: Account_1
-    Staff: Staff_1
+    User: sfGuardUser_1
     TaskStatus: TaskStatus_1
     TaskType: TaskType_1
     TaskPriority: TaskPriority_5
@@ -657,7 +645,7 @@ Task:
     updated_at: '2012-04-20 18:32:09'
   Task_17:
     Account: Account_1
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_1
     TaskType: TaskType_1
     TaskPriority: TaskPriority_1
@@ -669,7 +657,7 @@ Task:
     updated_at: '2012-04-20 18:33:50'
   Task_18:
     Account: Account_1
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_3
     TaskType: TaskType_1
     TaskPriority: TaskPriority_1
@@ -681,7 +669,7 @@ Task:
     updated_at: '2012-04-29 01:31:06'
   Task_19:
     Account: Account_1
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_3
     TaskType: TaskType_1
     TaskPriority: TaskPriority_1
@@ -693,7 +681,7 @@ Task:
     updated_at: '2012-04-28 23:46:47'
   Task_20:
     Account: Account_1
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_1
     TaskType: TaskType_1
     TaskPriority: TaskPriority_1
@@ -705,7 +693,7 @@ Task:
     updated_at: '2012-04-20 18:42:05'
   Task_21:
     Account: Account_1
-    Staff: Staff_2
+    User: sfGuardUser_2
     TaskStatus: TaskStatus_1
     TaskType: TaskType_1
     TaskPriority: TaskPriority_1

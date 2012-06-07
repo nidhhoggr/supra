@@ -4,6 +4,8 @@ function usd($price) {
     return '$'. sprintf("%01.2f",$price);
 }
 ?>
+<?php include_partial('global/showCrud',array('module'=>'invoice','object'=>$account_invoice)); ?>
+
 <table id="invoice">
   <tbody>
     <tr>

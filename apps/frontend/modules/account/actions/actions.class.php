@@ -8,13 +8,20 @@
  * @author     Your name here
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class accountActions extends sfActions
-{
-  public function executeIndex(sfWebRequest $request)
-  {
-    $this->accounts = Doctrine_Core::getTable('Account')
-      ->createQuery('a')
-      ->execute();
+class accountActions extends sfActions {
+
+  public function executeIndex(sfWebRequest $request) {
+
+    $dpu = new sfDoctrinePagerUtil('Account', 10);
+    $sort = $dpu->getSort($request);
+
+    if($this->getUser()->isSuperAdmin())
+        $accounts = Doctrine_Core::getTable('Account')->queryAll($sort);
+    else
+        $accounts = Doctrine_Core::getTable('Account')->queryAllByUserId($sort);
+
+    $this->pager = $this->_getPager(array('query'=>$accounts,'request'=>$request,'pager'=>$dpu));
+
   }
 
   public function executeShow(sfWebRequest $request)
@@ -76,4 +83,27 @@ class accountActions extends sfActions
       $this->redirect('account/edit?id='.$account->getId());
     }
   }
+
+  private function _getPager($args) {
+
+    $fields = array(
+                    'title'           => array('Title','account','getTitle'),
+                    'client_id'       => array('Client','client','getClient'),
+                    'domain_name'     => array('Domain','account','getDomainName'),
+                    'active'          => array('Active','account','getActive','bool'),
+                    'created_at'      => array('Created','account','getCreatedAt')
+                   );
+
+    $pagerOptions = array(
+                          'query'=>$args['query'],
+                          'fields'=>$fields,
+                          'request'=>$args['request']
+                         );
+
+    $pager = $args['pager'];
+
+    return $pager->getPager($pagerOptions);
+
+  }
+
 }

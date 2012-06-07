@@ -41,46 +41,49 @@ class Staff extends BaseStaff {
     }
 
     public function getSomeCompleteTasks() {
-      return $this->getTasksByStaffId()
+      return $this->getTasksByUserId()
         ->andWhere('t.task_status_id = ?', 3)
         ->orderBy('t.created_at DESC')
         ->limit(5)
         ->execute();
     }
 
-    public function getIncompleteTasks() {
-      return $this->getTasksByStaffId()
+    public function getIncompleteTasks($some = false) {
+      $q =  $this->getTasksByUserId()
         ->andWhere('t.task_status_id <> ?', 3)
-        ->orderBy('t.created_at DESC')
-        ->execute();
+        ->orderBy('t.created_at DESC');
+
+      if($some)
+          return $q->limit(5)->execute();
+      else
+          return $q->execute();
     }
 
     public function countTaskLogsByStaffId() {
       return  $this->getTaskLogs()->count();
     }
 
-    public function getTasksByStaffId() {
+    public function getTasksByUserId() {
       return Doctrine_Query::create()
         ->from('Task t')
-        ->where('t.staff_id = ?', $this->id);
+        ->where('t.user_id = ?', $this->getUser()->getId());
     }
 
     public function countCompleteTasksByStaffId() {
-      return $this->getTasksByStaffId()
+      return $this->getTasksByUserId()
         ->andWhere('t.task_status_id = ?', 3)->count();
     }
 
     public function countIncompleteTasksByStaffId() {
-       return $this->getTasksByStaffId()
+       return $this->getTasksByUserId()
          ->andWhere('t.task_status_id <> ?', 3)->count();
     }
 
     public static function getLoggedIn() {
-      $currentUser = sfContext::getInstance()->getUser();
 
       $q = Doctrine_Query::create()
       ->from('Staff s')
-      ->where('s.user_id = ?',$currentUser->getId());
+      ->where('s.user_id = ?',myUser::getLoggedIn()->getId());
 
       return $q;
     }

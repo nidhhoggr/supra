@@ -12,7 +12,7 @@
           <div style="margin-left:50px;">
               <h4>Accounts:</h4> 
               <ul>
-                 <?php foreach($client->getAccount() as $account):?>
+                 <?php foreach($client->getAccounts() as $account):?>
   
                   <li><?php echo link_to($account,'account/show?id='.$account->getId())?></li>
 

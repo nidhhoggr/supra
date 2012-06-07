@@ -14,7 +14,7 @@ class incomplete_taskActions extends TaskActionsUtil
   {
     $dpu = new sfDoctrinePagerUtil('Task', 10);
     $sort = $dpu->getSort($request);
-    $tasks = Doctrine_Core::getTable('Task')->queryIncompleteByStaffId($sort);
+    $tasks = Doctrine_Core::getTable('Task')->queryIncompleteByUserId($sort);
     $this->pager = $this->_getPager(array('query'=>$tasks,'request'=>$request,'pager'=>$dpu));
   }
 }

@@ -9,18 +9,18 @@
  * @property integer $user_id
  * @property clob $track_record
  * @property sfGuardUser $User
- * @property Doctrine_Collection $Account
+ * @property Doctrine_Collection $Accounts
  * 
  * @method integer             getId()           Returns the current record's "id" value
  * @method integer             getUserId()       Returns the current record's "user_id" value
  * @method clob                getTrackRecord()  Returns the current record's "track_record" value
  * @method sfGuardUser         getUser()         Returns the current record's "User" value
- * @method Doctrine_Collection getAccount()      Returns the current record's "Account" collection
+ * @method Doctrine_Collection getAccounts()     Returns the current record's "Accounts" collection
  * @method Client              setId()           Sets the current record's "id" value
  * @method Client              setUserId()       Sets the current record's "user_id" value
  * @method Client              setTrackRecord()  Sets the current record's "track_record" value
  * @method Client              setUser()         Sets the current record's "User" value
- * @method Client              setAccount()      Sets the current record's "Account" collection
+ * @method Client              setAccounts()     Sets the current record's "Accounts" collection
  * 
  * @package    supra
  * @subpackage model
@@ -55,7 +55,7 @@ abstract class BaseClient extends sfDoctrineRecord
              'foreign' => 'id',
              'onDelete' => 'cascade'));
 
-        $this->hasMany('Account', array(
+        $this->hasMany('Account as Accounts', array(
              'local' => 'id',
              'foreign' => 'client_id'));
 

@@ -8,7 +8,8 @@
  * @property integer $id
  * @property integer $account_id
  * @property integer $account_invoice_id
- * @property integer $staff_id
+ * @property integer $user_id
+ * @property integer $created_by
  * @property integer $task_status_id
  * @property integer $task_type_id
  * @property integer $task_priority_id
@@ -18,7 +19,8 @@
  * @property clob $description
  * @property Account $Account
  * @property AccountInvoice $AccountInvoice
- * @property Staff $Staff
+ * @property sfGuardUser $User
+ * @property sfGuardUser $Creator
  * @property TaskStatus $TaskStatus
  * @property TaskType $TaskType
  * @property TaskPriority $TaskPriority
@@ -29,7 +31,8 @@
  * @method integer             getId()                 Returns the current record's "id" value
  * @method integer             getAccountId()          Returns the current record's "account_id" value
  * @method integer             getAccountInvoiceId()   Returns the current record's "account_invoice_id" value
- * @method integer             getStaffId()            Returns the current record's "staff_id" value
+ * @method integer             getUserId()             Returns the current record's "user_id" value
+ * @method integer             getCreatedBy()          Returns the current record's "created_by" value
  * @method integer             getTaskStatusId()       Returns the current record's "task_status_id" value
  * @method integer             getTaskTypeId()         Returns the current record's "task_type_id" value
  * @method integer             getTaskPriorityId()     Returns the current record's "task_priority_id" value
@@ -39,7 +42,8 @@
  * @method clob                getDescription()        Returns the current record's "description" value
  * @method Account             getAccount()            Returns the current record's "Account" value
  * @method AccountInvoice      getAccountInvoice()     Returns the current record's "AccountInvoice" value
- * @method Staff               getStaff()              Returns the current record's "Staff" value
+ * @method sfGuardUser         getUser()               Returns the current record's "User" value
+ * @method sfGuardUser         getCreator()            Returns the current record's "Creator" value
  * @method TaskStatus          getTaskStatus()         Returns the current record's "TaskStatus" value
  * @method TaskType            getTaskType()           Returns the current record's "TaskType" value
  * @method TaskPriority        getTaskPriority()       Returns the current record's "TaskPriority" value
@@ -49,7 +53,8 @@
  * @method Task                setId()                 Sets the current record's "id" value
  * @method Task                setAccountId()          Sets the current record's "account_id" value
  * @method Task                setAccountInvoiceId()   Sets the current record's "account_invoice_id" value
- * @method Task                setStaffId()            Sets the current record's "staff_id" value
+ * @method Task                setUserId()             Sets the current record's "user_id" value
+ * @method Task                setCreatedBy()          Sets the current record's "created_by" value
  * @method Task                setTaskStatusId()       Sets the current record's "task_status_id" value
  * @method Task                setTaskTypeId()         Sets the current record's "task_type_id" value
  * @method Task                setTaskPriorityId()     Sets the current record's "task_priority_id" value
@@ -59,7 +64,8 @@
  * @method Task                setDescription()        Sets the current record's "description" value
  * @method Task                setAccount()            Sets the current record's "Account" value
  * @method Task                setAccountInvoice()     Sets the current record's "AccountInvoice" value
- * @method Task                setStaff()              Sets the current record's "Staff" value
+ * @method Task                setUser()               Sets the current record's "User" value
+ * @method Task                setCreator()            Sets the current record's "Creator" value
  * @method Task                setTaskStatus()         Sets the current record's "TaskStatus" value
  * @method Task                setTaskType()           Sets the current record's "TaskType" value
  * @method Task                setTaskPriority()       Sets the current record's "TaskPriority" value
@@ -89,7 +95,10 @@ abstract class BaseTask extends sfDoctrineRecord
         $this->hasColumn('account_invoice_id', 'integer', null, array(
              'type' => 'integer',
              ));
-        $this->hasColumn('staff_id', 'integer', null, array(
+        $this->hasColumn('user_id', 'integer', null, array(
+             'type' => 'integer',
+             ));
+        $this->hasColumn('created_by', 'integer', null, array(
              'type' => 'integer',
              ));
         $this->hasColumn('task_status_id', 'integer', null, array(
@@ -131,8 +140,13 @@ abstract class BaseTask extends sfDoctrineRecord
              'foreign' => 'id',
              'onDelete' => 'set null'));
 
-        $this->hasOne('Staff', array(
-             'local' => 'staff_id',
+        $this->hasOne('sfGuardUser as User', array(
+             'local' => 'user_id',
+             'foreign' => 'id',
+             'onDelete' => 'set null'));
+
+        $this->hasOne('sfGuardUser as Creator', array(
+             'local' => 'created_by',
              'foreign' => 'id',
              'onDelete' => 'set null'));
 

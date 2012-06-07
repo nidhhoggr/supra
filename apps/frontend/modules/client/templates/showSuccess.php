@@ -1,4 +1,5 @@
 <?php include_partial('global/showCrud',array('module'=>'client','object'=>$client)); ?>
+<?php echo link_to('Create Account',array('account/new'));?>
 <table>
   <tbody>
     <tr>

@@ -150,3 +150,13 @@ div#bool_true {
     height: 16px;
     background-image: url('../sfDoctrinePlugin/images/tick.png');
 }
+
+.account_task ol {
+    list-style: disc inside;
+}
+
+.account_details {
+
+    margin-left: 100px;
+
+}

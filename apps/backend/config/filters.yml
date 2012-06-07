@@ -8,6 +8,12 @@ remember_me:
 
 security:  ~
 
+access_control:
+  class: accessControlFilter
+  param:
+    condition:   %APP_ENABLE_ACCESS_CONTROLL%%
+
+
 # insert your own filters here
 
 cache:     ~

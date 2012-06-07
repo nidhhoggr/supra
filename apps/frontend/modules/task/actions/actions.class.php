@@ -19,7 +19,7 @@ class taskActions extends TaskActionsUtil
     if($this->getUser()->isSuperAdmin())
         $tasks = Doctrine_Core::getTable('Task')->queryAll($sort);
     else
-        $tasks = Doctrine_Core::getTable('Task')->queryAllByStaffId($sort);
+        $tasks = Doctrine_Core::getTable('Task')->queryAllByUserId($sort);
 
     $this->pager = $this->_getPager(array('query'=>$tasks,'request'=>$request,'pager'=>$dpu));
   }

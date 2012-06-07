@@ -13,7 +13,8 @@ class ClientForm extends BaseClientForm
   public function configure()
   {
       $this->unsetTimeStampable();
-
       $this->embedUser();
+      if(!myUser::getLoggedIn()->isSuperAdmin())
+          unset($this['track_record']);
   }
 }

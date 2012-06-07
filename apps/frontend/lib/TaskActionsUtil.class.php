@@ -16,7 +16,7 @@ abstract class TaskActionsUtil extends sfActions
     $fields = array(
                     'name'             => array('Name','task','getName'),
                     'account_id'       => array('Account','account','getAccount'),
-                    'staff_id'         => array('Employee','staff','getStaff'),
+                    'user_id'         => array('User','sfGuardUser','getUser'),
                     'task_status_id'   => array('Task Status','task_status','getTaskStatus'),
                     'task_type_id'     => array('Task Type','task_type','getTaskType'),
                     'task_priority_id' => array('Task Priority','task_priority','getTaskPriority'),
@@ -60,6 +60,7 @@ abstract class TaskActionsUtil extends sfActions
   public function executeEdit(sfWebRequest $request)
   {
     $this->forward404Unless($task = Doctrine_Core::getTable('Task')->find(array($request->getParameter('id'))), sprintf('Object task does not exist (%s).', $request->getParameter('id')));
+    $this->isEntitled($task);
     $this->form = new TaskForm($task);
   }
 
@@ -67,6 +68,7 @@ abstract class TaskActionsUtil extends sfActions
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
     $this->forward404Unless($task = Doctrine_Core::getTable('Task')->find(array($request->getParameter('id'))), sprintf('Object task does not exist (%s).', $request->getParameter('id')));
+    $this->isEntitled($task);
     $this->form = new TaskForm($task);
 
     $this->processForm($request, $this->form);
@@ -79,6 +81,7 @@ abstract class TaskActionsUtil extends sfActions
     $request->checkCSRFProtection();
 
     $this->forward404Unless($task = Doctrine_Core::getTable('Task')->find(array($request->getParameter('id'))), sprintf('Object task does not exist (%s).', $request->getParameter('id')));
+    $this->isEntitled($task);
     $task->delete();
 
     $this->redirect('task/index');
@@ -94,4 +97,10 @@ abstract class TaskActionsUtil extends sfActions
       $this->redirect('task/edit?id='.$task->getId());
     }
   }
+
+  private function isEntitled($task) {
+      if(!$task->isEntitled())
+          $this->redirect($this->getRequest()->getReferer());
+  }
+
 }

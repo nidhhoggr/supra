@@ -12,6 +12,22 @@
  */
 class Client extends BaseClient
 {
+
+    public function queryAccounts() {
+
+       return $this->getTable()->queryAccounts($this->id);
+
+    }
+
+    public function getAccountIds() {
+        $result = array();
+        $accounts = $this->queryAccounts()->select('id')->fetchArray();
+        foreach($accounts as $account) {
+            $result[] = $account['id'];
+        }
+        return $result;
+    }
+
     public static function getLoggedIn() {
       $currentUser = sfContext::getInstance()->getUser();
 
@@ -37,6 +53,6 @@ class Client extends BaseClient
   }
 
   function __toString() {
-      return $this->getFullName();
+      return $this->getUser()->__toString();
   }
 }
