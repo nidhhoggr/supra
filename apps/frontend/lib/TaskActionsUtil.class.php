@@ -16,11 +16,12 @@ abstract class TaskActionsUtil extends sfActions
     $fields = array(
                     'name'             => array('Name','task','getName'),
                     'account_id'       => array('Account','account','getAccount'),
-                    'user_id'         => array('User','sfGuardUser','getUser'),
+                    'user_id'          => array('Assigned To','sfGuardUser','getUser'),
+                    'created_by'       => array('Created By','sfGuardUser','getCreator'),
                     'task_status_id'   => array('Task Status','task_status','getTaskStatus'),
                     'task_type_id'     => array('Task Type','task_type','getTaskType'),
                     'task_priority_id' => array('Task Priority','task_priority','getTaskPriority'),
-                    'ref_no'          => array('Ref No','task','getRefNo'),
+                    'ref_no'           => array('Ref No','task','getRefNo'),
                    );
 
     $pagerOptions = array(
@@ -60,6 +61,7 @@ abstract class TaskActionsUtil extends sfActions
   public function executeEdit(sfWebRequest $request)
   {
     $this->forward404Unless($task = Doctrine_Core::getTable('Task')->find(array($request->getParameter('id'))), sprintf('Object task does not exist (%s).', $request->getParameter('id')));
+    $this->task = $task;
     $this->isEntitled($task);
     $this->form = new TaskForm($task);
   }

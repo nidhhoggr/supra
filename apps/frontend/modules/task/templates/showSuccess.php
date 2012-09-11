@@ -1,4 +1,4 @@
-<?php include_partial('global/showCrud',array('module'=>'task','object'=>$task))?>
+<?php include_partial('global/showCrud',array('module'=>$this->getModuleName(),'object'=>$task))?>
 <table>
   <tbody>
     <tr>
@@ -11,7 +11,7 @@
     <tr>
       <th>Assigned To:</th>
       <td>
-        <?php include_partial('global/userlinkto', array('user' => $sf_user)) ?>
+        <?php include_partial('global/userlinkto', array('user' => $task->getUser())) ?>
       </td>
     </tr>
 

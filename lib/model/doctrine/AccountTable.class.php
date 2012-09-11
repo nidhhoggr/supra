@@ -45,7 +45,7 @@ class AccountTable extends Doctrine_Table
         return Doctrine_Query::Create()
         ->from('Account a')
         ->where('a.client_id = ?',myUser::getLoggedIn()->isClient()->getId())
-        ->orderBy('t.'.$sort);
+        ->orderBy('a.'.$sort);
 
     }
 }

@@ -16,7 +16,7 @@ class invoiceActions extends sfActions
     $sort = $dpu->getSort($request);
 
 
-    if(myUser::getLoggedIn()->isSuperAdmin())
+    if(!$this->getUser()->isClient())
         $invoices = Doctrine_Core::getTable('AccountInvoice')->queryAll($sort);
     else 
         $invoices = Doctrine_Core::getTable('AccountInvoice')->queryAllByAccountId($sort);

@@ -15,7 +15,7 @@ class accountActions extends sfActions {
     $dpu = new sfDoctrinePagerUtil('Account', 10);
     $sort = $dpu->getSort($request);
 
-    if($this->getUser()->isSuperAdmin())
+    if(!$this->getUser()->isClient())
         $accounts = Doctrine_Core::getTable('Account')->queryAll($sort);
     else
         $accounts = Doctrine_Core::getTable('Account')->queryAllByUserId($sort);

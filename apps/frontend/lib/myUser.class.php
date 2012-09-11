@@ -24,12 +24,13 @@ class myUser extends sfGuardSecurityUser{
         }
 
         return false;
-
     }
 
     public function isStaff() {
+
         if($this->getUserType() == 'staff') {
             return Doctrine_Core::getTable('Staff')->getByUserId($this->getId());
+            //return $this->getStaff(); 
         }
         return false;
     }
