@@ -24,6 +24,10 @@ class AccountInvoice extends BaseAccountInvoice {
       $total = 0;
 
       foreach($this->getAssociatedTasks() as $task) {  
+<<<<<<< HEAD
+=======
+          $work = $task->getTaskWork();
+>>>>>>> 367533eaab798fa61ec4edded1c719ac2107deb4
           foreach($task->getTaskLog() as $log) {
               //must be admin to override is_viewable
               if($log->getHours() && ($log->getIsViewable() || $is_admin)) {
