@@ -1820,3 +1820,166 @@ Stack trace:
 [18-Sep-2012 22:44:37] Action "css/images" does not exist.
 [18-Sep-2012 22:44:37] Empty module and/or action after parsing the URL "/images/logo.png" (/).
 [18-Sep-2012 22:44:37] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 23:00:40] Action "css/images" does not exist.
+[18-Sep-2012 23:00:40] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 23:00:40] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 23:00:42] Action "css/images" does not exist.
+[18-Sep-2012 23:00:42] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 23:00:42] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 23:00:44] Action "css/images" does not exist.
+[18-Sep-2012 23:00:44] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 23:00:44] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 23:00:45] Action "css/images" does not exist.
+[18-Sep-2012 23:00:45] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 23:00:45] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 23:00:47] PHP Parse error:  syntax error, unexpected T_SL in /home/clonedpa/public_html/supra/lib/model/doctrine/AccountInvoice.class.php on line 27
+[18-Sep-2012 23:00:47] PHP Fatal error:  Call to a member function evictAll() on a non-object in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/vendor/doctrine/Doctrine/Connection.php on line 1239
+[18-Sep-2012 23:00:51] PHP Parse error:  syntax error, unexpected T_SL in /home/clonedpa/public_html/supra/lib/model/doctrine/AccountInvoice.class.php on line 27
+[18-Sep-2012 23:00:51] PHP Fatal error:  Call to a member function evictAll() on a non-object in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/vendor/doctrine/Doctrine/Connection.php on line 1239
+[18-Sep-2012 23:01:29] PHP Parse error:  syntax error, unexpected T_SL in /home/clonedpa/public_html/supra/lib/model/doctrine/AccountInvoice.class.php on line 27
+[18-Sep-2012 23:01:29] PHP Fatal error:  Call to a member function evictAll() on a non-object in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/plugins/sfDoctrinePlugin/lib/vendor/doctrine/Doctrine/Connection.php on line 1239
+[18-Sep-2012 23:01:30] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 23:02:21] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 23:02:21] Action "css/images" does not exist.
+[18-Sep-2012 23:02:22] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:22] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:22] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:22] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:22] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:22] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:22] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:22] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:22] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:22] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:22] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:22] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:22] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 23:02:46] Action "css/images" does not exist.
+[18-Sep-2012 23:02:46] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 23:02:46] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:47] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:47] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:47] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:47] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:47] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:47] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:47] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:47] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:47] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:47] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:47] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:47] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 23:02:56] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 23:02:56] Action "css/images" does not exist.
+[18-Sep-2012 23:02:56] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:57] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:57] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:57] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:57] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:57] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:57] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:57] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:57] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:57] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:57] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:57] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:58] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 23:02:59] Action "css/images" does not exist.
+[18-Sep-2012 23:02:59] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 23:02:59] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:59] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:59] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:59] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:59] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:02:59] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:00] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:00] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:00] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:00] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:00] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:00] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:00] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 23:03:01] Action "css/images" does not exist.
+[18-Sep-2012 23:03:01] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 23:03:01] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:01] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:01] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:01] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:01] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:02] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:02] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:02] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:02] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:02] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:02] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:02] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:02] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 23:03:03] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 23:03:03] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:03] Action "css/images" does not exist.
+[18-Sep-2012 23:03:03] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:03] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:03] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:04] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:04] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:04] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:04] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:04] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:04] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:04] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:04] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:04] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 23:03:05] Action "css/images" does not exist.
+[18-Sep-2012 23:03:05] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 23:03:05] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:05] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:05] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:05] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:05] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:05] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:05] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:05] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 23:03:06] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 23:03:06] Action "css/images" does not exist.
+[18-Sep-2012 23:03:06] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:06] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:06] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:06] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:06] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:06] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:06] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:06] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:06] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:06] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:06] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 23:03:07] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 23:03:07] Action "images/jqueryui" does not exist.
+[18-Sep-2012 23:03:07] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:07] Action "css/images" does not exist.
+[18-Sep-2012 23:03:07] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:07] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:08] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:08] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:08] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:08] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:08] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:08] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:08] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:08] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:08] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:08] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 23:03:09] Action "css/images" does not exist.
+[18-Sep-2012 23:03:09] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:09] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 23:03:09] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:10] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:10] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:10] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:10] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:10] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:10] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:10] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:10] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:10] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:10] Action "sf/sf_web_debug" does not exist.
+[18-Sep-2012 23:03:10] Empty module and/or action after parsing the URL "/favicon.ico" (/).
