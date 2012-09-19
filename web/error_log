@@ -1,0 +1,1822 @@
+[10-Sep-2012 23:33:07] Action "css/images" does not exist.
+[10-Sep-2012 23:33:07] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:33:07] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:33:11] Action "css/images" does not exist.
+[10-Sep-2012 23:33:11] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:33:12] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:33:13] Action "css/images" does not exist.
+[10-Sep-2012 23:33:13] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:33:13] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:33:15] Action "css/images" does not exist.
+[10-Sep-2012 23:33:15] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:33:15] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:33:17] Action "css/images" does not exist.
+[10-Sep-2012 23:33:17] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:33:17] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:33:22] Action "css/images" does not exist.
+[10-Sep-2012 23:33:22] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:33:22] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:33:26] Action "css/images" does not exist.
+[10-Sep-2012 23:33:26] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[10-Sep-2012 23:33:26] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:33:26] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[10-Sep-2012 23:33:26] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:33:26] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[10-Sep-2012 23:33:34] Action "css/images" does not exist.
+[10-Sep-2012 23:33:34] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:33:34] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:33:46] Action "css/images" does not exist.
+[10-Sep-2012 23:33:46] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:33:47] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:33:52] Action "css/images" does not exist.
+[10-Sep-2012 23:33:52] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:33:53] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:33:59] Action "css/images" does not exist.
+[10-Sep-2012 23:33:59] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:33:59] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:34:01] Action "css/images" does not exist.
+[10-Sep-2012 23:34:01] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:34:01] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:34:04] Action "css/images" does not exist.
+[10-Sep-2012 23:34:04] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:34:04] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:34:48] Action "css/images" does not exist.
+[10-Sep-2012 23:34:48] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:34:48] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:34:49] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:34:49] Action "css/images" does not exist.
+[10-Sep-2012 23:34:50] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:34:52] Action "css/images" does not exist.
+[10-Sep-2012 23:34:52] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:34:52] Action "images/jqueryui" does not exist.
+[10-Sep-2012 23:34:53] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:35:27] Action "css/images" does not exist.
+[10-Sep-2012 23:35:27] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:35:28] Action "images/jqueryui" does not exist.
+[10-Sep-2012 23:35:28] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:35:36] Action "css/images" does not exist.
+[10-Sep-2012 23:35:36] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:35:36] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:35:47] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:35:47] Action "css/images" does not exist.
+[10-Sep-2012 23:35:47] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:35:50] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:35:50] Action "css/images" does not exist.
+[10-Sep-2012 23:35:50] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:35:53] Action "css/images" does not exist.
+[10-Sep-2012 23:35:53] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:35:53] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:35:54] Action "css/images" does not exist.
+[10-Sep-2012 23:35:54] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:35:55] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:36:03] Action "css/images" does not exist.
+[10-Sep-2012 23:36:03] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:36:03] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:36:09] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:36:09] Action "css/images" does not exist.
+[10-Sep-2012 23:36:09] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:36:11] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:36:11] Action "css/images" does not exist.
+[10-Sep-2012 23:36:11] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:36:12] Action "css/images" does not exist.
+[10-Sep-2012 23:36:12] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:36:13] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:37:04] Action "css/images" does not exist.
+[10-Sep-2012 23:37:04] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:37:04] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:37:16] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:37:16] Action "css/images" does not exist.
+[10-Sep-2012 23:37:17] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:37:22] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:37:22] Action "css/images" does not exist.
+[10-Sep-2012 23:37:22] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:37:29] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:37:29] Action "css/images" does not exist.
+[10-Sep-2012 23:37:29] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:37:38] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:37:38] Action "css/images" does not exist.
+[10-Sep-2012 23:37:38] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:41:45] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:41:45] Action "css/images" does not exist.
+[10-Sep-2012 23:41:45] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:41:47] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:41:47] Action "css/images" does not exist.
+[10-Sep-2012 23:41:47] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:41:49] Action "css/images" does not exist.
+[10-Sep-2012 23:41:50] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:41:50] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:42:20] Action "css/images" does not exist.
+[10-Sep-2012 23:42:20] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:42:21] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:42:22] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:42:22] Action "css/images" does not exist.
+[10-Sep-2012 23:42:22] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:42:25] Action "css/images" does not exist.
+[10-Sep-2012 23:42:25] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:42:25] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:42:26] Action "css/images" does not exist.
+[10-Sep-2012 23:42:26] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:42:27] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:42:29] Action "css/images" does not exist.
+[10-Sep-2012 23:42:29] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:42:29] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:42:33] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:42:33] Action "css/images" does not exist.
+[10-Sep-2012 23:42:33] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:42:35] Action "css/images" does not exist.
+[10-Sep-2012 23:42:35] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:42:35] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:42:40] Action "css/images" does not exist.
+[10-Sep-2012 23:42:40] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:42:40] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:42:43] Action "css/images" does not exist.
+[10-Sep-2012 23:42:43] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:42:43] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:42:47] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:42:47] Action "css/images" does not exist.
+[10-Sep-2012 23:42:48] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:42:51] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:42:51] Action "css/images" does not exist.
+[10-Sep-2012 23:42:51] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:42:52] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:42:52] Action "css/images" does not exist.
+[10-Sep-2012 23:42:53] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:42:57] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:42:57] Action "css/images" does not exist.
+[10-Sep-2012 23:42:57] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:43:03] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:43:03] Action "css/images" does not exist.
+[10-Sep-2012 23:43:03] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[10-Sep-2012 23:43:06] Action "css/images" does not exist.
+[10-Sep-2012 23:43:07] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[10-Sep-2012 23:43:07] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 01:56:28] Action "css/images" does not exist.
+[11-Sep-2012 01:56:28] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 01:56:28] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 01:56:28] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 01:56:28] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 01:56:28] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 01:56:34] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 01:56:34] Action "css/images" does not exist.
+[11-Sep-2012 01:56:34] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 01:56:37] Action "css/images" does not exist.
+[11-Sep-2012 01:56:37] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 01:56:37] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 01:56:39] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 01:56:39] Action "css/images" does not exist.
+[11-Sep-2012 01:56:39] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 01:56:44] Action "css/images" does not exist.
+[11-Sep-2012 01:56:44] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 01:56:44] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 01:56:47] Action "css/images" does not exist.
+[11-Sep-2012 01:56:48] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 01:56:48] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 02:36:06] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 02:36:06] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 02:36:06] Action "css/images" does not exist.
+[11-Sep-2012 02:36:06] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 02:36:06] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 02:36:06] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 02:36:16] Action "css/images" does not exist.
+[11-Sep-2012 02:36:16] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 02:36:17] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 02:57:34] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 02:57:34] Action "css/images" does not exist.
+[11-Sep-2012 02:57:34] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 15:50:14] Action "css/images" does not exist.
+[11-Sep-2012 15:50:14] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 15:50:14] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 15:50:14] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 15:50:14] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 15:50:14] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 15:50:25] Action "css/images" does not exist.
+[11-Sep-2012 15:50:25] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 15:50:25] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 15:50:25] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 15:50:26] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 15:50:26] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 15:50:37] Action "css/images" does not exist.
+[11-Sep-2012 15:50:37] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 15:50:37] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 15:50:42] Action "css/images" does not exist.
+[11-Sep-2012 15:50:42] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 15:50:42] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 15:50:45] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 15:50:45] Action "css/images" does not exist.
+[11-Sep-2012 15:50:45] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 15:50:47] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 15:50:47] Action "css/images" does not exist.
+[11-Sep-2012 15:50:47] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 15:52:05] Action "css/images" does not exist.
+[11-Sep-2012 15:52:05] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 15:52:05] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 15:52:09] Action "css/images" does not exist.
+[11-Sep-2012 15:52:09] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 15:52:09] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 15:52:11] Action "css/images" does not exist.
+[11-Sep-2012 15:52:11] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 15:52:11] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:26:39] Action "css/images" does not exist.
+[11-Sep-2012 16:26:39] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 16:26:39] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:26:39] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 16:26:39] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:26:39] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 16:26:48] Action "css/images" does not exist.
+[11-Sep-2012 16:26:48] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:26:48] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:51:22] Action "css/images" does not exist.
+[11-Sep-2012 16:51:23] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:51:23] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:51:24] Action "css/images" does not exist.
+[11-Sep-2012 16:51:24] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:51:24] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:51:29] Action "css/images" does not exist.
+[11-Sep-2012 16:51:29] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:51:29] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:51:31] Action "css/images" does not exist.
+[11-Sep-2012 16:51:31] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:51:31] Action "images/jqueryui" does not exist.
+[11-Sep-2012 16:51:31] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:51:39] Action "css/images" does not exist.
+[11-Sep-2012 16:51:39] Action "images/jqueryui" does not exist.
+[11-Sep-2012 16:51:39] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:51:39] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:51:41] Action "css/images" does not exist.
+[11-Sep-2012 16:51:42] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:51:42] Action "images/jqueryui" does not exist.
+[11-Sep-2012 16:51:42] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:51:47] Action "css/images" does not exist.
+[11-Sep-2012 16:51:47] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:51:47] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:51:50] Action "css/images" does not exist.
+[11-Sep-2012 16:51:50] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:51:50] Action "images/jqueryui" does not exist.
+[11-Sep-2012 16:51:51] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:51:52] Action "css/images" does not exist.
+[11-Sep-2012 16:51:52] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:51:52] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:51:53] Action "css/images" does not exist.
+[11-Sep-2012 16:51:53] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:51:53] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:51:57] Action "css/images" does not exist.
+[11-Sep-2012 16:51:57] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:51:57] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:51:59] Action "css/images" does not exist.
+[11-Sep-2012 16:51:59] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:51:59] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:52:00] Action "css/images" does not exist.
+[11-Sep-2012 16:52:00] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:52:01] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:52:05] Action "css/images" does not exist.
+[11-Sep-2012 16:52:05] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:52:05] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:52:08] Action "css/images" does not exist.
+[11-Sep-2012 16:52:08] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:52:08] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 16:52:13] Action "css/images" does not exist.
+[11-Sep-2012 16:52:14] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 16:52:14] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 17:02:52] Action "css/images" does not exist.
+[11-Sep-2012 17:02:52] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 17:02:53] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 17:02:58] Action "css/images" does not exist.
+[11-Sep-2012 17:02:58] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 17:02:59] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 19:25:05] Action "css/images" does not exist.
+[11-Sep-2012 19:25:05] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 19:25:05] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 19:25:05] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 19:25:06] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 19:25:06] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 19:25:22] Action "css/images" does not exist.
+[11-Sep-2012 19:25:23] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 19:25:23] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 19:25:26] Action "css/images" does not exist.
+[11-Sep-2012 19:25:26] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 19:25:27] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 19:25:29] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 19:25:29] Action "css/images" does not exist.
+[11-Sep-2012 19:25:29] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 19:25:31] Action "css/images" does not exist.
+[11-Sep-2012 19:25:31] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 19:25:32] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 22:09:11] Action "css/images" does not exist.
+[11-Sep-2012 22:09:11] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 22:09:11] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 22:09:11] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 22:09:11] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 22:09:11] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[11-Sep-2012 22:09:17] Action "css/images" does not exist.
+[11-Sep-2012 22:09:17] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 22:09:17] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 22:09:19] Action "css/images" does not exist.
+[11-Sep-2012 22:09:19] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 22:09:20] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[11-Sep-2012 22:09:21] Action "css/images" does not exist.
+[11-Sep-2012 22:09:21] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[11-Sep-2012 22:09:21] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 05:10:23] Action "css/images" does not exist.
+[12-Sep-2012 05:10:23] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 05:10:23] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 05:10:23] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 05:10:23] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 05:10:23] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 10:01:39] Action "css/images" does not exist.
+[12-Sep-2012 10:01:39] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 10:01:39] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:01:39] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 10:01:41] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:01:41] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 10:01:46] Action "css/images" does not exist.
+[12-Sep-2012 10:01:46] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 10:01:46] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:01:46] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 10:01:47] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:01:47] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 10:01:50] Action "css/images" does not exist.
+[12-Sep-2012 10:01:51] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:01:51] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:01:56] Action "css/images" does not exist.
+[12-Sep-2012 10:01:56] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:01:56] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:01:59] Action "css/images" does not exist.
+[12-Sep-2012 10:01:59] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:02:00] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:03:16] Action "css/images" does not exist.
+[12-Sep-2012 10:03:16] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:03:16] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:03:22] Action "css/images" does not exist.
+[12-Sep-2012 10:03:22] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:03:22] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:03:30] Action "css/images" does not exist.
+[12-Sep-2012 10:03:30] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:03:30] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:03:35] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:03:35] Action "css/images" does not exist.
+[12-Sep-2012 10:03:35] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:03:36] Action "css/images" does not exist.
+[12-Sep-2012 10:03:36] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:03:37] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:03:38] Action "css/images" does not exist.
+[12-Sep-2012 10:03:38] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:03:39] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:03:44] Action "css/images" does not exist.
+[12-Sep-2012 10:03:44] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:03:44] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:03:57] Action "css/images" does not exist.
+[12-Sep-2012 10:03:57] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:03:57] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:04:00] Action "css/images" does not exist.
+[12-Sep-2012 10:04:00] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:04:01] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:04:03] Action "css/images" does not exist.
+[12-Sep-2012 10:04:03] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:04:03] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:04:35] Action "css/images" does not exist.
+[12-Sep-2012 10:04:35] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:04:35] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:04:38] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:04:38] Action "css/images" does not exist.
+[12-Sep-2012 10:04:38] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:04:43] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:04:43] Action "css/images" does not exist.
+[12-Sep-2012 10:04:43] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:04:48] Action "css/images" does not exist.
+[12-Sep-2012 10:04:48] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:04:49] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:04:54] Action "css/images" does not exist.
+[12-Sep-2012 10:04:54] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:04:54] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:04:58] Action "css/images" does not exist.
+[12-Sep-2012 10:04:58] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:04:58] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:05:05] Action "css/images" does not exist.
+[12-Sep-2012 10:05:05] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:05:05] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:05:07] Action "css/images" does not exist.
+[12-Sep-2012 10:05:07] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:05:07] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:05:14] Action "css/images" does not exist.
+[12-Sep-2012 10:05:14] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:05:14] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:06:00] Action "css/images" does not exist.
+[12-Sep-2012 10:06:00] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:06:00] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:58:23] Action "css/images" does not exist.
+[12-Sep-2012 10:58:23] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 10:58:23] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:58:23] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 10:58:24] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:58:24] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 10:58:39] Action "css/images" does not exist.
+[12-Sep-2012 10:58:39] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:58:40] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:58:53] Action "css/images" does not exist.
+[12-Sep-2012 10:58:53] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:58:54] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:58:57] Action "css/images" does not exist.
+[12-Sep-2012 10:58:58] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:58:58] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:59:02] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:59:02] Action "css/images" does not exist.
+[12-Sep-2012 10:59:03] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:59:13] Action "css/images" does not exist.
+[12-Sep-2012 10:59:13] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:59:13] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:59:15] Action "css/images" does not exist.
+[12-Sep-2012 10:59:15] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:59:15] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 10:59:22] Action "css/images" does not exist.
+[12-Sep-2012 10:59:22] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 10:59:22] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:00:31] Action "css/images" does not exist.
+[12-Sep-2012 11:00:31] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:00:31] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:00:32] Action "css/images" does not exist.
+[12-Sep-2012 11:00:32] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:00:32] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:00:44] Action "css/images" does not exist.
+[12-Sep-2012 11:00:44] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:00:45] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:01:06] Action "css/images" does not exist.
+[12-Sep-2012 11:01:06] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:01:07] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:01:07] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:01:07] Action "css/images" does not exist.
+[12-Sep-2012 11:01:08] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:01:55] Action "css/images" does not exist.
+[12-Sep-2012 11:01:56] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:01:56] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:02:00] Action "css/images" does not exist.
+[12-Sep-2012 11:02:00] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:02:01] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:02:04] Action "css/images" does not exist.
+[12-Sep-2012 11:02:04] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:02:04] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:02:08] Action "css/images" does not exist.
+[12-Sep-2012 11:02:08] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:02:08] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:02:48] Action "css/images" does not exist.
+[12-Sep-2012 11:02:48] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:02:48] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:02:58] Action "css/images" does not exist.
+[12-Sep-2012 11:02:58] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:02:59] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:16:16] Action "css/images" does not exist.
+[12-Sep-2012 11:16:16] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:16:17] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:16:19] Action "css/images" does not exist.
+[12-Sep-2012 11:16:19] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:16:20] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:18:04] Action "css/images" does not exist.
+[12-Sep-2012 11:18:04] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:18:05] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:18:08] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:18:08] Action "css/images" does not exist.
+[12-Sep-2012 11:18:08] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:18:11] Action "css/images" does not exist.
+[12-Sep-2012 11:18:11] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:18:11] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:18:19] Action "css/images" does not exist.
+[12-Sep-2012 11:18:19] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:18:19] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:18:25] Action "css/images" does not exist.
+[12-Sep-2012 11:18:25] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:18:25] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:18:27] Action "css/images" does not exist.
+[12-Sep-2012 11:18:27] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:18:27] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:18:30] Action "css/images" does not exist.
+[12-Sep-2012 11:18:30] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:18:30] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:18:32] Action "css/images" does not exist.
+[12-Sep-2012 11:18:32] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:18:32] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:18:41] Action "css/images" does not exist.
+[12-Sep-2012 11:18:41] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:18:41] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:19:04] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:19:04] Action "css/images" does not exist.
+[12-Sep-2012 11:19:05] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:19:11] Action "css/images" does not exist.
+[12-Sep-2012 11:19:11] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:19:11] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:19:17] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:19:17] Action "css/images" does not exist.
+[12-Sep-2012 11:19:18] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:19:23] Action "css/images" does not exist.
+[12-Sep-2012 11:19:23] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:19:23] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:19:33] Action "css/images" does not exist.
+[12-Sep-2012 11:19:33] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:19:33] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:19:43] Action "css/images" does not exist.
+[12-Sep-2012 11:19:43] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:19:43] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:19:50] Action "css/images" does not exist.
+[12-Sep-2012 11:19:50] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:19:51] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:20:31] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:20:31] Action "css/images" does not exist.
+[12-Sep-2012 11:20:34] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:21:49] Action "css/images" does not exist.
+[12-Sep-2012 11:21:49] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:21:50] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:21:54] Action "css/images" does not exist.
+[12-Sep-2012 11:21:54] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:21:55] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:21:57] Action "css/images" does not exist.
+[12-Sep-2012 11:21:57] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:21:57] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:22:04] Action "css/images" does not exist.
+[12-Sep-2012 11:22:04] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:22:05] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:22:07] Action "css/images" does not exist.
+[12-Sep-2012 11:22:07] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:22:08] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:22:14] Action "css/images" does not exist.
+[12-Sep-2012 11:22:14] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 11:22:14] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:22:14] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 11:22:15] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:22:15] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 11:22:19] Action "css/images" does not exist.
+[12-Sep-2012 11:22:19] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:22:19] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:22:25] Action "css/images" does not exist.
+[12-Sep-2012 11:22:25] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:22:26] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:23:36] Action "css/images" does not exist.
+[12-Sep-2012 11:23:36] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 11:23:36] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[12-Sep-2012 11:23:36] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[12-Sep-2012 11:23:37] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[12-Sep-2012 11:23:37] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[13-Sep-2012 07:02:50] Action "css/images" does not exist.
+[13-Sep-2012 07:02:50] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[13-Sep-2012 07:02:50] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[13-Sep-2012 07:02:50] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[13-Sep-2012 07:02:51] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[13-Sep-2012 07:02:51] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[13-Sep-2012 07:03:00] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[13-Sep-2012 07:03:01] Action "css/images" does not exist.
+[13-Sep-2012 07:03:02] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[13-Sep-2012 07:03:09] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[13-Sep-2012 07:03:09] Action "css/images" does not exist.
+[13-Sep-2012 07:03:10] Action "images/jqueryui" does not exist.
+[13-Sep-2012 07:03:11] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[13-Sep-2012 07:03:36] Action "css/images" does not exist.
+[13-Sep-2012 07:03:36] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[13-Sep-2012 07:03:38] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[13-Sep-2012 07:07:20] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[13-Sep-2012 07:07:20] Action "css/images" does not exist.
+[13-Sep-2012 07:07:22] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[14-Sep-2012 10:00:45] Action "css/images" does not exist.
+[14-Sep-2012 10:00:45] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[14-Sep-2012 10:00:45] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[14-Sep-2012 10:00:45] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[14-Sep-2012 10:00:46] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[14-Sep-2012 10:00:46] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[14-Sep-2012 10:00:51] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[14-Sep-2012 10:00:51] Action "css/images" does not exist.
+[14-Sep-2012 10:00:51] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[14-Sep-2012 10:00:55] Action "css/images" does not exist.
+[14-Sep-2012 10:00:55] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[14-Sep-2012 10:00:56] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[14-Sep-2012 10:00:57] Action "css/images" does not exist.
+[14-Sep-2012 10:00:57] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[14-Sep-2012 10:00:58] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[14-Sep-2012 10:02:17] Action "css/images" does not exist.
+[14-Sep-2012 10:02:17] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[14-Sep-2012 10:02:18] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[14-Sep-2012 10:02:22] Action "css/images" does not exist.
+[14-Sep-2012 10:02:22] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[14-Sep-2012 10:02:22] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[14-Sep-2012 10:02:40] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[14-Sep-2012 10:02:40] Action "css/images" does not exist.
+[14-Sep-2012 10:02:41] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[14-Sep-2012 10:02:42] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[14-Sep-2012 10:02:42] Action "css/images" does not exist.
+[14-Sep-2012 10:02:42] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[14-Sep-2012 10:02:45] Action "css/images" does not exist.
+[14-Sep-2012 10:02:45] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[14-Sep-2012 10:02:46] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[14-Sep-2012 10:02:51] Action "css/images" does not exist.
+[14-Sep-2012 10:02:51] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[14-Sep-2012 10:02:51] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[14-Sep-2012 10:03:02] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[14-Sep-2012 10:03:02] Action "css/images" does not exist.
+[14-Sep-2012 10:03:03] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[14-Sep-2012 10:03:03] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[14-Sep-2012 10:03:03] Action "css/images" does not exist.
+[14-Sep-2012 10:03:04] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[14-Sep-2012 10:03:17] Action "supra/web" does not exist.
+[14-Sep-2012 10:03:17] Action "sf/sf_default" does not exist.
+[14-Sep-2012 10:03:18] Action "sf/sf_default" does not exist.
+[14-Sep-2012 10:03:18] Action "sf/sf_default" does not exist.
+[14-Sep-2012 10:03:18] Action "css/images" does not exist.
+[14-Sep-2012 10:03:18] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[16-Sep-2012 00:03:10] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[16-Sep-2012 00:03:10] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[16-Sep-2012 00:03:11] Action "css/images" does not exist.
+[16-Sep-2012 00:03:11] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[16-Sep-2012 00:05:07] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[16-Sep-2012 00:05:07] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[16-Sep-2012 00:05:09] Action "css/images" does not exist.
+[16-Sep-2012 00:05:09] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[16-Sep-2012 00:05:22] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[16-Sep-2012 00:05:22] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[16-Sep-2012 00:05:24] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[16-Sep-2012 00:05:24] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[16-Sep-2012 00:05:46] Action "css/images" does not exist.
+[16-Sep-2012 00:05:46] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[16-Sep-2012 00:05:52] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[16-Sep-2012 00:05:52] Action "css/images" does not exist.
+[16-Sep-2012 00:06:49] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[16-Sep-2012 00:06:49] Action "css/images" does not exist.
+[16-Sep-2012 00:06:59] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[16-Sep-2012 00:06:59] Action "css/images" does not exist.
+[16-Sep-2012 00:10:11] Action "css/images" does not exist.
+[16-Sep-2012 00:10:13] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[16-Sep-2012 03:12:32] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[16-Sep-2012 03:12:32] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[16-Sep-2012 03:12:32] Action "css/images" does not exist.
+[16-Sep-2012 03:12:32] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[16-Sep-2012 03:12:33] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[16-Sep-2012 03:12:33] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[16-Sep-2012 03:16:13] Action "css/images" does not exist.
+[16-Sep-2012 03:16:13] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[16-Sep-2012 03:16:14] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[16-Sep-2012 03:16:28] Action "css/images" does not exist.
+[16-Sep-2012 03:16:28] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[16-Sep-2012 03:16:29] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[16-Sep-2012 03:16:32] Action "css/images" does not exist.
+[16-Sep-2012 03:16:37] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[16-Sep-2012 03:16:37] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[16-Sep-2012 03:16:37] Action "css/images" does not exist.
+[16-Sep-2012 03:16:37] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[16-Sep-2012 03:16:38] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[17-Sep-2012 14:30:52] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[17-Sep-2012 14:30:52] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[17-Sep-2012 14:30:53] Action "css/images" does not exist.
+[17-Sep-2012 14:30:53] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[17-Sep-2012 14:30:56] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[17-Sep-2012 14:30:56] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[17-Sep-2012 14:31:01] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[17-Sep-2012 14:31:01] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[17-Sep-2012 14:31:01] Action "css/images" does not exist.
+[17-Sep-2012 14:31:01] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[17-Sep-2012 14:31:01] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[17-Sep-2012 14:31:01] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[17-Sep-2012 14:31:06] Action "css/images" does not exist.
+[17-Sep-2012 14:31:06] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[17-Sep-2012 14:31:06] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[17-Sep-2012 14:31:09] Action "css/images" does not exist.
+[17-Sep-2012 14:31:09] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[17-Sep-2012 14:31:09] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[17-Sep-2012 14:31:13] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[17-Sep-2012 14:31:13] Action "css/images" does not exist.
+[17-Sep-2012 14:31:13] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[17-Sep-2012 14:31:15] Action "css/images" does not exist.
+[17-Sep-2012 14:31:15] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[17-Sep-2012 14:31:15] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[17-Sep-2012 14:31:18] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[17-Sep-2012 14:31:18] Action "css/images" does not exist.
+[17-Sep-2012 14:31:19] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[17-Sep-2012 14:31:20] Action "css/images" does not exist.
+[17-Sep-2012 14:31:20] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[17-Sep-2012 14:31:21] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[17-Sep-2012 19:17:14] Action "css/images" does not exist.
+[17-Sep-2012 19:17:14] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[17-Sep-2012 19:17:14] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[17-Sep-2012 19:17:14] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[17-Sep-2012 19:17:15] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[17-Sep-2012 19:17:15] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[17-Sep-2012 19:17:23] Action "css/images" does not exist.
+[17-Sep-2012 19:17:23] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[17-Sep-2012 19:17:23] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[17-Sep-2012 19:17:29] Action "css/images" does not exist.
+[17-Sep-2012 19:17:29] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[17-Sep-2012 19:17:29] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[17-Sep-2012 19:17:31] Action "css/images" does not exist.
+[17-Sep-2012 19:17:31] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[17-Sep-2012 19:17:32] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[17-Sep-2012 19:17:34] Action "css/images" does not exist.
+[17-Sep-2012 19:17:34] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[17-Sep-2012 19:17:34] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[17-Sep-2012 19:21:08] Action "css/images" does not exist.
+[17-Sep-2012 19:21:08] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[17-Sep-2012 19:21:08] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[17-Sep-2012 19:37:38] Action "css/images" does not exist.
+[17-Sep-2012 19:37:38] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[17-Sep-2012 19:37:39] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 09:37:51] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:37:51] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[18-Sep-2012 09:38:14] Action "css/images" does not exist.
+[18-Sep-2012 09:38:14] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[18-Sep-2012 09:38:14] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:38:14] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[18-Sep-2012 09:38:16] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 09:38:16] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[18-Sep-2012 09:38:19] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 09:38:19] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[18-Sep-2012 09:38:50] Action "css/images" does not exist.
+[18-Sep-2012 09:38:50] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:39:30] Action "css/images" does not exist.
+[18-Sep-2012 09:40:49] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:40:53] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:40:54] Action "css/images" does not exist.
+[18-Sep-2012 09:41:27] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:41:27] Action "css/images" does not exist.
+[18-Sep-2012 09:41:35] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:41:36] Action "css/images" does not exist.
+[18-Sep-2012 09:42:12] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:42:12] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:42:12] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:42:12] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:42:12] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:42:13] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:42:32] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:43:25] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:43:25] Action "css/images" does not exist.
+[18-Sep-2012 09:43:45] Action "css/images" does not exist.
+[18-Sep-2012 09:43:45] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:43:53] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:43:53] Action "css/images" does not exist.
+[18-Sep-2012 09:44:03] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:44:04] Action "css/images" does not exist.
+[18-Sep-2012 09:44:18] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:44:18] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:44:19] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:44:19] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:44:19] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:45:12] Action "css/images" does not exist.
+[18-Sep-2012 09:45:12] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:45:15] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:45:15] Action "css/images" does not exist.
+[18-Sep-2012 09:45:20] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:45:21] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:45:21] Action "css/images" does not exist.
+[18-Sep-2012 09:45:21] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:45:21] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:45:21] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:45:21] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:45:22] Action "images/jqueryui" does not exist.
+[18-Sep-2012 09:49:22] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:49:23] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:49:23] Action "css/images" does not exist.
+[18-Sep-2012 09:49:30] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:49:31] Action "css/images" does not exist.
+[18-Sep-2012 09:49:37] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:49:37] Action "css/images" does not exist.
+[18-Sep-2012 09:50:03] Action "css/images" does not exist.
+[18-Sep-2012 09:50:03] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:50:35] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:50:36] Action "css/images" does not exist.
+[18-Sep-2012 09:50:58] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:50:59] Action "css/images" does not exist.
+[18-Sep-2012 09:51:05] Action "css/images" does not exist.
+[18-Sep-2012 09:51:05] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:51:09] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:51:10] Action "css/images" does not exist.
+[18-Sep-2012 09:51:25] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:51:26] Action "css/images" does not exist.
+[18-Sep-2012 09:51:30] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:51:30] Action "css/images" does not exist.
+[18-Sep-2012 09:51:37] Action "css/images" does not exist.
+[18-Sep-2012 09:51:37] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:51:41] Action "css/images" does not exist.
+[18-Sep-2012 09:51:41] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:51:44] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:51:44] Action "css/images" does not exist.
+[18-Sep-2012 09:51:49] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:51:49] Action "css/images" does not exist.
+[18-Sep-2012 09:51:55] Action "css/images" does not exist.
+[18-Sep-2012 09:51:55] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:51:59] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:52:00] Action "css/images" does not exist.
+[18-Sep-2012 09:52:10] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:52:10] Action "css/images" does not exist.
+[18-Sep-2012 09:52:30] Action "css/images" does not exist.
+[18-Sep-2012 09:52:30] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[18-Sep-2012 09:52:30] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 09:52:30] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[18-Sep-2012 22:19:37] Action "css/images" does not exist.
+[18-Sep-2012 22:19:37] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[18-Sep-2012 22:19:37] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:19:37] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[18-Sep-2012 22:19:37] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:19:37] PHP Fatal error:  Uncaught exception 'sfStopException' in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php:96
+Stack trace:
+#0 /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php(55): sfBasicSecurityFilter->forwardToLoginAction()
+#1 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfBasicSecurityFilter->execute(Object(sfFilterChain))
+#2 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(995): sfFilterChain->execute()
+#3 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): sfRenderingFilter->execute(Object(sfFilterChain))
+#4 /home/clonedpa/public_html/supra/apps/frontend/lib/accessControlFilter.class.php(16): sfFilterChain->execute()
+#5 /home/clonedpa/public_html/supra/cache/frontend/prod/config/config_core_compile.yml.php(1031): accessControlFilter->execute(Object(sfFilterChain))
+#6 /home/clonedpa/public_html/supra/ca in /home/clonedpa/public_html/supra/lib/vendor/symfony/lib/filter/sfBasicSecurityFilter.class.php on line 96
+[18-Sep-2012 22:19:46] Action "css/images" does not exist.
+[18-Sep-2012 22:19:46] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:19:46] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:19:49] Action "css/images" does not exist.
+[18-Sep-2012 22:19:49] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:19:50] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:19:54] Action "css/images" does not exist.
+[18-Sep-2012 22:19:54] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:19:55] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:19:56] Action "css/images" does not exist.
+[18-Sep-2012 22:19:56] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:19:56] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:19:58] Action "css/images" does not exist.
+[18-Sep-2012 22:19:58] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:19:58] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:20:01] Action "css/images" does not exist.
+[18-Sep-2012 22:20:01] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:20:01] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:21:27] Action "css/images" does not exist.
+[18-Sep-2012 22:21:27] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:21:27] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:21:27] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:21:42] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:21:42] Action "css/images" does not exist.
+[18-Sep-2012 22:21:43] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:24:27] PHP Fatal error:  Call to undefined method myUser::getLoggedIn() in /home/clonedpa/public_html/supra/lib/model/doctrine/Staff.class.php on line 86
+[18-Sep-2012 22:24:41] PHP Fatal error:  Call to undefined method myUser::getLoggedIn() in /home/clonedpa/public_html/supra/lib/model/doctrine/Staff.class.php on line 86
+[18-Sep-2012 22:24:48] PHP Fatal error:  Call to undefined method myUser::getLoggedIn() in /home/clonedpa/public_html/supra/lib/model/doctrine/Staff.class.php on line 86
+[18-Sep-2012 22:25:25] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:25:25] Action "css/images" does not exist.
+[18-Sep-2012 22:25:25] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:25:29] Action "css/images" does not exist.
+[18-Sep-2012 22:25:29] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:25:29] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:25:29] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:25:41] Action "css/images" does not exist.
+[18-Sep-2012 22:25:41] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:25:41] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:25:42] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:25:44] Action "css/images" does not exist.
+[18-Sep-2012 22:25:44] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:25:44] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:25:46] Action "css/images" does not exist.
+[18-Sep-2012 22:25:46] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:25:47] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:25:49] Action "css/images" does not exist.
+[18-Sep-2012 22:25:49] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:25:49] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:25:52] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:25:52] Action "css/images" does not exist.
+[18-Sep-2012 22:25:52] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:06] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:06] Action "css/images" does not exist.
+[18-Sep-2012 22:26:06] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:09] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:09] Action "css/images" does not exist.
+[18-Sep-2012 22:26:09] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:12] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:12] Action "css/images" does not exist.
+[18-Sep-2012 22:26:13] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:15] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:15] Action "css/images" does not exist.
+[18-Sep-2012 22:26:15] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:16] Action "css/images" does not exist.
+[18-Sep-2012 22:26:16] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:16] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:17] Action "css/images" does not exist.
+[18-Sep-2012 22:26:17] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:18] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:19] Action "css/images" does not exist.
+[18-Sep-2012 22:26:19] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:19] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:20] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:20] Action "css/images" does not exist.
+[18-Sep-2012 22:26:21] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:22] Action "css/images" does not exist.
+[18-Sep-2012 22:26:22] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:22] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:23] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:23] Action "css/images" does not exist.
+[18-Sep-2012 22:26:24] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:25] Action "css/images" does not exist.
+[18-Sep-2012 22:26:25] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:26] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:27] Action "css/images" does not exist.
+[18-Sep-2012 22:26:27] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:27] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:28] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:28] Action "css/images" does not exist.
+[18-Sep-2012 22:26:28] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:40] Action "css/images" does not exist.
+[18-Sep-2012 22:26:40] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:40] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:44] Action "css/images" does not exist.
+[18-Sep-2012 22:26:44] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:44] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:46] Action "css/images" does not exist.
+[18-Sep-2012 22:26:46] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:47] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:26:48] Action "css/images" does not exist.
+[18-Sep-2012 22:26:48] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:26:49] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:27:02] Action "css/images" does not exist.
+[18-Sep-2012 22:27:02] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:27:02] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:27:05] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:27:05] Action "css/images" does not exist.
+[18-Sep-2012 22:27:05] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:27:07] Action "css/images" does not exist.
+[18-Sep-2012 22:27:07] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:27:07] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:27:10] Action "css/images" does not exist.
+[18-Sep-2012 22:27:10] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:27:10] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:27:18] Action "css/images" does not exist.
+[18-Sep-2012 22:27:18] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:27:18] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:27:25] Action "css/images" does not exist.
+[18-Sep-2012 22:27:26] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:27:26] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:27:29] Action "css/images" does not exist.
+[18-Sep-2012 22:27:29] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:27:29] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:27:31] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:27:31] Action "css/images" does not exist.
+[18-Sep-2012 22:27:32] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:27:34] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:27:34] Action "css/images" does not exist.
+[18-Sep-2012 22:27:34] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:27:35] Action "css/images" does not exist.
+[18-Sep-2012 22:27:35] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:27:36] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:27:36] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:27:36] Action "css/images" does not exist.
+[18-Sep-2012 22:27:37] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:27:38] Action "css/images" does not exist.
+[18-Sep-2012 22:27:38] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:27:38] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:27:43] Action "css/images" does not exist.
+[18-Sep-2012 22:27:43] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:27:43] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:27:44] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:27:49] Action "css/images" does not exist.
+[18-Sep-2012 22:27:49] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:27:49] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:27:49] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:27:57] Action "css/images" does not exist.
+[18-Sep-2012 22:27:57] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:27:57] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:28:02] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:28:02] Action "css/images" does not exist.
+[18-Sep-2012 22:28:02] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:28:03] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:28:07] Action "css/images" does not exist.
+[18-Sep-2012 22:28:07] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:28:08] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:28:13] Action "css/images" does not exist.
+[18-Sep-2012 22:28:13] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:28:13] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:28:13] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:28:22] Action "css/images" does not exist.
+[18-Sep-2012 22:28:22] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:28:22] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:28:23] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:28:26] Action "css/images" does not exist.
+[18-Sep-2012 22:28:26] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:28:26] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:28:30] Action "css/images" does not exist.
+[18-Sep-2012 22:28:30] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:28:31] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:28:31] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:28:37] Action "css/images" does not exist.
+[18-Sep-2012 22:28:37] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:28:37] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:28:38] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:28:42] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:28:42] Action "css/images" does not exist.
+[18-Sep-2012 22:28:42] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:28:46] Action "css/images" does not exist.
+[18-Sep-2012 22:28:46] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:28:46] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:28:46] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:28:51] Action "css/images" does not exist.
+[18-Sep-2012 22:28:51] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:28:51] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:28:51] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:28:56] Action "css/images" does not exist.
+[18-Sep-2012 22:28:59] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:28:59] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:29:00] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:29:00] Action "css/images" does not exist.
+[18-Sep-2012 22:29:00] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:29:03] Action "css/images" does not exist.
+[18-Sep-2012 22:29:03] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:29:03] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:29:09] Action "css/images" does not exist.
+[18-Sep-2012 22:29:09] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:29:09] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:29:11] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:29:11] Action "css/images" does not exist.
+[18-Sep-2012 22:29:11] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:29:39] Action "css/images" does not exist.
+[18-Sep-2012 22:29:39] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:29:39] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:29:43] Action "css/images" does not exist.
+[18-Sep-2012 22:29:43] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:29:43] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:30:23] Action "css/images" does not exist.
+[18-Sep-2012 22:30:23] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:30:24] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:30:25] Action "css/images" does not exist.
+[18-Sep-2012 22:30:25] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:30:26] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:30:28] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:30:28] Action "css/images" does not exist.
+[18-Sep-2012 22:30:28] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:30:30] Action "css/images" does not exist.
+[18-Sep-2012 22:30:30] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:30:31] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:30:32] Action "css/images" does not exist.
+[18-Sep-2012 22:30:32] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:30:32] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:30:35] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:30:35] Action "css/images" does not exist.
+[18-Sep-2012 22:30:36] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:30:36] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:30:41] Action "css/images" does not exist.
+[18-Sep-2012 22:30:41] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:30:42] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:30:42] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:30:46] Action "css/images" does not exist.
+[18-Sep-2012 22:30:46] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:30:46] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:30:49] Action "css/images" does not exist.
+[18-Sep-2012 22:30:49] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:30:49] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:30:49] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:30:55] Action "css/images" does not exist.
+[18-Sep-2012 22:30:55] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:30:55] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:30:56] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:30:58] Action "css/images" does not exist.
+[18-Sep-2012 22:30:58] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:30:58] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:31:02] Action "css/images" does not exist.
+[18-Sep-2012 22:31:02] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:31:02] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:31:02] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:31:07] Action "css/images" does not exist.
+[18-Sep-2012 22:31:07] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:31:07] Action "images/jqueryui" does not exist.
+[18-Sep-2012 22:31:08] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:31:11] Action "css/images" does not exist.
+[18-Sep-2012 22:31:11] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:31:11] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:31:14] Action "css/images" does not exist.
+[18-Sep-2012 22:31:14] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:31:14] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:31:24] Action "css/images" does not exist.
+[18-Sep-2012 22:31:24] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:31:24] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:31:38] Action "css/images" does not exist.
+[18-Sep-2012 22:31:38] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:31:38] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:31:49] Action "css/images" does not exist.
+[18-Sep-2012 22:31:49] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:31:49] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:31:51] Action "css/images" does not exist.
+[18-Sep-2012 22:31:51] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:31:51] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:31:53] Action "css/images" does not exist.
+[18-Sep-2012 22:31:53] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:31:54] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:31:54] Action "css/images" does not exist.
+[18-Sep-2012 22:31:54] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:31:55] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:32:11] Action "css/images" does not exist.
+[18-Sep-2012 22:32:11] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:32:12] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:32:13] Action "css/images" does not exist.
+[18-Sep-2012 22:32:14] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:32:14] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:32:17] Action "css/images" does not exist.
+[18-Sep-2012 22:32:17] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:32:17] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:32:22] Action "css/images" does not exist.
+[18-Sep-2012 22:32:23] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:32:36] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:32:38] Action "css/images" does not exist.
+[18-Sep-2012 22:32:38] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:32:38] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:33:07] Action "css/images" does not exist.
+[18-Sep-2012 22:33:07] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:33:07] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:33:17] Action "css/images" does not exist.
+[18-Sep-2012 22:33:18] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:33:18] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:33:25] Action "css/images" does not exist.
+[18-Sep-2012 22:33:25] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:33:25] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:33:27] Action "css/images" does not exist.
+[18-Sep-2012 22:33:27] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:33:27] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:33:31] Action "css/images" does not exist.
+[18-Sep-2012 22:33:31] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:33:31] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:33:43] Action "css/images" does not exist.
+[18-Sep-2012 22:33:43] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:33:43] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:33:48] Action "css/images" does not exist.
+[18-Sep-2012 22:33:48] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:33:48] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:33:49] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:33:49] Action "css/images" does not exist.
+[18-Sep-2012 22:33:49] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:34:11] Action "css/images" does not exist.
+[18-Sep-2012 22:34:11] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:34:11] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:34:13] Action "css/images" does not exist.
+[18-Sep-2012 22:34:13] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:34:14] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:34:15] Action "css/images" does not exist.
+[18-Sep-2012 22:34:15] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:34:15] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:38:20] Action "css/images" does not exist.
+[18-Sep-2012 22:38:20] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:38:20] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:38:21] Unknown record property / related component "getTaskWork" on "TaskLog"
+[18-Sep-2012 22:38:22] Action "sf/sf_default" does not exist.
+[18-Sep-2012 22:38:22] Action "sf/sf_default" does not exist.
+[18-Sep-2012 22:38:22] Action "sf/sf_default" does not exist.
+[18-Sep-2012 22:38:22] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:38:35] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:38:35] Action "css/images" does not exist.
+[18-Sep-2012 22:38:36] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:41:40] Action "css/images" does not exist.
+[18-Sep-2012 22:41:43] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:41:43] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:42:03] Action "css/images" does not exist.
+[18-Sep-2012 22:42:03] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:42:03] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:42:04] Action "css/images" does not exist.
+[18-Sep-2012 22:42:04] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:42:05] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:42:10] Action "css/images" does not exist.
+[18-Sep-2012 22:42:10] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:42:10] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:42:12] Action "css/images" does not exist.
+[18-Sep-2012 22:42:12] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:42:12] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:42:18] Action "css/images" does not exist.
+[18-Sep-2012 22:42:18] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:42:19] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:42:20] Action "css/images" does not exist.
+[18-Sep-2012 22:42:20] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:42:21] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:42:26] Action "css/images" does not exist.
+[18-Sep-2012 22:42:26] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:42:26] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:42:28] Action "css/images" does not exist.
+[18-Sep-2012 22:42:28] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:42:28] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:42:30] Action "css/images" does not exist.
+[18-Sep-2012 22:42:30] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:42:31] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:42:32] Action "css/images" does not exist.
+[18-Sep-2012 22:42:32] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:42:33] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:42:42] Action "css/images" does not exist.
+[18-Sep-2012 22:42:42] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:42:42] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:42:44] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:42:44] Action "css/images" does not exist.
+[18-Sep-2012 22:42:44] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:42:45] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:42:45] Action "css/images" does not exist.
+[18-Sep-2012 22:42:46] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:42:59] Action "css/images" does not exist.
+[18-Sep-2012 22:42:59] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:43:01] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:43:01] Action "css/images" does not exist.
+[18-Sep-2012 22:43:01] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:43:02] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:43:07] Action "css/images" does not exist.
+[18-Sep-2012 22:43:07] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:43:07] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:43:09] Action "css/images" does not exist.
+[18-Sep-2012 22:43:09] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:43:09] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:43:12] Action "css/images" does not exist.
+[18-Sep-2012 22:43:12] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:43:12] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:43:13] Action "css/images" does not exist.
+[18-Sep-2012 22:43:13] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:43:13] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:43:14] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:43:14] Action "css/images" does not exist.
+[18-Sep-2012 22:43:14] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:43:15] Action "css/images" does not exist.
+[18-Sep-2012 22:43:15] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:43:15] Empty module and/or action after parsing the URL "/favicon.ico" (/).
+[18-Sep-2012 22:44:37] Action "css/images" does not exist.
+[18-Sep-2012 22:44:37] Empty module and/or action after parsing the URL "/images/logo.png" (/).
+[18-Sep-2012 22:44:37] Empty module and/or action after parsing the URL "/favicon.ico" (/).
