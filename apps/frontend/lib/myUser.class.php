@@ -24,21 +24,27 @@ class myUser extends sfGuardSecurityUser{
         }
 
         return false;
-
     }
 
     public function isStaff() {
+
         if($this->getUserType() == 'staff') {
-            return true;
+            return Doctrine_Core::getTable('Staff')->getByUserId($this->getId());
+            //return $this->getStaff(); 
         }
         return false;
     }
 
     public function isClient() {
         if($this->getUserType() == 'client') {
-            return true;
+            return Doctrine_Core::getTable('Client')->getByUserId($this->getId());
+
         }
         return false;
+    }
+
+    public static function getLoggedIn() {
+        return sfContext::getInstance()->getUser();
     }
 
 }

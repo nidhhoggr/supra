@@ -8,15 +8,21 @@
  * @property integer $id
  * @property string $name
  * @property boolean $clock_in
+ * @property string $color
+ * @property string $image
  * @property Doctrine_Collection $TimeLog
  * 
  * @method integer             getId()       Returns the current record's "id" value
  * @method string              getName()     Returns the current record's "name" value
  * @method boolean             getClockIn()  Returns the current record's "clock_in" value
+ * @method string              getColor()    Returns the current record's "color" value
+ * @method string              getImage()    Returns the current record's "image" value
  * @method Doctrine_Collection getTimeLog()  Returns the current record's "TimeLog" collection
  * @method TimeLogType         setId()       Sets the current record's "id" value
  * @method TimeLogType         setName()     Sets the current record's "name" value
  * @method TimeLogType         setClockIn()  Sets the current record's "clock_in" value
+ * @method TimeLogType         setColor()    Sets the current record's "color" value
+ * @method TimeLogType         setImage()    Sets the current record's "image" value
  * @method TimeLogType         setTimeLog()  Sets the current record's "TimeLog" collection
  * 
  * @package    supra
@@ -41,6 +47,14 @@ abstract class BaseTimeLogType extends sfDoctrineRecord
         $this->hasColumn('clock_in', 'boolean', null, array(
              'type' => 'boolean',
              'notnull' => true,
+             ));
+        $this->hasColumn('color', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
+             ));
+        $this->hasColumn('image', 'string', 255, array(
+             'type' => 'string',
+             'length' => 255,
              ));
     }
 

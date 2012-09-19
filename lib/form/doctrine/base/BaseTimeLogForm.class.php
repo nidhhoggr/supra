@@ -14,16 +14,11 @@ abstract class BaseTimeLogForm extends BaseFormDoctrine
 {
   public function setup()
   {
-    if(!$this->getCurrentUser()->isSuperAdmin())
-        $staff_input = new sfWidgetFormInputHidden;
-    else 
-        $staff_input = new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Staff'), 'add_empty' => false));
-
     $this->setWidgets(array(
       'id'               => new sfWidgetFormInputHidden(),
-      'time_log_type_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TimeLogType'), 'add_empty' => false)),
-      'staff_id'         => $staff_input,
-      'time'             => $this->sfWidgetFormHumanTime(),
+      'time_log_type_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('TimeLogType'), 'add_empty' => true)),
+      'staff_id'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Staff'), 'add_empty' => false)),
+      'time'             => new sfWidgetFormDateTime(),
       'notes'            => new sfWidgetFormTextarea(),
       'created_at'       => new sfWidgetFormDateTime(),
       'updated_at'       => new sfWidgetFormDateTime(),
@@ -31,7 +26,7 @@ abstract class BaseTimeLogForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'               => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'time_log_type_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TimeLogType'))),
+      'time_log_type_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('TimeLogType'), 'required' => false)),
       'staff_id'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Staff'))),
       'time'             => new sfValidatorDateTime(),
       'notes'            => new sfValidatorString(array('required' => false)),

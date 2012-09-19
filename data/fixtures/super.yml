@@ -1,90 +1,412 @@
-StaffTaskWork:
-  StaffTaskWork_1:
-    Staff: Staff_1
-    TaskWork: TaskWork_1
-  StaffTaskWork_2:
-    Staff: Staff_2
-    TaskWork: TaskWork_2
-  StaffTaskWork_3:
-    Staff: Staff_3
-    TaskWork: TaskWork_3
-  StaffTaskWork_4:
-    Staff: Staff_4
-    TaskWork: TaskWork_2
-  StaffTaskWork_5:
-    Staff: Staff_5
-    TaskWork: TaskWork_1
+Account:
+  Account_1:
+    Client: Client_2
+    title: 'Super Accountant'
+    domain_name: 'http://accounting.clonedparts.com'
+    description: 'Testing account creation'
+    active: true
+    created_at: '2012-04-19 15:10:50'
+    updated_at: '2012-04-20 18:03:19'
+  Account_2:
+    Client: Client_2
+    Plan: Plan_1
+    title: 'Brevard County site'
+    domain_name: BrevardCounty.com
+    description: 'Website for county ...  profit generating,  god willing.'
+    active: true
+    created_at: '2012-04-20 18:08:43'
+    updated_at: '2012-04-20 18:08:43'
 TaskComment:
   TaskComment_1:
-    Task: Task_1
-    Staff: Staff_1
-    title: 'bug 1'
-    comment: 'description for bug 1'
-    created_at: '2012-03-29 00:30:01'
-    updated_at: '2012-03-29 00:30:01'
-  TaskComment_2:
     Task: Task_2
     Staff: Staff_1
-    title: 'bug 2'
-    comment: 'description for bug 2'
-    created_at: '2012-03-29 00:30:01'
-    updated_at: '2012-03-29 00:30:01'
+    title: test
+    comment: 'test comment'
+    created_at: '2012-04-19 15:20:17'
+    updated_at: '2012-04-19 15:20:17'
+  TaskComment_2:
+    Task: Task_2
+    Staff: Staff_3
+    title: Lurking
+    comment: "Just letting you know that I'm watching you work on this task ...\r\n\r\nI'm lurking"
+    created_at: '2012-04-20 17:12:06'
+    updated_at: '2012-04-20 17:13:34'
   TaskComment_3:
-    Task: Task_3
+    Task: Task_17
     Staff: Staff_2
-    title: 'bug 3'
-    comment: 'description for bug 3'
-    created_at: '2012-03-29 00:30:01'
-    updated_at: '2012-03-29 00:30:01'
-  TaskComment_4:
-    Task: Task_4
+    title: 'not needed '
+    comment: 'this feature no longer exsists however we can still filter out some other things will be working on it'
+    created_at: '2012-05-06 00:32:39'
+    updated_at: '2012-05-06 00:32:39'
+TaskStatus:
+  TaskStatus_1:
+    name: incomplete
+  TaskStatus_2:
+    name: 'in progress'
+  TaskStatus_3:
+    name: complete
+  TaskStatus_4:
+    name: 'need more info'
+  TaskStatus_5:
+    name: 'on hold'
+TaskType:
+  TaskType_1:
+    name: addition
+  TaskType_2:
+    name: improvement
+  TaskType_3:
+    name: bug
+Task:
+  Task_1:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_4
+    TaskType: TaskType_2
+    TaskPriority: TaskPriority_2
+    TaskWork: TaskWork_4
+    ref_no: '12345'
+    name: 'Testing '
+    description: 'Testing new Task'
+    created_at: '2012-04-19 15:15:25'
+    updated_at: '2012-04-19 15:15:25'
+  Task_2:
+    Account: Account_1
+    User: sfGuardUser_11
+    TaskStatus: TaskStatus_2
+    TaskType: TaskType_2
+    TaskPriority: TaskPriority_2
+    TaskWork: TaskWork_4
+    ref_no: '42389479'
+    name: 'SuperAccount Employee Interface Testing'
+    description: 'perfrom structured walkthrough of the employee frontend interface'
+    created_at: '2012-04-19 15:18:06'
+    updated_at: '2012-04-20 17:09:01'
+  Task_3:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_3
+    TaskPriority: TaskPriority_2
+    TaskWork: TaskWork_1
+    ref_no: '345345'
+    name: 'Client Link broken'
+    description: 'client link is broken'
+    created_at: '2012-04-19 15:27:05'
+    updated_at: '2012-04-19 17:15:02'
+  Task_4:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_2
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_1
+    ref_no: '1234234'
+    name: 'DateTime Inputs'
+    description: 'replace all select datetime inputs with jquery inputs'
+    created_at: '2012-04-19 15:28:23'
+    updated_at: '2012-04-22 02:09:49'
+  Task_5:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_1
+    ref_no: '53453'
+    name: 'Empyoyee "Emplyee" tab and crud'
+    description: 'create an employee tab and respective crud'
+    created_at: '2012-04-19 15:29:38'
+    updated_at: '2012-04-29 01:06:00'
+  Task_6:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_1
+    ref_no: '123456'
+    name: Pages
+    description: 'Setup Pagination'
+    created_at: '2012-04-19 15:53:08'
+    updated_at: '2012-04-28 23:45:47'
+  Task_7:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_1
+    ref_no: '213213'
+    name: 'crud functions for work log'
+    description: ''
+    created_at: '2012-04-19 15:54:55'
+    updated_at: '2012-04-29 02:58:09'
+  Task_8:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_2
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_1
+    ref_no: '5345345'
+    name: 'Deployment Environments'
+    description: 'Setup deployment environments to aid in the agile devlopment process '
+    created_at: '2012-04-19 16:15:17'
+    updated_at: '2012-04-19 16:15:17'
+  Task_9:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_3
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_1
+    ref_no: '5342553'
+    name: 'Ingreity Error UponDelete'
+    description: 'fix integroty contraint errors when attempting to delete various objects '
+    created_at: '2012-04-19 17:14:36'
+    updated_at: '2012-04-30 01:38:07'
+  Task_10:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_3
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_1
+    ref_no: '1'
+    name: 'task comment problem'
+    description: 'make comment staff id name hidden so that it can''t be changed.'
+    created_at: '2012-04-20 16:02:35'
+    updated_at: '2012-04-29 01:41:51'
+  Task_11:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_3
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_1
+    ref_no: '2'
+    name: 'work log'
+    description: 'staff id made hidden in work log'
+    created_at: '2012-04-20 16:03:57'
+    updated_at: '2012-04-29 03:03:21'
+  Task_12:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_3
+    TaskWork: TaskWork_1
+    ref_no: '123456969'
+    name: 'Create Description/Task Priorties'
+    description: 'needs Create Description spot for Task Priorty'
+    created_at: '2012-04-20 17:07:26'
+    updated_at: '2012-05-03 18:15:30'
+  Task_13:
+    Account: Account_2
+    User: sfGuardUser_14
+    TaskStatus: TaskStatus_2
+    TaskType: TaskType_2
+    TaskPriority: TaskPriority_3
+    TaskWork: TaskWork_3
+    ref_no: '565656'
+    name: 'Create meeting with JParker for BC.com'
+    description: 'Create meeting with JParker for BC.com to discuss Hometown news site partner'
+    created_at: '2012-04-20 17:33:04'
+    updated_at: '2012-04-20 18:09:19'
+  Task_14:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_5
+    TaskWork: TaskWork_1
+    ref_no: '54545457'
+    name: 'Employee Billiable or NOT Choice'
+    description: 'lets allow employees to choose whats bi-able or not'
+    created_at: '2012-04-20 18:27:05'
+    updated_at: '2012-04-29 03:01:27'
+  Task_15:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_5
+    TaskWork: TaskWork_1
+    ref_no: '0000012'
+    name: 'Auto Generate Ref #''s'
+    description: 'Auto Generate Ref #''s'
+    created_at: '2012-04-20 18:28:33'
+    updated_at: '2012-05-05 19:23:08'
+  Task_16:
+    Account: Account_1
+    User: sfGuardUser_11
+    TaskStatus: TaskStatus_1
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_5
+    TaskWork: TaskWork_1
+    ref_no: '0000013'
+    name: 'Completed Tasks Dont Show'
+    description: 'want to make it so the completed tasks dont show up in the drop list to choose from'
+    created_at: '2012-04-20 18:32:09'
+    updated_at: '2012-04-20 18:32:09'
+  Task_17:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_1
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_1
+    ref_no: '68769879687698'
+    name: 'Invoice Creation Task/Account Ajax'
+    description: 'make an ajax selector on the invoice task associator for task that associated the the selected account, is_billable and is incomplete.'
+    created_at: '2012-04-20 18:33:50'
+    updated_at: '2012-04-20 18:33:50'
+  Task_18:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_1
+    ref_no: '58545465'
+    name: 'Staff/Employee Naming'
+    description: 'be sure to change the staff employee naming throughout the frontend and backned'
+    created_at: '2012-04-20 18:35:58'
+    updated_at: '2012-04-29 01:31:06'
+  Task_19:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_1
+    ref_no: '76646574'
+    name: 'Paging Sortable By Fields'
+    description: 'make the paging function sortable by fields'
+    created_at: '2012-04-20 18:36:46'
+    updated_at: '2012-04-28 23:46:47'
+  Task_21:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_1
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_1
+    ref_no: '41234132'
+    name: 'timelog status coloration inconable'
+    description: 'give the capabilities of prividing icons or colors for timelogs '
+    created_at: '2012-04-20 18:45:31'
+    updated_at: '2012-04-20 18:45:31'
+  Task_22:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_3
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_1
+    ref_no: '34532453'
+    name: 'Total Hours Miscalculating'
+    description: 'the getTotalHours function is micalculating when users enter hours manually instaed of with the jQuetry datetime picker'
+    created_at: '2012-05-03 18:19:59'
+    updated_at: '2012-05-03 18:24:22'
+  Task_23:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_2
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_2
+    ref_no: '4364564645'
+    name: 'Paging Styling/images'
+    description: 'create css styling for the pager as well as arrow images etc'
+    created_at: '2012-05-03 18:21:06'
+    updated_at: '2012-05-03 18:23:03'
+  Task_24:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_3
+    TaskType: TaskType_1
+    TaskPriority: TaskPriority_3
+    TaskWork: TaskWork_1
+    ref_no: '23453453'
+    name: 'Validate clockin/clockout'
+    description: 'vlidate clockin clockout based on the users current clock status. For example a user should not have the option to clock out if tey are already clocked out.'
+    created_at: '2012-05-05 18:02:25'
+    updated_at: '2012-05-06 00:19:23'
+  Task_25:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_1
+    TaskType: TaskType_2
+    TaskPriority: TaskPriority_3
+    TaskWork: TaskWork_1
+    ref_no: '23453454'
+    name: 'create crid icons on the top of the page'
+    description: 'make sure theat the add icon is at the top of the index action and the add edit and delete are on the top of the show action ov every single object'
+    created_at: '2012-05-06 00:30:05'
+    updated_at: '2012-05-06 00:30:05'
+  Task_26:
+    Account: Account_1
+    User: sfGuardUser_12
+    TaskStatus: TaskStatus_1
+    TaskType: TaskType_2
+    TaskPriority: TaskPriority_1
+    TaskWork: TaskWork_1
+    ref_no: '23453455'
+    name: 'Create invoice tab'
+    description: 'create the invoice tab with crud accessiblke to superadmin only'
+    created_at: '2012-05-06 00:55:58'
+    updated_at: '2012-05-06 00:55:58'
+TimeLog:
+  TimeLog_1:
+    TimeLogType: TimeLogType_2
+    Staff: Staff_1
+    time: '2012-04-19 17:07:00'
+    notes: 'time for food'
+    created_at: '2012-04-19 15:58:38'
+    updated_at: '2012-04-19 16:07:37'
+  TimeLog_2:
+    TimeLogType: TimeLogType_1
+    Staff: Staff_1
+    time: '2012-04-20 12:57:00'
+    notes: ''
+    created_at: '2012-04-20 11:57:38'
+    updated_at: '2012-04-20 11:57:38'
+  TimeLog_3:
+    TimeLogType: TimeLogType_4
+    Staff: Staff_1
+    time: '2012-04-20 12:03:00'
+    notes: ''
+    created_at: '2012-04-20 12:03:41'
+    updated_at: '2012-04-20 12:03:45'
+  TimeLog_4:
+    TimeLogType: TimeLogType_2
+    Staff: Staff_1
+    time: '2012-04-20 17:00:00'
+    notes: ''
+    created_at: '2012-04-20 15:49:28'
+    updated_at: '2012-04-20 15:49:28'
+  TimeLog_5:
+    TimeLogType: TimeLogType_1
+    Staff: Staff_3
+    time: '2012-04-20 17:45:00'
+    notes: 'Here working HARDER then anyone as usual'
+    created_at: '2012-04-20 17:39:42'
+    updated_at: '2012-04-20 17:45:21'
+  TimeLog_6:
+    TimeLogType: TimeLogType_1
     Staff: Staff_2
-    title: 'bug 4'
-    comment: 'description for bug 4'
-    created_at: '2012-03-29 00:30:01'
-    updated_at: '2012-03-29 00:30:01'
-  TaskComment_5:
-    Task: Task_5
-    Staff: Staff_3
-    title: 'bug 5'
-    comment: 'description for bug 5'
-    created_at: '2012-03-29 00:30:01'
-    updated_at: '2012-03-29 00:30:01'
-  TaskComment_6:
-    Task: Task_6
-    Staff: Staff_3
-    title: 'bug 6'
-    comment: 'description for bug 6'
-    created_at: '2012-03-29 00:30:01'
-    updated_at: '2012-03-29 00:30:01'
-  TaskComment_7:
-    Task: Task_7
-    Staff: Staff_4
-    title: 'bug 7'
-    comment: 'description for bug 7'
-    created_at: '2012-03-29 00:30:01'
-    updated_at: '2012-03-29 00:30:01'
-  TaskComment_8:
-    Task: Task_8
-    Staff: Staff_4
-    title: 'bug 8'
-    comment: 'description for bug 8'
-    created_at: '2012-03-29 00:30:01'
-    updated_at: '2012-03-29 00:30:01'
-  TaskComment_9:
-    Task: Task_9
-    Staff: Staff_5
-    title: 'bug 9'
-    comment: 'description for bug 9'
-    created_at: '2012-03-29 00:30:01'
-    updated_at: '2012-03-29 00:30:01'
-  TaskComment_10:
-    Task: Task_10
-    Staff: Staff_5
-    title: 'bug 10'
-    comment: 'description for bug 10'
-    created_at: '2012-03-29 00:30:01'
-    updated_at: '2012-03-29 00:30:01'
+    time: '2012-04-20 11:00:00'
+    notes: 'started day ..  cant wait to sleep at my desk'
+    created_at: '2012-04-20 17:44:41'
+    updated_at: '2012-04-20 17:44:41'
+  TimeLog_7:
+    TimeLogType: TimeLogType_1
+    Staff: Staff_2
+    time: '2012-05-11 17:44:00'
+    notes: ''
+    created_at: '2012-05-11 17:45:07'
+    updated_at: '2012-05-11 17:45:07'
 Period:
   Period_1:
     title: yearly
@@ -100,171 +422,6 @@ Plan:
     description: 'host website with one hour of maintenance'
     deduction: '70.00'
     Period: Period_2
-TaskLog:
-  TaskLog_1:
-    Task: Task_1
-    TaskWork: TaskWork_1
-    Staff: Staff_1
-    title: 'bug 1'
-    description: 'had to make it functional'
-    staff_comment: null
-    clock_in: null
-    clock_out: null
-    hours_logged: '4.50'
-    mileage: null
-    percentage: null
-    is_billable: true
-    is_viewable: false
-    created_at: '2012-03-29 00:30:00'
-    updated_at: '2012-03-29 00:30:00'
-  TaskLog_2:
-    Task: Task_2
-    TaskWork: TaskWork_2
-    Staff: Staff_1
-    title: 'bug 2'
-    description: 'had to make it pretty'
-    staff_comment: null
-    clock_in: null
-    clock_out: null
-    hours_logged: '2.00'
-    mileage: null
-    percentage: null
-    is_billable: true
-    is_viewable: false
-    created_at: '2012-03-29 00:30:00'
-    updated_at: '2012-03-29 00:30:00'
-  TaskLog_3:
-    Task: Task_3
-    TaskWork: TaskWork_1
-    Staff: Staff_2
-    title: 'bug 3'
-    description: 'had to make it functional'
-    staff_comment: null
-    clock_in: null
-    clock_out: null
-    hours_logged: '4.50'
-    mileage: null
-    percentage: null
-    is_billable: true
-    is_viewable: false
-    created_at: '2012-03-29 00:30:00'
-    updated_at: '2012-03-29 00:30:00'
-  TaskLog_4:
-    Task: Task_4
-    TaskWork: TaskWork_2
-    Staff: Staff_2
-    title: 'bug 4'
-    description: 'had to make it pretty'
-    staff_comment: null
-    clock_in: null
-    clock_out: null
-    hours_logged: '2.00'
-    mileage: null
-    percentage: null
-    is_billable: true
-    is_viewable: false
-    created_at: '2012-03-29 00:30:00'
-    updated_at: '2012-03-29 00:30:00'
-  TaskLog_5:
-    Task: Task_5
-    TaskWork: TaskWork_1
-    Staff: Staff_3
-    title: 'bug 5'
-    description: 'had to make it functional'
-    staff_comment: null
-    clock_in: null
-    clock_out: null
-    hours_logged: '4.50'
-    mileage: null
-    percentage: null
-    is_billable: true
-    is_viewable: false
-    created_at: '2012-03-29 00:30:00'
-    updated_at: '2012-03-29 00:30:00'
-  TaskLog_6:
-    Task: Task_6
-    TaskWork: TaskWork_2
-    Staff: Staff_3
-    title: 'bug 6'
-    description: 'had to make it pretty'
-    staff_comment: null
-    clock_in: null
-    clock_out: null
-    hours_logged: '2.00'
-    mileage: null
-    percentage: null
-    is_billable: true
-    is_viewable: false
-    created_at: '2012-03-29 00:30:00'
-    updated_at: '2012-03-29 00:30:00'
-  TaskLog_7:
-    Task: Task_7
-    TaskWork: TaskWork_1
-    Staff: Staff_4
-    title: 'bug 7'
-    description: 'had to make it functional'
-    staff_comment: null
-    clock_in: null
-    clock_out: null
-    hours_logged: '4.50'
-    mileage: null
-    percentage: null
-    is_billable: true
-    is_viewable: false
-    created_at: '2012-03-29 00:30:00'
-    updated_at: '2012-03-29 00:30:00'
-  TaskLog_8:
-    Task: Task_8
-    TaskWork: TaskWork_2
-    Staff: Staff_4
-    title: 'bug 8'
-    description: 'had to make it pretty'
-    staff_comment: null
-    clock_in: null
-    clock_out: null
-    hours_logged: '2.00'
-    mileage: null
-    percentage: null
-    is_billable: true
-    is_viewable: false
-    created_at: '2012-03-29 00:30:00'
-    updated_at: '2012-03-29 00:30:00'
-  TaskLog_9:
-    Task: Task_9
-    TaskWork: TaskWork_1
-    Staff: Staff_5
-    title: 'bug 9'
-    description: 'had to make it functional'
-    staff_comment: null
-    clock_in: null
-    clock_out: null
-    hours_logged: '4.50'
-    mileage: null
-    percentage: null
-    is_billable: true
-    is_viewable: false
-    created_at: '2012-03-29 00:30:01'
-    updated_at: '2012-03-29 00:30:01'
-  TaskLog_10:
-    Task: Task_10
-    TaskWork: TaskWork_2
-    Staff: Staff_5
-    title: 'bug 10'
-    description: 'had to make it pretty'
-    staff_comment: null
-    clock_in: null
-    clock_out: null
-    hours_logged: '2.00'
-    mileage: null
-    percentage: null
-    is_billable: true
-    is_viewable: false
-    created_at: '2012-03-29 00:30:01'
-    updated_at: '2012-03-29 00:30:01'
-GenDesc:
-  GenDesc_1:
-    title: 'Virus Removal'
-    description: 'virus removal of the computer'
 TimeLogType:
   TimeLogType_1:
     name: 'Started Day'
@@ -278,67 +435,20 @@ TimeLogType:
   TimeLogType_4:
     name: 'Ended Break'
     clock_in: true
-AccountRecord:
-  AccountRecord_1:
-    Account: Account_1
-    name: 'Account1 Credentials'
-    description: 'these are the account1 credentials'
-    created_at: '2012-03-29 00:30:02'
-    updated_at: '2012-03-29 00:30:02'
-  AccountRecord_2:
+Credential:
+  Credential_1:
     Account: Account_2
-    name: 'Account2 Credentials'
-    description: 'these are the account2 credentials'
-    created_at: '2012-03-29 00:30:02'
-    updated_at: '2012-03-29 00:30:02'
-  AccountRecord_3:
-    Account: Account_3
-    name: 'Account3 Credentials'
-    description: 'these are the account3 credentials'
-    created_at: '2012-03-29 00:30:02'
-    updated_at: '2012-03-29 00:30:02'
-  AccountRecord_4:
-    Account: Account_4
-    name: 'Account4 Credentials'
-    description: 'these are the account4 credentials'
-    created_at: '2012-03-29 00:30:02'
-    updated_at: '2012-03-29 00:30:02'
-  AccountRecord_5:
-    Account: Account_5
-    name: 'Account5 Credentials'
-    description: 'these are the account5 credentials'
-    created_at: '2012-03-29 00:30:02'
-    updated_at: '2012-03-29 00:30:02'
-  AccountRecord_6:
-    Account: Account_6
-    name: 'Account6 Credentials'
-    description: 'these are the account6 credentials'
-    created_at: '2012-03-29 00:30:02'
-    updated_at: '2012-03-29 00:30:02'
-  AccountRecord_7:
-    Account: Account_7
-    name: 'Account7 Credentials'
-    description: 'these are the account7 credentials'
-    created_at: '2012-03-29 00:30:02'
-    updated_at: '2012-03-29 00:30:02'
-  AccountRecord_8:
-    Account: Account_8
-    name: 'Account8 Credentials'
-    description: 'these are the account8 credentials'
-    created_at: '2012-03-29 00:30:02'
-    updated_at: '2012-03-29 00:30:02'
-  AccountRecord_9:
-    Account: Account_9
-    name: 'Account9 Credentials'
-    description: 'these are the account9 credentials'
-    created_at: '2012-03-29 00:30:02'
-    updated_at: '2012-03-29 00:30:02'
-  AccountRecord_10:
-    Account: Account_10
-    name: 'Account10 Credentials'
-    description: 'these are the account10 credentials'
-    created_at: '2012-03-29 00:30:02'
-    updated_at: '2012-03-29 00:30:02'
+    CredentialType: CredentialType_1
+    name: 'FTP Creds'
+    internal_ip: 127.0.0.1
+    external_ip: 74.53.161.98
+    device: server
+    url: brevardcounty.com
+    user: brevardc
+    pass: LockNsync
+    notes: 'none yet'
+    created_at: '2012-04-20 18:14:16'
+    updated_at: '2012-04-20 18:14:16'
 TaskWork:
   TaskWork_1:
     name: Development
@@ -352,629 +462,371 @@ TaskWork:
     name: 'Project Management'
     rate: '110.00'
     description: 'entials interacting with clients creating and delegating tasks'
+  TaskWork_4:
+    name: QA
+    rate: '95.00'
+    description: 'Quality Assurance Testing'
 Client:
-  Client_1:
-    User: sfGuardUser_1
-    track_record: 'good customer'
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
   Client_2:
-    User: sfGuardUser_2
-    track_record: 'good customer'
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
-  Client_3:
-    User: sfGuardUser_3
-    track_record: 'good customer'
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
-  Client_4:
-    User: sfGuardUser_4
-    track_record: 'good customer'
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
-  Client_5:
-    User: sfGuardUser_5
-    track_record: 'good customer'
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
-TimeLog:
-  TimeLog_4:
-    TimeLogType: TimeLogType_1
-    Staff: Staff_4
-    time: '2012-03-29 01:46:00'
-    notes: test
-    created_at: '2012-03-29 01:46:36'
-    updated_at: '2012-03-29 01:46:36'
-  TimeLog_5:
-    TimeLogType: TimeLogType_2
-    Staff: Staff_4
-    time: '2012-03-29 02:21:00'
-    notes: 'im done'
-    created_at: '2012-03-29 02:21:18'
-    updated_at: '2012-03-29 02:21:18'
-  TimeLog_6:
-    TimeLogType: TimeLogType_1
-    Staff: Staff_4
-    time: '2012-03-30 01:46:00'
-    notes: test
-    created_at: '2012-03-30 01:46:36'
-    updated_at: '2012-03-30 01:46:36'
-  TimeLog_7:
-    TimeLogType: TimeLogType_2
-    Staff: Staff_4
-    time: '2012-03-30 02:21:00'
-    notes: 'im done'
-    created_at: '2012-03-30 02:21:18'
-    updated_at: '2012-03-30 02:21:18'
-  TimeLog_8:
-    TimeLogType: TimeLogType_1
-    Staff: Staff_4
-    time: '2012-03-31 01:46:00'
-    notes: test
-    created_at: '2012-03-31 01:46:36'
-    updated_at: '2012-03-31 01:46:36'
-  TimeLog_9:
-    TimeLogType: TimeLogType_2
-    Staff: Staff_4
-    time: '2012-03-31 02:21:00'
-    notes: 'im done'
-    created_at: '2012-03-31 02:21:18'
-    updated_at: '2012-03-31 02:21:18'
-  TimeLog_10:
-    TimeLogType: TimeLogType_1
-    Staff: Staff_4
-    time: '2012-04-01 01:46:00'
-    notes: test
-    created_at: '2012-04-01 01:46:36'
-    updated_at: '2012-04-01 01:46:36'
-  TimeLog_11:
-    TimeLogType: TimeLogType_2
-    Staff: Staff_4
-    time: '2012-04-01 02:21:00'
-    notes: 'im done'
-    created_at: '2012-04-01 02:21:18'
-    updated_at: '2012-04-01 02:21:18'
-  TimeLog_12:
-    TimeLogType: TimeLogType_1
-    Staff: Staff_1
-    time: '2012-03-29 02:21:00'
-    notes: 'drink some coffee '
-    created_at: '2012-03-29 02:22:07'
-    updated_at: '2012-03-29 02:22:07'
-  TimeLog_13:
-    TimeLogType: TimeLogType_1
-    Staff: Staff_4
-    time: '2012-04-04 01:46:00'
-    notes: test
-    created_at: '2012-04-04 01:46:00'
-    updated_at: '2012-04-04 01:46:00'
-  TimeLog_14:
-    TimeLogType: TimeLogType_2
-    Staff: Staff_4
-    time: '2012-03-24 01:46:00'
-    notes: test
-    created_at: '2012-03-24 01:46:36'
-    updated_at: '2012-03-24 01:46:36'
-  TimeLog_15:
-    TimeLogType: TimeLogType_2
-    Staff: Staff_1
-    time: '2012-04-04 11:30:00'
-    notes: 'im done'
-    created_at: '2012-04-04 11:30:39'
-    updated_at: '2012-04-04 11:30:39'
-  TimeLog_16:
-    TimeLogType: TimeLogType_1
-    Staff: Staff_1
-    time: '2012-04-12 16:13:00'
-    notes: ''
-    created_at: '2012-04-12 16:14:00'
-    updated_at: '2012-04-12 16:14:00'
-AccountInvoiceTask:
-  AccountInvoiceTask_1:
-    AccountInvoice: AccountInvoice_1
-    Task: Task_10
-  AccountInvoiceTask_2:
-    AccountInvoice: AccountInvoice_2
-    Task: Task_9
-  AccountInvoiceTask_3:
-    AccountInvoice: AccountInvoice_3
-    Task: Task_8
-  AccountInvoiceTask_4:
-    AccountInvoice: AccountInvoice_4
-    Task: Task_7
-  AccountInvoiceTask_5:
-    AccountInvoice: AccountInvoice_5
-    Task: Task_6
-  AccountInvoiceTask_6:
-    AccountInvoice: AccountInvoice_6
-    Task: Task_5
-  AccountInvoiceTask_7:
-    AccountInvoice: AccountInvoice_7
-    Task: Task_4
-  AccountInvoiceTask_8:
-    AccountInvoice: AccountInvoice_8
-    Task: Task_3
-  AccountInvoiceTask_9:
-    AccountInvoice: AccountInvoice_9
-    Task: Task_2
-  AccountInvoiceTask_10:
-    AccountInvoice: AccountInvoice_10
-    Task: Task_1
-TaskType:
-  TaskType_1:
-    name: addition
-  TaskType_2:
-    name: improvement
-  TaskType_3:
-    name: bug
-sfGuardUser:
-  sfGuardUser_1:
-    first_name: ufn_1
-    last_name: uln_1
-    email_address: user1@supraliminal.com
-    username: user1
-    algorithm: sha1
-    salt: 2501e623683acffa9f672ce96dd9ecd5
-    password: 80a6630a1debdcbadae1f6f74d3e6fef8eae8b1c
-    is_active: true
-    is_super_admin: false
-    last_login: '2012-03-29 17:48:46'
-    created_at: '2012-03-29 00:29:57'
-    updated_at: '2012-03-29 17:48:46'
-  sfGuardUser_2:
-    first_name: ufn_2
-    last_name: uln_2
-    email_address: user2@supraliminal.com
-    username: user2
-    algorithm: sha1
-    salt: null
-    password: null
-    is_active: true
-    is_super_admin: false
-    last_login: null
-    created_at: '2012-03-29 00:29:57'
-    updated_at: '2012-03-29 00:29:57'
-  sfGuardUser_3:
-    first_name: ufn_3
-    last_name: uln_3
-    email_address: user3@supraliminal.com
-    username: user3
-    algorithm: sha1
-    salt: null
-    password: null
-    is_active: true
-    is_super_admin: false
-    last_login: null
-    created_at: '2012-03-29 00:29:57'
-    updated_at: '2012-03-29 00:29:57'
-  sfGuardUser_4:
-    first_name: ufn_4
-    last_name: uln_4
-    email_address: user4@supraliminal.com
-    username: user4
-    algorithm: sha1
-    salt: null
-    password: null
-    is_active: true
-    is_super_admin: false
-    last_login: null
-    created_at: '2012-03-29 00:29:57'
-    updated_at: '2012-03-29 00:29:57'
-  sfGuardUser_5:
-    first_name: ufn_5
-    last_name: uln_5
-    email_address: user5@supraliminal.com
-    username: user5
-    algorithm: sha1
-    salt: null
-    password: null
-    is_active: true
-    is_super_admin: false
-    last_login: null
-    created_at: '2012-03-29 00:29:57'
-    updated_at: '2012-03-29 00:29:57'
-  sfGuardUser_6:
-    first_name: ufn_6
-    last_name: uln_6
-    email_address: user6@supraliminal.com
-    username: user6
-    algorithm: sha1
-    salt: 338316c860858b9d2604ee65d0ab75a7
-    password: 45094700aa7061c3579b49f0711e973e728c2d20
-    is_active: true
-    is_super_admin: true
-    last_login: '2012-04-12 21:59:08'
-    created_at: '2012-03-29 00:29:57'
-    updated_at: '2012-04-12 21:59:08'
-  sfGuardUser_7:
-    first_name: ufn_7
-    last_name: uln_7
-    email_address: user7@supraliminal.com
-    username: user7
-    algorithm: sha1
-    salt: null
-    password: null
-    is_active: true
-    is_super_admin: false
-    last_login: null
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
-  sfGuardUser_8:
-    first_name: ufn_8
-    last_name: uln_8
-    email_address: user8@supraliminal.com
-    username: user8
-    algorithm: sha1
-    salt: null
-    password: null
-    is_active: true
-    is_super_admin: false
-    last_login: null
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
-  sfGuardUser_9:
-    first_name: ufn_9
-    last_name: uln_9
-    email_address: user9@supraliminal.com
-    username: user9
-    algorithm: sha1
-    salt: 40272f878a2235381f87519670668121
-    password: 4bbde18f96e4959c60d83fa65a92c3b23afe11a4
-    is_active: true
-    is_super_admin: false
-    last_login: '2012-04-12 21:52:37'
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-04-12 21:52:37'
-  sfGuardUser_10:
-    first_name: ufn_10
-    last_name: uln_10
-    email_address: user10@supraliminal.com
-    username: user10
-    algorithm: sha1
-    salt: null
-    password: null
-    is_active: true
-    is_super_admin: false
-    last_login: null
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
+    User: sfGuardUser_15
+    track_record: ''
+    created_at: '2012-04-20 18:01:46'
+    updated_at: '2012-04-20 18:01:46'
 Staff:
   Staff_1:
-    User: sfGuardUser_6
-    title: staff
-    bio: 'is a staff of supraliminal.info'
-    is_subcontractor: false
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
+    User: sfGuardUser_11
+    title: ddd
+    bio: ddduuuuuuuu
+    is_subcontractor: true
+    created_at: '2012-04-19 15:02:41'
+    updated_at: '2012-04-19 15:49:23'
   Staff_2:
-    User: sfGuardUser_7
-    title: staff
-    bio: 'is a staff of supraliminal.info'
-    is_subcontractor: false
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
+    User: sfGuardUser_12
+    title: Developer
+    bio: 'The developer'
+    is_subcontractor: true
+    created_at: '2012-04-19 15:06:28'
+    updated_at: '2012-04-19 15:06:28'
   Staff_3:
-    User: sfGuardUser_8
-    title: staff
-    bio: 'is a staff of supraliminal.info'
+    User: sfGuardUser_14
+    title: VP
+    bio: 'me / caveman'
     is_subcontractor: false
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
+    created_at: '2012-04-20 16:58:34'
+    updated_at: '2012-04-20 16:58:34'
   Staff_4:
-    User: sfGuardUser_9
-    title: staff
-    bio: 'is a staff of supraliminal.info'
+    User: sfGuardUser_16
+    title: 'President of Geek Club'
+    bio: 'human (sort of)'
     is_subcontractor: false
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
-  Staff_5:
-    User: sfGuardUser_10
-    title: staff
-    bio: 'is a staff of supraliminal.info'
-    is_subcontractor: false
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
-Task:
-  Task_1:
-    Account: Account_1
-    Staff: Staff_1
-    TaskStatus: TaskStatus_4
-    TaskType: TaskType_3
-    TaskPriority: TaskPriority_2
-    TaskWork: TaskWork_1
-    ref_no: '320389'
-    name: bug_1
-    description: 'need to be able to edit the site'
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  Task_2:
+    created_at: '2012-04-20 18:35:52'
+    updated_at: '2012-04-20 18:35:52'
+AccountInvoice:
+  AccountInvoice_1:
     Account: Account_2
+    ref_no: '45655545'
+    description: 'Current work done for brevardcounty.com site ...  test invoice'
+    paid_off: false
+    is_viewable: true
+    created_at: '2012-04-20 18:22:52'
+    updated_at: '2012-04-20 18:22:52'
+  AccountInvoice_2:
+    Account: Account_1
+    ref_no: '45655546'
+    description: 'this is the invoice for the superaccount development work'
+    paid_off: false
+    is_viewable: true
+    created_at: '2012-05-06 00:57:10'
+    updated_at: '2012-05-06 00:57:10'
+TaskLog:
+  TaskLog_1:
+    Task: Task_2
+    TaskWork: TaskWork_1
     Staff: Staff_1
-    TaskStatus: TaskStatus_2
-    TaskType: TaskType_1
-    TaskPriority: TaskPriority_1
-    TaskWork: TaskWork_2
-    ref_no: '320390'
-    name: bug_2
-    description: 'tax doesnt show up'
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  Task_3:
-    Account: Account_3
+    title: 'Test work on new tasks'
+    description: ''
+    staff_comment: ''
+    clock_in: '2014-05-03 07:08:00'
+    clock_out: '2012-05-03 08:08:00'
+    hours_logged: '1.00'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: true
+    created_at: '2012-04-19 15:23:53'
+    updated_at: '2012-04-19 15:23:53'
+  TaskLog_2:
+    Task: Task_2
+    TaskWork: TaskWork_4
+    Staff: Staff_1
+    title: 'work on QA testing'
+    description: 'found problems and set them up as tasks'
+    staff_comment: ''
+    clock_in: '2012-04-19 03:30:00'
+    clock_out: '2012-04-19 05:00:00'
+    hours_logged: '1.50'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: true
+    created_at: '2012-04-19 15:56:46'
+    updated_at: '2012-04-19 15:57:13'
+  TaskLog_3:
+    Task: Task_6
+    TaskWork: TaskWork_1
     Staff: Staff_2
-    TaskStatus: TaskStatus_4
-    TaskType: TaskType_3
-    TaskPriority: TaskPriority_2
+    title: 'Pagination edits'
+    description: 'implemented pagination for tasks and set limit to 10 for both clients and tasks as well as assured the paginator always shows at the bottom to sort fields'
+    staff_comment: ''
+    clock_in: null
+    clock_out: null
+    hours_logged: '2.00'
+    mileage: null
+    percentage: null
+    is_billable: false
+    is_viewable: true
+    created_at: '2012-04-19 17:21:42'
+    updated_at: '2012-04-19 17:21:42'
+  TaskLog_4:
+    Task: Task_2
     TaskWork: TaskWork_1
-    ref_no: '320391'
-    name: bug_3
-    description: 'need to be able to edit the site'
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  Task_4:
-    Account: Account_4
+    Staff: Staff_3
+    title: checking
+    description: "just checking to see if u got this done yet ...   i see no\r\n\r\nu suck"
+    staff_comment: ''
+    clock_in: '2012-04-20 17:25:00'
+    clock_out: '2012-04-20 17:25:00'
+    hours_logged: null
+    mileage: null
+    percentage: null
+    is_billable: false
+    is_viewable: true
+    created_at: '2012-04-20 17:25:42'
+    updated_at: '2012-04-20 17:27:04'
+  TaskLog_5:
+    Task: Task_13
+    TaskWork: TaskWork_1
+    Staff: Staff_3
+    title: ''
+    description: ''
+    staff_comment: ''
+    clock_in: '2012-04-20 17:35:00'
+    clock_out: '2012-04-20 17:35:00'
+    hours_logged: null
+    mileage: null
+    percentage: null
+    is_billable: false
+    is_viewable: true
+    created_at: '2012-04-20 17:35:09'
+    updated_at: '2012-04-20 17:35:14'
+  TaskLog_6:
+    Task: Task_4
+    TaskWork: TaskWork_1
     Staff: Staff_2
-    TaskStatus: TaskStatus_2
-    TaskType: TaskType_1
-    TaskPriority: TaskPriority_1
-    TaskWork: TaskWork_2
-    ref_no: '320392'
-    name: bug_4
-    description: 'tax doesnt show up'
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  Task_5:
-    Account: Account_5
-    Staff: Staff_3
-    TaskStatus: TaskStatus_4
-    TaskType: TaskType_3
-    TaskPriority: TaskPriority_2
+    title: 'plugin creation and implmentation'
+    description: 'created a symfony plugin widget and validator to return the input as a valid datetime. Implemented the plugin in all areas of the form where previous datetime info was displayed'
+    staff_comment: ''
+    clock_in: '2012-04-22 02:07:00'
+    clock_out: '2012-04-22 02:07:00'
+    hours_logged: '4.00'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: true
+    created_at: '2012-04-22 02:08:52'
+    updated_at: '2012-04-22 02:08:52'
+  TaskLog_7:
+    Task: Task_19
     TaskWork: TaskWork_1
-    ref_no: '320393'
-    name: bug_5
-    description: 'need to be able to edit the site'
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  Task_6:
-    Account: Account_6
-    Staff: Staff_3
-    TaskStatus: TaskStatus_2
-    TaskType: TaskType_1
-    TaskPriority: TaskPriority_1
-    TaskWork: TaskWork_2
-    ref_no: '320394'
-    name: bug_6
-    description: 'tax doesnt show up'
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  Task_7:
-    Account: Account_7
-    Staff: Staff_4
-    TaskStatus: TaskStatus_4
-    TaskType: TaskType_3
-    TaskPriority: TaskPriority_2
+    Staff: Staff_2
+    title: 'created and implemented pagerutil'
+    description: 'created and implemented the page util on both task and clinet actions index tmeplates. The utiltiy is compleye with three different portion of templating for prefertial purposes'
+    staff_comment: ''
+    clock_in: '2012-04-28 23:43:00'
+    clock_out: '2012-04-28 23:43:00'
+    hours_logged: '3.50'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: true
+    created_at: '2012-04-28 23:45:09'
+    updated_at: '2012-04-28 23:45:09'
+  TaskLog_8:
+    Task: Task_5
     TaskWork: TaskWork_1
-    ref_no: '320395'
-    name: bug_7
-    description: 'need to be able to edit the site'
-    created_at: '2012-03-29 00:30:00'
-    updated_at: '2012-03-29 00:30:00'
-  Task_8:
-    Account: Account_8
-    Staff: Staff_4
-    TaskStatus: TaskStatus_3
-    TaskType: TaskType_1
-    TaskPriority: TaskPriority_1
-    TaskWork: TaskWork_2
-    ref_no: '320396'
-    name: bug_8
-    description: 'tax doesnt show up'
-    created_at: '2012-03-29 00:30:00'
-    updated_at: '2012-03-29 18:44:24'
-  Task_9:
-    Account: Account_9
-    Staff: Staff_5
-    TaskStatus: TaskStatus_4
-    TaskType: TaskType_3
-    TaskPriority: TaskPriority_2
+    Staff: Staff_2
+    title: 'complete this '
+    description: 'created the tab set the font to 12px for the nav created the employee tab and edited the baseofrm for embeduser to moit admin editable fields for edit profile'
+    staff_comment: ''
+    clock_in: '2012-04-29 01:02:00'
+    clock_out: '2012-04-29 01:02:00'
+    hours_logged: '0.70'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: true
+    created_at: '2012-04-29 01:04:57'
+    updated_at: '2012-04-29 01:04:57'
+  TaskLog_9:
+    Task: Task_18
     TaskWork: TaskWork_1
-    ref_no: '320397'
-    name: bug_9
-    description: 'need to be able to edit the site'
-    created_at: '2012-03-29 00:30:00'
-    updated_at: '2012-03-29 00:30:00'
-  Task_10:
-    Account: Account_10
-    Staff: Staff_5
-    TaskStatus: TaskStatus_2
-    TaskType: TaskType_1
-    TaskPriority: TaskPriority_1
+    Staff: Staff_2
+    title: 'Finished in frontend'
+    description: 'finished in the fronted still some resdiual instances in filters on the backend, not that important at the moment'
+    staff_comment: ''
+    clock_in: '2012-04-29 01:29:00'
+    clock_out: '2012-04-29 01:29:00'
+    hours_logged: '0.35'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: true
+    created_at: '2012-04-29 01:30:29'
+    updated_at: '2012-04-29 01:30:29'
+  TaskLog_10:
+    Task: Task_18
+    TaskWork: TaskWork_1
+    Staff: Staff_2
+    title: 'Finished in frontend'
+    description: 'finished in the fronted still some resdiual instances in filters on the backend, not that important at the moment'
+    staff_comment: ''
+    clock_in: '2012-04-29 01:29:00'
+    clock_out: '2012-04-29 01:29:00'
+    hours_logged: '0.35'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: true
+    created_at: '2012-04-29 01:30:29'
+    updated_at: '2012-04-29 01:30:29'
+  TaskLog_11:
+    Task: Task_7
+    TaskWork: TaskWork_1
+    Staff: Staff_2
+    title: 'added crud for work log and task log'
+    description: 'added the edit feature for work log and comment as well as Back To Task in those actions'
+    staff_comment: ''
+    clock_in: '2012-04-29 02:56:00'
+    clock_out: '2012-04-29 02:56:00'
+    hours_logged: '1.20'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: true
+    created_at: '2012-04-29 02:57:43'
+    updated_at: '2012-04-29 02:57:43'
+  TaskLog_12:
+    Task: Task_14
+    TaskWork: TaskWork_1
+    Staff: Staff_2
+    title: done
+    description: 'Employees now have the capabilities specifying whether or not the task log is billable'
+    staff_comment: ''
+    clock_in: '2012-04-29 02:58:00'
+    clock_out: '2012-04-29 02:58:00'
+    hours_logged: '0.10'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: true
+    created_at: '2012-04-29 02:59:47'
+    updated_at: '2012-04-29 02:59:47'
+  TaskLog_13:
+    Task: Task_9
+    TaskWork: TaskWork_1
+    Staff: Staff_2
+    title: 'A whole lot more'
+    description: 'had to revise the schema and explicity declare onDelete for each repective object as well as deleted the m2m ref between account invoice and task'
+    staff_comment: ''
+    clock_in: '2012-04-30 01:36:00'
+    clock_out: '2012-04-30 01:36:00'
+    hours_logged: '4.00'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: true
+    created_at: '2012-04-30 01:37:54'
+    updated_at: '2012-04-30 01:37:54'
+  TaskLog_14:
+    Task: Task_12
+    TaskWork: TaskWork_1
+    Staff: Staff_2
+    title: export/build
+    description: 'had to edit the schema and rebuild both apps and export the sql export into the nstaging dtabase'
+    staff_comment: ''
+    clock_in: '2012-05-03 18:12:00'
+    clock_out: '2012-05-03 18:12:00'
+    hours_logged: '0.90'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: true
+    created_at: '2012-05-03 18:13:26'
+    updated_at: '2012-05-03 18:13:26'
+  TaskLog_15:
+    Task: Task_23
     TaskWork: TaskWork_2
-    ref_no: '320398'
-    name: bug_10
-    description: 'tax doesnt show up'
-    created_at: '2012-03-29 00:30:00'
-    updated_at: '2012-03-29 00:30:00'
-TaskStatus:
-  TaskStatus_1:
-    name: incomplete
-  TaskStatus_2:
-    name: 'in progress'
-  TaskStatus_3:
-    name: complete
-  TaskStatus_4:
-    name: 'need more info'
-  TaskStatus_5:
-    name: 'on hold'
+    Staff: Staff_2
+    title: 'Did some styling'
+    description: 'created the css as well as added the arrow png for descedning and ascending sort as well ast arrows for the pager at the bottom, gave the contents a dark grey background'
+    staff_comment: ''
+    clock_in: '2012-05-03 18:22:00'
+    clock_out: '2012-05-03 18:22:00'
+    hours_logged: '2.30'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: true
+    created_at: '2012-05-03 18:22:22'
+    updated_at: '2012-05-03 18:22:39'
+  TaskLog_16:
+    Task: Task_22
+    TaskWork: TaskWork_1
+    Staff: Staff_2
+    title: 'calculation bug'
+    description: 'fixed this by checking in the timediff of the datpicker is null then selct hours logged.'
+    staff_comment: ''
+    clock_in: '2012-05-03 18:23:00'
+    clock_out: '2012-05-03 18:23:00'
+    hours_logged: '0.34'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: true
+    created_at: '2012-05-03 18:24:12'
+    updated_at: '2012-05-03 18:24:12'
+  TaskLog_17:
+    Task: Task_15
+    TaskWork: TaskWork_1
+    Staff: Staff_2
+    title: 'All done'
+    description: 'created an implmneted function in the table class and form of both taks and accountinvoice '
+    staff_comment: ''
+    clock_in: '2012-05-05 19:20:00'
+    clock_out: '2012-05-05 19:20:00'
+    hours_logged: '1.30'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: true
+    created_at: '2012-05-05 19:22:43'
+    updated_at: '2012-05-05 19:22:43'
+  TaskLog_18:
+    Task: Task_24
+    TaskWork: TaskWork_1
+    Staff: Staff_2
+    title: 'timelog validted the type'
+    description: 'validted the ype of the login by detectting if its a clockin and providing types of otherwise and viserversa'
+    staff_comment: ''
+    clock_in: '2012-05-06 00:17:00'
+    clock_out: '2012-05-06 00:17:00'
+    hours_logged: '0.80'
+    mileage: null
+    percentage: null
+    is_billable: true
+    is_viewable: true
+    created_at: '2012-05-06 00:18:55'
+    updated_at: '2012-05-06 00:18:55'
+CredentialType:
+  CredentialType_1:
+    name: FTP
 TaskPriority:
   TaskPriority_1:
     name: critical
+    description: null
   TaskPriority_2:
     name: blocker
+    description: null
   TaskPriority_3:
     name: minor
+    description: null
   TaskPriority_4:
     name: backlist
-AccountInvoice:
-  AccountInvoice_1:
-    Account: Account_1
-    ref_no: '320389'
-    description: 'for the whole design and implemeantation of the site good customer discount'
-    paid_off: true
-    is_viewable: false
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  AccountInvoice_2:
-    Account: Account_2
-    ref_no: '320390'
-    description: 'built a simple calculator'
-    paid_off: false
-    is_viewable: false
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  AccountInvoice_3:
-    Account: Account_3
-    ref_no: '320391'
-    description: 'for the whole design and implemeantation of the site good customer discount'
-    paid_off: true
-    is_viewable: false
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  AccountInvoice_4:
-    Account: Account_4
-    ref_no: '320392'
-    description: 'built a simple calculator'
-    paid_off: false
-    is_viewable: false
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  AccountInvoice_5:
-    Account: Account_5
-    ref_no: '320393'
-    description: 'for the whole design and implemeantation of the site good customer discount'
-    paid_off: true
-    is_viewable: false
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  AccountInvoice_6:
-    Account: Account_6
-    ref_no: '320394'
-    description: 'built a simple calculator'
-    paid_off: false
-    is_viewable: false
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  AccountInvoice_7:
-    Account: Account_7
-    ref_no: '320395'
-    description: 'for the whole design and implemeantation of the site good customer discount'
-    paid_off: true
-    is_viewable: false
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  AccountInvoice_8:
-    Account: Account_8
-    ref_no: '320396'
-    description: 'built a simple calculator'
-    paid_off: false
-    is_viewable: false
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  AccountInvoice_9:
-    Account: Account_9
-    ref_no: '320397'
-    description: 'for the whole design and implemeantation of the site good customer discount'
-    paid_off: true
-    is_viewable: false
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  AccountInvoice_10:
-    Account: Account_10
-    ref_no: '320398'
-    description: 'built a simple calculator'
-    paid_off: false
-    is_viewable: false
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-Account:
-  Account_1:
-    Client: Client_1
-    title: ''
-    domain_name: user1domain1.com
-    description: 'another dynbamic site'
-    active: true
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-04-12 21:26:38'
-  Account_2:
-    Client: Client_1
-    title: null
-    domain_name: user1domain2.com
-    description: 'a dynamic site t calculate'
-    active: true
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
-  Account_3:
-    Client: Client_2
-    title: null
-    domain_name: user2domain1.com
-    description: 'another dynbamic site'
-    active: true
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
-  Account_4:
-    Client: Client_2
-    title: null
-    domain_name: user2domain2.com
-    description: 'a dynamic site t calculate'
-    active: true
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
-  Account_5:
-    Client: Client_3
-    title: null
-    domain_name: user3domain1.com
-    description: 'another dynbamic site'
-    active: true
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
-  Account_6:
-    Client: Client_3
-    title: null
-    domain_name: user3domain2.com
-    description: 'a dynamic site t calculate'
-    active: true
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
-  Account_7:
-    Client: Client_4
-    title: null
-    domain_name: user4domain1.com
-    description: 'another dynbamic site'
-    active: true
-    created_at: '2012-03-29 00:29:58'
-    updated_at: '2012-03-29 00:29:58'
-  Account_8:
-    Client: Client_4
-    title: null
-    domain_name: user4domain2.com
-    description: 'a dynamic site t calculate'
-    active: true
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  Account_9:
-    Client: Client_5
-    title: null
-    domain_name: user5domain1.com
-    description: 'another dynbamic site'
-    active: true
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
-  Account_10:
-    Client: Client_5
-    title: null
-    domain_name: user5domain2.com
-    description: 'a dynamic site t calculate'
-    active: true
-    created_at: '2012-03-29 00:29:59'
-    updated_at: '2012-03-29 00:29:59'
+    description: null
+  TaskPriority_5:
+    name: Medium
+    description: null
+GenDesc:
+  GenDesc_1:
+    title: 'Virus Removal'
+    description: 'virus removal of the computer'

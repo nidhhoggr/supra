@@ -1,3 +1,5 @@
+<?php include_partial('global/showCrud',array('module'=>'client','object'=>$client)); ?>
+<?php echo link_to('Create Account',array('account/new'));?>
 <table>
   <tbody>
     <tr>
@@ -15,8 +17,3 @@
   </tbody>
 </table>
 
-<hr />
-
-<a href="<?php echo url_for('client/edit?id='.$client->getId()) ?>">Edit</a>
-&nbsp;
-<a href="<?php echo url_for('client/index') ?>">List</a>

@@ -22,18 +22,27 @@ class AccountInvoice extends BaseAccountInvoice {
 
   public function getTotal($is_admin = false) {
       $total = 0;
- 
-      foreach($this->getAccountInvoiceTask() as $inv_task) {
-          $task = $inv_task->getTask();
-          $work = $task->getTaskWork();
+
+      foreach($this->getAssociatedTasks() as $task) {  
           foreach($task->getTaskLog() as $log) {
               //must be admin to override is_viewable
               if($log->getHours() && ($log->getIsViewable() || $is_admin)) {
-                  $total += $work->getRate() * $log->getHours();
+                  $rate = $log->getTaskWork()->getRate();
+                  $total += $rate * $log->getHours();
               }
           }
       }
 
       return round($total,2);
+  }
+
+  public function getAssociatedTasks() {
+      return Doctrine_Core::getTable('Task')->getAllByAccountInvoiceId($this->getId());
+  }
+
+  function __toString() {
+
+      return $this->getAccount() . ' - ' . $this->getRefNo();
+
   }
 }

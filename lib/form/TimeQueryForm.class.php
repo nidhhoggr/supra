@@ -21,11 +21,16 @@ class TimeQueryForm extends BaseForm
                            );
 
       $this->setWidgets(array(
-          'staff_id'      => new sfWidgetFormDoctrineChoice(array('model' => 'Staff', 'add_empty' => false)),
+          'staff_id'      => new sfWidgetFormDoctrineChoice(array('label'=>'Employee','model' => 'Staff', 'add_empty' => false)),
           'from'     => new sfJQueryDateTimeWidget($fromOptions),
           'until'    => new sfJQueryDateTimeWidget($untilOptions),
       ));
 
+
+      $this->setValidators(array(
+          'from' => new sfJQueryDateTimeValidator(array('widget_name'=>'from')),
+          'until' => new sfJQueryDateTimeValidator(array('widget_name'=>'until')),
+      ));
   
     if(@$params['staff_id']) 
         $this->setDefault('staff_id',$params['staff_id']);

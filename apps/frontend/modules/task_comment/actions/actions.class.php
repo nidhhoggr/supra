@@ -23,9 +23,9 @@ class task_commentActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
-    $task_id = $request->getParameter('task_id');
+    $this->task_id = $request->getParameter('task_id');
 
-    $this->form = new TaskCommentForm(array(),array('params'=>array('task_id'=>$task_id)));
+    $this->form = new TaskCommentForm(array(),array('params'=>array('task_id'=>$this->task_id)));
   }
 
   public function executeCreate(sfWebRequest $request)
@@ -42,8 +42,10 @@ class task_commentActions extends sfActions
   public function executeEdit(sfWebRequest $request)
   {
     $this->forward404Unless($task_comment = Doctrine_Core::getTable('TaskComment')->find(array($request->getParameter('id'))), sprintf('Object task_comment does not exist (%s).', $request->getParameter('id')));
+    $this->task_id = $request->getParameter('task_id');
+    $this->isEntitled($task_comment);
     $this->form = new TaskCommentForm($task_comment);
-  }
+ }
 
   public function executeUpdate(sfWebRequest $request)
   {
@@ -61,8 +63,8 @@ class task_commentActions extends sfActions
     $request->checkCSRFProtection();
 
     $this->forward404Unless($task_comment = Doctrine_Core::getTable('TaskComment')->find(array($request->getParameter('id'))), sprintf('Object task_comment does not exist (%s).', $request->getParameter('id')));
+    $this->isEntitled($task_comment);
     $task_comment->delete();
-
     $this->redirect('task_comment/index');
   }
 
@@ -75,5 +77,10 @@ class task_commentActions extends sfActions
 
       $this->redirect('task_comment/edit?id='.$task_comment->getId());
     }
+  }
+
+  private function isEntitled($task_comment) {
+    if($task_comment->getStaff()->getUser()->getId() != $this->getUser()->getId())
+        $this->redirect($this->getRequest()->getReferer());
   }
 }

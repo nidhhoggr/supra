@@ -1,3 +1,4 @@
+<?php include_partial('global/showCrud',array('module'=>'staff','object'=>$staff)) ?>
 <table>
   <tbody>
     <tr>
@@ -39,6 +40,3 @@
       <td><?php echo $tasks_incomplete?></td>
     </tr>
 </table>
-
-<hr />
-<a href="<?php echo url_for('staff/index') ?>">List</a>

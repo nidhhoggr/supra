@@ -29,15 +29,13 @@ abstract class BaseAccountPlan extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('account_plan');
-        $this->hasColumn('account_id', 'integer', 8, array(
+        $this->hasColumn('account_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 8,
              ));
-        $this->hasColumn('plan_id', 'integer', 8, array(
+        $this->hasColumn('plan_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 8,
              ));
     }
 
@@ -46,11 +44,13 @@ abstract class BaseAccountPlan extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Account', array(
              'local' => 'account_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'cascade'));
 
         $this->hasOne('Plan', array(
              'local' => 'plan_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'cascade'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));

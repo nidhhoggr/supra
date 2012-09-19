@@ -37,9 +37,8 @@ abstract class BaseAccountRecord extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('account_id', 'integer', 8, array(
+        $this->hasColumn('account_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 8,
              ));
         $this->hasColumn('name', 'string', 255, array(
              'type' => 'string',
@@ -56,7 +55,8 @@ abstract class BaseAccountRecord extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Account', array(
              'local' => 'account_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'cascade'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));

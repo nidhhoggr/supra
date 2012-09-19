@@ -67,13 +67,12 @@ abstract class BaseAccount extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('client_id', 'integer', 8, array(
+        $this->hasColumn('client_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 8,
+             'notnull' => true,
              ));
-        $this->hasColumn('plan_id', 'integer', 8, array(
+        $this->hasColumn('plan_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 8,
              ));
         $this->hasColumn('title', 'string', 255, array(
              'type' => 'string',
@@ -98,11 +97,13 @@ abstract class BaseAccount extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Client', array(
              'local' => 'client_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'cascade'));
 
         $this->hasOne('Plan', array(
              'local' => 'plan_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'set null'));
 
         $this->hasMany('AccountRate', array(
              'local' => 'id',

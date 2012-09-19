@@ -1,3 +1,4 @@
+<?php include_partial('global/showCrud',array('module'=>'account','object'=>$account))?>
 <table>
   <tbody>
     <tr>
@@ -47,8 +48,3 @@
 <?php endforeach;?>
 </ul>
 <?php echo link_to('add credential','credential/new?account_id='.$account->getId()); ?>
-<hr />
-
-<a href="<?php echo url_for('account/edit?id='.$account->getId()) ?>">Edit</a>
-&nbsp;
-<a href="<?php echo url_for('account/index') ?>">List</a>

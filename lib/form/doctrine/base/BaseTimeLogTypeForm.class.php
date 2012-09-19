@@ -18,12 +18,16 @@ abstract class BaseTimeLogTypeForm extends BaseFormDoctrine
       'id'       => new sfWidgetFormInputHidden(),
       'name'     => new sfWidgetFormInputText(),
       'clock_in' => new sfWidgetFormInputCheckbox(),
+      'color'    => new sfWidgetFormInputText(),
+      'image'    => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
       'id'       => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'name'     => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'clock_in' => new sfValidatorBoolean(),
+      'color'    => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'image'    => new sfValidatorString(array('max_length' => 255, 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('time_log_type[%s]');

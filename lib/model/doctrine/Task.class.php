@@ -12,4 +12,18 @@
  */
 class Task extends BaseTask {
 
+
+    public function isEntitled() {
+
+        return Doctrine_Query::Create()
+        ->from('Task t')
+        ->where('t.created_by = ?',myUser::getLoggedIn()->getId())
+        ->andWhere('t.id = ?',$this->getId())
+        ->orWhere('t.user_id = ?',myUser::getLoggedIn()->getId())
+        ->andWhere('t.id = ?',$this->getId())
+        ->limit(1)
+        ->fetchOne();
+
+    }
+
 }

@@ -15,6 +15,8 @@ class TaskLogForm extends BaseTaskLogForm
       $params = $this->getOption('params');
 
       $this->unsetTimeStampable();
+
+      $this->setWidget('staff_id', new sfWidgetFormInputHidden());
      
       $this->setDefault('staff_id',Staff::loggedInId());
 
@@ -22,11 +24,34 @@ class TaskLogForm extends BaseTaskLogForm
 
       if(!$this->getCurrentUser()->isSuperAdmin()) {
           unset(
-              $this['is_billable'],
               $this['is_viewable'],
               $this['percentage']
           );
       }
+
+      $this->getOption('params');
+
+      $inOptions = array(
+                 'widget_name'=>'clock_in',
+                 'params'=>$params,
+                 'default_date'=>date('Y-m-d'),
+                 'default_time'=>date('h:i A')
+                );
+
+      $outOptions = array(
+                 'widget_name'=>'clock_out',
+                 'params'=>$params,
+                 'default_date'=>date('Y-m-d'),
+                 'default_time'=>date('h:i A')
+                );
+
+      $this->setWidget('clock_in', new sfJQueryDateTimeWidget($inOptions));
+      $this->setWidget('clock_out', new sfJQueryDateTimeWidget($outOptions));
+
+      $this->setValidator('clock_in',new sfJQueryDateTimeValidator(array('widget_name'=>'clock_in')));
+      $this->setValidator('clock_out', new sfJqueryDateTimeValidator(array('widget_name'=>'clock_out')));
+
+
   }
 
 }

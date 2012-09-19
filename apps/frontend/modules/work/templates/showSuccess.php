@@ -1,3 +1,4 @@
+<?php include_partial('global/showCrud',array('module'=>'work','object'=>$task_work))?>
 <table>
   <tbody>
     <tr>
@@ -14,9 +15,3 @@
     </tr>
   </tbody>
 </table>
-
-<hr />
-
-<a href="<?php echo url_for('work/edit?id='.$task_work->getId()) ?>">Edit</a>
-&nbsp;
-<a href="<?php echo url_for('work/index') ?>">List</a>

@@ -1,10 +1,13 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/12-Filters
 
+# insert your own filters here
+access_control:
+  class: accessControlFilter
+  param:
+    condition:   %APP_ENABLE_ACCESS_CONTROLL%%
+
 rendering: ~
 security:  ~
-
-# insert your own filters here
-
 cache:     ~
 execution: ~

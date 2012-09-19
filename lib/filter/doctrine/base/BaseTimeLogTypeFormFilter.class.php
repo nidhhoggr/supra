@@ -15,11 +15,15 @@ abstract class BaseTimeLogTypeFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'name'     => new sfWidgetFormFilterInput(),
       'clock_in' => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
+      'color'    => new sfWidgetFormFilterInput(),
+      'image'    => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
       'name'     => new sfValidatorPass(array('required' => false)),
       'clock_in' => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
+      'color'    => new sfValidatorPass(array('required' => false)),
+      'image'    => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('time_log_type_filters[%s]');
@@ -42,6 +46,8 @@ abstract class BaseTimeLogTypeFormFilter extends BaseFormFilterDoctrine
       'id'       => 'Number',
       'name'     => 'Text',
       'clock_in' => 'Boolean',
+      'color'    => 'Text',
+      'image'    => 'Text',
     );
   }
 }

@@ -16,4 +16,36 @@ class AccountTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Account');
     }
+
+    public function getTasks($account_id,$some = false,$complete = false) {
+
+        $q = Doctrine_Query::create()
+               ->from('Task t')
+               ->where('t.account_id = ?',$account_id);
+   
+        if($complete)
+            $q = $q->andWhere('t.task_status_id = ?', 3);
+        else 
+            $q = $q->andWhere('t.task_status_id <> ?', 3);
+
+        if($some)
+            return $q->limit(5)->execute();
+        
+        return $q->execute();
+    }
+
+    public function queryAll($sort) {
+        return Doctrine_Query::Create()
+               ->from('Account a')
+               ->orderBy('a.'.$sort);
+    } 
+
+    public function queryAllByUserId($sort) {
+
+        return Doctrine_Query::Create()
+        ->from('Account a')
+        ->where('a.client_id = ?',myUser::getLoggedIn()->isClient()->getId())
+        ->orderBy('a.'.$sort);
+
+    }
 }

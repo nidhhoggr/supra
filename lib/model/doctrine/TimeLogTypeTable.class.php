@@ -16,4 +16,19 @@ class TimeLogTypeTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('TimeLogType');
     }
+
+    public function getClockInById($id) {
+        return Doctrine_Query::Create()
+               ->select('t.clock_in')
+               ->from('TimeLogType t')
+               ->where('t.id = ?', $id)
+               ->fetchOne()->clock_in;
+    }
+
+    public function getByClockIn($clock_in) {
+        return Doctrine_Query::Create()
+               ->from('TimeLogType t')
+               ->where('t.clock_in <> ?', $clock_in)
+               ->execute();
+    }
 }

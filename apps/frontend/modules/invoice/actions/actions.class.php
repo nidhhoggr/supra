@@ -12,26 +12,32 @@ class invoiceActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->account_invoices = Doctrine_Core::getTable('AccountInvoice')
-      ->createQuery('a')
-      ->execute();
+    $dpu = new sfDoctrinePagerUtil('AccountInvoice', 10);
+    $sort = $dpu->getSort($request);
+
+
+    if(!$this->getUser()->isClient())
+        $invoices = Doctrine_Core::getTable('AccountInvoice')->queryAll($sort);
+    else 
+        $invoices = Doctrine_Core::getTable('AccountInvoice')->queryAllByAccountId($sort);
+
+    $this->pager = $this->_getPager(array('query'=>$invoices,'request'=>$request,'pager'=>$dpu));
   }
 
   public function executeShow(sfWebRequest $request)
   {
     $this->account_invoice = Doctrine_Core::getTable('AccountInvoice')->find(array($request->getParameter('id')));
     $this->forward404Unless($this->account_invoice);
-/*
     //get the total of the invoice
-    foreach($this->account_invoice->getAccountInvoiceTask() as $inv_task):
-      $task = $inv_task->getTask();
-      $work = $task->getTaskWork();
+/*    foreach($this->account_invoice->getAccount()->getTask() as $task):
+      if($this->account_invoice->getId() == $task->getAccountInvoiceId()) {
+        $work = $task->getTaskWork();
 	foreach($task->getTaskLog() as $log):
-		$this->total += $log->getHoursLogged() * $work->getRate();
-      endforeach;
+	  $this->total += $log->getHoursLogged() * $work->getRate();
+        endforeach;
+      }
     endforeach;
 */
-
     $this->total = $this->account_invoice->getTotal();
   }
 
@@ -88,4 +94,24 @@ class invoiceActions extends sfActions
       $this->redirect('invoice/edit?id='.$account_invoice->getId());
     }
   }
+
+  private function _getPager($args) {
+    $fields = array(
+                    'ref_no'           => array('Ref No','invoice','getRefNo'),
+                    'account_id'       => array('Account','account','getAccount'),
+                    'paid_off'         => array('Paid Off','invoice','getPaidOff','bool'),
+                    'created_at'       => array('Created','invoice','getCreatedAt')
+                   );
+
+    $pagerOptions = array(
+                          'query'=>$args['query'],
+                          'fields'=>$fields,
+                          'request'=>$args['request']
+                         );
+
+    $pager = $args['pager'];
+
+    return $pager->getPager($pagerOptions);
+  }
+
 }

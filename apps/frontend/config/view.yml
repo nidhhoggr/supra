@@ -12,9 +12,9 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [ main.css, jquery-ui.css, timePicker.css, bobo/style.css ]
+  stylesheets:    [ main.css, jquery-ui.css, /sfJQueryDateTimeFormWidgetPlugin/css/timePicker.css, bobo/style.css ]
 
-  javascripts:    [ date.js, jquery.js, jquery-ui.js, jquery.timePicker.js ]
+  javascripts:    [ date.js, jquery.js, jquery-ui.js, /sfJQueryDateTimeFormWidgetPlugin/js/jquery.timePicker.js ]
 
   has_layout:     true
   layout:         layout

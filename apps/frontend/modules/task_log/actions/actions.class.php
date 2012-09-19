@@ -23,9 +23,8 @@ class task_logActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
-
-    $task_id = $request->getParameter('task_id');
-    $this->form = new TaskLogForm(array(),array('params'=>array('task_id'=>$task_id)));
+    $this->task_id = $request->getParameter('task_id');
+    $this->form = new TaskLogForm(array(),array('params'=>array('task_id'=>$this->task_id)));
   }
 
   public function executeCreate(sfWebRequest $request)
@@ -42,6 +41,7 @@ class task_logActions extends sfActions
   public function executeEdit(sfWebRequest $request)
   {
     $this->forward404Unless($task_log = Doctrine_Core::getTable('TaskLog')->find(array($request->getParameter('id'))), sprintf('Object task_log does not exist (%s).', $request->getParameter('id')));
+    $this->task_id = $request->getParameter('task_id');
     $this->form = new TaskLogForm($task_log);
   }
 

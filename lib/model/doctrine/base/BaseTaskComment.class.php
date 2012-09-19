@@ -10,23 +10,23 @@
  * @property integer $staff_id
  * @property string $title
  * @property clob $comment
- * @property Task $Task
  * @property Staff $Staff
+ * @property Task $Task
  * 
  * @method integer     getId()       Returns the current record's "id" value
  * @method integer     getTaskId()   Returns the current record's "task_id" value
  * @method integer     getStaffId()  Returns the current record's "staff_id" value
  * @method string      getTitle()    Returns the current record's "title" value
  * @method clob        getComment()  Returns the current record's "comment" value
- * @method Task        getTask()     Returns the current record's "Task" value
  * @method Staff       getStaff()    Returns the current record's "Staff" value
+ * @method Task        getTask()     Returns the current record's "Task" value
  * @method TaskComment setId()       Sets the current record's "id" value
  * @method TaskComment setTaskId()   Sets the current record's "task_id" value
  * @method TaskComment setStaffId()  Sets the current record's "staff_id" value
  * @method TaskComment setTitle()    Sets the current record's "title" value
  * @method TaskComment setComment()  Sets the current record's "comment" value
- * @method TaskComment setTask()     Sets the current record's "Task" value
  * @method TaskComment setStaff()    Sets the current record's "Staff" value
+ * @method TaskComment setTask()     Sets the current record's "Task" value
  * 
  * @package    supra
  * @subpackage model
@@ -43,15 +43,13 @@ abstract class BaseTaskComment extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('task_id', 'integer', 8, array(
+        $this->hasColumn('task_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 8,
              ));
-        $this->hasColumn('staff_id', 'integer', 8, array(
+        $this->hasColumn('staff_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 8,
              ));
         $this->hasColumn('title', 'string', 255, array(
              'type' => 'string',
@@ -65,13 +63,15 @@ abstract class BaseTaskComment extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('Task', array(
-             'local' => 'task_id',
-             'foreign' => 'id'));
-
         $this->hasOne('Staff', array(
              'local' => 'staff_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'cascade'));
+
+        $this->hasOne('Task', array(
+             'local' => 'task_id',
+             'foreign' => 'id',
+             'onDelete' => 'cascade'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));

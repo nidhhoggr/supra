@@ -10,23 +10,23 @@
  * @property integer $staff_id
  * @property timestamp $time
  * @property clob $notes
- * @property TimeLogType $TimeLogType
  * @property Staff $Staff
+ * @property TimeLogType $TimeLogType
  * 
  * @method integer     getId()               Returns the current record's "id" value
  * @method integer     getTimeLogTypeId()    Returns the current record's "time_log_type_id" value
  * @method integer     getStaffId()          Returns the current record's "staff_id" value
  * @method timestamp   getTime()             Returns the current record's "time" value
  * @method clob        getNotes()            Returns the current record's "notes" value
- * @method TimeLogType getTimeLogType()      Returns the current record's "TimeLogType" value
  * @method Staff       getStaff()            Returns the current record's "Staff" value
+ * @method TimeLogType getTimeLogType()      Returns the current record's "TimeLogType" value
  * @method TimeLog     setId()               Sets the current record's "id" value
  * @method TimeLog     setTimeLogTypeId()    Sets the current record's "time_log_type_id" value
  * @method TimeLog     setStaffId()          Sets the current record's "staff_id" value
  * @method TimeLog     setTime()             Sets the current record's "time" value
  * @method TimeLog     setNotes()            Sets the current record's "notes" value
- * @method TimeLog     setTimeLogType()      Sets the current record's "TimeLogType" value
  * @method TimeLog     setStaff()            Sets the current record's "Staff" value
+ * @method TimeLog     setTimeLogType()      Sets the current record's "TimeLogType" value
  * 
  * @package    supra
  * @subpackage model
@@ -45,13 +45,11 @@ abstract class BaseTimeLog extends sfDoctrineRecord
              ));
         $this->hasColumn('time_log_type_id', 'integer', 8, array(
              'type' => 'integer',
-             'notnull' => true,
              'length' => 8,
              ));
-        $this->hasColumn('staff_id', 'integer', 8, array(
+        $this->hasColumn('staff_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 8,
              ));
         $this->hasColumn('time', 'timestamp', null, array(
              'type' => 'timestamp',
@@ -65,12 +63,13 @@ abstract class BaseTimeLog extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('TimeLogType', array(
-             'local' => 'time_log_type_id',
-             'foreign' => 'id'));
-
         $this->hasOne('Staff', array(
              'local' => 'staff_id',
+             'foreign' => 'id',
+             'onDelete' => 'cascade'));
+
+        $this->hasOne('TimeLogType', array(
+             'local' => 'time_log_type_id',
              'foreign' => 'id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(

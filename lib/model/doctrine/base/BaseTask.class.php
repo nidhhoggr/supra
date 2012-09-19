@@ -7,7 +7,9 @@
  * 
  * @property integer $id
  * @property integer $account_id
- * @property integer $staff_id
+ * @property integer $account_invoice_id
+ * @property integer $user_id
+ * @property integer $created_by
  * @property integer $task_status_id
  * @property integer $task_type_id
  * @property integer $task_priority_id
@@ -16,19 +18,21 @@
  * @property string $name
  * @property clob $description
  * @property Account $Account
- * @property Staff $Staff
+ * @property AccountInvoice $AccountInvoice
+ * @property sfGuardUser $User
+ * @property sfGuardUser $Creator
  * @property TaskStatus $TaskStatus
  * @property TaskType $TaskType
  * @property TaskPriority $TaskPriority
  * @property TaskWork $TaskWork
- * @property Doctrine_Collection $AccountInvoice
- * @property Doctrine_Collection $AccountInvoiceTask
  * @property Doctrine_Collection $TaskComment
  * @property Doctrine_Collection $TaskLog
  * 
  * @method integer             getId()                 Returns the current record's "id" value
  * @method integer             getAccountId()          Returns the current record's "account_id" value
- * @method integer             getStaffId()            Returns the current record's "staff_id" value
+ * @method integer             getAccountInvoiceId()   Returns the current record's "account_invoice_id" value
+ * @method integer             getUserId()             Returns the current record's "user_id" value
+ * @method integer             getCreatedBy()          Returns the current record's "created_by" value
  * @method integer             getTaskStatusId()       Returns the current record's "task_status_id" value
  * @method integer             getTaskTypeId()         Returns the current record's "task_type_id" value
  * @method integer             getTaskPriorityId()     Returns the current record's "task_priority_id" value
@@ -37,18 +41,20 @@
  * @method string              getName()               Returns the current record's "name" value
  * @method clob                getDescription()        Returns the current record's "description" value
  * @method Account             getAccount()            Returns the current record's "Account" value
- * @method Staff               getStaff()              Returns the current record's "Staff" value
+ * @method AccountInvoice      getAccountInvoice()     Returns the current record's "AccountInvoice" value
+ * @method sfGuardUser         getUser()               Returns the current record's "User" value
+ * @method sfGuardUser         getCreator()            Returns the current record's "Creator" value
  * @method TaskStatus          getTaskStatus()         Returns the current record's "TaskStatus" value
  * @method TaskType            getTaskType()           Returns the current record's "TaskType" value
  * @method TaskPriority        getTaskPriority()       Returns the current record's "TaskPriority" value
  * @method TaskWork            getTaskWork()           Returns the current record's "TaskWork" value
- * @method Doctrine_Collection getAccountInvoice()     Returns the current record's "AccountInvoice" collection
- * @method Doctrine_Collection getAccountInvoiceTask() Returns the current record's "AccountInvoiceTask" collection
  * @method Doctrine_Collection getTaskComment()        Returns the current record's "TaskComment" collection
  * @method Doctrine_Collection getTaskLog()            Returns the current record's "TaskLog" collection
  * @method Task                setId()                 Sets the current record's "id" value
  * @method Task                setAccountId()          Sets the current record's "account_id" value
- * @method Task                setStaffId()            Sets the current record's "staff_id" value
+ * @method Task                setAccountInvoiceId()   Sets the current record's "account_invoice_id" value
+ * @method Task                setUserId()             Sets the current record's "user_id" value
+ * @method Task                setCreatedBy()          Sets the current record's "created_by" value
  * @method Task                setTaskStatusId()       Sets the current record's "task_status_id" value
  * @method Task                setTaskTypeId()         Sets the current record's "task_type_id" value
  * @method Task                setTaskPriorityId()     Sets the current record's "task_priority_id" value
@@ -57,13 +63,13 @@
  * @method Task                setName()               Sets the current record's "name" value
  * @method Task                setDescription()        Sets the current record's "description" value
  * @method Task                setAccount()            Sets the current record's "Account" value
- * @method Task                setStaff()              Sets the current record's "Staff" value
+ * @method Task                setAccountInvoice()     Sets the current record's "AccountInvoice" value
+ * @method Task                setUser()               Sets the current record's "User" value
+ * @method Task                setCreator()            Sets the current record's "Creator" value
  * @method Task                setTaskStatus()         Sets the current record's "TaskStatus" value
  * @method Task                setTaskType()           Sets the current record's "TaskType" value
  * @method Task                setTaskPriority()       Sets the current record's "TaskPriority" value
  * @method Task                setTaskWork()           Sets the current record's "TaskWork" value
- * @method Task                setAccountInvoice()     Sets the current record's "AccountInvoice" collection
- * @method Task                setAccountInvoiceTask() Sets the current record's "AccountInvoiceTask" collection
  * @method Task                setTaskComment()        Sets the current record's "TaskComment" collection
  * @method Task                setTaskLog()            Sets the current record's "TaskLog" collection
  * 
@@ -82,34 +88,30 @@ abstract class BaseTask extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('account_id', 'integer', 8, array(
+        $this->hasColumn('account_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 8,
              ));
-        $this->hasColumn('staff_id', 'integer', 8, array(
+        $this->hasColumn('account_invoice_id', 'integer', null, array(
              'type' => 'integer',
-             'length' => 8,
              ));
-        $this->hasColumn('task_status_id', 'integer', 8, array(
+        $this->hasColumn('user_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
-             'length' => 8,
              ));
-        $this->hasColumn('task_type_id', 'integer', 8, array(
+        $this->hasColumn('created_by', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
-             'length' => 8,
              ));
-        $this->hasColumn('task_priority_id', 'integer', 8, array(
+        $this->hasColumn('task_status_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
-             'length' => 8,
              ));
-        $this->hasColumn('task_work_id', 'integer', 8, array(
+        $this->hasColumn('task_type_id', 'integer', null, array(
              'type' => 'integer',
-             'notnull' => true,
-             'length' => 8,
+             ));
+        $this->hasColumn('task_priority_id', 'integer', null, array(
+             'type' => 'integer',
+             ));
+        $this->hasColumn('task_work_id', 'integer', null, array(
+             'type' => 'integer',
              ));
         $this->hasColumn('ref_no', 'string', 255, array(
              'type' => 'string',
@@ -130,36 +132,43 @@ abstract class BaseTask extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Account', array(
              'local' => 'account_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'cascade'));
 
-        $this->hasOne('Staff', array(
-             'local' => 'staff_id',
-             'foreign' => 'id'));
+        $this->hasOne('AccountInvoice', array(
+             'local' => 'account_invoice_id',
+             'foreign' => 'id',
+             'onDelete' => 'set null'));
+
+        $this->hasOne('sfGuardUser as User', array(
+             'local' => 'user_id',
+             'foreign' => 'id',
+             'onDelete' => 'set null'));
+
+        $this->hasOne('sfGuardUser as Creator', array(
+             'local' => 'created_by',
+             'foreign' => 'id',
+             'onDelete' => 'set null'));
 
         $this->hasOne('TaskStatus', array(
              'local' => 'task_status_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'set null'));
 
         $this->hasOne('TaskType', array(
              'local' => 'task_type_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'set null'));
 
         $this->hasOne('TaskPriority', array(
              'local' => 'task_priority_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'set null'));
 
         $this->hasOne('TaskWork', array(
              'local' => 'task_work_id',
-             'foreign' => 'id'));
-
-        $this->hasMany('AccountInvoice', array(
-             'refClass' => 'AccountInvoiceTask',
-             'local' => 'task_id',
-             'foreign' => 'account_invoice_id'));
-
-        $this->hasMany('AccountInvoiceTask', array(
-             'local' => 'id',
-             'foreign' => 'task_id'));
+             'foreign' => 'id',
+             'onDelete' => 'set null'));
 
         $this->hasMany('TaskComment', array(
              'local' => 'id',

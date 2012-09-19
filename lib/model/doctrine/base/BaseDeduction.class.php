@@ -43,10 +43,9 @@ abstract class BaseDeduction extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('account_invoice_id', 'integer', 8, array(
+        $this->hasColumn('account_invoice_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 8,
              ));
         $this->hasColumn('title', 'string', 255, array(
              'type' => 'string',
@@ -70,7 +69,8 @@ abstract class BaseDeduction extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('AccountInvoice', array(
              'local' => 'account_invoice_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'cascade'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));

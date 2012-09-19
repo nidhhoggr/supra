@@ -16,7 +16,7 @@ generator:
       fields:  ~
       list:
         title: Time Log Type Management
-        display: [=name,clock_in]
+        display: [=name,clock_in,color]
       filter:  ~
       form:    ~
       edit:

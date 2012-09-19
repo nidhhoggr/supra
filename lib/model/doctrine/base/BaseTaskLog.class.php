@@ -21,8 +21,8 @@
  * @property boolean $is_billable
  * @property boolean $is_viewable
  * @property Task $Task
- * @property TaskWork $TaskWork
  * @property Staff $Staff
+ * @property TaskWork $TaskWork
  * @property GenDesc $GenDesc
  * 
  * @method integer   getId()            Returns the current record's "id" value
@@ -41,8 +41,8 @@
  * @method boolean   getIsBillable()    Returns the current record's "is_billable" value
  * @method boolean   getIsViewable()    Returns the current record's "is_viewable" value
  * @method Task      getTask()          Returns the current record's "Task" value
- * @method TaskWork  getTaskWork()      Returns the current record's "TaskWork" value
  * @method Staff     getStaff()         Returns the current record's "Staff" value
+ * @method TaskWork  getTaskWork()      Returns the current record's "TaskWork" value
  * @method GenDesc   getGenDesc()       Returns the current record's "GenDesc" value
  * @method TaskLog   setId()            Sets the current record's "id" value
  * @method TaskLog   setTaskId()        Sets the current record's "task_id" value
@@ -60,8 +60,8 @@
  * @method TaskLog   setIsBillable()    Sets the current record's "is_billable" value
  * @method TaskLog   setIsViewable()    Sets the current record's "is_viewable" value
  * @method TaskLog   setTask()          Sets the current record's "Task" value
- * @method TaskLog   setTaskWork()      Sets the current record's "TaskWork" value
  * @method TaskLog   setStaff()         Sets the current record's "Staff" value
+ * @method TaskLog   setTaskWork()      Sets the current record's "TaskWork" value
  * @method TaskLog   setGenDesc()       Sets the current record's "GenDesc" value
  * 
  * @package    supra
@@ -79,20 +79,17 @@ abstract class BaseTaskLog extends sfDoctrineRecord
              'primary' => true,
              'autoincrement' => true,
              ));
-        $this->hasColumn('task_id', 'integer', 8, array(
+        $this->hasColumn('task_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 8,
              ));
         $this->hasColumn('task_work_id', 'integer', 8, array(
              'type' => 'integer',
-             'notnull' => true,
              'length' => 8,
              ));
-        $this->hasColumn('staff_id', 'integer', 8, array(
+        $this->hasColumn('staff_id', 'integer', null, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => 8,
              ));
         $this->hasColumn('title', 'string', 255, array(
              'type' => 'string',
@@ -140,14 +137,16 @@ abstract class BaseTaskLog extends sfDoctrineRecord
         parent::setUp();
         $this->hasOne('Task', array(
              'local' => 'task_id',
-             'foreign' => 'id'));
-
-        $this->hasOne('TaskWork', array(
-             'local' => 'task_work_id',
-             'foreign' => 'id'));
+             'foreign' => 'id',
+             'onDelete' => 'cascade'));
 
         $this->hasOne('Staff', array(
              'local' => 'staff_id',
+             'foreign' => 'id',
+             'onDelete' => 'cascade'));
+
+        $this->hasOne('TaskWork', array(
+             'local' => 'task_work_id',
              'foreign' => 'id'));
 
         $this->hasOne('GenDesc', array(

@@ -13,11 +13,13 @@ abstract class BaseTaskPriorityFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'name' => new sfWidgetFormFilterInput(),
+      'name'        => new sfWidgetFormFilterInput(),
+      'description' => new sfWidgetFormFilterInput(),
     ));
 
     $this->setValidators(array(
-      'name' => new sfValidatorPass(array('required' => false)),
+      'name'        => new sfValidatorPass(array('required' => false)),
+      'description' => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('task_priority_filters[%s]');
@@ -37,8 +39,9 @@ abstract class BaseTaskPriorityFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'id'   => 'Number',
-      'name' => 'Text',
+      'id'          => 'Number',
+      'name'        => 'Text',
+      'description' => 'Text',
     );
   }
 }

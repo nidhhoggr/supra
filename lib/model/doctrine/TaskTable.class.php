@@ -17,12 +17,113 @@ class TaskTable extends Doctrine_Table
         return Doctrine_Core::getTable('Task');
     }
 
-    public function getByStaffId() {
+    public function queryAll($sort) {
+        return Doctrine_Query::Create()
+               ->from('Task t')
+               ->orderBy('t.'.$sort);
+    }
+
+    public function queryAllByUserId($sort) {
+
+        $q = Doctrine_Query::Create()
+        ->from('Task t')
+        ->where('t.user_id = ?',myUser::getLoggedIn()->getId())
+        ->orWhere('t.created_by = ?',myUser::getLoggedIn()->getId());
+        
+        if($this->queryWhereClientAccounts($q))
+
+        return $q->orderBy('t.'.$sort);
+
+    }
+
+    public function queryIncomplete($sort) {
+        return Doctrine_Query::Create()
+               ->from('Task t')
+               ->where('t.task_status_id <> ?',3)
+               ->orderBy('t.'.$sort);
+    }
+
+    public function queryWhereClientAccounts(&$q) {
+
+        $client = myUser::getLoggedIn()->isClient();
+
+        if($client) {
+            $q->orWhereIn('t.account_id',$client->getAccountIds());
+            return true;
+        }
+ 
+        return false;
+
+    }
+
+    public function queryCreatedByUserId($sort = "id ASC") {
 
         return Doctrine_Query::Create() 
         ->from('Task t')
-        ->where('t.staff_id = ?',Staff::loggedInId())
-        ->execute();
+        ->where('t.created_by = ?',myUser::getLoggedIn()->getId())
+        ->orderBy('t.'.$sort);
+    }
 
+    public function queryCompleteByUserId($sort = "id ASC") {
+
+        $q = Doctrine_Query::Create()
+        ->from('Task t')
+        ->where('t.user_id = ?',myUser::getLoggedIn()->getId())
+        ->andWhere('t.task_status_id = ?',3);
+
+        if($this->queryWhereClientAccounts($q))
+            $q->andWhere('t.task_status_id = ?',3);
+
+        return $q->orderBy('t.'.$sort);
+
+    }
+
+    public function queryIncompleteByUserId($sort = "id ASC") {
+
+        $q = Doctrine_Query::Create()
+        ->from('Task t')
+        ->where('t.user_id = ?',myUser::getLoggedIn()->getId())
+        ->andWhere('t.task_status_id <> ?',3);
+
+        if($this->queryWhereClientAccounts($q))
+            $q->andWhere('t.task_status_id <> ?',3);
+
+        return $q->orderBy('t.'.$sort);
+
+    }
+
+
+    public function refNoExists($refno) {
+        return Doctrine_Query::Create()
+               ->from('Task t')
+               ->where('t.ref_no = ?', $refno)
+               ->limit(1)
+               ->fetchOne();
+    }
+
+    public function getLastRefNo() {
+        return Doctrine_Query::Create()
+               ->select('t.ref_no')
+               ->from('Task t')
+               ->orderBy('t.id DESC')
+               ->limit(1)
+               ->fetchOne()->ref_no;
+    }
+
+    public function createRefNo() {
+        $last = $this->getLastRefNo();
+        $next = $last+1;
+        while($this->refNoExists($next)) {
+            $next++;
+            $ref_no = $next;
+        }
+        return $next;
+    }
+
+    public function getAllByAccountInvoiceId($account_invoice_id) {
+        return Doctrine_Query::Create()
+               ->from('Task t')
+               ->where('t.account_invoice_id = ?',$account_invoice_id)
+               ->execute();
     }
 }

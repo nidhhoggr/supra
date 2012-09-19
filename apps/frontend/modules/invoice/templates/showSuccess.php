@@ -4,7 +4,9 @@ function usd($price) {
     return '$'. sprintf("%01.2f",$price);
 }
 ?>
-<table>
+<?php include_partial('global/showCrud',array('module'=>'invoice','object'=>$account_invoice)); ?>
+
+<table id="invoice">
   <tbody>
     <tr>
       <th>Account:</th>
@@ -26,24 +28,27 @@ function usd($price) {
       <th>Description:</th>
       <td><?php echo $account_invoice->getDescription() ?></td>
     </tr>
-    <?php foreach($account_invoice->getAccountInvoiceTask() as $inv_task): ?>
+    <?php foreach($account_invoice->getAssociatedTasks() as $task): ?>
     <?php 
-        $task = $inv_task->getTask();
         $work = $task->getTaskWork();
     ?>
-         
-    <tr>
+    <tr id="invoice_task">
       <th>Task</th>
       <td>
           <p><?php echo link_to($task->getName(),'task/show?id='.$task->getId()) ?></p>
           <p><?php echo $task->getDescription() ?>
       </td>
     </tr>
-    <tr>
+    <tr id="invoice_work">
       <th>Work Completed</th>
       <td>
         <ol>
           <?php foreach($task->getTaskLog() as $log):?>
+ <?
+
+     $work = $log->getTaskWork();
+
+ ?>
           <?php if(!$log->getIsViewable()) continue; ?>
           <li>
             <p>
@@ -61,9 +66,9 @@ function usd($price) {
         </ol>
       </td>
     </tr>
-    <?php endforeach ?>
+    <?php endforeach  ?>
     <tr>
-      <td>
+      <td colspan="2">
         <hr />
         <p>Total: <?php echo usd($total) ?></p>
       </td>

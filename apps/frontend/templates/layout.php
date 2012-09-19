@@ -41,12 +41,6 @@
             </div><!--end header-->
             <div id="frontpage-content">      
     			
-    			<div id="frontpage-intro">    	
-    				
-    				<p>[ADD BRIEF INTRODUCTION]</p>    	
-    				
-    			</div><!--end frontpage-info-->    	
-    	
     			<div id="frontpage-intro">   	
                                     <?php echo $sf_content ?>
 <!--

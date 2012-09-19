@@ -23,6 +23,8 @@
  * @property sfGuardForgotPassword $ForgotPassword
  * @property Client $Client
  * @property Staff $Staff
+ * @property Task $User
+ * @property Task $Creator
  * 
  * @method string                getFirstName()             Returns the current record's "first_name" value
  * @method string                getLastName()              Returns the current record's "last_name" value
@@ -42,6 +44,8 @@
  * @method sfGuardForgotPassword getForgotPassword()        Returns the current record's "ForgotPassword" value
  * @method Client                getClient()                Returns the current record's "Client" value
  * @method Staff                 getStaff()                 Returns the current record's "Staff" value
+ * @method Task                  getUser()                  Returns the current record's "User" value
+ * @method Task                  getCreator()               Returns the current record's "Creator" value
  * @method sfGuardUser           setFirstName()             Sets the current record's "first_name" value
  * @method sfGuardUser           setLastName()              Sets the current record's "last_name" value
  * @method sfGuardUser           setEmailAddress()          Sets the current record's "email_address" value
@@ -60,6 +64,8 @@
  * @method sfGuardUser           setForgotPassword()        Sets the current record's "ForgotPassword" value
  * @method sfGuardUser           setClient()                Sets the current record's "Client" value
  * @method sfGuardUser           setStaff()                 Sets the current record's "Staff" value
+ * @method sfGuardUser           setUser()                  Sets the current record's "User" value
+ * @method sfGuardUser           setCreator()               Sets the current record's "Creator" value
  * 
  * @package    supra
  * @subpackage model
@@ -162,6 +168,14 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
         $this->hasOne('Staff', array(
              'local' => 'id',
              'foreign' => 'user_id'));
+
+        $this->hasOne('Task as User', array(
+             'local' => 'id',
+             'foreign' => 'user_id'));
+
+        $this->hasOne('Task as Creator', array(
+             'local' => 'id',
+             'foreign' => 'created_by'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));

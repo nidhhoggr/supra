@@ -42,6 +42,7 @@ class sfWidgetFormChoice extends sfWidgetFormChoiceBase
   {
     parent::configure($options, $attributes);
 
+    $this->addOption('add_empty', false);
     $this->addOption('multiple', false);
     $this->addOption('expanded', false);
     $this->addOption('renderer_class', false);
@@ -140,5 +141,14 @@ class sfWidgetFormChoice extends sfWidgetFormChoiceBase
     $renderer->setParent($this->getParent());
 
     return $renderer;
+  }
+
+  public function getChoices()
+  {
+    $choices = parent::getChoices();
+    if ($this->getOption('add_empty') !== false) {
+        return array_merge(array(''=>''),$choices);
+    }
+    return $choices;
   }
 }

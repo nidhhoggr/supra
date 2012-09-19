@@ -36,6 +36,7 @@ class time_logActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
+    $this->time_log = Doctrine_Core::getTable('TimeLog')->find(array($request->getParameter('id')));
     $this->form = new TimeLogForm();
   }
 
